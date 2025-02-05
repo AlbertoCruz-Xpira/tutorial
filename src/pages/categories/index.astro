@@ -1,0 +1,40 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+// Obtiene todos los posts
+const allPosts: any = await Astro.glob('../posts/*.md');
+// Extrae todas las categorias únicas
+const categories = [...new Set(allPosts.map((post: any) => post.frontmatter.categories).flat())];
+const pageTitle = "Todas las categorias";
+---
+
+<style>
+  a {
+    color: #00539F;
+  }
+
+  .categories {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .category {
+    margin: 0.25em;
+    border: dotted 1px #a1a1a1;
+    border-radius: .5em;
+    padding: .5em 1em;
+    font-size: 1.15em;
+    background-color: #F8FCFD;
+  }
+</style>
+
+<BaseLayout pageTitle={pageTitle}>
+
+  <div class="categories">
+    {categories.map((categoy) => (
+      <p class="category">
+        <a href={`/categories/${categoy}`}>{categoy}</a>
+      </p>
+    ))}
+  </ul>
+</BaseLayout>

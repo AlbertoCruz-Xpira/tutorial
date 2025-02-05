@@ -17,6 +17,9 @@ const { posts } = Astro.props;
 const filteredPosts = posts.filter((post:any) => post.frontmatter.categories?.includes(category));
 ---
 <BaseLayout pageTitle={category}>
+
+  <BlogPost url="/categories" title="Todas las categorias"/>
+
   <p>Entradas etiquetadas con {category}</p>
   <ul>
     {filteredPosts.map((post:any) => <BlogPost url={post.url} title={post.frontmatter.title}/>)}

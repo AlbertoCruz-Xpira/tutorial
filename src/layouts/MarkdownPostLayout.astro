@@ -3,21 +3,41 @@ const { frontmatter } = Astro.props;
 import BaseLayout from './BaseLayout.astro';
 ---
 <BaseLayout pageTitle={frontmatter.title}>
-    <p>
-        Tags 
+    <div class="tags">
+        <p>Tags</p> 
         {frontmatter.tags.map((tag:any) => (
-            <a href={`/tags/${tag}`}>{tag}</a>
-        )).reduce((prev: any, curr: any) => [prev, ', ', curr])}
-    </p>
-    <p>
-        Categorias
+            <a class="tag" href={`/tags/${tag}`}>{tag}</a>
+        ))}
+    </div>
+    <div class="categories">
+        <p>Categorias</p>
         {frontmatter.categories.map((category:any) => (
-            <a href={`/categories/${category}`}>{category}</a>
-        )).reduce((prev: any, curr: any) => [prev, ', ', curr])}
-    </p>
+            <a class="category" href={`/categories/${category}`}>{category}</a>
+        ))}
+    </div>
     <p>{frontmatter.pubDate.toString().slice(0,10)}</p>
     <p><em>{frontmatter.description}</em></p>
     <p>Escrito por: {frontmatter.author}</p>
     <img src={frontmatter.image.url} width="300" alt={frontmatter.image.alt} />
     <slot />
 </BaseLayout>
+
+<style>
+    a {
+      color: #00539F;
+    }
+  
+    .tags, .categories {
+      display: flex;
+      flex-wrap: wrap;
+    }
+  
+    .tag, .category {
+      margin: 0.25em;
+      border: dotted 1px #a1a1a1;
+      border-radius: .5em;
+      padding: .5em 1em;
+      font-size: 1.15em;
+      background-color: #F8FCFD;
+    }
+  </style>

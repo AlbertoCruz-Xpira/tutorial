@@ -26,7 +26,11 @@ const { tag } = Astro.params;
 const { posts } = Astro.props;
 const filteredPosts = posts.filter((post:any) => post.frontmatter.tags?.includes(tag));
 ---
+
 <BaseLayout pageTitle={tag}>
+
+  <BlogPost url="/tags" title="Todas las etiquetas"/>
+
   <p>Entradas etiquetadas con {tag}</p>
   <ul>
     {filteredPosts.map((post:any) => <BlogPost url={post.url} title={post.frontmatter.title}/>)}

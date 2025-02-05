@@ -10,7 +10,8 @@ const submenuItems = [
   { name: "Salud Senior", link: "/servicios-salud/salud-senior" }
 ];
 ---
-<div class="nav-links">
+
+<div class="nav-links f-12">
   <a href="/">Inicio</a>
 
   <!-- Menú Servicios con Submenú -->
@@ -26,25 +27,32 @@ const submenuItems = [
   <a href="/garantias-incluidas">Garantías incluidas</a>
   <a href="/blog">Artículos</a>
   <a href="/plan-de-vida-saludable">Plan de vida saludable</a>
-  <a href="/about">Sobre mi</a>
   <a href="/otros-servicios">Otros servicios</a>
-  <a href="/area-privada">Área privada</a>
+  <a class="orange" href="/area-privada">Área privada</a>
 </div>
 
 <style>
+ 
   .nav-links {
+    background-color: white;
     display: flex;
-    gap: 15px;
-    background: #333;
-    padding: 10px;
+    justify-content: flex-end;
+    align-items: center;
   }
-
   .nav-links a {
-    color: white;
+    display: block;
+    text-align: center;
+    padding: 1.3rem 1rem;
     text-decoration: none;
-    padding: 8px 12px;
+    font-size: 0.6rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: black;
   }
 
+  .nav-links a:hover, a:focus {
+    background-color: #EFEFEF;
+  }
   .menu-item {
     position: relative;
   }
@@ -72,5 +80,17 @@ const submenuItems = [
 
   .menu-item:hover .submenu {
     display: block;
+  }
+
+  .nav-links .orange {
+    background-color: #FFB023;
+    border-top-left-radius: 30px;
+    color: white;
+    border-bottom-left-radius: 30px;
+    padding-left: 1.5rem;
+  }
+
+  .nav-links .orange:hover {
+    background-color: #f19f0b;
   }
 </style>
