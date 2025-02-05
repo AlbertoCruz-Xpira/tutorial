@@ -1,0 +1,25 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import BlogPost from '../../components/BlogPost.astro';
+
+export async function getStaticPaths() {
+  const allPosts: any = await Astro.glob('../posts/*.md');
+
+  return [
+    {params: {category: "salud"}, props: {posts: allPosts}},
+    {params: {category: "cuidado"}, props: {posts: allPosts}},
+    {params: {category: "promociones"}, props: {posts: allPosts}},
+  ]
+}
+
+const { category } = Astro.params;
+const { posts } = Astro.props;
+const filteredPosts = posts.filter((post:any) => post.frontmatter.categories?.includes(category));
+---
+<BaseLayout pageTitle={category}>
+  <p>Entradas etiquetadas con {category}</p>
+  <ul>
+    {filteredPosts.map((post:any) => <BlogPost url={post.url} title={post.frontmatter.title}/>)}
+  </ul>
+</BaseLayout>
+

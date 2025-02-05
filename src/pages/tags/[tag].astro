@@ -1,0 +1,35 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import BlogPost from '../../components/BlogPost.astro';
+
+
+// Genera todas las rutas de las etiquetas
+export async function getStaticPaths() {
+  // Extrae todos los posts y los almacena en la variable allPosts
+  const allPosts: any = await Astro.glob('../posts/*.md');
+  // Extrae todas las etiquetas únicas de los posts y las almacena en la variable uniqueTags
+  const uniqueTags = [...new Set(allPosts.map((post:any) => post.frontmatter.tags).flat())];
+
+  //Por cada etiqueta extraida, filtra los posts que contienen esa etiqueta y los almacena en filteredPosts
+  return uniqueTags.map((tag) => {
+    const filteredPosts = allPosts.filter((post:any) => post.frontmatter.tags.includes(tag));
+    return {
+      params: { tag },
+      props: { posts: filteredPosts },
+    };
+  });
+}
+
+//Propiedades que se pasan al layout
+//Astro.params contiene los parámetros de la URL
+const { tag } = Astro.params;
+const { posts } = Astro.props;
+const filteredPosts = posts.filter((post:any) => post.frontmatter.tags?.includes(tag));
+---
+<BaseLayout pageTitle={tag}>
+  <p>Entradas etiquetadas con {tag}</p>
+  <ul>
+    {filteredPosts.map((post:any) => <BlogPost url={post.url} title={post.frontmatter.title}/>)}
+  </ul>
+</BaseLayout>
+

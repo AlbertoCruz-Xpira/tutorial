@@ -3,6 +3,18 @@ const { frontmatter } = Astro.props;
 import BaseLayout from './BaseLayout.astro';
 ---
 <BaseLayout pageTitle={frontmatter.title}>
+    <p>
+        Tags 
+        {frontmatter.tags.map((tag:any) => (
+            <a href={`/tags/${tag}`}>{tag}</a>
+        )).reduce((prev: any, curr: any) => [prev, ', ', curr])}
+    </p>
+    <p>
+        Categorias
+        {frontmatter.categories.map((category:any) => (
+            <a href={`/categories/${category}`}>{category}</a>
+        )).reduce((prev: any, curr: any) => [prev, ', ', curr])}
+    </p>
     <p>{frontmatter.pubDate.toString().slice(0,10)}</p>
     <p><em>{frontmatter.description}</em></p>
     <p>Escrito por: {frontmatter.author}</p>
