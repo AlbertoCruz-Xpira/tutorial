@@ -1,7 +1,14 @@
 ---
 export const title = "Título de la sección";
 export const content = "Este es el contenido de la sección.";
+
+import bkgImg from '../assets/HeroSection.jpg';
 ---
-<section class="my-8 p-4 bg-gray-100 rounded-lg">
-    <slot/>
+
+<section class="relative w-full h-screen bg-cover bg-center bg-no-repeat bg-fixed"
+style={`background-image: url(src/assets/HeroSection.jpg);`}>
+  <!-- Capa negra con opacidad -->
+  <div class="absolute inset-0 bg-black opacity-20"></div>
+
+    
 </section>
