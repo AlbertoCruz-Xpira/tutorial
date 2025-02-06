@@ -1,0 +1,62 @@
+---
+// import { IconSearch, IconFilter } from '@tabler/icons-react';
+
+let isFiltersOpen = false;
+
+function toggleFilters() {
+  isFiltersOpen = !isFiltersOpen;
+}
+---
+
+<div class="relative z-10 flex flex-col items-center justify-center h-full text-center text-white px-6">
+  <h1 class="text-4xl md:text-6xl font-extrabold">
+    Busca un médico cerca de ti
+  </h1>
+
+  <!-- Input de búsqueda -->
+  <div class="relative mt-8 flex items-center w-full max-w-lg">
+    <input
+      type="text"
+      placeholder="Introduce una especialidad, nombre o ubicación"
+      class="w-full bg-white text-gray-900 rounded-full px-4 py-3 pr-16 shadow-lg focus:outline-none"
+    />
+    
+    <!-- Botón de búsqueda -->
+    <button type="submit" class="absolute right-12 bg-blue-600 hover:bg-blue-700 text-white p-3 rounded-full transition duration-300">
+      <!-- <IconSearch size={24} /> -->
+       B
+    </button>
+
+    <!-- Botón de filtros -->
+    <button type="button" class="absolute right-2 bg-gray-200 hover:bg-gray-300 p-3 rounded-full transition duration-300" onClick={toggleFilters}>
+      <!-- <IconFilter size={24} /> -->
+       F
+    </button>
+  </div>
+
+  <!-- Filtros desplegables -->
+  {isFiltersOpen && (
+    <div class="absolute top-full mt-2 w-full max-w-lg bg-white shadow-lg rounded-lg p-4">
+      <h3 class="text-lg font-semibold text-gray-900">Filtros</h3>
+      <div class="mt-2 space-y-2">
+        <label class="block text-gray-700">
+          <span>Especialidad:</span>
+          <select class="w-full mt-1 p-2 border border-gray-300 rounded-md">
+            <option>Cardiología</option>
+            <option>Neurología</option>
+            <option>Oftalmología</option>
+          </select>
+        </label>
+
+        <label class="block text-gray-700">
+          <span>Ubicación:</span>
+          <input type="text" class="w-full mt-1 p-2 border border-gray-300 rounded-md" placeholder="Introduce una ciudad" />
+        </label>
+
+        <button class="w-full bg-blue-600 hover:bg-blue-700 text-white py-2 rounded-md">
+          Aplicar filtros
+        </button>
+      </div>
+    </div>
+  )}
+</div>
