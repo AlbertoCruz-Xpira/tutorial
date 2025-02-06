@@ -4,7 +4,6 @@ import Footer from '../components/Footer.astro';
 import '../styles/global.css';
 const { pageTitle } = Astro.props;
 
-const skillColor = "navy";
 const fontWeight = "bold";
 const textCase = "uppercase";
 
@@ -27,7 +26,7 @@ import "../styles/global.css";
     
     <title>{pageTitle}</title>
 
-    <style define:vars={{skillColor, fontWeight, textCase}}>
+    <style define:vars={{fontWeight, textCase}}>
     h1 {
         color: black;
         font-size: 1.5rem;
