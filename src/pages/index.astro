@@ -1,9 +1,15 @@
 ---
+import Banner from '../components/Banner.astro';
 import Hero from '../components/Hero.astro';
 import BaseLayout from '../layouts/BaseLayout.astro';
 ---
 <BaseLayout>
-  <Hero></Hero>
+  <Hero imageSrc ='src/assets/HeroSection.jpg';></Hero>
+  <Banner 
+    imageSrc="/src/assets/chica-con-movil.jpg" 
+    title="Accede a tu área asegurado" 
+    subtitle="Realiza consultas y gestiona tus citas en el área asegurado." 
+  />
 </BaseLayout>
 
 

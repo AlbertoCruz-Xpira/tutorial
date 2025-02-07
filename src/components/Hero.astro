@@ -4,11 +4,11 @@ import MedicalSearch from './MedicalSearch.astro';
 export const title = "Título de la sección";
 export const content = "Este es el contenido de la sección.";
 
-const bkgImg = 'src/assets/HeroSection.jpg';
+const {imageSrc} = Astro.props;
 ---
 
 <section class="relative w-full h-screen bg-cover bg-center bg-no-repeat"
-style={`background-image: url(${bkgImg});`}>
+style={`background-image: url(${imageSrc});`}>
   <!-- Capa negra con opacidad -->
   <div class="absolute inset-0 bg-black opacity-20"></div>
     <MedicalSearch></MedicalSearch>

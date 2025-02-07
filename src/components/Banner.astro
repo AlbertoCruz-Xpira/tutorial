@@ -1,0 +1,28 @@
+---
+const { imageSrc, title, subtitle, link } = Astro.props;
+---
+
+<div class="grid grid-cols-2 items-center lg:gap-10 bg-[#F2F4F8] rounded-xl max-w-5xl mx-auto">
+  <!-- Imagen a la izquierda que sobresale 35px por arriba y abajo -->
+  <img src={imageSrc} alt="Banner Image"
+  class="w-full rounded-[50px] -mt-12 -mb-12 z-100 max-w-100" >
+  
+  <div class="grid lg:grid-cols-2 grid-cols-1 px-6 lg:px-0 py-6 lg:py-0 gap-6">
+    <!-- Contenido en el centro -->
+    <div class="text-left lg:col-span-1">
+        <h2 class="text-[1rem] font-bold text-gray-800">{title}</h2>
+        <p class="text-[0.85rem] text-gray-600 mt-1">{subtitle}</p>
+    </div>
+
+    <!-- Botón a la derecha -->
+    <div class="flex justify-center">
+        <a href={link} class="
+        bg-[#009494] text-white rounded-full font-bold
+        text-[0.75rem] md:text-[0.93rem] lg:text-[1rem] 
+        w-20 h-20 md:w-25 md:h-25 lg:w-30 lg:h-30
+        flex items-center justify-center tracking-widest p-2 cursor-pointer
+        transform transition-all duration-300 hover:scale-110 hover:bg-[#007e7e]">
+            ACCEDER
+        </a>
+    </div>
+</div>
