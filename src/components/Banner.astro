@@ -1,5 +1,8 @@
 ---
-const { imageSrc, title, subtitle, link } = Astro.props;
+import Button from "./Button.astro";
+
+const { bannerData } = Astro.props;
+const { imageSrc, title, subtitle, buttonText, buttonLink } = bannerData;
 ---
 
 <div class="grid grid-cols-2 items-center lg:gap-10 bg-[#F2F4F8] rounded-xl max-w-5xl mx-auto">
@@ -14,15 +17,5 @@ const { imageSrc, title, subtitle, link } = Astro.props;
         <p class="text-[0.85rem] text-gray-600 mt-1">{subtitle}</p>
     </div>
 
-    <!-- Botón a la derecha -->
-    <div class="flex justify-center">
-        <a href={link} class="
-        bg-[#009494] text-white rounded-full font-bold
-        text-[0.75rem] md:text-[0.93rem] lg:text-[1rem] 
-        w-20 h-20 md:w-25 md:h-25 lg:w-30 lg:h-30
-        flex items-center justify-center tracking-widest p-2 cursor-pointer
-        transform transition-all duration-300 hover:scale-110 hover:bg-[#007e7e]">
-            ACCEDER
-        </a>
-    </div>
+    <Button buttonText={buttonText} buttonLink={buttonLink}></Button>
 </div>

@@ -1,1 +1,0 @@
-https://docs.astro.build/es/tutorial/5-astro-api/2/

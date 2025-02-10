@@ -1,15 +1,47 @@
 ---
-import Banner from '../components/Banner.astro';
-import Hero from '../components/Hero.astro';
 import BaseLayout from '../layouts/BaseLayout.astro';
+import Hero from '../components/Hero.astro';
+import Banner from '../components/Banner.astro';
+import Carousel from "../components/Carousel.astro";
+import CarouselSlide from '../components/CarouselSlide.astro';
+
+const bannerData = {
+  imageSrc: "/src/assets/chica-con-movil.jpg",
+  title: "Accede a tu área asegurado" ,
+  subtitle: "Realiza consultas y gestiona tus citas en el área asegurado.",
+  buttonText: "Acceder",
+  buttonLink: "/"
+}
+
+const slides = [
+  {
+    imageSrc: "/src/assets/fisioterapia.jpg",
+    title: "Conoce nuestros servicios",
+    content: "Servicios avanzados de Fisioterapia.",
+    buttonText: "Más información",
+    buttonLink: "/descubrir"
+  },
+  {
+    imageSrc: "/src/assets/oftalmología.jpg",
+    title: "Conéctate con expertos",
+    content: "Accede a una comunidad de profesionales dispuestos a ayudarte.",
+    buttonText: "Conectar ahora",
+    buttonLink: "/conectar"
+  },
+  {
+    imageSrc: "/src/assets/gimnasio.jpg",
+    title: "Tu éxito empieza aquí",
+    content: "Aprende, crece y alcanza tus metas con nosotros.",
+    buttonText: "Empezar",
+    buttonLink: "/empezar"
+  }
+];
 ---
 <BaseLayout>
   <Hero imageSrc ='src/assets/HeroSection.jpg';></Hero>
-  <Banner 
-    imageSrc="/src/assets/chica-con-movil.jpg" 
-    title="Accede a tu área asegurado" 
-    subtitle="Realiza consultas y gestiona tus citas en el área asegurado." 
-  />
+  <Banner bannerData={bannerData} />
+  <Carousel slides={slides}/>
+
 </BaseLayout>
 
 

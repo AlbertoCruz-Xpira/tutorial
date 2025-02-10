@@ -1,0 +1,51 @@
+---
+import 'keen-slider/keen-slider.min.css';
+import CarouselSlide from "./CarouselSlide.astro";
+const { slides } = Astro.props;
+---
+
+<div id="carousel" class="keen-slider relative w-full h-full mx-auto overflow-hidden">
+
+  <!-- Contenedor de Imágenes -->
+  {slides.map((slide: any) => (
+    <div class="keen-slider__slide flex">
+        <CarouselSlide slide={slide}></CarouselSlide>
+    </div>
+  ))}
+</div>
+
+<script>
+  let index = 0;
+  const carousel = document.getElementById("carousel");
+  const prevBtn = document.getElementById("prev");
+  const nextBtn = document.getElementById("next");
+
+  if (carousel && prevBtn && nextBtn) {
+    const totalSlides = carousel.children.length;
+
+    prevBtn.addEventListener("click", () => {
+      index = (index > 0) ? index - 1 : totalSlides - 1;
+      updateCarousel();
+    });
+
+    nextBtn.addEventListener("click", () => {
+      index = (index < totalSlides - 1) ? index + 1 : 0;
+      updateCarousel();
+    });
+
+    function updateCarousel() {
+      if (carousel)
+      carousel.style.transform = `translateX(-${index * 100}%)`;
+    }
+  } else {
+    console.error("Error: No se encontraron los elementos del carrusel.");
+  }
+
+  import KeenSlider from "keen-slider";
+
+  const slider = new KeenSlider("#carousel", {
+    slidesPerView: 1.25,
+    spacing: 30,
+  });
+</script>
+

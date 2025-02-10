@@ -1,0 +1,17 @@
+---
+const { buttonText, buttonLink } = Astro.props;
+---
+
+<section class="flex justify-end">
+    <a href={buttonLink} aria-label={buttonText} class="
+    bg-[#009494] text-white rounded-full font-bold uppercase
+    text-[0.75rem] md:text-[0.93rem] lg:text-[1rem]  
+    
+    flex items-center justify-center tracking-widest p-2 cursor-pointer
+    transform transition-all duration-300 hover:scale-110 hover:bg-[#007e7e]
+    inline-flex justify-center items-center aspect-square rounded-full
+    text-white text-[1rem] p-[0.9375rem] cursor-pointer whitespace-pre-wrap break-words
+    ">{buttonText}</a>
+</section>
+
+<!-- w-20 h-20 md:w-24 md:h-24 lg:w-28 lg:h-28   -->
