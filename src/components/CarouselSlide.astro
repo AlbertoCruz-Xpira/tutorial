@@ -5,14 +5,17 @@ const { slide } = Astro.props;
 const { imageSrc, title, content, buttonText, buttonLink } = slide;
 ---
 
-<div class="relative w-full h-screen flex justify-end items-center justify-center bg-cover bg-center bg-no-repeat p-[3.125rem] md:p-[1.5625rem] p-[0.9375rem]" 
+<div class="relative w-full h-screen 
+    flex justify-end items-center justify-center
+    bg-cover bg-center bg-no-repeat
+    p-[3.125rem] md:p-[1.5625rem] p-[0.9375rem]" 
     style={`background-image: url(${imageSrc});`}>
 
     <!-- Capa oscura para mejorar contraste -->
     <div class="absolute inset-0 bg-black opacity-30"></div>
 
-    <div class="relative z-10 text-center text-white max-w-lg">
-        <section class="text-right mb-[4rem] md:mb-[3rem]">
+    <div class="relative z-10 text-white max-w-lg">
+        <section class="text-right mr-[2.5rem] md:mr-[2.5rem] sm:mr-[0rem]">
             <h2 class="text-3xl font-bold">{title}</h2>
             <p class="text-lg">{content}</p>
         </section>

@@ -3,7 +3,6 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import Hero from '../components/Hero.astro';
 import Banner from '../components/Banner.astro';
 import Carousel from "../components/Carousel.astro";
-import CarouselSlide from '../components/CarouselSlide.astro';
 
 const bannerData = {
   imageSrc: "/src/assets/chica-con-movil.jpg",
@@ -37,11 +36,9 @@ const slides = [
   }
 ];
 ---
+
 <BaseLayout>
   <Hero imageSrc ='src/assets/HeroSection.jpg';></Hero>
   <Banner bannerData={bannerData} />
   <Carousel slides={slides}/>
-
 </BaseLayout>
-
-
