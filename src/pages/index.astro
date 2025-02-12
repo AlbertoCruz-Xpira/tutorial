@@ -1,20 +1,20 @@
 ---
-import BaseLayout from '../layouts/BaseLayout.astro';
-import Hero from '../components/Hero.astro';
-import Banner from '../components/Banner.astro';
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Hero from "../components/Hero.astro";
+import Banner from "../components/Banner.astro";
 import Carousel from "../components/Carousel.astro";
-import BannerOcaso from '../components/BannerOcaso.astro';
-import InfoBanner from '../components/InfoBanner.astro';
-import Promotions from '../components/Promotions.astro';
-import PostsResume from '../components/PostsResume.astro';
+import BannerOcaso from "../components/BannerOcaso.astro";
+import InfoBanner from "../components/InfoBanner.astro";
+import Promotions from "../components/Promotions.astro";
+import PostsResume from "../components/PostsResume.astro";
 
 const bannerData = {
   imageSrc: "/src/assets/chica-con-movil.jpg",
-  title: "Accede a tu área asegurado" ,
+  title: "Accede a tu área asegurado",
   subtitle: "Realiza consultas y gestiona tus citas en el área asegurado.",
   buttonText: "Acceder",
-  buttonLink: "/"
-}
+  buttonLink: "/",
+};
 
 const slides = [
   {
@@ -22,91 +22,102 @@ const slides = [
     title: "Conoce nuestros servicios",
     content: "Servicios avanzados de Fisioterapia.",
     buttonText: "Más información",
-    buttonLink: "/descubrir"
+    buttonLink: "/descubrir",
   },
   {
     imageSrc: "/src/assets/oftalmología.jpg",
     title: "Conéctate con expertos",
     content: "Accede a una comunidad de profesionales dispuestos a ayudarte.",
     buttonText: "Conectar ahora",
-    buttonLink: "/conectar"
+    buttonLink: "/conectar",
   },
   {
     imageSrc: "/src/assets/gimnasio.jpg",
     title: "Tu éxito empieza aquí",
     content: "Aprende, crece y alcanza tus metas con nosotros.",
     buttonText: "Empezar",
-    buttonLink: "/empezar"
-  }
+    buttonLink: "/empezar",
+  },
 ];
 
 const bannerOcasoData = {
-  imageSrc: "/src/assets/chica-con-movil.jpg",
-  heading: "Legálitas Salud es un servicio para los asegurados de OCASO SEGUROS" ,
+  imageSrc: "/src/assets/ocaso.webp",
+  heading:
+    "Legálitas Salud es un servicio para los asegurados de OCASO SEGUROS",
   heading2: "¿Aún no eres Asegurado?",
   buttonText: "INFÓRMATE AQUÍ",
-  buttonLink: "/"
-}
+  buttonLink: "/",
+};
 
 const infoBannerData = {
-  imageSrc: "/src/assets/chica-con-movil.jpg",
-  title: "Legálitas Salud es un servicio para los asegurados de OCASO SEGUROS" ,
+  imageSrc: "/src/assets/familia.jpg",
+  title: "Legálitas Salud es un servicio para los asegurados de OCASO SEGUROS",
   content: "¿Aún no eres Asegurado?",
-  buttons: [{
-    heading: "Orientación médica profesional",
-    buttonText: "más información",
-    buttonLink: "/"
-  },{
-    heading: "Consulta de especialistas",
-    buttonText: "más información",
-    buttonLink: "/"
-  }]
-}
+  buttons: [
+    {
+      heading: "Orientación médica profesional",
+      buttonText: "más información",
+      buttonLink: "/",
+    },
+    {
+      heading: "Consulta de especialistas",
+      buttonText: "más información",
+      buttonLink: "/",
+    },
+  ],
+};
 
 const promotionsData = {
   title: "Promociones destacadas",
-  promotions: [{
-    heading: "Presbicia",
-    imageSrc: "/src/assets/presbicia.jpg",
-    buttonText: "más información",
-    buttonLink: "/"
-  },{
-    heading: "Cataratas",
-    imageSrc: "/src/assets/cataratas.jpg",
-    buttonText: "más información",
-    buttonLink: "/"
-  }, {
-    heading: "Retina",
-    imageSrc: "/src/assets/retina.jpg",
-    buttonText: "más información",
-    buttonLink: "/"
-  }]
-}
+  promotions: [
+    {
+      heading: "Presbicia",
+      imageSrc: "/src/assets/promociones/Presbicia.jpg",
+      buttonText: "más información",
+      buttonLink: "/",
+    },
+    {
+      heading: "Cataratas",
+      imageSrc: "/src/assets/promociones/Cataratas.jpg",
+      buttonText: "más información",
+      buttonLink: "/",
+    },
+    {
+      heading: "Retina",
+      imageSrc: "/src/assets/promociones/Retina.jpg",
+      buttonText: "más información",
+      buttonLink: "/",
+    },
+  ],
+};
 
 const postsResumeData = {
   title: "Publicaciones",
-  posts: [{
-    heading: "La vida y la edad",
-    category: "Salud",
-    description: "Lorem ipsum",
-    imageSrc: "/src/assets/presbicia.jpg",
-    buttonText: "Leer más",
-    buttonLink: "/"
-  },{
-    heading: "El cuidado de la piel en verano",
-    category: "Salud",
-    description: "Lorem ipsum",
-    imageSrc: "/src/assets/presbicia.jpg",
-    buttonText: "Leer más",
-    buttonLink: "/"
-  }]
-}
+  posts: [
+    {
+      heading: "La vida y la edad",
+      category: "Salud",
+      description: "Lorem ipsum",
+      imageSrc: "/src/assets/posts/De-que-se-ocupa-un-oftalmologo.jpg",
+      buttonText: "Leer más",
+      buttonLink: "/",
+    },
+    {
+      heading: "El cuidado de la piel en verano",
+      category: "Salud",
+      description: "Lorem ipsum",
+      imageSrc: "/src/assets/posts/El-cuidado-de-la-piel-en-verano.jpg",
+      buttonText: "Leer más",
+      buttonLink: "/",
+    },
+  ],
+};
 ---
 
 <BaseLayout>
-  <Hero imageSrc ='src/assets/HeroSection.jpg';></Hero>
+  <Hero imageSrc="src/assets/HeroSection.jpg" ; />
   <Banner bannerData={bannerData} />
-  <Carousel slides={slides}/>
+  <Carousel slides={slides} />
   <BannerOcaso bannerOcasoData={bannerOcasoData} />
   <InfoBanner infoBannerData={infoBannerData} />
   <Promotions promotionsData={promotionsData} />

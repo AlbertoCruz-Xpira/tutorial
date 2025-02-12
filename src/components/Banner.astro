@@ -5,7 +5,8 @@ const { bannerData } = Astro.props;
 const { imageSrc, title, subtitle, buttonText, buttonLink } = bannerData;
 ---
 
-<div class="grid grid-cols-2 items-center lg:gap-10 bg-[#F2F4F8] rounded-xl max-w-5xl mx-auto">
+<section class="grid grid-cols-2 items-center lg:gap-10 bg-[#F2F4F8] rounded-xl max-w-5xl mx-auto"
+  data-component="Banner">
   <!-- Imagen a la izquierda que sobresale 35px por arriba y abajo -->
   <img src={imageSrc} alt="Banner Image"
   class="w-full rounded-[50px] -mt-12 -mb-12 z-100 max-w-100" >
@@ -18,4 +19,4 @@ const { imageSrc, title, subtitle, buttonText, buttonLink } = bannerData;
     </div>
 
     <Button buttonText={buttonText} buttonLink={buttonLink}></Button>
-</div>
+</section>
