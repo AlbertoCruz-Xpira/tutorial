@@ -1,0 +1,22 @@
+---
+import Button from "./Button.astro";
+
+const { promotionsData } = Astro.props;
+const { title, promotions } = promotionsData;
+---
+
+<section class="bg-[#009494] p-6">
+
+  <div class="lg:col-span-1">
+    <h2 class="text-[1rem] font-bold text-white">{title}</h2>
+  </div>
+  
+  <div class="flex gap-6">
+    {promotions.map((promotion:any) => (
+      <div class="text-left lg:col-span-1" style="background-image: url({post.imageSrc}); background-size: cover;">
+          <Button buttonText={promotion.buttonText} buttonLink={promotion.buttonLink}></Button>
+      </div>
+      <p class="text-sm">{promotion.heading}</p>
+    ))}
+  </div>
+</section>

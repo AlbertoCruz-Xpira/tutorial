@@ -1,0 +1,24 @@
+---
+import Button from "./Button.astro";
+
+const { postsResumeData } = Astro.props;
+const { title, posts } = postsResumeData;
+---
+
+<section class="bg-[#009494] p-6">
+
+  <div class="lg:col-span-1">
+    <h2 class="text-[1rem] font-bold text-white">{title}</h2>
+  </div>
+  
+  <div class="flex gap-6">
+    {posts.map((post:any) => (
+      <div class="text-left lg:col-span-1" style="background-image: url({post.imageSrc}); background-size: cover;">
+          <Button buttonText={post.buttonText} buttonLink={post.buttonLink}></Button>
+      </div>
+      <p class="text-sm">{post.heading}</p>
+      <p class="text-sm">{post.category}</p>
+      <p class="text-sm">{post.description}</p>
+    ))}
+  </div>
+</section>

@@ -3,6 +3,10 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import Hero from '../components/Hero.astro';
 import Banner from '../components/Banner.astro';
 import Carousel from "../components/Carousel.astro";
+import BannerOcaso from '../components/BannerOcaso.astro';
+import InfoBanner from '../components/InfoBanner.astro';
+import Promotions from '../components/Promotions.astro';
+import PostsResume from '../components/PostsResume.astro';
 
 const bannerData = {
   imageSrc: "/src/assets/chica-con-movil.jpg",
@@ -35,10 +39,76 @@ const slides = [
     buttonLink: "/empezar"
   }
 ];
+
+const bannerOcasoData = {
+  imageSrc: "/src/assets/chica-con-movil.jpg",
+  heading: "Legálitas Salud es un servicio para los asegurados de OCASO SEGUROS" ,
+  heading2: "¿Aún no eres Asegurado?",
+  buttonText: "INFÓRMATE AQUÍ",
+  buttonLink: "/"
+}
+
+const infoBannerData = {
+  imageSrc: "/src/assets/chica-con-movil.jpg",
+  title: "Legálitas Salud es un servicio para los asegurados de OCASO SEGUROS" ,
+  content: "¿Aún no eres Asegurado?",
+  buttons: [{
+    heading: "Orientación médica profesional",
+    buttonText: "más información",
+    buttonLink: "/"
+  },{
+    heading: "Consulta de especialistas",
+    buttonText: "más información",
+    buttonLink: "/"
+  }]
+}
+
+const promotionsData = {
+  title: "Promociones destacadas",
+  promotions: [{
+    heading: "Presbicia",
+    imageSrc: "/src/assets/presbicia.jpg",
+    buttonText: "más información",
+    buttonLink: "/"
+  },{
+    heading: "Cataratas",
+    imageSrc: "/src/assets/cataratas.jpg",
+    buttonText: "más información",
+    buttonLink: "/"
+  }, {
+    heading: "Retina",
+    imageSrc: "/src/assets/retina.jpg",
+    buttonText: "más información",
+    buttonLink: "/"
+  }]
+}
+
+const postsResumeData = {
+  title: "Publicaciones",
+  posts: [{
+    heading: "La vida y la edad",
+    category: "Salud",
+    description: "Lorem ipsum",
+    imageSrc: "/src/assets/presbicia.jpg",
+    buttonText: "Leer más",
+    buttonLink: "/"
+  },{
+    heading: "El cuidado de la piel en verano",
+    category: "Salud",
+    description: "Lorem ipsum",
+    imageSrc: "/src/assets/presbicia.jpg",
+    buttonText: "Leer más",
+    buttonLink: "/"
+  }]
+}
 ---
 
 <BaseLayout>
   <Hero imageSrc ='src/assets/HeroSection.jpg';></Hero>
   <Banner bannerData={bannerData} />
   <Carousel slides={slides}/>
+  <BannerOcaso bannerOcasoData={bannerOcasoData} />
+  <InfoBanner infoBannerData={infoBannerData} />
+  <Promotions promotionsData={promotionsData} />
+  <PostsResume postsResumeData={postsResumeData} />
 </BaseLayout>
