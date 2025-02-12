@@ -3,17 +3,21 @@ const { bannerOcasoData } = Astro.props;
 const { imageSrc, heading, heading2, buttonText, buttonLink } = bannerOcasoData;
 ---
 
-<section class="bg-[#003362] p-6">
-  
-  <h2 class="text-lg font-bold text-white">{heading}</h2>
-  
-  <div class="grid lg:grid-cols-2 grid-cols-1">
-
+<section class="bg-[#003362] p-10" data-component="BannerOcaso">
+  <!-- fila -->
+  <div class="grid grid-cols-2 lg:gap-10 items-center max-w-5xl mx-auto">
     <!--columna izquierda -->
-    <div class="text-left">
-      <div class="bg-white text-black p-4 mt-4 rounded-lg">
-        <p class="text-sm">{heading2}</p>
-        <a href={buttonLink} class="block bg-yellow-400 text-center text-black font-bold py-2 px-4 mt-4 rounded-lg">
+    <div
+      class="text-left px-6 lg:px-0 py-6 lg:py-0 gap-6"
+      style="border: 1px solid red"
+    >
+      <h2 class="text-lg font-bold text-white mb-5">{heading}</h2>
+      <div class="bg-white text-black p-4 mt-4 grid-col-1">
+        <p class="text-[1.3rem] font-bold text-center">{heading2}</p>
+        <a
+          href={buttonLink}
+          class="block bg-yellow-400 text-center text-black font-bold py-2 px-4 mt-4 rounded-lg"
+        >
           {buttonText}
         </a>
       </div>
@@ -21,9 +25,11 @@ const { imageSrc, heading, heading2, buttonText, buttonLink } = bannerOcasoData;
 
     <!--columna derecha -->
     <div>
-      <img src={imageSrc} alt="Ocaso Banner Image"
-      class="w-full rounded-[50px] -mt-12 -mb-12 z-100 max-w-100" >
+      <img
+        src={imageSrc}
+        alt="Ocaso Banner Image"
+        class="w-full rounded-[50px] -mt-12 -mb-12 z-100 max-w-100 z-100"
+      />
     </div>
-
   </div>
 </section>
