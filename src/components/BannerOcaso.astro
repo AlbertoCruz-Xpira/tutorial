@@ -9,14 +9,19 @@ const { imageSrc, heading, heading2, buttonText, buttonLink } = bannerOcasoData;
     <!--columna izquierda -->
     <div
       class="text-left px-6 lg:px-0 py-6 lg:py-0 gap-6"
-      style="border: 1px solid red"
     >
       <h2 class="text-lg font-bold text-white mb-5">{heading}</h2>
-      <div class="bg-white text-black p-4 mt-4 grid-col-1">
-        <p class="text-[1.3rem] font-bold text-center">{heading2}</p>
+
+      <!-- ventana -->
+      <div class="bg-white text-black p-10 mt-4 grid-col-1 rounded-lg">
+        <p class="text-[1.3rem] font-bold text-center family-Lato">
+          {heading2}
+        </p>
         <a
           href={buttonLink}
-          class="block bg-yellow-400 text-center text-black font-bold py-2 px-4 mt-4 rounded-lg"
+          class="block bg-yellow-400 py-4 px-6 mt-4 rounded-lg
+          family-Lato text-sm text-center text-black font-bold
+          transform transition-all duration-300 hover:scale-110 hover:bg-[#F7B710]"
         >
           {buttonText}
         </a>

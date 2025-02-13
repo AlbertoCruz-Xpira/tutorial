@@ -1,0 +1,47 @@
+---
+const apiUrl =
+  "http://10.230.1.100:3000/api/banners?where[title][equals]=Example";
+const apiKey = "aa8d5dc7-6a44-4f8e-ab9f-6637bd4cc8c9";
+
+let banners = [];
+let error = null;
+
+try {
+  const response = await fetch(apiUrl, {
+    headers: { Authorization: `users ${apiKey}` },
+  });
+
+  if (!response.ok) {
+    throw new Error("Error al obtener los banners");
+  }
+
+  const data = await response.json();
+  banners = data.docs;
+} catch (err: any) {
+  error = err.message;
+}
+---
+
+
+BANNER API
+<div class="p-6 max-w-5xl mx-auto">
+  {error && <p class="text-red-500">{error}</p>}
+  <ul>
+    {
+      banners.map((banner: any) => (
+        <li class="bg-gray-100 p-4 mb-2 rounded-lg">
+          <img
+            src={banner.image.thumbnailURL}
+            alt={banner.image.alt}
+            class="w-40 h-30 rounded-lg"
+          />
+          <h2 class="text-lg font-bold">{banner.title}</h2>
+          <p>{banner.subtitle}</p>
+          <button class="bg-blue-500 text-white py-2 px-4 mt-2 rounded">
+            {banner.buttonText}
+          </button>
+        </li>
+      ))
+    }
+  </ul>
+</div>

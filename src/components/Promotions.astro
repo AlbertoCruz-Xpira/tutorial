@@ -5,19 +5,28 @@ const { promotionsData } = Astro.props;
 const { title, promotions } = promotionsData;
 ---
 
-<section class="grid grid-cols-2 items-center lg:gap-10 bg-[#FFF] rounded-xl max-w-5xl mx-auto"
-  data-component="Promotions">
-
-  <div class="lg:col-span-1">
-    <h2 class="text-[1rem] font-bold">{title}</h2>
+<section class="bg-[#F2F4F8] p-10" data-component="Promotions">
+  <div class="items-center max-w-5xl mx-auto mb-10">
+    <h2 class="text-[1.2rem] font-bold">{title}</h2>
   </div>
-  
-  <div class="flex gap-6">
-    {promotions.map((promotion:any) => (
-      <div class="text-left lg:col-span-1" style={`background-image: url(${promotion.imageSrc}); , background-size: cover;`}>
-          <Button buttonText={promotion.buttonText} buttonLink={promotion.buttonLink}></Button>
-      </div>
-      <p class="text-sm">{promotion.heading}</p>
-    ))}
+
+  <!-- fila -->
+  <div class="max-w-5xl mx-auto">
+    <div class="grid lg:grid-cols-3 grid-cols-1 lg:gap-10 items-center">
+      {
+        promotions.map((promotion: any) => (
+          <div
+            class="text-left lg:col-span-1"
+            style={`background-image: url(${promotion.imageSrc}); , background-size: cover;`}
+          >
+            <p class="text-[1.2] text-white">{promotion.heading}</p>
+            <Button
+              buttonText={promotion.buttonText}
+              buttonLink={promotion.buttonLink}
+            />
+          </div>
+        ))
+      }
+    </div>
   </div>
 </section>
