@@ -3,55 +3,72 @@ import FooterColumn from "./FooterColumn.astro";
 import Social from "./Social.astro";
 ---
 
-<footer class="background-5 flex">
-  <FooterColumn heading="Redes sociales">
-    <div class="flex">
-      <Social platform="twitter" username="astrodotbuild" />
-      <Social platform="github" username="withastro" />
-      <Social platform="youtube" username="astrodotbuild" />
-    </div>
-  </FooterColumn>
-  <FooterColumn heading="Productos">
-    <div class="flex">
-      <ul>
-        <li><a href="">Legálitas Esencial</a></li>
-        <li><a href="">Legálitas Plus</a></li>
-        <li><a href="">Legálitas Premium</a></li>
-        <li><a href="">Legálitas Esencial Premium</a></li>
-        <li><a href="">Legálitas Plus Negocio</a></li>
-        <li><a href="">Legálitas Premium Negocio</a></li>
-      </ul>
-    </div>
-  </FooterColumn>
-  <FooterColumn heading="Conócenos">
-    <div class="flex">
-      <ul>
-        <li><a href="">Sobre Nosotros</a></li>
-        <li><a href="">Trabaja con nosotros</a></li>
-        <li><a href="">Fundación</a></li>
-        <li><a href="">Seguros viaje</a></li>
-        <li><a href="">Legálitas lab</a></li>
-      </ul>
-    </div>
-  </FooterColumn>
-  <FooterColumn heading="Contacta">
-    <div class="flex">
-      <ul>
-        <li><a href="">Clientes</a></li>
-        <li><a href="">Hazte cliente</a></li>
-      </ul>
-    </div>
-  </FooterColumn>
-  <FooterColumn heading="Certificaciones">
-    <div class="flex">
-      <ul>
-        <li>Imagen</li>
-        <li>Legálitas Seguros, informe situación financiera y solvencia:</li>
-        <li>2016 | 2017 | 2018 | 2019 | 2020</li>
-      </ul>
-    </div>
-  </FooterColumn>
+<footer class="background-5">
+  <div
+    class="grid lg:grid-cols-5 grid-cols-1 lg:gap-10 items-top max-w-5xl mx-auto"
+  >
+    <FooterColumn heading="Redes sociales">
+      <div class="flex">
+        <Social platform="twitter" username="astrodotbuild" />
+        <Social platform="github" username="withastro" />
+        <Social platform="youtube" username="astrodotbuild" />
+      </div>
+    </FooterColumn>
+    <FooterColumn heading="Productos">
+      <div class="flex">
+        <ul>
+          <li><a href="">Legálitas Esencial</a></li>
+          <li><a href="">Legálitas Plus</a></li>
+          <li><a href="">Legálitas Premium</a></li>
+          <li><a href="">Legálitas Esencial Premium</a></li>
+          <li><a href="">Legálitas Plus Negocio</a></li>
+          <li><a href="">Legálitas Premium Negocio</a></li>
+        </ul>
+      </div>
+    </FooterColumn>
+    <FooterColumn heading="Conócenos">
+      <div class="flex">
+        <ul>
+          <li><a href="">Sobre Nosotros</a></li>
+          <li><a href="">Trabaja con nosotros</a></li>
+          <li><a href="">Fundación</a></li>
+          <li><a href="">Seguros viaje</a></li>
+          <li><a href="">Legálitas lab</a></li>
+        </ul>
+      </div>
+    </FooterColumn>
+    <FooterColumn heading="Contacta">
+      <div class="flex">
+        <ul>
+          <li><a href="">Clientes</a></li>
+          <li><a href="">Hazte cliente</a></li>
+        </ul>
+      </div>
+    </FooterColumn>
+    <FooterColumn heading="Certificaciones">
+      <div class="flex">
+        <ul>
+          <li>Imagen</li>
+          <li>Legálitas Seguros, informe situación financiera y solvencia:</li>
+          <li>2016 | 2017 | 2018 | 2019 | 2020</li>
+        </ul>
+      </div>
+    </FooterColumn>
+  </div>
 </footer>
+<section class="bg-[#001313]" id="copyright-footer">
+  <div
+    class="grid lg:grid-cols-2 grid-cols-1 lg:gap-10 items-top max-w-5xl mx-auto
+    p-3" >
+    <div class="legal-links text-[0.7rem] text-white">
+      Política de Cookies | Aviso Legal Política de privacidad | Canal ético |
+      Información previa | Política de seguridad de la información y continuidad
+      del negocio | Mapa-web
+    </div>
+    <div class="copyright text-[0.7rem] text-white">
+      Todos los derechos reservados | Copyright Legálitas Salud © 2025
+    </div>
+</section>
 
 <style>
   footer {
@@ -59,12 +76,17 @@ import Social from "./Social.astro";
   }
   .background-5 {
     padding: 65px 25px 110px;
-    background: rgb(2,149,149);
-    background: linear-gradient(0deg, rgba(2,149,149,1) 0%, rgba(0,100,100,1) 100%);
+    background: rgb(2, 149, 149);
+    background: linear-gradient(
+      0deg,
+      rgba(2, 149, 149, 1) 0%,
+      rgba(0, 100, 100, 1) 100%
+    );
   }
-  a, li {
+  a,
+  li {
     color: white;
-    font-size: .8rem;
+    font-size: 0.8rem;
     font-weight: 400;
     text-decoration: none;
   }
@@ -72,5 +94,5 @@ import Social from "./Social.astro";
   li {
     padding-top: 10px;
     padding-bottom: 5px;
-    }
+  }
 </style>

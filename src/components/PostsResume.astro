@@ -6,23 +6,34 @@ const { title, posts } = postsResumeData;
 ---
 
 <section class="bg-[#FFF] p-10" data-component="PostsResume">
-
   <div class="items-center max-w-5xl mx-auto mb-10">
     <h2 class="text-[1.2rem] font-bold">{title}</h2>
   </div>
 
   <!-- fila -->
-  <div class="max-w-5xl mx-auto">
-  
-      <div class="grid lg:grid-cols-2 grid-cols-1 lg:gap-10 items-center ">
-        {posts.map((post:any) => (
-          <div class="text-left lg:col-span-1" style={`background-image: url(${post.imageSrc}); , background-size: cover;`}>
-            <Button buttonText={post.buttonText} buttonLink={post.buttonLink}></Button>
+  <div class="max-w-5xl mx-auto items-center">
+    <div class="grid lg:grid-cols-2 grid-cols-1 gap-10 items-center">
+      {
+        posts.map((post: any) => (
+          <div class="grid grid-col-1 gap-3">
+            <div
+              class="min-h-[20rem] flex justify-end items-end bg-cover bg-center relative"
+              style={`background-image: url(${post.imageSrc});`}
+            >
+   
+              <div class="absolute inset-0 bg-black opacity-30"></div>
+
+              <Button
+                buttonText={post.buttonText}
+                buttonLink={post.buttonLink}
+              />
+            </div>
+            <p class="text-[1.2rem] font-bold">{post.heading}</p>
+            <p class="text-[1rem]">{post.category}</p>
+            <p class="text-[1rem]">{post.description}</p>
           </div>
-          <p class="text-sm">{post.heading}</p>
-          <p class="text-sm">{post.category}</p>
-          <p class="text-sm">{post.description}</p>
-        ))}
+        ))
+      }
     </div>
   </div>
 </section>
