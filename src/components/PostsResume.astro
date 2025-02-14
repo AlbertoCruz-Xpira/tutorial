@@ -1,5 +1,6 @@
 ---
-import Button from "./Button.astro";
+import Button from "./buttons/Button.astro";
+import SquareButton from "./buttons/SquareButton.astro";
 
 const { postsResumeData } = Astro.props;
 const { title, posts } = postsResumeData;
@@ -20,13 +21,19 @@ const { title, posts } = postsResumeData;
               class="min-h-[20rem] flex justify-end items-end bg-cover bg-center relative"
               style={`background-image: url(${post.imageSrc});`}
             >
-   
-              <div class="absolute inset-0 bg-black opacity-30"></div>
+              <!-- Black layer -->
+              <div class="absolute inset-0 bg-black opacity-10" />
 
-              <Button
+              <SquareButton
                 buttonText={post.buttonText}
                 buttonLink={post.buttonLink}
-              />
+              >
+                <!-- chevron right icon -->
+                <svg class="w-6 h-6 text-white dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m10 16 4-4-4-4"/>
+                </svg>
+              </SquareButton>
+
             </div>
             <p class="text-[1.2rem] font-bold">{post.heading}</p>
             <p class="text-[1rem]">{post.category}</p>

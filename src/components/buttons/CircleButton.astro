@@ -1,21 +1,18 @@
 ---
 const { buttonText, buttonLink } = Astro.props;
-
-/*
-CIRCULO aspect-square rounded-full whitespace-pre-wrap break-words
-*/
 ---
 
 <a
-    href={buttonLink}
-    aria-label={buttonText}
-    class="bg-[#009494] text-white font-bold uppercase
+  href={buttonLink}
+  aria-label={buttonText}
+  class="bg-[#009494] text-white font-bold uppercase
         text-[0.75rem] md:text-[0.93rem] lg:text-[1rem]
         flex items-center justify-center tracking-widest p-2
         transform transition-all duration-300 hover:scale-110 hover:bg-[#007e7e]
         inline-flex justify-center items-center
-        text-white text-[1rem] p-[0.9375rem] cursor-pointer
-        rounded-full"
+        cursor-pointer
+        aspect-square rounded-full w-30"
 >
-    {buttonText}
+  {buttonText}
 </a>
+
