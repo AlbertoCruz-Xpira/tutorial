@@ -17,7 +17,7 @@ const submenuItems = [
   <!-- Menú Servicios con Submenú -->
   <div class="menu-item">
     <a href="#">Servicios</a>
-    <ul class="submenu">
+    <ul class="submenu text-black">
       {submenuItems.map((item) => (
         <li><a href={item.link}>{item.name}</a></li>
       ))}
@@ -32,7 +32,6 @@ const submenuItems = [
 </div>
 
 <style>
- 
   .nav-links {
     background-color: white;
     display: flex;
@@ -60,23 +59,23 @@ const submenuItems = [
   .submenu {
     display: none;
     position: absolute;
+    background: white;
     top: 100%;
     left: 0;
-    background: #444;
     list-style: none;
-    padding: 10px;
+    padding: 0px;
     border-radius: 5px;
     min-width: 200px;
     z-index: 100;
   }
 
   .submenu li {
-    padding: 5px 10px;
   }
 
   .submenu li a {
-    color: white;
+    color: black;
     text-decoration: none;
+    padding: 20px 5px;
   }
 
   .menu-item:hover .submenu {

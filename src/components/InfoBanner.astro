@@ -14,8 +14,8 @@ import logo from "../assets/Logo_Salud_Positivo_RGB.png";
     <!-- columna izquierda -->
     <div class="">
       <div class="text-left lg:col-span-1">
-        <h2 class="font-bold text-[1.2rem] text-white">{title}</h2>
-        <p class="text-[0.85rem] text-white mt-1">{content}</p>
+        <h4 class="font-bold text-[1.2rem] text-white">{title}</h4>
+        <p class="text-[0.85rem] text-white mt-3">{content}</p>
       </div>
 
       <!-- contenedor gris -->
@@ -29,7 +29,7 @@ import logo from "../assets/Logo_Salud_Positivo_RGB.png";
         {
           buttons.map((button: any) => (
             <div class="">
-              <div class=" text-black p-4 mt-4 rounded-[50px]">
+              <div class=" text-black p-4 mt-4 rounded-lg">
                 <p class="text-sm font-bold">{button.heading}</p>
                 <a class="text-sm text-[#0478D4]" href={button.buttonLink}>
                   {button.buttonText}

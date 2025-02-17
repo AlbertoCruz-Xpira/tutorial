@@ -1,5 +1,7 @@
+@import "tailwindcss";
+
 :root {
     --ocaso-blue: #003362;
     --ocaso-yellow: #F7B700;
-    --turquoise: #009494;
+    --color-turquoise-500: #009494;
 }

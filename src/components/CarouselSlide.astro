@@ -15,11 +15,11 @@ const { imageSrc, title, content, buttonText, buttonLink } = slide;
   <!-- Capa oscura para mejorar contraste -->
   <div class="absolute inset-0 bg-black opacity-30"></div>
 
-  <div class="z-10 text-white max-w-lg grid grid-col-1 gap-10 lg:mr-20 mr-10">
-    <div
-      class="text-right mr-[2.5rem] md:mr-[2.5rem] sm:mr-[0rem] grid grid-col-1 gap-2"
-    >
-      <h2 class="text-[1.5rem] font-bold">{title}</h2>
+  <div
+    class="z-10 text-white max-w-lg grid grid-col-1 gap-10 mr-[4.5rem] md:mr-[4.5rem] sm:mr-[2rem] justify-items-end"
+  >
+    <div class="text-right grid grid-col-1 gap-2">
+      <h3 class="text-[1.5rem] font-bold">{title}</h3>
       <p class="text-[1rem]">{content}</p>
     </div>
     <Button buttonLink={buttonLink} buttonText={buttonText} />
