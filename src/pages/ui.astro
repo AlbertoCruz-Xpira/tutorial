@@ -1,0 +1,46 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+---
+
+<BaseLayout>
+  <div class="wrapper">
+    <section class="colors grid grid-cols-1 gap-5">
+      <div>
+        <h2>Colores</h2>
+        <hr />
+      </div>
+      <div class="bg-red-500">Red 500</div>
+      <div class="bg-red-500">Red 500</div>
+      <div class="bg-red-500">Red 500</div>
+      <div class="bg-red-500">Red 500</div>
+    </section>
+    <section class="texts grid grid-cols-1 gap-5">
+      <div>
+        <h2>Textos</h2>
+        <hr />
+      </div>
+      <h1>Heading H1</h1>
+      <h2>Heading H2</h2>
+      <h3>Heading H3</h3>
+      <h4>Heading H4</h4>
+      <h5>Heading H5</h5>
+      <p>Paragraph</p>
+    </section>
+    <section class="buttons grid grid-cols-1 gap-5">
+      <div>
+        <h2>Botones</h2>
+        <hr />
+      </div>
+    </section>
+  </div>
+</BaseLayout>
+
+<style>
+  .wrapper {
+    padding: 50px;
+  }
+  section {
+    margin-top: 20px;
+    margin-bottom: 30px;
+  }
+</style>

@@ -6,99 +6,109 @@
 <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer
 ></script>
 
-<div
-  class="relative z-10 flex flex-col items-center justify-center h-full text-center text-white px-6"
+<section
+  class="grid grid-cols-1 items-center lg:gap-10 rounded-xl max-w-5xl
+mx-auto pb-50"
+  data-component="MedicalSearch"
 >
-  <h1 class="text-4xl md:text-6xl font-bold">Busca un médico cerca de ti</h1>
-
-  <!-- Input de búsqueda con Alpine.js -->
   <div
-    x-data="{ showFilters: false }"
-    class="relative mt-8 flex items-center w-full max-w-lg"
+    class="relative z-10 flex flex-col items-center justify-center h-full text-center text-white px-6"
   >
-    <input
-      type="text"
-      placeholder="Introduce una especialidad, nombre o ubicación"
-      class="w-full bg-white text-gray-900 rounded-full px-4 py-3 pr-16 shadow-lg focus:outline-none"
-    />
+    <div>
+      <h3 class="text-4xl md:text-6xl font-bold">
+        Busca un médico cerca de ti
+      </h3>
 
-    <!-- Botón de búsqueda -->
-    <button
-      type="submit"
-      class="absolute right-12 bg-blue-600 hover:bg-blue-700 text-white p-3 rounded-full transition duration-300"
-    >
-      <svg
-        class="w-6 h-6 text-white dark:text-white"
-        aria-hidden="true"
-        xmlns="http://www.w3.org/2000/svg"
-        width="24"
-        height="24"
-        fill="none"
-        viewBox="0 0 24 24"
+      <!-- Input de búsqueda con Alpine.js -->
+      <div
+        x-data="{ showFilters: false }"
+        class="relative mt-2 flex items-center w-full max-w-lg"
       >
-        <path
-          stroke="currentColor"
-          stroke-linecap="round"
-          stroke-width="2"
-          d="m21 21-3.5-3.5M17 10a7 7 0 1 1-14 0 7 7 0 0 1 14 0Z"></path>
-      </svg>
-    </button>
+        <input
+          type="text"
+          placeholder="Introduce una especialidad, nombre o ubicación"
+          class="w-full bg-white text-gray-900 rounded-full px-4 py-3 pr-16 shadow-lg focus:outline-none"
+        />
 
-    <!-- Botón de filtros con Alpine.js -->
-    <button
-      type="button"
-      class="absolute right-2 bg-gray-200 hover:bg-gray-300 p-3 rounded-full transition duration-300"
-      @click="showFilters = !showFilters"
-    >
-      <svg
-        class="w-6 h-6 text-white dark:text-white"
-        aria-hidden="true"
-        xmlns="http://www.w3.org/2000/svg"
-        width="24"
-        height="24"
-        fill="none"
-        viewBox="0 0 24 24"
-      >
-        <path
-          stroke="currentColor"
-          stroke-linecap="round"
-          stroke-width="2"
-          d="M18.796 4H5.204a1 1 0 0 0-.753 1.659l5.302 6.058a1 1 0 0 1 .247.659v4.874a.5.5 0 0 0 .2.4l3 2.25a.5.5 0 0 0 .8-.4v-7.124a1 1 0 0 1 .247-.659l5.302-6.059c.566-.646.106-1.658-.753-1.658Z"
-        ></path>
-      </svg>
-    </button>
-
-    <!-- Filtros desplegables -->
-    <div
-      x-show="showFilters"
-      class="absolute top-full mt-2 w-full max-w-lg bg-white shadow-lg rounded-lg p-4"
-    >
-      <h3 class="text-lg font-semibold text-gray-900">Filtros</h3>
-      <div class="mt-2 space-y-2">
-        <label class="block text-gray-700">
-          <span>Especialidad:</span>
-          <select class="w-full mt-1 p-2 border border-gray-300 rounded-md">
-            <option>Cardiología</option>
-            <option>Neurología</option>
-            <option>Oftalmología</option>
-          </select>
-        </label>
-
-        <label class="block text-gray-700">
-          <span>Ubicación:</span>
-          <input
-            type="text"
-            class="w-full mt-1 p-2 border border-gray-300 rounded-md"
-            placeholder="Introduce una ciudad"
-          />
-        </label>
-
+        <!-- Botón de búsqueda -->
         <button
-          class="w-full bg-blue-600 hover:bg-blue-700 text-white py-2 rounded-md"
+          type="submit"
+          class="absolute right-12 hover:bg-gray-300 text-white p-3 rounded-full transition duration-300 cursor-pointer"
         >
-          Aplicar filtros
+          <svg
+            class="w-6 h-6 text-black dark:text-white"
+            aria-hidden="true"
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            fill="none"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-width="2"
+              d="m21 21-3.5-3.5M17 10a7 7 0 1 1-14 0 7 7 0 0 1 14 0Z"></path>
+          </svg>
         </button>
+
+        <!-- Botón de filtros con Alpine.js -->
+        <button
+          type="button"
+          class="absolute right-2 hover:bg-gray-300 p-3 rounded-full transition duration-300 cursor-pointer"
+          @click="showFilters = !showFilters"
+        >
+          <svg
+            class="w-6 h-6 text-black dark:text-white"
+            aria-hidden="true"
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            fill="none"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-width="2"
+              d="M18.796 4H5.204a1 1 0 0 0-.753 1.659l5.302 6.058a1 1 0 0 1 .247.659v4.874a.5.5 0 0 0 .2.4l3 2.25a.5.5 0 0 0 .8-.4v-7.124a1 1 0 0 1 .247-.659l5.302-6.059c.566-.646.106-1.658-.753-1.658Z"
+            ></path>
+          </svg>
+        </button>
+
+        <!-- Filtros desplegables -->
+        <div
+          x-show="showFilters"
+          class="absolute top-full mt-2 w-full max-w-lg bg-white shadow-lg rounded-lg p-4 z-1000"
+        >
+          <h3 class="text-lg font-semibold text-gray-900">Filtros</h3>
+          <div class="mt-2 space-y-2">
+            <label class="block text-gray-700">
+              <span>Especialidad:</span>
+              <select class="w-full mt-1 p-2 border border-gray-300 rounded-md">
+                <option>Cardiología</option>
+                <option>Neurología</option>
+                <option>Oftalmología</option>
+              </select>
+            </label>
+
+            <label class="block text-gray-700">
+              <span>Ubicación:</span>
+              <input
+                type="text"
+                class="w-full mt-1 p-2 border border-gray-300 rounded-md"
+                placeholder="Introduce una ciudad"
+              />
+            </label>
+
+            <button
+              class="w-full bg-blue-600 hover:bg-blue-700 text-white py-2 rounded-md"
+            >
+              Aplicar filtros
+            </button>
+          </div>
+        </div>
       </div>
     </div>
   </div>
-</div>
+</section>
