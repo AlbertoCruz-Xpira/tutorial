@@ -1,8 +1,75 @@
 ---
+import Hero from "../../components/Hero.astro";
+import PostsResume from "../../components/PostsResume.astro";
 import BaseLayout from "../../layouts/BaseLayout.astro";
 const pageTitle = "Salud mujer";
+
+const postsResumeData = {
+  title: "Publicaciones",
+  posts: [
+    {
+      heading: "La vida y la edad",
+      category: "Salud",
+      description:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec molestie turpis id odio blandit, dignissim tincidunt arcu bibendum.",
+      imageSrc: "/src/assets/posts/De-que-se-ocupa-un-oftalmologo.jpg",
+      buttonText: "Leer más",
+      buttonLink: "/",
+    },
+    {
+      heading: "El cuidado de la piel en verano",
+      category: "Salud",
+      description:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec molestie turpis id odio blandit, dignissim tincidunt arcu bibendum.",
+      imageSrc: "/src/assets/posts/El-cuidado-de-la-piel-en-verano.jpg",
+      buttonText: "Leer más",
+      buttonLink: "/",
+    },
+  ],
+};
+
+const services = [
+  {
+    heading: "Ginecología",
+    link: "/",
+    icon: "/src/assets/icons/ginecologia.svg",
+    imageSrc: "/src/assets/posts/Ginecología.jpg",
+  },
+  {
+    heading: "Obstetricia",
+    link: "/",
+    icon: "/src/assets/icons/obstetricia.svg",
+    imageSrc: "/src/assets/posts/Obstetricia.jpg",
+  },
+  {
+    heading: "Reproduccion asistida",
+    link: "/",
+    icon: "/src/assets/icons/reproduccion_asistida.svg",
+    imageSrc: "/src/assets/posts/reproduccion_asistida.jpg",
+  },
+  {
+    heading: "Onco-gine",
+    link: "/",
+    icon: "/src/assets/icons/reproduccion_asistida.svg",
+    imageSrc: "/src/assets/posts/reproduccion_asistida.jpg",
+  },
+  {
+    heading: "Preserva",
+    link: "/",
+    icon: "/src/assets/icons/reproduccion_asistida.svg",
+    imageSrc: "/src/assets/posts/reproduccion_asistida.jpg",
+  },
+  {
+    heading: "Genética",
+    link: "/",
+    icon: "/src/assets/icons/reproduccion_asistida.svg",
+    imageSrc: "/src/assets/posts/reproduccion_asistida.jpg",
+  },
+];
 ---
 
 <BaseLayout pageTitle={pageTitle}>
-
+    <Hero imageSrc="src/assets/HeroSection.jpg" ; />
+    <ServiceMenu services={services}></ServiceMenu>
+    <PostsResume postsResumeData={postsResumeData} />
 </BaseLayout>

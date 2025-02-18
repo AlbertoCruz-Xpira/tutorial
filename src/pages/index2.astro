@@ -1,0 +1,63 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Hero from "../components/Hero.astro";
+import Banner from "../components/Banner.astro";
+import Carousel from "../components/Carousel.astro";
+import BannerOcaso from "../components/BannerOcaso.astro";
+import InfoBanner from "../components/InfoBanner.astro";
+import Promotions from "../components/Promotions.astro";
+import PostsResume from "../components/PostsResume.astro";
+
+// URL de la API
+const API_URL = "http://10.3.0.97:80/api/banners";
+const API_KEY = "aa8d5dc7-6a44-4f8e-ab9f-6637bd4cc8c9";
+
+// Datos mockup por si la API falla
+const mockBannerData = {
+  imageSrc: "/src/assets/chica-con-movil.jpg",
+  title: "Accede a tu área asegurado",
+  subtitle: "Realiza consultas y gestiona tus citas en el área asegurado.",
+  buttonText: "Acceder",
+  buttonLink: "/",
+};
+
+// Función para obtener los datos de la API
+async function fetchBanners() {
+  try {
+    const response = await fetch(API_URL, {
+      headers: {
+        Authorization: `users API-Key ${API_KEY}`,
+      },
+    });
+
+    if (!response.ok) {
+      throw new Error(`Error al obtener datos: ${response.status}`);
+    }
+
+    const data = await response.json();
+
+    if (!data.docs || data.docs.length === 0) {
+      throw new Error("La API no devolvió datos válidos.");
+    }
+
+    return {
+      imageSrc: data.docs[0].image.url,
+      title: data.docs[0].title,
+      subtitle: data.docs[0].subtitle,
+      buttonText: data.docs[0].buttonText,
+      buttonLink: "/",
+    };
+  } catch (error) {
+    console.error("Error al cargar la API:", error);
+    return mockBannerData;
+  }
+}
+
+// Obtener datos (API o Mockup)
+const bannerData = await fetchBanners();
+---
+
+<BaseLayout>
+  <Hero imageSrc="src/assets/HeroSection.jpg" />
+  <Banner bannerData={bannerData} />
+</BaseLayout>
