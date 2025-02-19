@@ -7,7 +7,7 @@ const submenuItems = [
   { name: "Podología", link: "/servicios-salud/podologia" },
   { name: "Salud Hombre", link: "/servicios-salud/salud-hombre" },
   { name: "Salud Mujer", link: "/servicios-salud/salud-mujer" },
-  { name: "Salud Senior", link: "/servicios-salud/salud-senior" }
+  { name: "Salud Senior", link: "/servicios-salud/salud-senior" },
 ];
 ---
 
@@ -18,9 +18,13 @@ const submenuItems = [
   <div class="menu-item">
     <a href="#">Servicios</a>
     <ul class="submenu text-black">
-      {submenuItems.map((item) => (
-        <li><a href={item.link}>{item.name}</a></li>
-      ))}
+      {
+        submenuItems.map((item) => (
+          <li>
+            <a href={item.link}>{item.name}</a>
+          </li>
+        ))
+      }
     </ul>
   </div>
 
@@ -38,8 +42,15 @@ const submenuItems = [
     justify-content: flex-end;
     align-items: center;
   }
+
+  @media screen and (max-width: 1099px) {
+    .nav-links {
+      display: none;
+    }
+  }
   .nav-links a {
-    display: block;
+    display: inline-block;
+    width: 100%;
     text-align: center;
     padding: 2rem 1rem;
     text-decoration: none;
@@ -49,8 +60,9 @@ const submenuItems = [
     color: black;
   }
 
-  .nav-links a:hover, a:focus {
-    background-color: #EFEFEF;
+  .nav-links a:hover,
+  a:focus {
+    background-color: #efefef;
   }
   .menu-item {
     position: relative;
@@ -83,7 +95,7 @@ const submenuItems = [
   }
 
   .nav-links .orange {
-    background-color: #FFB023;
+    background-color: #ffb023;
     border-top-left-radius: 50px;
     color: white;
     border-bottom-left-radius: 50px;

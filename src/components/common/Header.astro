@@ -1,16 +1,14 @@
 ---
 import Navigation from "./Navigation.astro";
 import Hamburger from "./Hamburger.astro";
+import NavigationMobile from "./NavigationMobile.astro";
 
 import logo from "../../assets/Logo_Salud_Positivo_RGB.png";
 import OcasoIcon from "../../icons/OcasoIcon.astro";
 ---
 
-<div
-  id="sub-header"
-  class="container-full-width flex justify-between items-center text-white
-pl-20 pr-20"
->
+<div id="sub-header" class="flex justify-between items-center text-white
+py-2">
   <section id="left"></section>
   <section class="ocaso flex items-center gap-2">
     <OcasoIcon />
@@ -22,20 +20,23 @@ pl-20 pr-20"
   </div>
 </div>
 
-<header class="container-full-width bg-white text-black">
+<header class="container-full-width bg-white text-black flex">
   <div class="logo">
     <a href="/"><img src={logo.src} alt="logo" /></a>
   </div>
-  <nav>
+  <nav class="flex items-center">
     <Hamburger />
     <Navigation />
   </nav>
 </header>
 
+<nav class="navigation-mobile">
+  <NavigationMobile />
+</nav>
+
 <style>
   header {
     width: 100%;
-    display: flex;
     align-content: center;
     justify-content: space-between;
     flex-wrap: wrap;
@@ -64,5 +65,4 @@ pl-20 pr-20"
   #lang-menu a {
     font-size: 0.8rem;
   }
-  
 </style>

@@ -1,0 +1,102 @@
+---
+const submenuItems = [
+  { name: "Dental", link: "/servicios-salud/dental" },
+  { name: "Genética", link: "/servicios-salud/genetica" },
+  { name: "Oftalmología", link: "/servicios-salud/oftalmologia" },
+  { name: "Pediatría", link: "/servicios-salud/pediatria" },
+  { name: "Podología", link: "/servicios-salud/podologia" },
+  { name: "Salud Hombre", link: "/servicios-salud/salud-hombre" },
+  { name: "Salud Mujer", link: "/servicios-salud/salud-mujer" },
+  { name: "Salud Senior", link: "/servicios-salud/salud-senior" },
+];
+---
+
+<div class="relative" id="menu-mobile">
+  <div
+    class="nav-links-mobile absolute top-0 left-0 grid grid-cols-1 w-full items-center bg-white z-100"
+  >
+    <a href="/">Inicio</a>
+
+    <!-- Menú Servicios con Submenú -->
+    <div class="menu-item">
+      <a href="#">Servicios ▼</a>
+      <ul class="submenu text-black">
+        {
+          submenuItems.map((item) => (
+            <li>
+              <a href={item.link}>{item.name}</a>
+            </li>
+          ))
+        }
+      </ul>
+    </div>
+
+    <a href="/garantias-incluidas">Garantías incluidas</a>
+    <a href="/blog">Artículos</a>
+    <a href="/plan-de-vida-saludable">Plan de vida saludable</a>
+    <a href="/otros-servicios">Otros servicios</a>
+    <a class="orange" href="/area-privada">Área privada</a>
+  </div>
+</div>
+
+<style>
+  .nav-links-mobile {
+    background-color: white;
+    display: none;
+  }
+
+  .expanded .nav-links-mobile {
+    display: grid;
+  }
+
+  @media screen and (min-width: 1100px) {
+    .nav-links-mobile {
+      display: none;
+    }
+  }
+  .nav-links-mobile a,
+  .menu-item {
+    display: grid;
+    text-align: center;
+    padding: 0.8rem 1rem;
+    text-decoration: none;
+    font-size: 0.8rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: black;
+  }
+
+  .nav-links-mobile a:hover,
+  a:focus {
+    background-color: #efefef;
+  }
+
+  .submenu {
+    display: none;
+    background: white;
+    list-style: none;
+  }
+
+  .submenu.expanded {
+    display: grid;
+  }
+
+  .submenu li a {
+    color: black;
+    text-decoration: none;
+    padding: 0.8rem 1rem;
+  }
+
+  .menu-item.expanded .submenu {
+    display: block;
+  }
+
+  .nav-links-mobile .orange {
+    background-color: #ffb023;
+    color: white;
+  }
+
+  .nav-links-mobile .orange:hover {
+    background-color: #f19f0b;
+  }
+</style>

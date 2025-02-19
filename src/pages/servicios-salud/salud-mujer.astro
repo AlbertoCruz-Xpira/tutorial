@@ -2,6 +2,7 @@
 import Hero from "../../components/Hero.astro";
 import PostsResume from "../../components/PostsResume.astro";
 import BaseLayout from "../../layouts/BaseLayout.astro";
+import ServiceMenu from "../../components/ServiceMenu.astro";
 const pageTitle = "Salud mujer";
 
 const postsResumeData = {
@@ -32,44 +33,44 @@ const services = [
   {
     heading: "Ginecología",
     link: "/",
-    icon: "/src/assets/icons/ginecologia.svg",
-    imageSrc: "/src/assets/posts/Ginecología.jpg",
+    icon: "/src/icons/salud-mujer/icon-ginecologia.png",
+    imageSrc: "/src/assets/salud-mujer/ginecología.jpg",
   },
   {
     heading: "Obstetricia",
     link: "/",
-    icon: "/src/assets/icons/obstetricia.svg",
-    imageSrc: "/src/assets/posts/Obstetricia.jpg",
+    icon: "/src/icons/salud-mujer/icon-obstreticia.png",
+    imageSrc: "/src/assets/salud-mujer/obstetricia.jpg",
   },
   {
     heading: "Reproduccion asistida",
     link: "/",
-    icon: "/src/assets/icons/reproduccion_asistida.svg",
-    imageSrc: "/src/assets/posts/reproduccion_asistida.jpg",
+    icon: "/src/icons/salud-mujer/icon-repro-asistida.png",
+    imageSrc: "/src/assets/salud-mujer/reproduccion_asistida.jpg",
   },
   {
     heading: "Onco-gine",
     link: "/",
-    icon: "/src/assets/icons/reproduccion_asistida.svg",
-    imageSrc: "/src/assets/posts/reproduccion_asistida.jpg",
+    icon: "/src/icons/salud-mujer/icon-onco-gine.png",
+    imageSrc: "/src/assets/salud-mujer/onco-gine.jpg",
   },
   {
     heading: "Preserva",
     link: "/",
-    icon: "/src/assets/icons/reproduccion_asistida.svg",
-    imageSrc: "/src/assets/posts/reproduccion_asistida.jpg",
+    icon: "/src/icons/salud-mujer/icon-preserva.png",
+    imageSrc: "/src/assets/salud-mujer/reproduccion_asistida.jpg",
   },
   {
     heading: "Genética",
     link: "/",
-    icon: "/src/assets/icons/reproduccion_asistida.svg",
-    imageSrc: "/src/assets/posts/reproduccion_asistida.jpg",
+    icon: "/src/icons/salud-mujer/icon-genetica.png",
+    imageSrc: "/src/assets/salud-mujer/genetica.jpg",
   },
 ];
 ---
 
-<BaseLayout pageTitle={pageTitle}>
-    <Hero imageSrc="src/assets/HeroSection.jpg" ; />
-    <ServiceMenu services={services}></ServiceMenu>
-    <PostsResume postsResumeData={postsResumeData} />
+<BaseLayout>
+  <Hero imageSrc="../../../src/assets/salud-mujer/HeroSaludMujer.jpg" ; />
+  <ServiceMenu services={services} />
+  <PostsResume postsResumeData={postsResumeData} />
 </BaseLayout>

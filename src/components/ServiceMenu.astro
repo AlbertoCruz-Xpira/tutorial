@@ -2,7 +2,7 @@
 const { services } = Astro.props;
 ---
 
-<section class="bg-[#FFF] p-10" data-component="ServiceMenu">
+<section class="bg-[#FFF] p-10 pt-20" data-component="ServiceMenu">
 
   <!-- fila -->
   <div class="max-w-5xl mx-auto items-center">
@@ -10,17 +10,28 @@ const { services } = Astro.props;
       {
         services.map((service: any) => (
             <a href={service.link}
-              class="min-h-[20rem] flex justify-end items-end bg-cover bg-center relative"
+              class="service min-h-[20rem] grid grid-cols-1 grid place-items-center bg-cover bg-center relative rounded-lg p-5"
               style={`background-image: url(${service.imageSrc});`}
             >
               <!-- Turquoise layer -->
-              <div class="absolute inset-0 bg-black opacity-10" />
+              <div class="absolute inset-0 turquouise opacity-75 rounded-lg p-5" />
 
-                <p>{service.heading}</p>
-                <p>{service.icon}</p>
+              <div class="grid grid-cols-1 place-items-center gap-5">
+                <h4 class="text-white relative">{service.heading}</h4>
+                <img src={service.icon} class="relative"/>
+              </div>
             </a>
         ))
       }
     </div>
   </div>
 </section>
+
+<style>
+  .turquouise {
+    background-color: var(--color-turquoise-500);
+  }
+  a.service:hover .turquouise {
+    opacity: .5;
+  }
+</style>  

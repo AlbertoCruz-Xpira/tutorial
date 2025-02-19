@@ -1,7 +1,29 @@
----
----
-<div class="hamburger">
-    <span class="line"></span>
-    <span class="line"></span>
-    <span class="line"></span>
-  </div>
+<div class="hamburger" id="hamburger-button">
+  <span class="line"></span>
+  <span class="line"></span>
+  <span class="line"></span>
+</div>
+
+<style>
+  /* estilos de la barra de navegación*/
+  .hamburger {
+    padding-top: 2px;
+    padding-right: 20px;
+    cursor: pointer;
+  }
+
+  .hamburger .line {
+    display: block;
+    width: 40px;
+    height: 3px;
+    margin-bottom: 5px;
+    border-radius: 5px;
+    background-color: black;
+  }
+
+  @media screen and (min-width: 1100px) {
+    .hamburger {
+      display: none;
+    }
+  }
+</style>
