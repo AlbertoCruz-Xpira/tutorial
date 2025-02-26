@@ -1,0 +1,18 @@
+---
+import RowContainer from "./RowContainer.astro";
+import IconBlock from "../simple/IconBlock.astro";
+
+const { title, icon, id, containers } = Astro.props;
+---
+
+<section id={id} class="py-10 px-6">
+  <div class="flex justift-content-center items-center">
+    <IconBlock icon={icon}/>
+    <h4 class="text-3xl font-bold ml-5">{title}</h4>
+  </div>
+  {
+    containers.map((container: any) => (
+      <RowContainer columns={container.columns} />
+    ))
+  }
+</section>

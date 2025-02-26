@@ -1,67 +1,368 @@
 ---
-import BaseLayout from '../layouts/BaseLayout.astro';
-const pageTitle = "Garantías incluidas";
+import BaseLayout from "../layouts/BaseLayout.astro";
 ---
 
-<BaseLayout pageTitle={pageTitle}>
-    
-    Grupo Ocaso pone a disposición de sus asegurados una amplia gama de servicios médicos y complementarios de salud a través de su garantía Asistencia médica.
+<BaseLayout>
+  <div class="pt-5 pb-10">
+    <div class="container max-w-5xl mx-auto">
+      <div class="row">
+        <div class="col-12">
+          <div class="PageGaranti">
+            <h2 class="title color-turquoise">Garantía Asistencia médica</h2>
 
-    Esta garantía, prestada por Legálitas Salud, ofrece el acceso a servicios médicos en condiciones preferentes, tanto económicas como de ahorro de tiempo.
+            <!-- INTRODUCCION -->
+            <section class="row">
+              <div class="col-md-12">
+                <div class="cont_parrafo">
+                  <p>
+                    Grupo Ocaso pone a disposición de sus <strong
+                      >asegurados</strong
+                    > una amplia gama de servicios médicos y complementarios de salud
+                    a través de su garantía <strong>Asistencia médica</strong>.
+                  </p>
+                  <p>
+                    Esta garantía, prestada por Legálitas Salud, ofrece el
+                    acceso a servicios médicos en <strong
+                      >condiciones preferentes</strong
+                    >, tanto económicas como de ahorro de tiempo.
+                  </p>
+                </div>
+              </div>
+            </section>
 
-    Descubre tu Garantía Médica Ocaso
-    ¿Cómo utilizar la garantía?
-    Ventajas de la garantía
-    Cualquier especialidad, sin importar la edad o las preexistencias médicas del asegurado
-    Sin listas de esperas
-    Sin periodo de carencia
-    Dirigido a toda la familia, desde los más pequeños hasta los más mayores
-    Hasta un 25% de descuento garantizado (tomándose como referencia los honorarios profesionales utilizados para pacientes privados por el mismo profesional y la misma prestación)
-    Cobertura nacional
-    Servicios gratuitos incluidos
-    Orientación médica telefónica gratuita
-    Servicio disponible las 24 horas, los 365 días del año, destinado al asesoramiento médico sobre cuestiones relativas a la salud del asegurado.
+            <!-- VIDEOS -->
+            <section class="grid grid-col-1 lg:grid-cols-2">
+              <div>
+                <h3 class="color-turquoise">
+                  Descubre tu Garantía Médica Ocaso
+                </h3>
+                <div>
+                  <img
+                    src="/src/assets/garantias-asistencia/video1.jpg"
+                    alt="Video 1"
+                  />
+                </div>
+              </div>
+              <div>
+                <h3 class="color-turquoise">¿Cómo utilizar la garantía?</h3>
+                <div>
+                  <img
+                    src="/src/assets/garantias-asistencia/video2.jpg"
+                    alt="Video 2"
+                  />
+                </div>
+              </div>
+            </section>
 
-    Servicio telefónico de urgencias médicas
-    Atención primaria telefónica de urgencias, las 24 horas del día, los 365 días del año por nuestro departamento médico.
+            <section class="row">
+              <div class="col-md-12">
+                <div class="cont_parrafo">
+                  <h3 class="color-turquoise">Ventajas de la garantía</h3>
+                  <ul>
+                    <li>
+                      Cualquier especialidad, sin importar la edad o las
+                      preexistencias médicas del asegurado
+                    </li>
+                    <li>Sin listas de esperas</li>
+                    <li>Sin periodo de carencia</li>
+                    <li>
+                      Dirigido a toda la familia, desde los más pequeños hasta
+                      los más mayores
+                    </li>
+                    <li>
+                      <strong>Hasta un 25% de descuento garantizado</strong> (tomándose
+                      como referencia los honorarios profesionales utilizados para
+                      pacientes privados por el mismo profesional y la misma prestación)
+                    </li>
+                    <li><strong>Cobertura nacional</strong></li>
+                  </ul>
+                </div>
+              </div>
+            </section>
 
-    Segunda opinión médica
-    Un médico de reconocido prestigio nacional o internacional en su especialidad analizará el diagnóstico inicial y recomendará de forma gratuita el mejor tratamiento para enfermedades graves, crónicas o degenerativas que supongan un peligro o afecte sensiblemente a su calidad de vida, como:
+            <section class="row">
+              <div class="col-md-12">
+                <div class="cont_parrafo">
+                  <h3 class="color-turquoise">Servicios gratuitos incluidos</h3>
+                  <h4 class="color-turquoise">
+                    Orientación médica telefónica gratuita
+                  </h4>
+                  <p>
+                    Servicio disponible las <strong>24 horas</strong>, los <strong
+                      >365 días del año</strong
+                    >, destinado al asesoramiento médico sobre cuestiones
+                    relativas a la salud del asegurado.
+                  </p>
+                  <h4 class="color-turquoise">
+                    Servicio telefónico de urgencias médicas
+                  </h4>
+                  <p>
+                    Atención primaria telefónica de urgencias, las <strong
+                      >24 horas</strong
+                    > del día, los <strong>365 días</strong> del año por nuestro
+                    departamento médico.
+                  </p>
+                  <h4 class="color-turquoise">Segunda opinión médica</h4>
+                  <p>
+                    Un médico de reconocido prestigio nacional o internacional
+                    en su especialidad analizará el diagnóstico inicial y
+                    recomendará de forma gratuita el mejor tratamiento para
+                    enfermedades graves, crónicas o degenerativas que supongan
+                    un peligro o afecte sensiblemente a su calidad de vida,
+                    como:
+                  </p>
+                  <section class="py-10">
+                    <div
+                      class="grid grid-cols-3 lg:grid-cols-7 items-center gap-5"
+                    >
+                      <div
+                        class="grid grid-col-1 justify-content-center justify-items-center opinion_cancer"
+                      >
+                        <img
+                          src="/src/assets/garantias-asistencia/ico_cancer.png"
+                          alt="Cancer"
+                        />
+                        <h5 class="color-turquoise text-center mt-2">Cáncer</h5>
+                      </div>
+                      <div
+                        class="grid grid-col-1 justify-content-center justify-items-center opinion_transplantes"
+                      >
+                        <img
+                          src="/src/assets/garantias-asistencia/ico_transplantes.png"
+                          alt="Transplantes"
+                        />
+                        <h5 class="color-turquoise text-center mt-2">
+                          Transplantes
+                        </h5>
+                      </div>
+                      <div
+                        class="grid grid-col-1 justify-content-center justify-items-center opinion_renal"
+                      >
+                        <img
+                          src="/src/assets/garantias-asistencia/ico_renal.png"
+                          alt="Insuficiencia Renal Crónica"
+                        />
+                        <h5 class="color-turquoise text-center mt-2">
+                          Insuficiencia Renal Crónica
+                        </h5>
+                      </div>
+                      <div
+                        class="grid grid-col-1 justify-content-center justify-items-center opinion_hemato"
+                      >
+                        <img
+                          src="/src/assets/garantias-asistencia/ico_hemato.png"
+                          alt="Enfermedades Hematológicas"
+                        />
+                        <h5 class="color-turquoise text-center mt-2">
+                          Enfermedades Hematológicas
+                        </h5>
+                      </div>
+                      <div
+                        class="grid grid-col-1 justify-content-center justify-items-center opinion_inmuno"
+                      >
+                        <img
+                          src="/src/assets/garantias-asistencia/ico_inmunologico.png"
+                          alt="Enfermedades Inmunológicas"
+                        />
+                        <h5 class="color-turquoise text-center mt-2">
+                          Enfermedades Inmunológicas
+                        </h5>
+                      </div>
+                      <div
+                        class="grid grid-col-1 justify-content-center justify-items-center opinion_cardio"
+                      >
+                        <img
+                          src="/src/assets/garantias-asistencia/ico_cardio.png"
+                          alt="Enfermedades Cardiovasculares"
+                        />
+                        <h5 class="color-turquoise text-center mt-2">
+                          Enfermedades Cardiovasculares
+                        </h5>
+                      </div>
+                      <div
+                        class="grid grid-col-1 justify-content-center justify-items-center opinion_respiratorio"
+                      >
+                        <img
+                          src="/src/assets/garantias-asistencia/ico_respiratorio.png"
+                          alt="Enfermedades Respiratorias"
+                        />
+                        <h5 class="color-turquoise text-center mt-2">
+                          Enfermedades Respiratorias
+                        </h5>
+                      </div>
 
-    Cáncer
-    Transplantes
-    Insuficiencia Renal Crónica
-    Enfermedades Hematológicas
-    Enfermedades Inmunológicas
-    Enfermedades Cardiovasculares
-    Enfermedades Respiratorias
-    Enfermedades Neurológicas y Neuromusculares
-    Enfermedades Oftalmológicas
-    Enfermedades Neuroquirúrgicas
-    Enfermedades Gastrointestinales
-    Enfermedades Otorrinolaringológicas
-    SIDA
-    Enfermedades Dermatológicas
-    Se asignará un asesor médico, quien será el encargado de seleccionar al especialista y gestionar con el asegurado el mejor sistema para aportar el historial clínico de su enfermedad, así como las pruebas complementarias que el médico especialista necesite. Este asesor mantendrá informado al paciente sobre el estado de su consulta y finalmente le hará entrega un informe por escrito firmado de la segunda opinión médica solicitada.
-
-    Doctor virtual
-    El servicio de Doctor virtual ayuda al asegurado a resolver dudas relacionadas con su salud, medicamentos, enfermedades, tratamientos o pruebas diagnósticas. Desde el Área privada, el asegurado interesado podrá escribir su consulta en un formulario y un médico especialista le responderá en un plazo máximo de 24 horas.
-
-    Atención psicológica telefónica
-    La muerte de un familiar es siempre un duro golpe que a veces es difícil de superar. Grupo Ocaso pone a disposición de sus asegurados de Decesos un profesional experto especializado en psicología del duelo que le atenderá gratuitamente las 24 horas del día los 365 días del año de forma gratuita. Tanto el cónyuge, como los padres y los hijos del/los asegurado/s fallecidos podrán hacer uso del servicio durante un año, a partir de la fecha de fallecimiento.
-
-    Video Consulta Médica
-    Video atención médica 24 × 365 inmediata, sin citas, desde las urgencias de hospitales privados. Servicio de Urgencias Gratuito.
-
-    VENTAJAS:
-
-    Conecta con un médico donde y cuando tú quieras.
-    Ahorra tiempo en esperas y desplazamientos.
-    Mediante la Video Consulta Médica el médico podrá recetarte medicamentos.
-    Servicio ofrecido por expertos URGENCIAS desde red asistencial hospitalaria.
-    Otros servicios
-    Servicios médicos en condiciones especiales
-    Servicios veterinarios.
-    Balnearios y spa.
-    Ayuda a la dependencia del hogar.
+                      <div
+                        class="grid grid-col-1 justify-content-center justify-items-center opinion_neuro"
+                      >
+                        <img
+                          src="/src/assets/garantias-asistencia/ico_neuro.png"
+                          alt="Enfermedades Neurológicas y Neuromusculares"
+                        />
+                        <h5 class="color-turquoise text-center mt-2">
+                          Enfermedades Neurológicas y Neuromusculares
+                        </h5>
+                      </div>
+                      <div
+                        class="grid grid-col-1 justify-content-center justify-items-center opinion_oftalmo"
+                      >
+                        <img
+                          src="/src/assets/garantias-asistencia/ico_oftalmo.png"
+                          alt="Enfermedades Oftalmológicas"
+                        />
+                        <h5 class="color-turquoise text-center mt-2">
+                          Enfermedades Oftalmológicas
+                        </h5>
+                      </div>
+                      <div
+                        class="grid grid-col-1 justify-content-center justify-items-center opinion_neuroquirurgico"
+                      >
+                        <img
+                          src="/src/assets/garantias-asistencia/ico_neuro2.png"
+                          alt="Enfermedades Neuroquirúrgicas"
+                        />
+                        <h5 class="color-turquoise text-center mt-2">
+                          Enfermedades Neuroquirúrgicas
+                        </h5>
+                      </div>
+                      <div
+                        class="grid grid-col-1 justify-content-center justify-items-center opinion_gastro"
+                      >
+                        <img
+                          src="/src/assets/garantias-asistencia/ico_gastro.png"
+                          alt="Enfermedades Gastrointestinales"
+                        />
+                        <h5 class="color-turquoise text-center mt-2">
+                          Enfermedades Gastrointestinales
+                        </h5>
+                      </div>
+                      <div
+                        class="grid grid-col-1 justify-content-center justify-items-center opinion_otorrino"
+                      >
+                        <img
+                          src="/src/assets/garantias-asistencia/ico_otorrino.png"
+                          alt="Enfermedades Otorrinolaringológicas"
+                        />
+                        <h5 class="color-turquoise text-center mt-2">
+                          Enfermedades Otorrinolaringológicas
+                        </h5>
+                      </div>
+                      <div
+                        class="grid grid-col-1 justify-content-center justify-items-center opinion_sida"
+                      >
+                        <img
+                          src="/src/assets/garantias-asistencia/ico_sida.png"
+                          alt="Transplantes"
+                        />
+                        <h5 class="color-turquoise text-center mt-2">SIDA</h5>
+                      </div>
+                      <div
+                        class="grid grid-col-1 justify-content-center justify-items-center opinion_derma"
+                      >
+                        <img
+                          src="/src/assets/garantias-asistencia/ico_derma.png"
+                          alt="Transplantes"
+                        />
+                        <h5 class="color-turquoise text-center mt-2">
+                          Enfermedades Dermatológicas
+                        </h5>
+                      </div>
+                    </div>
+                  </section>
+                  <p>
+                    Se asignará un asesor médico, quien será el encargado de
+                    seleccionar al especialista y gestionar con el asegurado el
+                    mejor sistema para aportar el historial clínico de su
+                    enfermedad, así como las pruebas complementarias que el
+                    médico especialista necesite. Este asesor mantendrá
+                    informado al paciente sobre el estado de su consulta y
+                    finalmente le hará entrega un informe por escrito firmado de
+                    la segunda opinión médica solicitada.
+                  </p>
+                  <h4 class="color-turquoise">Doctor virtual</h4>
+                  <p>
+                    El servicio de Doctor virtual ayuda al asegurado a resolver
+                    dudas relacionadas con su salud, medicamentos, enfermedades,
+                    tratamientos o pruebas diagnósticas. Desde el <a
+                      href="https://atencionmedica.legalitas.com/"
+                      ><strong>Área privada</strong></a
+                    >, el asegurado interesado podrá escribir su consulta en un
+                    formulario y un médico especialista le responderá en un
+                    plazo máximo de 24 horas.
+                  </p>
+                  <h4 class="color-turquoise">
+                    Atención psicológica telefónica
+                  </h4>
+                  <p>
+                    La muerte de un familiar es siempre un duro golpe que a
+                    veces es difícil de superar. Grupo Ocaso pone a disposición
+                    de sus asegurados de Decesos un profesional experto <strong
+                      >especializado en psicología del duelo</strong
+                    > que le atenderá gratuitamente las 24 horas del día los 365
+                    días del año de forma gratuita. Tanto el cónyuge, como los padres
+                    y los hijos del/los asegurado/s fallecidos podrán hacer uso del
+                    servicio durante un año, a partir de la fecha de fallecimiento.
+                  </p>
+                  <h4 class="color-turquoise">Video Consulta Médica</h4>
+                  <p>
+                    Video atención médica 24 × 365 inmediata, sin citas, desde
+                    las urgencias de hospitales privados. Servicio de Urgencias
+                    Gratuito.
+                  </p>
+                  <p><strong>VENTAJAS:</strong></p>
+                  <ul>
+                    <li>Conecta con un médico donde y cuando tú quieras.</li>
+                    <li>Ahorra tiempo en esperas y desplazamientos.</li>
+                    <li>
+                      Mediante la Video Consulta Médica el médico podrá
+                      recetarte medicamentos.
+                    </li>
+                    <li>
+                      Servicio ofrecido por expertos URGENCIAS desde red
+                      asistencial hospitalaria.
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </section>
+            <div class="row">
+              <div class="col-md-12">
+                <div class="cont_parrafo">
+                  <h3 class="color-turquoise">Otros servicios</h3>
+                  <ul class="listaIndicador">
+                    <li>Servicios médicos en condiciones especiales</li>
+                    <li>Servicios veterinarios.</li>
+                    <li>Balnearios y spa.</li>
+                    <li>Ayuda a la dependencia del hogar.</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </BaseLayout>
+
+<style>
+  h2,
+  h3,
+  h4 {
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+  h5 {
+    font-size: 12px;
+  }
+  ul {
+    list-style-type: disc;
+    font-size: 0.8rem;
+    padding-left: 20px;
+  }
+  ul li:not(:last-child) {
+    margin-bottom: 10px;
+  }
+  strong {
+    font-weight: bold;
+  }
+</style>

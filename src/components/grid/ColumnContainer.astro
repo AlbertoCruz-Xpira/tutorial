@@ -1,0 +1,15 @@
+---
+import TextBlock from "../simple/TextBlock.astro";
+import ImageBlock from "../simple/ImageBlock.astro";
+import IconBlock from "../simple/IconBlock.astro";
+import HtmlBlock from "../simple/HtmlBlock.astro";
+
+const { content } = Astro.props;
+---
+
+<div class="flex-1 p-4">
+  {content.type === "text" && <TextBlock text={content.value} />}
+  {content.type === "image" && <ImageBlock src={content.value} />}
+  {content.type === "icon" && <IconBlock icon={content.value} />}
+  {content.type === "html" && <HtmlBlock html={content.value} />}
+</div>

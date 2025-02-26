@@ -4,4 +4,9 @@
     --ocaso-blue: #003362;
     --ocaso-yellow: #F7B700;
     --color-turquoise-500: #009494;
+    --color-turquoise-700: #006e6e;
+}
+
+.color-turquoise {
+    color: var(--color-turquoise-500);
 }

@@ -1,6 +1,59 @@
 ---
   import SearchIcon from '../icons/SearchIcon.astro';
   import FilterIcon from '../icons/FilterIcon.astro';
+
+  const mockup = `{
+    "name": "Orthopedic Medicine and Rehabilitation Center",
+    "address": {
+      "street": "AV. Juan Antonio Cavestany 2 (Local)",
+      "city": "Seville",
+      "postal_code": "41003",
+      "country": "Spain"
+    },
+    "phone": "954537172",
+    "distance_km": 0.24,
+    "location": {
+      "latitude": 37.3914,
+      "longitude": -5.9823
+    },
+    "opening_hours": [
+      {
+        "day": "Monday",
+        "open": "08:00",
+        "close": "18:00"
+      },
+      {
+        "day": "Tuesday",
+        "open": "08:00",
+        "close": "18:00"
+      },
+      {
+        "day": "Wednesday",
+        "open": "08:00",
+        "close": "18:00"
+      },
+      {
+        "day": "Thursday",
+        "open": "08:00",
+        "close": "18:00"
+      },
+      {
+        "day": "Friday",
+        "open": "08:00",
+        "close": "15:00"
+      },
+      {
+        "day": "Saturday",
+        "open": "Closed",
+        "close": "Closed"
+      },
+      {
+        "day": "Sunday",
+        "open": "Closed",
+        "close": "Closed"
+      }
+    ]
+  }`
 ---
 
 <!-- Importar Alpine.js en la página si no está globalmente -->

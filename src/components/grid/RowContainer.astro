@@ -1,0 +1,9 @@
+---
+import Column from "./ColumnContainer.astro";
+
+const { columns } = Astro.props;
+---
+
+<div class="flex flex-wrap gap-4">
+  {columns.map((column: any) => <Column content={column.content} />)}
+</div>

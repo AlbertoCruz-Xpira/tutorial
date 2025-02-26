@@ -1,0 +1,20 @@
+---
+import IndexAccordion from "../components/grid/IndexAccordion.astro";
+import Section from "../components/grid/Section.astro";
+
+const { sections } = Astro.props;
+---
+
+<main class="items-center max-w-5xl mx-auto py-10">
+  <IndexAccordion sections={sections} />
+  {
+    sections.map((section: any) => (
+      <Section
+        title={section.title}
+        icon={section.icon}
+        id={section.id}
+        containers={section.containers}
+      />
+    ))
+  }
+</main>

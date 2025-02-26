@@ -32,7 +32,7 @@ const postsResumeData = {
 const services = [
   {
     heading: "Ginecología",
-    link: "/",
+    link: "./salud-mujer/ginecologia",
     icon: "/src/icons/salud-mujer/icon-ginecologia.png",
     imageSrc: "/src/assets/salud-mujer/ginecología.jpg",
   },
@@ -70,7 +70,10 @@ const services = [
 ---
 
 <BaseLayout>
-  <Hero imageSrc="../../../src/assets/salud-mujer/HeroSaludMujer.jpg" ; />
+  <Hero
+    imageSrc="../../../src/assets/salud-mujer/HeroSaludMujer.jpg"
+    showMedicalSearch={true}
+  />
   <ServiceMenu services={services} />
   <PostsResume postsResumeData={postsResumeData} />
 </BaseLayout>

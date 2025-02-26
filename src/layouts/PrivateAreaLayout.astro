@@ -1,0 +1,80 @@
+---
+import SearchIcon from "../icons/SearchIcon.astro";
+
+const { nombre, apellido } = Astro.props;
+---
+
+<section class="max-w-5xl mx-auto py-10 px-10">
+  <header>
+    <h3 class="mb-10">
+      Bienvenido/a a tu área asegurado <strong>{nombre} {apellido}</strong>
+    </h3>
+
+    <div class="grid grid-cols-2">
+      <aside class="grid grid-cols-1">
+        <a class="inline-flex items-center" href="/area-privada/mis-datos">
+          <SearchIcon />
+          <span class="pl-2">Mis datos</span>
+        </a>
+        <a class="inline-flex items-center" href="/area-privada/contacto">
+          <SearchIcon />
+          <span class="pl-2">Contacto</span>
+        </a>
+        <a
+          class="inline-flex items-center"
+          href="/area-privada/gestionar-mis-citas"
+        >
+          <SearchIcon />
+          <span class="pl-2">Gestionar mis citas</span>
+        </a>
+        <a
+          class="inline-flex items-center"
+          href="/area-privada/atencion-medica-telefonica"
+        >
+          <SearchIcon />
+          <span class="pl-2">Atención médica telefónica</span>
+        </a>
+        <a class="inline-flex items-center" href="/area-privada/doctor-virtual">
+          <SearchIcon />
+          <span class="pl-2">Doctor Virtual</span>
+        </a>
+        <a
+          class="inline-flex items-center"
+          href="/area-privada/segunda-opinion"
+        >
+          <SearchIcon />
+          <span class="pl-2">Segunda Opinión</span>
+        </a>
+      </aside>
+
+      <main>
+        <slot />
+      </main>
+    </div>
+  </header>
+
+  <style>
+    h3 {
+      font-weight: 300;
+    }
+    h3 strong {
+      font-weight: bold;
+    }
+    aside {
+      max-width: 200px;
+    }
+    aside a {
+      font-size: 0.6rem;
+      font-weight: bold;
+      color: var(--color-turquoise-500);
+      padding-top: 10px;
+      padding-bottom: 10px;
+    }
+    aside a:hover {
+      color: var(--color-turquoise-700);
+    }
+    aside a:not(:last-child) {
+      border-bottom: 1px solid #dfdfdf;
+    }
+  </style>
+</section>

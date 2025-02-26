@@ -4,7 +4,7 @@ import MedicalSearch from "./MedicalSearch.astro";
 export const title = "Título de la sección";
 export const content = "Este es el contenido de la sección.";
 
-const { imageSrc } = Astro.props;
+const { imageSrc, showMedicalSearch } = Astro.props;
 ---
 
 <section
@@ -15,5 +15,5 @@ grid grid-cols-1 items-end"
   <!-- Capa negra con opacidad -->
   <div class="absolute inset-0 bg-black opacity-20"></div>
 
-  <MedicalSearch />
+  {showMedicalSearch && <MedicalSearch />}
 </section>

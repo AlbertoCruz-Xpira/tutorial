@@ -1,0 +1,18 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import PrivateAreaLayout from "../../layouts/PrivateAreaLayout.astro";
+
+const nombre = "Juan";
+const apellido = "Pérez";
+const tituloPagina = "Mis Datos";
+---
+
+<BaseLayout>
+  <PrivateAreaLayout
+    nombre={nombre}
+    apellido={apellido}
+    tituloPagina={tituloPagina}
+  >
+    <p>{tituloPagina}</p>
+  </PrivateAreaLayout>
+</BaseLayout>

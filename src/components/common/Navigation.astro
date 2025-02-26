@@ -17,15 +17,13 @@ const submenuItems = [
   <!-- Menú Servicios con Submenú -->
   <div class="menu-item">
     <a href="#">Servicios</a>
-    <ul class="submenu text-black">
+    <div class="submenu text-black">
       {
         submenuItems.map((item) => (
-          <li>
-            <a href={item.link}>{item.name}</a>
-          </li>
+          <a href={item.link}>{item.name}</a>
         ))
       }
-    </ul>
+    </div>
   </div>
 
   <a href="/garantias-incluidas">Garantías incluidas</a>
@@ -81,10 +79,7 @@ const submenuItems = [
     z-index: 100;
   }
 
-  .submenu li {
-  }
-
-  .submenu li a {
+  .submenu a {
     color: black;
     text-decoration: none;
     padding: 20px 5px;
