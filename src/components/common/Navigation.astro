@@ -18,11 +18,7 @@ const submenuItems = [
   <div class="menu-item">
     <a href="#">Servicios</a>
     <div class="submenu text-black">
-      {
-        submenuItems.map((item) => (
-          <a href={item.link}>{item.name}</a>
-        ))
-      }
+      {submenuItems.map((item) => <a href={item.link}>{item.name}</a>)}
     </div>
   </div>
 
@@ -46,6 +42,7 @@ const submenuItems = [
       display: none;
     }
   }
+
   .nav-links a {
     display: inline-block;
     width: 100%;
@@ -62,6 +59,7 @@ const submenuItems = [
   a:focus {
     background-color: #efefef;
   }
+
   .menu-item {
     position: relative;
   }

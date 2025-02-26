@@ -1,8 +1,6 @@
 ---
 import BaseLayout from "../../../layouts/BaseLayout.astro";
 import Hero from "../../../components/Hero.astro";
-import ServiceDetailLayout from "../../../layouts/ServiceDetailLayout.astro";
-import MoreInformacionForm from "../../../components/MoreInformacionForm.astro";
 ---
 
 <BaseLayout>
@@ -11,110 +9,98 @@ import MoreInformacionForm from "../../../components/MoreInformacionForm.astro";
     showMedicalSearch={false}
   />
 
-  <!-- Array de blocks payload -->
-  <ServiceDetailLayout
-    sections={[
-      {
-        id: "servicios-generales",
-        title: "El propósito de estas visitas",
-        icon: "/src/assets/salud-mujer_ginecologia/icon-proposito-ginecologia.png",
-        containers: [
-          {
-            columns: [
-              {
-                content: {
-                  type: "image",
-                  value:
-                    "/src/assets/salud-mujer_ginecologia/proposito-ginecologia.png",
-                },
-              },
-              {
-                content: {
-                  type: "html",
-                  value: `<ul>
-                    <li><span>Prevención de enfermedades.</span></li>
-                    <li><span>Detectar riesgo de problemas médicos futuros.</span></li>
-                    <li><span>Orientar sobre estilos y calidad de vida.</span></li>
-                    <li><span>Revisión y recomendación de las vacunas correspondientes.</span></li>
-                    <li><span>Seguimiento y control por un médico de forma directa.</span></li>
-                </ul>`,
-                },
-              },
-            ],
-          },
-        ],
-      },
-      {
-        id: "evaluacion-ginecologico",
-        title: "Evaluación ginecológico anual",
-        icon: "/src/assets/salud-mujer_ginecologia/icon-evaluacion-ginecologia.png",
-        containers: [
-          {
-            columns: [
-              {
-                content: {
-                  type: "html",
-                  value: `
-                    <ul>
-                        <li><span>Consulta inicial (exploración y pruebas).</span></li>
-                        <li><span>Citología.</span></li>
-                        <li><span>Ecografía abdominal o transvaginal.</span></li>
-                        <li><span>Consulta de Reevaluación.</span></li>
-                    </ul>`,
-                },
-              },
-              {
-                content: {
-                  type: "image",
-                  value:
-                    "/src/assets/salud-mujer_ginecologia/evaluacion-ginecologia.png",
-                },
-              },
-            ],
-          },
-        ],
-      },
-      {
-        id: "servicios-generales",
-        title: "Valoración y prevención",
-        icon: "/src/assets/salud-mujer_ginecologia/icon-prevencion-ginecologia.png",
-        containers: [
-          {
-            columns: [
-              {
-                content: {
-                  type: "image",
-                  value:
-                    "/src/assets/salud-mujer_ginecologia/valoracion-ginecologia.png",
-                },
-              },
-              {
-                content: {
-                  type: "html",
-                  value: `<ul class="plan-vida-p">
-                    <li><span>Orientación sobre hábitos de vida saludable.</span></li>
-                    <li><span>Control de Talla Peso e IMC.</span></li>
-                    <li><span>Medición de la presión arterial.</span></li>
-                    <li><span>Control analítico que incluye Hemograma y bioquímica completa al igual que estudio sistemático de orina.</span></li>
-                    <li><span>Examen de colesterol.</span></li>
-                    <li><span>Examen para diabetes.</span></li>
-                    <li><span>Pruebas de función tiroidea.</span></li>
-                    <li><span>Radiografía de tórax PA y Lateral.</span></li>
-                    <li><span>Ecografía abdominal.</span></li>
-                    <li><span>Audiometría tonal bilateral.</span></li>
-                    <li><span>Espirometría.</span></li>
-                    <li><span>Revisión por cardiólogo: electrocardiograma y prueba de esfuerzo.</span></li>
-                    <li><span>Revisión oftalmológica por optometrista (óptica): tonometría, agudeza visual y exploración del fondo de ojo.</span></li>
-                    <li><span>Revisión ginecológica: consulta con un especialista del Departamento de Ginecología y Obstetricia, citología vaginal y ecografía ginecológica. Mamografía y ecografía mamaria a criterio de ginecólogo. También disponer de estudios genéticos con alta sensibilidad diagnostica.</span></li>
-                    <li><span>Visite al odontólogo cada año para un examen y limpieza dentales.</span></li>
-                </ul>`,
-                },
-              },
-            ],
-          },
-        ],
-      },
-    ]}
-  />
-  <MoreInformacionForm />
+  <div>
+    <div>
+      <div>
+        <img src="/images/icon/icon-proposito-ginecologia.png" />
+        <h2>El propósito de estas visitas</h2>
+      </div>
+    </div>
+    <div>
+      <div>
+        <img src="/images/saludmujer/proposito-ginecologia.png" />
+      </div>
+      <div>
+        <ul>
+          <li><span>Prevención de enfermedades.</span></li>
+          <li><span>Detectar riesgo de problemas médicos futuros.</span></li>
+          <li><span>Orientar sobre estilos y calidad de vida.</span></li>
+          <li>
+            <span
+              >Revisión y recomendación de las vacunas correspondientes.</span>
+          </li>
+          <li>
+            <span>Seguimiento y control por un médico de forma directa.</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div>
+    <div>
+      <div>
+        <img src="/images/icon/icon-evaluacion-ginecologia.png" />
+        <h2>Evaluación ginecológico anual</h2>
+      </div>
+    </div>
+    <div>
+      <div>
+        <ul>
+          <li><span>Consulta inicial (exploración y pruebas).</span></li>
+          <li><span>Citología.</span></li>
+          <li><span>Ecografía abdominal o transvaginal.</span></li>
+          <li><span>Consulta de Reevaluación.</span></li>
+        </ul>
+      </div>
+      <div>
+        <img src="/images/saludmujer/evaluacion-ginecologia.png" />
+      </div>
+    </div>
+  </div>
+
+  <div>
+    <div>
+      <div>
+        <img src="/images/icon/icon-prevencion-ginecologia.png" />
+        <h2>Valoración y prevención</h2>
+      </div>
+    </div>
+    <div>
+      <div>
+        <p>
+          Las valoraciones ginecológicas periódicas nos ayudan a la detección
+          temprana de posibles problemas de salud, que con un diagnóstico precoz
+          lograremos una resolución satisfactoria. Es importante mantener unos
+          hábitos de vida saludable, para controlar la tensión arterial,
+          colesterol y azúcar en sangre.
+        </p>
+      </div>
+      <div>
+        <img src="/images/saludmujer/valoracion-ginecologia.png" />
+        <p>
+          Nota: Si padece cardiopatía, problemas renales o algunas otras
+          afecciones, es posible que necesite un control más estricto.
+        </p>
+      </div>
+      <div>
+        <ul>
+          <li><span>Orientación sobre hábitos de vida saludable.</span></li>
+          <li><span>Control de Talla Peso e IMC.</span></li>
+          <li><span>Medición de la presión arterial.</span></li>
+          <li>
+            <span
+              >Control analítico que incluye Hemograma y bioquímica completa.</span>
+          </li>
+          <li><span>Examen de colesterol.</span></li>
+          <li><span>Examen para diabetes.</span></li>
+          <li><span>Pruebas de función tiroidea.</span></li>
+          <li><span>Radiografía de tórax PA y Lateral.</span></li>
+          <li><span>Ecografía abdominal.</span></li>
+          <li><span>Audiometría tonal bilateral.</span></li>
+          <li><span>Espirometría.</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
 </BaseLayout>
