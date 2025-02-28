@@ -1,8 +1,18 @@
 ---
-import BaseLayout from "../../layouts/BaseLayout.astro";
-const pageTitle = "Salud dental";
+Astro.redirect("https://ocaso.giradental.com/");
 ---
 
-<BaseLayout pageTitle={pageTitle}>
-
-</BaseLayout>
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta http-equiv="refresh" content="0;url=https://ocaso.giradental.com/" />
+    <title>Redirigiendo...</title>
+  </head>
+  <body>
+    <p>
+      Si no redirige automáticamente, <a href="https://ocaso.giradental.com/"
+        >haz clic aquí</a
+      >.
+    </p>
+  </body>
+</html>

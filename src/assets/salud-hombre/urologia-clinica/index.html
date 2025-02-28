@@ -1,0 +1,1247 @@
+<html>
+ <head>
+  <title>
+   Legálitas Salud
+  </title>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1, user-scalable=no" name="viewport"/>
+  <meta content="telephone=no" name="format-detection"/>
+  <link href="/images/favicon.ico" rel="icon" type="image/x-icon"/>
+  <!-- Google tag (gtag.js) -->
+  <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-BWPQH02F5J">
+  </script>
+  <script>
+   window.dataLayer = window.dataLayer || []; function gtag() { dataLayer.push(arguments); } gtag('js', new Date()); gtag('config', 'G-BWPQH02F5J');
+  </script>
+  <script src="/Scripts/autotrack.js">
+  </script>
+  <link href="/Content/css/boostrap/bootstrap.css" rel="stylesheet"/>
+  <link href="/Content/css/base.css" rel="stylesheet"/>
+  <link href="/images/favicon.ico" rel="shortcut icon" type="image/x-icon"/>
+  <script src="/Scripts/jquery-3.4.1.min.js">
+  </script>
+  <script src="https://code.highcharts.com/highcharts.js" type="text/javascript">
+  </script>
+  <script src="https://code.highcharts.com/highcharts-more.js" type="text/javascript">
+  </script>
+  <script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js" type="text/javascript">
+  </script>
+  <script src="/Scripts/moment.js" type="text/javascript">
+  </script>
+  <link href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css" rel="stylesheet"/>
+ </head>
+ <body class="is-preload homepage">
+  <div id="page-wrapper">
+   <!-- Header -->
+   <div class="container-fluid" id="header-wrapper">
+    <header id="header">
+     <div class="ocasoHeader">
+      <p>
+       Servicio para asegurados de Ocaso
+      </p>
+     </div>
+     <div class="ContactHeader row">
+      <!-- Logo -->
+      <div class="container">
+       <div id="logo">
+        <a href="/" id="iconoHome">
+         <img src="/images/Logo_Salud_Positivo_RGB.png"/>
+        </a>
+       </div>
+       <div id="contactHeader">
+        <ul class="justify-content-end">
+         <li class="nav-item hablaMedico" id="hablaMedico" onclick="abrirEnlaceGadaca()">
+          <p class="titleContact">
+           Vídeo Consulta
+          </p>
+          <p class="txtContact">
+           de Urgencias
+          </p>
+         </li>
+         <li class="nav-item contactTef" onclick="window.location.href='tel:+34917039024'">
+          <p class="titleContact">
+           Teléfono
+          </p>
+          <p class="txtContact">
+           917 039 024
+          </p>
+         </li>
+         <li class="nav-item contactWhats" onclick="window.location.href='https://api.whatsapp.com/send?phone=34696091138'">
+          <p class="titleContact">
+           Contacta por
+          </p>
+          <p class="txtContact">
+           WhatsApp
+          </p>
+         </li>
+        </ul>
+       </div>
+      </div>
+     </div>
+     <div class="menuHeader row">
+      <div class="container">
+       <!-- Nav -->
+       <nav class="navbar navbar-expand-lg custom-toggler">
+        <button aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler" data-target="#navbarSupportedContent" data-toggle="collapse" type="button">
+         <span class="navbar-toggler-icon">
+         </span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+         <ul class="navbar-nav mr-auto">
+          <li class="dropdown">
+           <a href="/">
+            Home
+           </a>
+          </li>
+          <li class="current serviciosSalud dropdown">
+           <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+            Servicios de Salud
+           </a>
+           <ul class="dropdown-menu">
+            <li class="ss-salud-mujer">
+             <a href="/servicios-de-salud/salud-mujer">
+              Salud Mujer
+             </a>
+            </li>
+            <li class="ss-salud-varon">
+             <a href="/servicios-de-salud/salud-hombre">
+              Salud Hombre
+             </a>
+            </li>
+            <li class="ss-paciente-mayor">
+             <a href="/servicios-de-salud/salud-senior">
+              Salud Senior
+             </a>
+            </li>
+            <li class="ss-pediatria">
+             <a href="/servicios-de-salud/pediatria">
+              Pediatría
+             </a>
+            </li>
+            <li class="ss-dental">
+             <a href="https://ocaso.giradental.com/">
+              Dental
+             </a>
+            </li>
+            <li class="ss-podologia">
+             <a href="/servicios-de-salud/podologia">
+              Podología
+             </a>
+            </li>
+            <li class="ss-genetica">
+             <a href="/servicios-de-salud/genetica">
+              Genética
+             </a>
+            </li>
+            <li class="ss-oftalmologia">
+             <a href="/servicios-de-salud/oftalmologia">
+              Oftalmología
+             </a>
+            </li>
+           </ul>
+          </li>
+          <li class="cuadroMedico dropdown">
+           <a href="/buscador-medico/">
+            Cuadro Médico
+           </a>
+          </li>
+          <li class="planVida dropdown">
+           <a href="/plan-de-vida-saludable/">
+            Plan de Vida Saludable
+           </a>
+           <ul class="dropdown-menu">
+            <li class="">
+            </li>
+           </ul>
+          </li>
+          <li class="garantia dropdown">
+           <a href="/garantia-asistencia-medica/">
+            Garantía Asistencia Médica
+           </a>
+          </li>
+          <!--Boton para sacar Modal para el login (alojado en OcasoWebBase.cshtml)-->
+          <!--<button class="btn btn-primary LoginBtn" type="submit" data-toggle="modal" onclick="window.open('https://clientes.ocaso.es/login', '_blank')">Iniciar Sesión</button>-->
+          <a class="btn btn-primary LoginBtn" href="https://clientes.ocaso.es/login" target="_blank">
+           Iniciar Sesión
+          </a>
+          <div class="alert-dark" id="device">
+          </div>
+         </ul>
+        </div>
+       </nav>
+       <script>
+        var isMobile = {
+        Android: function () {
+            return navigator.userAgent.match(/Android/i);
+        },
+        BlackBerry: function () {
+            return navigator.userAgent.match(/BlackBerry/i);
+        },
+        iOS: function () {
+            return navigator.userAgent.match(/iPhone|iPad|iPod/i);
+        },
+        Opera: function () {
+            return navigator.userAgent.match(/Opera Mini/i);
+        },
+        Windows: function () {
+            return navigator.userAgent.match(/IEMobile/i);
+        },
+        any: function () {
+            return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows());
+        }
+    };
+
+    //$(document).ready(function () {
+    //    var content = $("#device");
+    //    if (isMobile.Windows)
+    //        content.html = "Windows";
+    //    if (isMobile.Android)
+    //        content.html = "Android";
+    //    if (isMobile.iOS)
+    //        content.html = "iOS";
+    //    if (isMobile.Opera)
+    //        content.html = "Opera";
+    //});
+       </script>
+       <div class="modal fade" id="modalLogin">
+        <script async="" defer="" src="https://www.google.com/recaptcha/api.js">
+        </script>
+        <div class="modal-dialog">
+         <div class="modal-content row no-gutters row-eq-height">
+          <div class="col-12 col-md-6 box-left-login">
+           <div class="PositionEnd">
+            <img src="/images/logos/Logo_Salud_Negativo_RGB.png">
+             <!--<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla maximus posuere orci non finibus. Morbi vulputate sagittis laoreet. Suspendisse convallis.  Nulla maximus posuere orci non finibus.</p>-->
+            </img>
+           </div>
+          </div>
+          <div class="col-12 col-md-6 box-rigth-login">
+           <form action="/servicios-de-salud/salud-hombre/landings-salud-hombre/urologia-clinica" autocomplete="off" enctype="multipart/form-data" method="post">
+            <div class="modal-body">
+             <h1>
+              Iniciar Sesión
+             </h1>
+             <input name="__RequestVerificationToken" type="hidden" value="Q8sWf8h9WSMVprqSTg1LJVifXbC1FRTmxxNQ5R7d7rqq-S2Bx_Ehu_mCu5-a8zNSyuljYR_qvEmV2559XmW3x7uKZuAa-ZZLA5qDlEnNU1Q1"/>
+             <div class="form-group">
+             </div>
+             <div class="row form-group">
+              <div class="col-12">
+               <input id="Id" name="Id" placeholder="Usuario" required="required" type="text" value=""/>
+              </div>
+             </div>
+             <div class="row form-group">
+              <div class="col-12">
+               <input id="Psswd" name="Psswd" placeholder="Contraseña" required="required" type="password" value=""/>
+               <button id="eye" type="button">
+                <img alt="eye" src="/images/icon/eye_login.png"/>
+               </button>
+              </div>
+             </div>
+             <div class="row">
+              <div class="col-12 g-recaptcha" data-sitekey="6LfsBG8pAAAAAN2SYPXQP11ZZyEyvfKYvPInuPPW">
+              </div>
+             </div>
+             <div style="text-align:left;">
+              <button class="btn btn-primary BtnLogin">
+               Acceder
+              </button>
+             </div>
+             <div class="recordPassword">
+              <a href="/Recordar-Psswd">
+               ¿Olvidé la contraseña?
+              </a>
+             </div>
+             <div class="regUsuario">
+              <p>
+               Si aún no tiene cuenta,
+               <a href="/Registro">
+                regístrese
+               </a>
+              </p>
+             </div>
+            </div>
+            <input name="ufprt" type="hidden" value="64912F4101EEC156A0F980A1765B34E6CCDB9F146C0A5A480C7B3C84380BBF95333ED8077F4E82E5E6773AB91AB7EAEBA917D6F1D29F83B1447F4D97445E3111CC69EF1C8385D264F5850678E6C68752529AC881B02ACD85C4278372B77A54251EC7744C1C1180323EB40A58A8261628D3A145131D7060B11E1963A5B591DB9E"/>
+           </form>
+          </div>
+         </div>
+         <!-- /.modal-content -->
+        </div>
+        <!-- /.modal-dialog -->
+       </div>
+       <script>
+        function show() {
+        var p = document.getElementById('Psswd');
+        p.setAttribute('type', 'text');
+    }
+
+    function hide() {
+        var p = document.getElementById('Psswd');
+        p.setAttribute('type', 'password');
+    }
+
+    var pwShown = 0;
+
+    document.getElementById("eye").addEventListener("click", function () {
+        if (pwShown == 0) {
+            pwShown = 1;
+            show();
+        } else {
+            pwShown = 0;
+            hide();
+        }
+    }, false);
+       </script>
+      </div>
+     </div>
+    </header>
+   </div>
+   <script src="https://cdn.jsdelivr.net/npm/ismobilejs@0.5.1/dist/isMobile.min.js">
+   </script>
+   <script>
+    $(document).ready(function () {
+        if (isMobile.apple.device || isMobile.android.device)
+        {
+            $('#hablaMedico').removeAttr('hidden');
+        }
+        else
+        {
+            //$('#hablaMedico').attr('hidden','hidden');
+        }
+    })
+    
+
+
+    function abrirEnlaceGadaca() {
+        if (isMobile.apple.device || isMobile.android.device) {
+
+            if (isMobile.apple.device) {
+                //window.location.href = 'https://itunes.apple.com/es/app/gadaca/id1327347501?mt=8';
+                window.location.href = 'https://itunes.apple.com/es/app/video-consulta-medica/id1453412803';
+            }
+            else {
+                //window.location.href = 'https://play.google.com/store/apps/details?id=com.lorentech.gadaca&hl=es'                
+                window.location.href = 'https://play.google.com/store/apps/details?id=com.gadaca.videoconsultamedica'
+            }
+
+        } else {
+            window.location.href = '/seccion-home-banner/banner-videoconsulta/';
+        }
+    }
+   </script>
+   <div class="OnlyImg">
+    <img alt="banner" class="d-block w-100" src="/images/background/banner-urologia.jpg"/>
+    <div class="Tex--OnlyImg">
+     <h5 class="genericbannerh5">
+      Urología Clínica
+     </h5>
+    </div>
+   </div>
+   <div class="container saludvaroncontainer">
+    <div class="row margintop85">
+     <div class="col-md-5">
+      <img class="img-proposito" src="/images/saludhombre/urologia1.png">
+      </img>
+     </div>
+     <div class="col-md-7">
+      <h3>
+       Infecciones Urogenitales:
+      </h3>
+      <p>
+       Pueden ocurrir infecciones en cualquier parte de los genitales, incluyendo en:
+      </p>
+      <br/>
+      <p>
+       <strong>
+        Un testículo (orquitis):
+       </strong>
+       Es la inflamación de uno o ambos testículos. Se puede producir debido a infecciones por bacterias o virus, o que se desconozca la causa. La causa más frecuente de la orquitis es una infección bacteriana, como una infección de transmisión sexual (ETS). En algunos casos, el virus de las paperas puede provocar orquitis. Pruebas que puede necesitar:
+      </p>
+      <ul class="plan-vida-p margintop35">
+       <li>
+        <span>
+         Análisis simple de orina y/o urocultivo para identificar el germen si se sospecha ITU. Si sospechamos enfermedad de transmisión sexual, se recogería muestra de secreción de la uretra.
+        </span>
+       </li>
+       <li>
+        <span>
+         Ecografía del escroto, para identificar las estructuras afectadas y descartar otro tipo de enfermedades que se pueden confundir con la orquitis.
+        </span>
+       </li>
+       <li>
+        <span>
+         La gammagrafía de los testículos es una prueba de medicina nuclear que puede ayudar también en descartar sobre todo la torsión testicular, aunque en general no es un procedimiento tan disponible como la ecografía.
+        </span>
+       </li>
+      </ul>
+     </div>
+    </div>
+    <div class="row margintop35">
+     <div class="col-md-7">
+      <p>
+       <strong>
+        El epidídimo (epididimitis):
+       </strong>
+       Es la inflamación del epidídimo, en ocasiones acompañada por inflamación de los testículos (orquiepididimitis). Por lo general aparecen dolor en el escroto e hinchazón unilateral. El diagnóstico se basa en el examen físico. El tratamiento incluye antibióticos, analgésicos y soporte escrotal.
+      </p>
+      <br/>
+      <p>
+       <strong>
+        La uretra (uretritis):
+       </strong>
+       La uretritis es un cuadro infeccioso que se caracteriza por una inflamación de la uretra masculina que puede ir acompañada de secreción de líquido purulento. Hay que distinguir dos grandes grupos: la uretritis gonocócica producida por el Gonococo y las uretritis No Gonocócicas que están causadas por el resto de gérmenes el mas frecuente de este grupo la Clamidia. Pruebas que se pueden requerir:
+      </p>
+      <br/>
+      <ul class="plan-vida-p">
+       <li>
+        <span>
+         Análisis de orina.
+        </span>
+       </li>
+       <li>
+        <span>
+         Análisis de sangre.
+        </span>
+       </li>
+       <li>
+        <span>
+         Cultivo de secreción uretral. Se toman muestras de secreciones.
+        </span>
+       </li>
+       <li>
+        <span>
+         Cistoscopia.
+        </span>
+       </li>
+      </ul>
+     </div>
+     <div class="col-md-5">
+      <img class="img-proposito" src="/images/saludhombre/urologia2.png"/>
+     </div>
+    </div>
+    <div class="row margintop35">
+     <div class="col-md-5">
+      <img class="img-proposito" src="/images/saludhombre/urologia3.png"/>
+     </div>
+     <div class="col-md-7">
+      <p>
+       <strong>
+        La próstata (prostatitis):
+       </strong>
+       Es la afección urológica más común en los varones menores de 50 años. Los síntomas de la prostatitis son variados, aunque los más característicos son el dolor pelviano, los trastornos urinarios y la disfunción sexual. Precisamos:
+      </p>
+      <br/>
+      <ul class="plan-vida-p">
+       <li>
+        <span>
+         Historia clínica y exploración.
+        </span>
+       </li>
+       <li>
+        <span>
+         Cultivo fraccionado de orina.
+        </span>
+       </li>
+       <li>
+        <span>
+         Cultivo de semen
+        </span>
+       </li>
+       <li>
+        <span>
+         Ecografía
+        </span>
+       </li>
+       <li>
+        <span>
+         Estudio analítico en sangre (PSA elevado en la prostatitis aguda)
+        </span>
+       </li>
+       <li>
+        <span>
+         Biopsia prostática en algunos casos de prostatitis crónica.
+        </span>
+       </li>
+      </ul>
+      <p>
+       <strong>
+        La vejiga (cistitis):
+       </strong>
+       No es un problema exclusivo de la mujer, también la padecen los hombres, es la inflamación y/o infección de la vejiga que se manifiesta con ardor al orinar, irritabilidad de la vejiga, orinar más seguido o quedarse con la sensación de querer miccionar mucho más. Cuando se complica la cistitis, los varones presentan una infección alta al riñón (pielonefritis) muchas veces con dolores en la espalda y en el estómago, náuseas y vómitos. Puede precisar Examen básico de orina y/o Urocultivo.
+      </p>
+     </div>
+    </div>
+    <div class="row margintop35">
+     <div class="col-md-7">
+      <p>
+       Un solo folículo capilar (absceso) o un absceso más profundo en el escroto que puede involucrar los testículos, el epidídimo o la uretra.
+      </p>
+      <br/>
+      <p>
+       <strong>
+        La zona genital,
+       </strong>
+       como el herpes genital o, en casos raros, la gangrena de Fournier.
+      </p>
+      <br/>
+      <p>
+       <strong>
+        La cabeza del pene.
+       </strong>
+       La infección puede ocurrir debajo del prepucio. Esto se llama balanitis.
+      </p>
+      <br/>
+      <p>
+       Usted puede notar sangre en el semen. La causa más frecuente de sangre en el semen es una infección o inflamación.
+      </p>
+     </div>
+     <div class="col-md-5">
+      <img class="img-proposito" src="/images/saludhombre/urologia4.png"/>
+     </div>
+    </div>
+    <div class="row margintop35">
+     <div class="col-md-5">
+      <img class="img-proposito" src="/images/saludhombre/urologia5.png"/>
+     </div>
+     <div class="col-md-7">
+      <h3>
+       La litiasis de vías Urinarias:
+      </h3>
+      <p>
+       Es una enfermedad causada por la presencia de litiasis o piedras en el interior de los riñones o de las vías urinarias (uréteres, vejiga). Los cálculos renales se componen de diferentes sustancias, siendo los de Oxalato cálcico y Acido Úrico los más frecuentes ( 90%). La situación y el tamaño se valora mediante:
+      </p>
+      <br/>
+      <ul class="plan-vida-p">
+       <li>
+        <span>
+         Radiografías simples. Permite distinguir la presencia de cálculos radiopacos situados en la vía urinaria.
+        </span>
+       </li>
+       <li>
+        <span>
+         Urografías con contraste. Prueba radiológica que permite localizar con precisión la situación del cálculo y su repercusión en la vía urinaria.
+        </span>
+       </li>
+       <li>
+        <span>
+         Ecografías. Es el examen no invasivo más utilizado en la actualidad, pues permite confirmar o descartar la obstrucción producida por los cálculos y localizarlos en la mayoría de los casos.
+        </span>
+       </li>
+       <li>
+        <span>
+         El UroTAC, permiten una localización precisa de la litiasis.
+        </span>
+       </li>
+      </ul>
+     </div>
+    </div>
+    <div class="row margintop35 marginbottom35">
+     <div class="col-md-12">
+      <h3>
+       Incontinencia Urinaria:
+      </h3>
+      <p>
+       Es una pérdida del control de la vejiga, problema frecuente y que a menudo causa vergüenza. La intensidad va desde mínimas perdidas asociados a esfuerzos hasta sensación de pérdida de control. Presenta relación directa con la edad.
+                Se dividen en diferentes tipos:
+      </p>
+      <br/>
+      <ul class="plan-vida-p">
+       <li>
+        <span>
+         <strong>
+          Incontinencia de esfuerzo.
+         </strong>
+         La orina se escapa cuando ejerces presión sobre la vejiga al toser, estornudar, reír, hacer ejercicio o levantar algo pesado.
+        </span>
+       </li>
+       <li>
+        <span>
+         <strong>
+          Incontinencia imperiosa.
+         </strong>
+         Tienes una necesidad repentina e intensa de orinar, seguida de una pérdida involuntaria de orina. Es posible que tengas que orinar con frecuencia, incluso durante toda la noche. La incontinencia imperiosa puede deberse a una afección menor, como una infección, o a una enfermedad más grave, como un trastorno neurológico o diabetes.
+        </span>
+       </li>
+       <li>
+        <span>
+         <strong>
+          Incontinencia por rebosamiento.
+         </strong>
+         Tienes goteo de orina frecuente o constante debido a que la vejiga no se vacía por completo.
+        </span>
+       </li>
+       <li>
+        <span>
+         <strong>
+          Incontinencia funcional.
+         </strong>
+         Un deterioro físico o mental te impide llegar al baño a tiempo.
+        </span>
+       </li>
+       <li>
+        <span>
+         <strong>
+          Incontinencia mixta.
+         </strong>
+         Tienes más de un tipo de incontinencia urinaria.
+        </span>
+       </li>
+      </ul>
+      <h4 class="h4color">
+       Valoración diagnóstica
+      </h4>
+      <ul class="plan-vida-p">
+       <li>
+        <span>
+         <strong>
+          Historia clínica exhaustiva:
+         </strong>
+         que ayudará a realizar una presunción diagnóstica bastante certera.
+        </span>
+       </li>
+       <li>
+        <span>
+         <strong>
+          Exploración física debe incluir:
+         </strong>
+         examen general, exploración abdominal focalizada a nivel del hipogastrio, valoración de la sensibilidad perianal y de los reflejos lumbosacros y exploración ginecológica.
+        </span>
+       </li>
+       <li>
+        <span>
+         <strong>
+          Pueden realizar pruebas complementarias para ayudar al diagnóstico.
+         </strong>
+         Estas pruebas deben incluir: urocultivo, laboratorio (glucemia, función renal e iones), ecografía renovesical, evaluación de la orina residual, flujometría, estudio urodinámico y cistoscopia.
+        </span>
+       </li>
+      </ul>
+     </div>
+    </div>
+   </div>
+   <div class="container">
+    <div class="row margintop35">
+     <div class="col-md-12">
+      <img class="img-mesa paddingtop40" src="/images/icon/mail.png"/>
+      <h2>
+       ¿Necesitas más información?
+      </h2>
+      <div class="mas-info">
+       <p>
+        Por favor, déjanos tu teléfono e email y nos pondremos en contacto contigo cuanto antes para explicarte todos los detalles.
+       </p>
+       <p>
+        <strong>
+         <em>
+          Horario de llamadas L-V de 8.00 a 21.00h.
+         </em>
+        </strong>
+       </p>
+      </div>
+     </div>
+     <div class="col-md-12">
+      <div>
+       <form action="/servicios-de-salud/salud-hombre/landings-salud-hombre/urologia-clinica" enctype="multipart/form-data" id="solicitudInfoDonanteForm" method="post">
+        <input name="__RequestVerificationToken" type="hidden" value="gvULs7zfNr6hg5YZtSOsbVZDvNRfVmeJShznlry05uyMe1Pb0Bblo8u6GJlVmAIfsvWw1CjHQqidwphcwrz-8pCqa_iLTOm4XrtqryBD2P01"/>
+        <div class="form-group">
+        </div>
+        <div>
+         <input hidden="" id="Subject" name="Subject" type="text" value="SO88FL Consulta Salud Hombre Urología Clínica"/>
+        </div>
+        <div class="row marginbottom20">
+         <div class="col-md-6">
+          <div class="form-group form-salud">
+           <input class="form-control" id="Nombre" name="Nombre" placeholder="Nombre*" required="true" type="text" value="">
+           </input>
+          </div>
+         </div>
+         <div class="col-md-6">
+          <div class="form-group form-salud">
+           <input class="form-control" id="Apellidos" name="Apellidos" placeholder="Apellidos*" required="true" type="text" value=""/>
+          </div>
+         </div>
+        </div>
+        <div class="row marginbottom20">
+         <div class="col-md-6">
+          <div class="form-group form-salud">
+           <input class="form-control" id="Telefono" name="Telefono" pattern="[0-9]{9}" placeholder="Teléfono*" required="true" type="text" value=""/>
+          </div>
+         </div>
+         <div class="col-md-6">
+          <div class="form-group form-salud">
+           <input class="form-control" id="Mail" name="Mail" placeholder="Email*" required="true" type="text" value=""/>
+          </div>
+         </div>
+        </div>
+        <div class="row">
+         <div class="col-md-12">
+          <div class="form-group form-salud">
+           <textarea class="form-control" cols="20" id="TextoPregunta" name="TextoPregunta" placeholder="Tu pregunta*" required="true" rows="2">
+</textarea>
+           <label>
+            <input class="form-control" id="AceptoPolitica" name="AceptoPolitica" required="true" type="checkbox" value="true"/>
+            <input name="AceptoPolitica" type="hidden" value="false"/>
+            Acepto la
+            <a class="noHover" href="https://atencionmedica.legalitas.com/politica-privacidad/" target="_blank">
+             política de privacidad
+            </a>
+            de la web*
+           </label>
+           <p class="float-right">
+            <em>
+             <strong>
+              *Campos obligatorios
+             </strong>
+            </em>
+           </p>
+           <div class="buttonPassword btn-formulario">
+            <button class="btn_popup">
+             Enviar
+            </button>
+           </div>
+          </div>
+         </div>
+        </div>
+        <input name="ufprt" type="hidden" value="0277E7E9DA39CD05BA76EE50D8F59866B59974A9833D554271FDCE10CF8A8A50667F2B0417D4081CAF586723C5E7CB3B46DD6F47BD884F13F7851FA3D988C785E569E55D5B36902C31C60852CCB1154A327D1A2AB23FF7E87A2BFE124CD9F122D110EDD19B765095FB4EC5082295F208E2C730ECF64E392AB0F87F530AD5B74915B5897F87136B321C92450A2818B2C33A68CEE156D4C14D66D581E1D4625726FD74A199D63F8D15F97E88EC8F5DBC95B6BEF03E2FB0D4AA803616FE54181164"/>
+       </form>
+      </div>
+     </div>
+    </div>
+   </div>
+   <div class="container-fluid container-cuadro-medico">
+    <a class="btn btn-primary btn-cuadro-medico" href="/buscador-medico/">
+     <strong>
+      ACCEDER AL CUADRO MÉDICO
+     </strong>
+    </a>
+   </div>
+   <div aria-hidden="true" class="modal fade" id="modalAvisos" role="dialog" tabindex="-1">
+    <div class="modal-dialog" role="document">
+     <div class="modal-content">
+      <div class="modal-body" id="textoModal">
+      </div>
+      <div class="modal-footer">
+       <button class="btn btn-secondary" data-dismiss="modal" type="button">
+        Cerrar
+       </button>
+      </div>
+     </div>
+    </div>
+   </div>
+   <script>
+    function mostrarModal() {
+        $('#modalAvisos').modal("show");
+    }
+   </script>
+   <!-- Footer -->
+   <!-- Footer -->
+   <div id="footer-wrapper">
+    <footer class="container" id="footer">
+     <div class="footerContent row row-eq-height">
+      <!-- Logo -->
+      <div class="col-12 col-sm-3 col-xl-2" id="logo">
+       <a href="/" id="iconoHome">
+        <img src="/images/Logo_Salud_Positivo_RGB.png"/>
+       </a>
+      </div>
+      <div class="col-12 col-sm-9 col-xl-4" id="quienes">
+       <p class="title">
+        ¿Quiénes somos?
+       </p>
+       <p>
+        Phasellus mi lectus, pellentesque eget sem interdum, pellentesque sagittis diam. Proin et ultricies elit.
+       </p>
+      </div>
+      <div class="contactFooter col-12 col-xl-6">
+       <ul class="nav justify-content-end">
+        <li class="nav-item hablaMedico" id="hablaMedico" onclick="abrirEnlaceGadaca()" style="cursor: pointer">
+         <p class="titleContact">
+          Vídeo Consulta
+         </p>
+         <p class="txtContact">
+          de Urgencias
+         </p>
+        </li>
+        <li class="nav-item contactTef" onclick="window.location.href='tel:+34917039024'">
+         <p class="titleContact">
+          Teléfono
+         </p>
+         <p class="txtContact">
+          917 039 024
+         </p>
+        </li>
+       </ul>
+      </div>
+     </div>
+    </footer>
+    <div class="copyrightFooter row">
+     <div class="container">
+      <div class="boxCookies">
+       <ul class="nav">
+        <li>
+         <a href="/cookies/">
+          Cookies
+         </a>
+        </li>
+        <li>
+         <a href="/aviso-legal/">
+          Aviso Legal
+         </a>
+        </li>
+        <li>
+         <a href="/politica-privacidad/">
+          Política de privacidad
+         </a>
+        </li>
+       </ul>
+      </div>
+      <div class="boxCopyright">
+       <p>
+        © Legálitas Salud 2025
+       </p>
+      </div>
+     </div>
+    </div>
+   </div>
+   <script src="https://cdn.jsdelivr.net/npm/ismobilejs@0.5.1/dist/isMobile.min.js">
+   </script>
+   <script>
+    $(document).ready(function () {
+    if (isMobile.apple.device || isMobile.android.device) {
+      $('#hablaMedico').removeAttr('hidden');
+    }
+    else {
+      //$('#hablaMedico').attr('hidden','hidden');
+    }
+  })
+
+
+
+  function abrirEnlaceGadaca() {
+    if (isMobile.apple.device || isMobile.android.device) {
+
+      if (isMobile.apple.device) {
+        //window.location.href = 'https://itunes.apple.com/es/app/gadaca/id1327347501?mt=8';
+        window.location.href = 'https://itunes.apple.com/es/app/video-consulta-medica/id1453412803';
+      }
+      else {
+        //window.location.href = 'https://play.google.com/store/apps/details?id=com.lorentech.gadaca&hl=es'
+        window.location.href = 'https://play.google.com/store/apps/details?id=com.gadaca.videoconsultamedica'
+      }
+
+    } else {
+      window.location.href = '/seccion-home-banner/banner-videoconsulta/';
+    }
+  }
+   </script>
+  </div>
+  <script src="/Scripts/jquery.validate.min.js">
+  </script>
+  <script src="/Scripts/bootstrap/bootstrap.min.js">
+  </script>
+  <script src="/Scripts/Quodem/quodem-cookies.1.0.js" type="text/javascript">
+  </script>
+  <script src="/Scripts/Quodem/js.cookie.js" type="text/javascript">
+  </script>
+  <div class="cookies_box custom-cookies" id="cuadroCookies" style="display:none;">
+   <h3>
+    Configuración de Cookies
+   </h3>
+   <p class="textoPanelCookies">
+    En LEGALITAS SALUD utilizamos cookies propias técnicas y de terceros para permitir el
+        correcto funcionamiento de este sitio, así como cookies con fines analíticos. Puedes encontrar
+        más detalles en nuestra
+    <a href="/Cookies/">
+     Política de Cookies.
+    </a>
+   </p>
+   <button onclick="allCookies();setCookie('cookiesConfig', '1', 365)">
+    ACEPTAR TODAS LAS COOKIES
+   </button>
+   <button onclick="cookiesPanel()">
+    CONFIGURACIÓN DE COOKIES
+   </button>
+   <button onclick="refuseAll();setCookie('cookiesConfig', '1', 365)">
+    RECHAZAR TODAS LAS COOKIES
+   </button>
+  </div>
+  <!--------Ventana Configuración COOKIES ---->
+  <div class="modalDialogCookies modal fade" style="display:none;">
+   <div class="modal-dialog">
+    <div class="modal-content">
+     <div class="modal-header mx-auto">
+      <h4 class="modal-title">
+       CONFIGURACIÓN DE COOKIES
+      </h4>
+     </div>
+     <p>
+      Puede escoger sus preferencias sobre qué cookies acepta o no, marcando a continuación las opciones que usted elija:
+     </p>
+     <h5>
+      <strong>
+       NECESARIAS
+      </strong>
+     </h5>
+     <p>
+      <strong>
+       Cookies básicas e imprescindibles
+      </strong>
+      .- Las cookies necesarias son absolutamente esenciales para que el sitio web funcione correctamente. Esta categoría solo incluye cookies que garantizan funcionalidades básicas y características de seguridad del sitio web. Estas cookies no almacenan ninguna información personal.
+     </p>
+     <div class="swipe-configuration__footer">
+      <a aria-controls="listado_1" aria-expanded="false" class="btn-collapse d-block w-100 text-left" data-toggle="collapse" href="#listado_1" role="button">
+       <span class="btn-collapse__text">
+        Ver listado completo de cookies de análisis
+       </span>
+      </a>
+      <div class="collapse" id="listado_1" style="">
+       <div class="card card-body">
+        <table>
+         <thead>
+          <tr>
+           <th>
+            Denominación
+           </th>
+           <th>
+            Titular
+           </th>
+           <th>
+            Duración
+           </th>
+           <th>
+            Finalidad
+           </th>
+          </tr>
+         </thead>
+         <tbody>
+          <tr>
+           <td>
+            ASP.NET_SessionId
+           </td>
+           <td>
+            Atención Médica Ocaso
+           </td>
+           <td>
+            Sesión
+           </td>
+           <td>
+            Control de sesiones
+           </td>
+          </tr>
+          <tr>
+           <td>
+            jwplayer.captionLabel
+           </td>
+           <td>
+            Atención Médica Ocaso
+           </td>
+           <td>
+            Sesión
+           </td>
+           <td>
+            Guarda los ajustes sobre los vídeos de la web de cara a las siguientes reproducciones.
+           </td>
+          </tr>
+          <tr>
+           <td>
+            __RequestVerificationToken
+           </td>
+           <td>
+            Atención Médica Ocaso
+           </td>
+           <td>
+            Sesión
+           </td>
+           <td>
+            Indica si el usuario ha aceptado la política de cookies.
+           </td>
+          </tr>
+          <tr>
+           <td>
+            OcasoAuthCookie
+           </td>
+           <td>
+            Atención Médica Ocaso
+           </td>
+           <td>
+            30 minutos
+           </td>
+           <td>
+            Indica si el usuario ha aceptado la política de cookies.
+           </td>
+          </tr>
+          <tr>
+           <td>
+            cookiesConfig
+           </td>
+           <td>
+            Atención Médica Ocaso
+           </td>
+           <td>
+            1 año
+           </td>
+           <td>
+            Indica si el usuario ha aceptado la política de cookies.
+           </td>
+          </tr>
+         </tbody>
+        </table>
+       </div>
+      </div>
+     </div>
+     <h5>
+      <strong>
+       ANALÍTICAS
+      </strong>
+     </h5>
+     <p>
+      <input id="cbox2" name="cbox" type="checkbox" value="analisis"/>
+      <strong>
+       Cookies de análisis.
+      </strong>
+      - Las cookies analíticas, que no son necesarias para que el sitio web funcione, las utilizamos específicamente para conocer mejor cómo interactúas por nuestro sitio web. Esto nos ayuda a seguir mejorando nuestros contenidos, y la experiencia de usuario.
+     </p>
+     <div class="swipe-configuration__footer">
+      <a aria-controls="listado_2" aria-expanded="false" class="btn-collapse d-block w-100 text-left" data-toggle="collapse" href="#listado_2" role="button">
+       <span class="btn-collapse__text">
+        Ver listado completo de cookies de análisis
+       </span>
+      </a>
+      <div class="collapse" id="listado_2" style="">
+       <div class="card card-body">
+        <table>
+         <thead>
+          <tr>
+           <th>
+            Denominación
+           </th>
+           <th>
+            Titular
+           </th>
+           <th>
+            Duración
+           </th>
+           <th>
+            Finalidad
+           </th>
+          </tr>
+         </thead>
+         <tbody>
+          <tr>
+           <td>
+            _ga
+           </td>
+           <td>
+            Google
+           </td>
+           <td>
+            2 años
+           </td>
+           <td>
+            Identificador utilizado por Google Analytics para distinguir usuarios
+           </td>
+          </tr>
+          <tr>
+           <td>
+            _gid
+           </td>
+           <td>
+            Google
+           </td>
+           <td>
+            1 día
+           </td>
+           <td>
+            Identificador utilizado por Google Analytics para distinguir usuarios
+           </td>
+          </tr>
+          <tr>
+           <td>
+            _gat
+           </td>
+           <td>
+            Google
+           </td>
+           <td>
+            1 minuto
+           </td>
+           <td>
+            Se usa para limitar el porcentaje de solicitudes.
+           </td>
+          </tr>
+          <tr>
+           <td>
+            _ga_ID
+           </td>
+           <td>
+            Google
+           </td>
+           <td>
+            2 años
+           </td>
+           <td>
+            Se usa para mantener el estado de la sesión
+           </td>
+          </tr>
+         </tbody>
+        </table>
+       </div>
+      </div>
+     </div>
+     <div class="modal-footer">
+      <button class="btn_popup mx-auto" data-dismiss="modal" id="btnAceptarModal" onclick="analyticCookies();setCookie('cookiesConfig', '1', 365)" type="button">
+       Guardar configuración
+      </button>
+      <button class="btn_popup mx-auto" data-dismiss="modal" id="btnCerrarModal" onclick="clickOptionInPanel()" type="button">
+       Cerrar
+      </button>
+     </div>
+    </div>
+   </div>
+  </div>
+  <script>
+   $('body').addClass('noLoged');
+  </script>
+  <script type="text/javascript">
+   $(document).ready(function () {
+            // Verifica si la cookie existe
+            if (getCookie("cookiesConfig")) {
+                //si sí existe, no mostramos el panel
+                //$("#cuadroCookies").css("display", "none");
+                $(".panelGestCookies").css("display", "block");
+            } else {
+                $("#cuadroCookies").css("display", "block");
+            }
+        });
+
+        function setCookie(name, value, days) {
+            var expires = "";
+            if (days) {
+                var date = new Date();
+                date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+                expires = "; expires=" + date.toUTCString();
+            }
+            document.cookie = name + "=" + value + expires + "; path=/";
+        }
+
+        function cookiesPanel() {
+            $('.modal-content .collapse').each(function (index) {
+                $(this).removeClass("show");
+            });
+
+            var acepted = cookiesAcepted();
+            $(".modalDialogCookies").modal("show");
+            if (acepted) {
+                document.getElementById("cbox2").checked = true;
+            }
+            
+        }
+
+        function clickOptionInPanel() {
+            $(".modalDialogCookies").modal("hide");
+        }
+
+        function cookiesAcepted() {
+            var acepted = false;
+
+            var cookies = document.cookie.split(';');
+
+            // Iterar a través de las cookies y verificar si alguna contiene el nombre deseado
+            for (var i = 0; i < cookies.length; i++) {
+                var cookie = cookies[i].trim();
+                // Verificar si la cookie comienza con el nombre deseado
+                if (cookie.indexOf('_g') === 0) {
+                    acepted = true;
+                }
+            }
+
+            return acepted;
+        }
+
+        function analyticCookies() {
+            var isChecked = document.getElementById('cbox2').checked;
+            if (isChecked == true) {
+                window.ga = window.ga || function () { (ga.q = ga.q || []).push(arguments) }; ga.l = +new Date;
+                ga('create', 'UA-64597784-5', 'auto');
+                ga('require', 'outboundLinkTracker');
+
+                ga('send', 'pageview');
+            } else {
+                var cookies = document.cookie.split(';'); // Obtener todas las cookies
+                var cookiesToDelete = [];
+
+                // Filtrar y obtener las cookies que empiezan con "_g"
+                for (var i = 0; i < cookies.length; i++) {
+                    var cookie = cookies[i].trim();
+                    if (cookie.indexOf('_g') === 0) {
+                        cookiesToDelete.push(cookie);
+                    }
+                }
+                var domain = window.location.host;
+                var cleanDomain = domain.split('.');
+                // Borrar las cookies
+                for (var j = 0; j < cookiesToDelete.length; j++) {
+                    var cookieName = cookiesToDelete[j].split('=')[0];
+                    //el primero siver solo para local
+                    //document.cookie = cookieName + '=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;';
+                    document.cookie = cookieName + '=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/; domain=' + cleanDomain[1] + '.' + cleanDomain[2] + ';';
+                }
+
+            }
+
+            $(".modalDialogCookies").modal("hide");
+            $("#cuadroCookies").css("display", "none");
+            $(".panelGestCookies").css("display", "block");
+        }
+
+        function allCookies() {
+            window.ga = window.ga || function () { (ga.q = ga.q || []).push(arguments) }; ga.l = +new Date;
+            ga('create', 'UA-64597784-5', 'auto');
+            ga('require', 'outboundLinkTracker');
+
+            ga('send', 'pageview');
+
+            $("#cuadroCookies").css("display", "none");
+            $(".panelGestCookies").css("display", "block");
+        }
+
+        function refuseAll() {
+            $("#cuadroCookies").css("display", "none");
+            $(".panelGestCookies").css("display", "block");
+        }
+
+        function getCookie(name) {
+            var cookieName = name + "=";
+            var decodedCookie = decodeURIComponent(document.cookie);
+            var cookieArray = decodedCookie.split(';');
+
+            for (var i = 0; i < cookieArray.length; i++) {
+                var cookie = cookieArray[i];
+                while (cookie.charAt(0) === ' ') {
+                    cookie = cookie.substring(1);
+                }
+                if (cookie.indexOf(cookieName) === 0) {
+                    return cookie.substring(cookieName.length, cookie.length);
+                }
+            }
+            return null;
+        }
+  </script>
+  <script type="text/javascript">
+   function showLoginError() {
+            $("#modalErrorLogin").modal("show");
+        }
+        function showLogin() {
+            $("#modalLogin").modal("show");
+        }
+  </script>
+  <script src="/Scripts/jquery.cubeportfolio.js" type="text/javascript">
+  </script>
+  <script src="/Scripts/main-cube.js" type="text/javascript">
+  </script>
+  <div class="panelGestCookies" style="display: none;">
+   <p onclick="cookiesPanel()">
+    Panel de configuración de cookies
+   </p>
+  </div>
+ </body>
+</html>

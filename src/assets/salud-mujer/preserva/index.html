@@ -1,0 +1,1573 @@
+<html>
+ <head>
+  <title>
+   Legálitas Salud
+  </title>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1, user-scalable=no" name="viewport"/>
+  <meta content="telephone=no" name="format-detection"/>
+  <link href="/images/favicon.ico" rel="icon" type="image/x-icon"/>
+  <!-- Google tag (gtag.js) -->
+  <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-BWPQH02F5J">
+  </script>
+  <script>
+   window.dataLayer = window.dataLayer || []; function gtag() { dataLayer.push(arguments); } gtag('js', new Date()); gtag('config', 'G-BWPQH02F5J');
+  </script>
+  <script src="/Scripts/autotrack.js">
+  </script>
+  <link href="/Content/css/boostrap/bootstrap.css" rel="stylesheet"/>
+  <link href="/Content/css/base.css" rel="stylesheet"/>
+  <link href="/images/favicon.ico" rel="shortcut icon" type="image/x-icon"/>
+  <script src="/Scripts/jquery-3.4.1.min.js">
+  </script>
+  <script src="https://code.highcharts.com/highcharts.js" type="text/javascript">
+  </script>
+  <script src="https://code.highcharts.com/highcharts-more.js" type="text/javascript">
+  </script>
+  <script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js" type="text/javascript">
+  </script>
+  <script src="/Scripts/moment.js" type="text/javascript">
+  </script>
+  <link href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css" rel="stylesheet"/>
+ </head>
+ <body class="is-preload homepage">
+  <div id="page-wrapper">
+   <!-- Header -->
+   <div class="container-fluid" id="header-wrapper">
+    <header id="header">
+     <div class="ocasoHeader">
+      <p>
+       Servicio para asegurados de Ocaso
+      </p>
+     </div>
+     <div class="ContactHeader row">
+      <!-- Logo -->
+      <div class="container">
+       <div id="logo">
+        <a href="/" id="iconoHome">
+         <img src="/images/Logo_Salud_Positivo_RGB.png"/>
+        </a>
+       </div>
+       <div id="contactHeader">
+        <ul class="justify-content-end">
+         <li class="nav-item hablaMedico" id="hablaMedico" onclick="abrirEnlaceGadaca()">
+          <p class="titleContact">
+           Vídeo Consulta
+          </p>
+          <p class="txtContact">
+           de Urgencias
+          </p>
+         </li>
+         <li class="nav-item contactTef" onclick="window.location.href='tel:+34917039024'">
+          <p class="titleContact">
+           Teléfono
+          </p>
+          <p class="txtContact">
+           917 039 024
+          </p>
+         </li>
+         <li class="nav-item contactWhats" onclick="window.location.href='https://api.whatsapp.com/send?phone=34696091138'">
+          <p class="titleContact">
+           Contacta por
+          </p>
+          <p class="txtContact">
+           WhatsApp
+          </p>
+         </li>
+        </ul>
+       </div>
+      </div>
+     </div>
+     <div class="menuHeader row">
+      <div class="container">
+       <!-- Nav -->
+       <nav class="navbar navbar-expand-lg custom-toggler">
+        <button aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler" data-target="#navbarSupportedContent" data-toggle="collapse" type="button">
+         <span class="navbar-toggler-icon">
+         </span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+         <ul class="navbar-nav mr-auto">
+          <li class="dropdown">
+           <a href="/">
+            Home
+           </a>
+          </li>
+          <li class="current serviciosSalud dropdown">
+           <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+            Servicios de Salud
+           </a>
+           <ul class="dropdown-menu">
+            <li class="ss-salud-mujer">
+             <a href="/servicios-de-salud/salud-mujer">
+              Salud Mujer
+             </a>
+            </li>
+            <li class="ss-salud-varon">
+             <a href="/servicios-de-salud/salud-hombre">
+              Salud Hombre
+             </a>
+            </li>
+            <li class="ss-paciente-mayor">
+             <a href="/servicios-de-salud/salud-senior">
+              Salud Senior
+             </a>
+            </li>
+            <li class="ss-pediatria">
+             <a href="/servicios-de-salud/pediatria">
+              Pediatría
+             </a>
+            </li>
+            <li class="ss-dental">
+             <a href="https://ocaso.giradental.com/">
+              Dental
+             </a>
+            </li>
+            <li class="ss-podologia">
+             <a href="/servicios-de-salud/podologia">
+              Podología
+             </a>
+            </li>
+            <li class="ss-genetica">
+             <a href="/servicios-de-salud/genetica">
+              Genética
+             </a>
+            </li>
+            <li class="ss-oftalmologia">
+             <a href="/servicios-de-salud/oftalmologia">
+              Oftalmología
+             </a>
+            </li>
+           </ul>
+          </li>
+          <li class="cuadroMedico dropdown">
+           <a href="/buscador-medico/">
+            Cuadro Médico
+           </a>
+          </li>
+          <li class="planVida dropdown">
+           <a href="/plan-de-vida-saludable/">
+            Plan de Vida Saludable
+           </a>
+           <ul class="dropdown-menu">
+            <li class="">
+            </li>
+           </ul>
+          </li>
+          <li class="garantia dropdown">
+           <a href="/garantia-asistencia-medica/">
+            Garantía Asistencia Médica
+           </a>
+          </li>
+          <!--Boton para sacar Modal para el login (alojado en OcasoWebBase.cshtml)-->
+          <!--<button class="btn btn-primary LoginBtn" type="submit" data-toggle="modal" onclick="window.open('https://clientes.ocaso.es/login', '_blank')">Iniciar Sesión</button>-->
+          <a class="btn btn-primary LoginBtn" href="https://clientes.ocaso.es/login" target="_blank">
+           Iniciar Sesión
+          </a>
+          <div class="alert-dark" id="device">
+          </div>
+         </ul>
+        </div>
+       </nav>
+       <script>
+        var isMobile = {
+        Android: function () {
+            return navigator.userAgent.match(/Android/i);
+        },
+        BlackBerry: function () {
+            return navigator.userAgent.match(/BlackBerry/i);
+        },
+        iOS: function () {
+            return navigator.userAgent.match(/iPhone|iPad|iPod/i);
+        },
+        Opera: function () {
+            return navigator.userAgent.match(/Opera Mini/i);
+        },
+        Windows: function () {
+            return navigator.userAgent.match(/IEMobile/i);
+        },
+        any: function () {
+            return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows());
+        }
+    };
+
+    //$(document).ready(function () {
+    //    var content = $("#device");
+    //    if (isMobile.Windows)
+    //        content.html = "Windows";
+    //    if (isMobile.Android)
+    //        content.html = "Android";
+    //    if (isMobile.iOS)
+    //        content.html = "iOS";
+    //    if (isMobile.Opera)
+    //        content.html = "Opera";
+    //});
+       </script>
+       <div class="modal fade" id="modalLogin">
+        <script async="" defer="" src="https://www.google.com/recaptcha/api.js">
+        </script>
+        <div class="modal-dialog">
+         <div class="modal-content row no-gutters row-eq-height">
+          <div class="col-12 col-md-6 box-left-login">
+           <div class="PositionEnd">
+            <img src="/images/logos/Logo_Salud_Negativo_RGB.png">
+             <!--<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla maximus posuere orci non finibus. Morbi vulputate sagittis laoreet. Suspendisse convallis.  Nulla maximus posuere orci non finibus.</p>-->
+            </img>
+           </div>
+          </div>
+          <div class="col-12 col-md-6 box-rigth-login">
+           <form action="/servicios-de-salud/salud-mujer/landings-salud-mujer/preserva" autocomplete="off" enctype="multipart/form-data" method="post">
+            <div class="modal-body">
+             <h1>
+              Iniciar Sesión
+             </h1>
+             <input name="__RequestVerificationToken" type="hidden" value="1wT68zatwJPHQdkK-CNiLBt8EsvB0AIrBQ0DRnQq8Ihz7VtFOEj8jlWhacWCaniZwcR-R52jS0Vj4JB5MjUVvNJ89eVk2lD_FaKY1xXtIpM1"/>
+             <div class="form-group">
+             </div>
+             <div class="row form-group">
+              <div class="col-12">
+               <input id="Id" name="Id" placeholder="Usuario" required="required" type="text" value=""/>
+              </div>
+             </div>
+             <div class="row form-group">
+              <div class="col-12">
+               <input id="Psswd" name="Psswd" placeholder="Contraseña" required="required" type="password" value=""/>
+               <button id="eye" type="button">
+                <img alt="eye" src="/images/icon/eye_login.png"/>
+               </button>
+              </div>
+             </div>
+             <div class="row">
+              <div class="col-12 g-recaptcha" data-sitekey="6LfsBG8pAAAAAN2SYPXQP11ZZyEyvfKYvPInuPPW">
+              </div>
+             </div>
+             <div style="text-align:left;">
+              <button class="btn btn-primary BtnLogin">
+               Acceder
+              </button>
+             </div>
+             <div class="recordPassword">
+              <a href="/Recordar-Psswd">
+               ¿Olvidé la contraseña?
+              </a>
+             </div>
+             <div class="regUsuario">
+              <p>
+               Si aún no tiene cuenta,
+               <a href="/Registro">
+                regístrese
+               </a>
+              </p>
+             </div>
+            </div>
+            <input name="ufprt" type="hidden" value="1F2EDB6BF3867E67788D20612A6B5617566D1DF124B7FA5D54B7F225536F1A0687ABED38246E483624C487053C02A6120B20F4FABAD68A76437913695AFA4BAE42AEF29CD565765D4BC2053B8369A09445DFB4302927105E870A5D49B62EA338781456449FE2900FAF077ABDC35A1ACAB64617A64860D06E9DC95D683E5320F8"/>
+           </form>
+          </div>
+         </div>
+         <!-- /.modal-content -->
+        </div>
+        <!-- /.modal-dialog -->
+       </div>
+       <script>
+        function show() {
+        var p = document.getElementById('Psswd');
+        p.setAttribute('type', 'text');
+    }
+
+    function hide() {
+        var p = document.getElementById('Psswd');
+        p.setAttribute('type', 'password');
+    }
+
+    var pwShown = 0;
+
+    document.getElementById("eye").addEventListener("click", function () {
+        if (pwShown == 0) {
+            pwShown = 1;
+            show();
+        } else {
+            pwShown = 0;
+            hide();
+        }
+    }, false);
+       </script>
+      </div>
+     </div>
+    </header>
+   </div>
+   <script src="https://cdn.jsdelivr.net/npm/ismobilejs@0.5.1/dist/isMobile.min.js">
+   </script>
+   <script>
+    $(document).ready(function () {
+        if (isMobile.apple.device || isMobile.android.device)
+        {
+            $('#hablaMedico').removeAttr('hidden');
+        }
+        else
+        {
+            //$('#hablaMedico').attr('hidden','hidden');
+        }
+    })
+    
+
+
+    function abrirEnlaceGadaca() {
+        if (isMobile.apple.device || isMobile.android.device) {
+
+            if (isMobile.apple.device) {
+                //window.location.href = 'https://itunes.apple.com/es/app/gadaca/id1327347501?mt=8';
+                window.location.href = 'https://itunes.apple.com/es/app/video-consulta-medica/id1453412803';
+            }
+            else {
+                //window.location.href = 'https://play.google.com/store/apps/details?id=com.lorentech.gadaca&hl=es'                
+                window.location.href = 'https://play.google.com/store/apps/details?id=com.gadaca.videoconsultamedica'
+            }
+
+        } else {
+            window.location.href = '/seccion-home-banner/banner-videoconsulta/';
+        }
+    }
+   </script>
+   <script src="/Scripts/script.js">
+   </script>
+   <script src="/Assets/js/jwpcontainer.js">
+   </script>
+   <div class="OnlyImg">
+    <img alt="banner" class="d-block w-100" src="/images/background/banner-preserva.png"/>
+    <div class="Tex--OnlyImg">
+     <h5 class="genericbannerh5">
+      Preserva
+     </h5>
+    </div>
+   </div>
+   <div class="container-fluid bgwhite">
+    <div "="" class="row" id="MenuFixed">
+     <div class="col-md-6 menu-ginecologia">
+      <a href="#preserva">
+       Preserva
+      </a>
+     </div>
+     <div class="col-md-6 menu-ginecologia noborder">
+      <a href="#donacion">
+       Donación de óvulos
+      </a>
+     </div>
+    </div>
+   </div>
+   <div class="container" id="Scrolling">
+    <div id="preserva">
+     <div class="row margintop35">
+      <div class="col-md-12">
+       <img class="img-mesa" src="/images/icon/icon-preserva1.png">
+        <h2>
+         Preserva
+        </h2>
+       </img>
+      </div>
+     </div>
+     <div class="row margintop35">
+      <div class="col-md-4">
+       <img src="/images/saludmujer/preserva1.png"/>
+      </div>
+      <div class="col-md-8">
+       <h3>
+        Decidir ser madre es una decisión difícil de tomar
+       </h3>
+       <p>
+        La mujer nace con un número determinado de óvulos, que constituyen su reserva ovárica. Esta disminuye con los años, por lo que su capacidad de concebir va disminuyendo con el paso del tiempo, especialmente a partir de los 35 años. Debido al ritmo de vida actual cada vez más mujeres se encuentran con un nivel de fertilidad muy bajo cuando deciden ser madres.
+       </p>
+       <div class="preserva-sermadre">
+        <p>
+         ¿Sabías que por cada año que se retrasa la maternidad
+         <strong>
+          las posibilidades de quedarse embarazada se reducen un 5%?
+         </strong>
+        </p>
+       </div>
+      </div>
+     </div>
+     <div class="row margintop35">
+      <div class="col-md-12">
+       <p class="text-center margintop60">
+        *probalidad de embarazo espontáneo tras un año
+       </p>
+      </div>
+     </div>
+     <div class="row margintop35">
+      <div class="col-md-6">
+       <h3>
+        ¿Qué es Preserva?
+       </h3>
+       <p>
+        Es un tratamiento que te ayudará a decidir cual es tu momento adecuado para ser madre, evitando el deterioro de la fertilidad propio del paso del tiempo.
+       </p>
+      </div>
+      <div class="col-md-6">
+       <h3>
+        ¿En qué consiste?
+       </h3>
+       <p>
+        Mediante la técnica de vitrificación se congelan los ovocitos de la mujer en su edad fertil con el fin de fecundarlos y transferirlos cuando la mujer decida ser madre. Es decir, si preservas a los 20 años tus óvulos tendrán la calidad de los 20 años cuando decidas utilizarlos.
+       </p>
+      </div>
+     </div>
+     <div class="row margintop35">
+      <div class="col-md-12">
+       <h3>
+        Ventajas
+       </h3>
+      </div>
+     </div>
+     <div class="row margintop35 ventajas">
+      <div class="col-md-4">
+       <img class="img-ventaja" src="/images/saludmujer/preserva-ventaja1.png"/>
+       <h4>
+        Tiempo
+       </h4>
+       <p>
+        Ganarás la batalla al reloj biologico. Pasados los 35 años, se disminuye de casi un 50% las probalidades de quedarse embarazada.
+       </p>
+      </div>
+      <div class="col-md-4">
+       <img class="img-ventaja" src="/images/saludmujer/preserva-ventaja2.png"/>
+       <h4>
+        Libertad
+       </h4>
+       <p>
+        La tranquilidad de ser madre en el momento que consideres oportuno.
+       </p>
+      </div>
+      <div class="col-md-4">
+       <img class="img-ventaja" src="/images/saludmujer/preserva-ventaja3.png"/>
+       <h4>
+        Óvulos propios
+       </h4>
+       <p>
+        Reducirás las posibilidades de recurrir a la ovodonación, teniendo tus propios óvulos en edad óptima.
+       </p>
+      </div>
+     </div>
+     <div class="row margintop35 ventajas">
+      <div class="col-md-4">
+       <img class="img-ventaja" src="/images/saludmujer/preserva-ventaja4.png"/>
+       <h4>
+        Hijos más sanos
+       </h4>
+       <p>
+        Mayor probalidad de tener un hijo libre de enfermedades hereditarias, con tratamientos complementarios con el DGP*.
+       </p>
+      </div>
+      <div class="col-md-4">
+       <img class="img-ventaja" src="/images/saludmujer/preserva-ventaja5.png"/>
+       <h4>
+        Comodidad
+       </h4>
+       <p>
+        Es un tratamiento rápido cómodo, facil y menos costoso de lo que piensas, ¡no dudes en informarte!
+       </p>
+      </div>
+      <div class="col-md-4">
+       <img class="img-ventaja" src="/images/saludmujer/preserva-ventaja6.png"/>
+       <h4>
+        Ilusión
+       </h4>
+       <p>
+        Con un sencillo gesto conseguiras libertdad, tiempo y la tranquilidad de tener hijos saludables en el futuro.
+       </p>
+      </div>
+     </div>
+     <div class="row margintop35">
+      <div class="col-md-12">
+       <p class="text-center">
+        <strong>
+         *DGP:
+        </strong>
+        El Diagnóstico Genético Preimplantacional (DGP) detecta y previene la transmisión a la descendencia de enfermedades graves causadas por alteraciones genéticas y cromosómicas en los embriones, antes de su implantación, para lograr que los hijos nazcan libres de enfermedades hereditarias.
+       </p>
+      </div>
+     </div>
+     <div class="row margintop35">
+      <div class="col-md-12">
+       <h3>
+        ¿Cómo es el proceso?
+       </h3>
+      </div>
+     </div>
+     <div class="row margintop35">
+      <div class="col-md-6">
+       <img src="/images/saludmujer/preserva2.png"/>
+      </div>
+      <div class="col-md-6">
+       <h4 class="colorOrange">
+        1. Estimulación ovárica
+       </h4>
+       <p>
+        Este procedimiento es necesario para incrementar las posibilidades de éxito,  ya que de forma natural sólo madura un óvulo en cada ciclo menstrual. Después de la visita ginecológica y con el asesoramiento debido, se realiza la estimulación ovárica. Es un sencillo tratamiento hormonal que ayuda a estimular ovarios. Te lo podrás administrar tú misma en casa o si lo prefieres podemos administrártelo nosotros. Durante la estimulación ovárico se realizarán algunos controles ecográficos para ver tu evolución, estos controles no provocan ninguna molestia y no duelen nada.
+       </p>
+       <br/>
+       <h4 class="colorOrange">
+        2. Punción folicular y vitrificación
+       </h4>
+       <p>
+        Entre nosotras, es un proceso sencillo, seguro e indoloro, que dura unos 20 minutos, se practica por vía vaginal y bajo una pequeña sedación para que no tengas ninguna molestia. Una vez acabada esta punción, descansarás y te recuperarás en nuestra clínica hasta que pasen los efectos de la anestesia. Es una intervención segura que no tiene los efectos de la anestesia. Es una intervención segura que no tiene efectos secundarios y donde las complicaciones puede ser mínimas.
+       </p>
+      </div>
+     </div>
+     <div class="row margintop35">
+      <div class="col-md-6">
+       <h4>
+        ¿A quién va dirigido?
+       </h4>
+       <ul class="ul-preserva">
+        <li>
+         1. Mujeres que se planteen tener hijos pero más tarde.
+        </li>
+        <li>
+         2. Por indicación médica:
+         <ul class="ul-preserva">
+          <li>
+           - Endometriosis
+          </li>
+          <li>
+           - Cirugía ovárica
+          </li>
+          <li>
+           - Oncológica
+          </li>
+         </ul>
+        </li>
+        <li>
+         3. Marcadores de reserva ovárica baja (AMH).
+        </li>
+       </ul>
+      </div>
+      <div class="col-md-6">
+       <img class="img-proposito" src="/images/saludmujer/preserva3.png"/>
+      </div>
+     </div>
+     <div class="row margin-bottom-35">
+      <div class="col-md-12">
+       <h4 class="colorOrange">
+        ¿Qué son los marcadores de reserva ovárica y como conocerlos?
+       </h4>
+       <p>
+        La hormona antimulleriana (AMH) es una sustancia segregada por los folículos ovarícos que nos permiten medir la reserva ovárica de una mujer, y saber así el número de óvulos fértiles de los que ésta dispone en el momento en el que se hace el análisis. Basta con un sencillo análisis de sangre del que se obtendrá una cifra directamente relacionada con la cantidad de óvulos.
+       </p>
+      </div>
+     </div>
+     <div class="row margintop35">
+      <div class="col-md-12">
+       <h3>
+        ¿Qué pasa si no Preservas?
+       </h3>
+      </div>
+     </div>
+     <div class="row margintop35 ventajas">
+      <div class="col-md-6">
+       <img class="img-ventaja" src="/images/saludmujer/preserva4.png"/>
+       <h4>
+        30 años
+       </h4>
+       <p>
+        Una mujer de 30 años tiene alrededor del 20% de probabilidades de quedarse embarazada cada mes.
+       </p>
+      </div>
+      <div class="col-md-6">
+       <img class="img-ventaja" src="/images/saludmujer/preserva5.png"/>
+       <h4>
+        35 años
+       </h4>
+       <p>
+        Una mujer de 35 años tiene alrededor del 10% de probalidades de quedarse embarazada cada mes.
+       </p>
+      </div>
+     </div>
+     <div class="row margintop35">
+      <div class="col-md-12">
+       <h3>
+        ¿A qué edad se debe preservar?
+       </h3>
+      </div>
+     </div>
+     <div class="row margintop35">
+      <div class="col-md-12">
+       <h4 class="colorOrange">
+        El buen momento
+       </h4>
+       <p>
+        En la sociedad actual existe un retraso voluntario de la maternidad. Hay una multitud de razones que hacen que una mujer no esté preparada para formar una familia en el momento perfecto biológicamente hablando, es decir antes de los 35 años: carrera profesional, mujeres sin pareja estable u otros.
+       </p>
+       <br/>
+       <h4 class="colorOrange">
+        Planificación familiar
+       </h4>
+       <p>
+        Si ya tienes un hijo pero no es el momento adecuado para la llegada del segundo. Retrasar esa llegada puede provocar lo que se conoce como Infertilidad Secundaria. Es decir, cuando el primer hijo llega de forma natural pero cuando se busca el segundo, aparecen los problemas.
+       </p>
+       <br/>
+       <h4 class="colorOrange">
+        Incertidumbre
+       </h4>
+       <p>
+        A lo mejor no sabes si quieres tener hijos, preservar el embarazo, como la Endometriosis, tratamientos para el cancer, cirugía ovárica u otros. Preservar te permitirá conservar la opción de ser madre en el futuro.
+       </p>
+       <br/>
+       <h4 class="colorOrange">
+        Condicionante médicos
+       </h4>
+       <p>
+        Hay condicionantes médicos que complican el embarazo, como la Endometriosis, tratamientos para el cáncer, cirugía ovárica y otros. Preservar te permitirá conservar la opción de ser madre en el futuro.
+       </p>
+      </div>
+     </div>
+     <div class="row margintop35">
+      <div class="col-md-12">
+       <div class="preserva-sermadre preserva-container">
+        <p>
+         Posterga la decisión de ser madre preservando tu fertilidad.
+         <br>
+          <strong>
+           No te arrepentirás.
+          </strong>
+         </br>
+        </p>
+       </div>
+      </div>
+     </div>
+    </div>
+    <div class="container-fluid container-video">
+     <div class="container-btn" onclick="setTimeout(function(){resize_idcontainer();}, 500);">
+      <a class="video-btn" data-target="#exampleModalCenter" data-toggle="modal">
+       <img class="imgvideo" src="/images/icon/play-video.png"/>
+       VER VIDEO
+      </a>
+     </div>
+     <!-- Modal -->
+     <div aria-hidden="true" aria-labelledby="exampleModalCenterTitle" class="modal fade" id="exampleModalCenter" role="dialog" tabindex="-1">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+       <div class="modal-content">
+        <div class="modal-header">
+         <h5 class="modal-title" id="exampleModalLongTitle">
+          Preserva
+         </h5>
+         <button aria-label="Close" class="close" data-dismiss="modal" type="button">
+          <span aria-hidden="true">
+           ×
+          </span>
+         </button>
+        </div>
+        <div class="modal-body">
+         <div class="col-md-12">
+          <div class="contDocument" id="resizevideo">
+           <div class="jwplayer" id="Idvideo">
+           </div>
+          </div>
+          <script>
+           var vid1 = null;
+                                vid1 = jwpContainer.createVideoWithSetup({
+                                    file: "/Assets/video/Video_Preserva.mp4",
+                                    image: "/Assets/video/thumb/thumb-preserva.png",
+                                    width: 640,
+                                    height: 160,
+                                }, "Idvideo");
+
+                                function resize_idcontainer() {
+                                    /// Ancho de la capa donde va a estar el video.
+                                    var videoWidth = document.getElementById("resizevideo").clientWidth;
+                                    var ratioHeightWidth = 0.5;
+                                    try {
+                                        ratioHeightWidth = 16 / 9;
+                                    } catch (e) {
+                                    }
+                                    vid1.resize(videoWidth, (videoWidth / ratioHeightWidth));
+                                }
+
+                                $(window).resize(function () {
+                                    resize_idcontainer();
+                                });
+
+                                var divWidth = document.getElementById("resizevideo").clientWidth;
+                                var aspectRatio = 16 / 9;
+                                vid1.resize(divWidth, (divWidth / aspectRatio));
+
+                                $(document).ready(function (e) {
+                                    $(".close").click(function () {
+                                        jwplayer().stop();
+
+                                    })
+
+                                    $('#exampleModalCenter').on('hidden.bs.modal', function (e) {
+                                        jwplayer().stop();
+                                    })
+
+                                });
+          </script>
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+    <div id="donacion">
+     <div class="row margintop35">
+      <div class="col-md-12">
+       <img class="img-mesa" src="/images/icon/icon-ovodonacion.png"/>
+       <h2>
+        Donación de óvulos
+       </h2>
+      </div>
+     </div>
+     <div class="row margintop35">
+      <div class="col-md-6">
+       <img class="img-proposito" src="/images/saludmujer/donacion1.png"/>
+      </div>
+      <div class="col-md-6">
+       <p>
+        Ayuda a muchas mujeres con problemas de fertilidad a poder cumplir el deseo de ser madre y obtén información clara, detallada y gratuita sobre tu estado físico, psíquico, analítico y sobre tu propia fertilidad. La Ley 14/2006, del 14 de Mayo, sobre técnicas de reproducción humana asistida establece que la donación se tiene que realizar de forma anónima, voluntaria, informada y no renumerada.
+       </p>
+      </div>
+     </div>
+     <div class="row margintop35">
+      <div class="col-md-6">
+       <h3>
+        ¿Qué es?
+       </h3>
+       <p>
+        Donar óvulos permite a muchas mujeres con problemas de fertilidad poder cumplir el deseo de ser madre. Existen muchas razones por las que una mujer puede necesitar óvulos donados de otra mujer, razones tanto médicas como sociales:
+       </p>
+       <br>
+        <ul class="plan-vida-p">
+         <li>
+          <span>
+           Mujeres que ya no tienen ovarios ya sea por cirugías previas o por otros tratamientos como la Quimioterapia.
+          </span>
+         </li>
+         <li>
+          <span>
+           Mujeres sin función ovárica (menopausia, fallo ovárico prematuro, etc.).
+          </span>
+         </li>
+         <li>
+          <span>
+           Mujeres en las que la calidad del óvulo ya no es buena.
+          </span>
+         </li>
+         <li>
+          <span>
+           Mujeres portadoras de alguna enfermedad genética con riesgo de transmisión a la descendencia.
+          </span>
+         </li>
+         <li>
+          <span>
+           Ser donante de óvulos te va a permitir ayudar a esas mujeres que ya no pueden concebir con sus propios óvulos.
+          </span>
+         </li>
+        </ul>
+       </br>
+      </div>
+      <div class="col-md-6">
+       <img class="img-proposito" src="/images/saludmujer/donacion2.png"/>
+      </div>
+     </div>
+     <div class="row margintop35">
+      <div class="col-md-12">
+       <h3>
+        Ley de donación de óvulos
+       </h3>
+       <p>
+        La donación de óvulos es un proceso voluntario, altruista y anónimo. La Legislación Española autorizó la donación de óvulos en 1988 y actualmente está perfectamente regulada por la Ley 14/2006, del 14 de Mayo, sobre técnicas de reproducción humana asistida establece que la donación se tiene que realizar de forma  anónima, voluntaria, informada y no renumerada.
+       </p>
+      </div>
+     </div>
+     <div class="row margintop35 ventajas">
+      <div class="col-md-4">
+       <img class="img-ventaja" src="/images/saludmujer/donacion3.png"/>
+       <p>
+        Las donantes de óvulos deben tener 18 años y no superar los 34 años
+       </p>
+      </div>
+      <div class="col-md-4">
+       <img class="img-ventaja" src="/images/saludmujer/donacion4.png"/>
+       <p>
+        Las donantes de óvulos deben tener capacidad de obrar y estar en buen estado de salud psíquica y física
+       </p>
+      </div>
+      <div class="col-md-4">
+       <img class="img-ventaja" src="/images/saludmujer/donacion5.png"/>
+       <p>
+        La donación se debe formalizar mediante un contrato confidencial, escrito y firmado entre la donante y el centro médico
+       </p>
+      </div>
+     </div>
+     <div class="row margintop35">
+      <div class="col-md-6">
+       <h3>
+        Estudio previo de la donante
+       </h3>
+       <p>
+        Una vez recibida toda la información necesaria, se realiza una evaluación médica, psicológica y ginecológica completa y gratuita. Este chequeo es necesario para garantizar el estado de salud para la donación y permite a la donante tener información concreta sobre su estado de salud físico, psíquico y analítico. Este estudio incluirá:
+       </p>
+       <br>
+        <ul class="plan-vida-p">
+         <li>
+          <span>
+           Antecedentes personales y familiares.
+          </span>
+         </li>
+         <li>
+          <span>
+           Ecografía ginecológica.
+          </span>
+         </li>
+         <li>
+          <span>
+           Citología y cultivo vaginal.
+          </span>
+         </li>
+         <li>
+          <span>
+           Analíticas (hemograma y pruebas de coagulación, bioquímica, grupo y RH), screening de enfermedades infecciosas (sífilis, VHB, VHC, HIV, CMV).
+          </span>
+         </li>
+         <li>
+          <span>
+           Estudios genéticos: cariotipo, cribado de la Fibrosis Quística, Sd. X frágil, Estudio de Talasemias y atrofia muscular espinal (AME).
+          </span>
+         </li>
+         <li>
+          <span>
+           Evaluación psicológica.
+          </span>
+         </li>
+         <li>
+          <span>
+           Determinación de características fenotípicas: raza, altura, peso, IMC, color de ojos, color de piel, color y textura de pelo.
+          </span>
+         </li>
+        </ul>
+       </br>
+      </div>
+      <div class="col-md-6">
+       <img class="img-proposito" src="/images/saludmujer/donacion6.png"/>
+      </div>
+     </div>
+     <div class="row margintop35">
+      <div class="col-md-12">
+       <h3>
+        Proceso de donación
+       </h3>
+      </div>
+     </div>
+     <div class="row margintop35">
+      <div class="col-md-6">
+       <img class="img-proposito" src="/images/saludmujer/donacion7.png"/>
+      </div>
+      <div class="col-md-6">
+       <h4 class="colorOrange">
+        <span class="number-round">
+         1
+        </span>
+        Durante el proceso
+       </h4>
+       <p>
+        A diferencia de un ciclo normal, en el que la mujer produce un único óvulo cada mes, el proceso de la donación consiste en estimular los ovarios para conseguir un mayor número de óvulos. La estimulación ovárica se realiza mediante la administración de hormonas FSH y LH por vía subcutánea durante un periodo de entre 8 y 10 días. Durante el tratamiento se llevan a cabo una serie de ecografías y análisis hormonales para el control del crecimiento folicular.
+       </p>
+       <br/>
+       <p>
+        Finalmente, cuando los folículos alcanzan el tamaño en el cual el óvulo llega a la madurez, se realiza la descarga ovulatoria mediante la administración de una última inyección (HCG) por vía subcutánea.
+        <strong>
+         36 horas después de la inyección
+        </strong>
+        , se procede a la recuperación de los óvulos mediante una punción folicular (de los ovarios) por vía vaginal guiada por ecografía.
+        <strong>
+         Es un procedimiento muy seguro y rápido (dura unos 10-15 minutos),
+        </strong>
+        realizado en ambulatorio y requiere de una pequeña sedación. Tras una o dos horas en observación, la donante puede retirarse y hacer reposo durante ese mismo día.
+       </p>
+      </div>
+     </div>
+     <div class="row margintop35">
+      <div class="col-md-6">
+       <h4 class="colorOrange">
+        <span class="number-round">
+         2
+        </span>
+        Tras el proceso
+       </h4>
+       <p>
+        Una vez finalizado el proceso la donante puede hacer vida normal, teniendo la menstruación (en su mayoría) entre 5 y 6 días después de la punción. Los principales riesgos de este procedimiento terapéutico son:
+       </p>
+       <br/>
+       <ul class="plan-vida-p">
+        <li>
+         <span>
+          Síndrome de hiperestimulación ovárica: Consiste en una respuesta exagerada al tratamiento de estimulación del ovario o a las modificaciones hormonales derivadas del embarazo. En ocasiones, la respuesta ovárica es excesiva y se produce un desarrollo de gran número de folículos con aumento del tamaño ovárico y elevación considerable de la cantidad de estradiol en sangre.
+         </span>
+        </li>
+        <li>
+         <span>
+          Reacciones adversas o Intolerancia a la medicación.
+         </span>
+        </li>
+        <li>
+         <span>
+          Infección peritoneal.
+         </span>
+        </li>
+        <li>
+         <span>
+          Complicaciones de la punción folicular:
+         </span>
+         <ul class="sublista">
+          <li>
+           <span>
+            Hemorragia abdominal post punción por sangrado no autolimitado propio del ovario.
+           </span>
+          </li>
+          <li>
+           <span>
+            Punción de un asa intestinal.
+           </span>
+          </li>
+          <li>
+           <span>
+            La donación, no tiene ningún efecto negativo sobre la futura fertilidad de la donante.
+           </span>
+          </li>
+         </ul>
+        </li>
+       </ul>
+      </div>
+      <div class="col-md-6">
+       <img class="img-proposito" src="/images/saludmujer/donacion8.png"/>
+      </div>
+     </div>
+    </div>
+    <div class="container">
+     <div class="row margintop35">
+      <div class="col-md-12">
+       <img class="img-mesa paddingtop40" src="/images/icon/mail.png"/>
+       <h2>
+        ¿Necesitas más información?
+       </h2>
+       <div class="mas-info">
+        <p>
+         Por favor, déjanos tu teléfono e email y nos pondremos en contacto contigo cuanto antes para explicarte todos los detalles.
+        </p>
+        <p>
+         <strong>
+          <em>
+           Horario de llamadas L-V de 8.00 a 21.00h.
+          </em>
+         </strong>
+        </p>
+       </div>
+      </div>
+      <div class="col-md-12">
+       <div>
+        <form action="/servicios-de-salud/salud-mujer/landings-salud-mujer/preserva" enctype="multipart/form-data" id="solicitudInfoDonanteForm" method="post">
+         <input name="__RequestVerificationToken" type="hidden" value="jO603sxK52qs0ZNiGDsZzGK_GHU-KXZGl3RvyX1qGKIP_sDQofJl2xDZDwy_q7fFSls0JpjrpopJcCJ_wfIG7Db-Q8Qx1HG2w7zqmX2UafQ1"/>
+         <div class="form-group">
+         </div>
+         <div>
+          <input hidden="" id="Subject" name="Subject" type="text" value="SO88FL Consulta Salud Mujer Donacion"/>
+         </div>
+         <div class="row marginbottom20">
+          <div class="col-md-6">
+           <div class="form-group form-salud">
+            <input class="form-control" id="Nombre" name="Nombre" placeholder="Nombre*" required="true" type="text" value="">
+            </input>
+           </div>
+          </div>
+          <div class="col-md-6">
+           <div class="form-group form-salud">
+            <input class="form-control" id="Apellidos" name="Apellidos" placeholder="Apellidos*" required="true" type="text" value=""/>
+           </div>
+          </div>
+         </div>
+         <div class="row marginbottom20">
+          <div class="col-md-6">
+           <div class="form-group form-salud">
+            <input class="form-control" id="Telefono" name="Telefono" pattern="[0-9]{9}" placeholder="Teléfono*" required="true" type="text" value=""/>
+           </div>
+          </div>
+          <div class="col-md-6">
+           <div class="form-group form-salud">
+            <input class="form-control" id="Mail" name="Mail" placeholder="Email*" required="true" type="text" value=""/>
+           </div>
+          </div>
+         </div>
+         <div class="row">
+          <div class="col-md-12">
+           <div class="form-group form-salud">
+            <textarea class="form-control" cols="20" id="TextoPregunta" name="TextoPregunta" placeholder="Tu pregunta*" required="true" rows="2">
+</textarea>
+            <label>
+             <input class="form-control" id="AceptoPolitica" name="AceptoPolitica" required="true" type="checkbox" value="true"/>
+             <input name="AceptoPolitica" type="hidden" value="false"/>
+             Acepto la
+             <a class="noHover" href="https://atencionmedica.legalitas.com/politica-privacidad/" target="_blank">
+              política de privacidad
+             </a>
+             de la web*
+            </label>
+            <p class="float-right">
+             <em>
+              <strong>
+               *Campos obligatorios
+              </strong>
+             </em>
+            </p>
+            <div class="buttonPassword btn-formulario">
+             <button class="btn_popup">
+              Enviar
+             </button>
+            </div>
+           </div>
+          </div>
+         </div>
+         <input name="ufprt" type="hidden" value="21E866CB47D46057384260610B36F132A94DAE8719178E10AE59B86E11F0F014FC94BA2DE1ADAF77AFF822E7FC9EFF1279B9FD5D640966649BEE00C1A47FEE6599239D789497186520D7ED73D0DEFDE1F989613F7491B92D9D0806DF6F65BFE5E6C0AA32AA16562A3E68885CB5859F5D5E33B137DC1F803796811FD5C8BD155595F3D76CE7D3BEECCD83BFCE4BDC75980E722E64C6B9D5FD21E25489821D8AFBA104B39BF6B15AEA80F458803E81CD87B3BC32A2A88F7D69F5B16BBAEEF50698"/>
+        </form>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+   <div class="container-fluid container-cuadro-medico">
+    <a class="btn btn-primary btn-cuadro-medico" href="/buscador-medico/">
+     <strong>
+      ACCEDER AL CUADRO MÉDICO
+     </strong>
+    </a>
+   </div>
+   <div aria-hidden="true" class="modal fade" id="modalAvisos" role="dialog" tabindex="-1">
+    <div class="modal-dialog" role="document">
+     <div class="modal-content">
+      <div class="modal-body" id="textoModal">
+      </div>
+      <div class="modal-footer">
+       <button class="btn btn-secondary" data-dismiss="modal" type="button">
+        Cerrar
+       </button>
+      </div>
+     </div>
+    </div>
+   </div>
+   <script>
+    function mostrarModal() {
+        $('#modalAvisos').modal("show");
+    }
+   </script>
+   <!-- Footer -->
+   <!-- Footer -->
+   <div id="footer-wrapper">
+    <footer class="container" id="footer">
+     <div class="footerContent row row-eq-height">
+      <!-- Logo -->
+      <div class="col-12 col-sm-3 col-xl-2" id="logo">
+       <a href="/" id="iconoHome">
+        <img src="/images/Logo_Salud_Positivo_RGB.png"/>
+       </a>
+      </div>
+      <div class="col-12 col-sm-9 col-xl-4" id="quienes">
+       <p class="title">
+        ¿Quiénes somos?
+       </p>
+       <p>
+        Phasellus mi lectus, pellentesque eget sem interdum, pellentesque sagittis diam. Proin et ultricies elit.
+       </p>
+      </div>
+      <div class="contactFooter col-12 col-xl-6">
+       <ul class="nav justify-content-end">
+        <li class="nav-item hablaMedico" id="hablaMedico" onclick="abrirEnlaceGadaca()" style="cursor: pointer">
+         <p class="titleContact">
+          Vídeo Consulta
+         </p>
+         <p class="txtContact">
+          de Urgencias
+         </p>
+        </li>
+        <li class="nav-item contactTef" onclick="window.location.href='tel:+34917039024'">
+         <p class="titleContact">
+          Teléfono
+         </p>
+         <p class="txtContact">
+          917 039 024
+         </p>
+        </li>
+       </ul>
+      </div>
+     </div>
+    </footer>
+    <div class="copyrightFooter row">
+     <div class="container">
+      <div class="boxCookies">
+       <ul class="nav">
+        <li>
+         <a href="/cookies/">
+          Cookies
+         </a>
+        </li>
+        <li>
+         <a href="/aviso-legal/">
+          Aviso Legal
+         </a>
+        </li>
+        <li>
+         <a href="/politica-privacidad/">
+          Política de privacidad
+         </a>
+        </li>
+       </ul>
+      </div>
+      <div class="boxCopyright">
+       <p>
+        © Legálitas Salud 2025
+       </p>
+      </div>
+     </div>
+    </div>
+   </div>
+   <script src="https://cdn.jsdelivr.net/npm/ismobilejs@0.5.1/dist/isMobile.min.js">
+   </script>
+   <script>
+    $(document).ready(function () {
+    if (isMobile.apple.device || isMobile.android.device) {
+      $('#hablaMedico').removeAttr('hidden');
+    }
+    else {
+      //$('#hablaMedico').attr('hidden','hidden');
+    }
+  })
+
+
+
+  function abrirEnlaceGadaca() {
+    if (isMobile.apple.device || isMobile.android.device) {
+
+      if (isMobile.apple.device) {
+        //window.location.href = 'https://itunes.apple.com/es/app/gadaca/id1327347501?mt=8';
+        window.location.href = 'https://itunes.apple.com/es/app/video-consulta-medica/id1453412803';
+      }
+      else {
+        //window.location.href = 'https://play.google.com/store/apps/details?id=com.lorentech.gadaca&hl=es'
+        window.location.href = 'https://play.google.com/store/apps/details?id=com.gadaca.videoconsultamedica'
+      }
+
+    } else {
+      window.location.href = '/seccion-home-banner/banner-videoconsulta/';
+    }
+  }
+   </script>
+  </div>
+  <script src="/Scripts/jquery.validate.min.js">
+  </script>
+  <script src="/Scripts/bootstrap/bootstrap.min.js">
+  </script>
+  <script src="/Scripts/Quodem/quodem-cookies.1.0.js" type="text/javascript">
+  </script>
+  <script src="/Scripts/Quodem/js.cookie.js" type="text/javascript">
+  </script>
+  <div class="cookies_box custom-cookies" id="cuadroCookies" style="display:none;">
+   <h3>
+    Configuración de Cookies
+   </h3>
+   <p class="textoPanelCookies">
+    En LEGALITAS SALUD utilizamos cookies propias técnicas y de terceros para permitir el
+        correcto funcionamiento de este sitio, así como cookies con fines analíticos. Puedes encontrar
+        más detalles en nuestra
+    <a href="/Cookies/">
+     Política de Cookies.
+    </a>
+   </p>
+   <button onclick="allCookies();setCookie('cookiesConfig', '1', 365)">
+    ACEPTAR TODAS LAS COOKIES
+   </button>
+   <button onclick="cookiesPanel()">
+    CONFIGURACIÓN DE COOKIES
+   </button>
+   <button onclick="refuseAll();setCookie('cookiesConfig', '1', 365)">
+    RECHAZAR TODAS LAS COOKIES
+   </button>
+  </div>
+  <!--------Ventana Configuración COOKIES ---->
+  <div class="modalDialogCookies modal fade" style="display:none;">
+   <div class="modal-dialog">
+    <div class="modal-content">
+     <div class="modal-header mx-auto">
+      <h4 class="modal-title">
+       CONFIGURACIÓN DE COOKIES
+      </h4>
+     </div>
+     <p>
+      Puede escoger sus preferencias sobre qué cookies acepta o no, marcando a continuación las opciones que usted elija:
+     </p>
+     <h5>
+      <strong>
+       NECESARIAS
+      </strong>
+     </h5>
+     <p>
+      <strong>
+       Cookies básicas e imprescindibles
+      </strong>
+      .- Las cookies necesarias son absolutamente esenciales para que el sitio web funcione correctamente. Esta categoría solo incluye cookies que garantizan funcionalidades básicas y características de seguridad del sitio web. Estas cookies no almacenan ninguna información personal.
+     </p>
+     <div class="swipe-configuration__footer">
+      <a aria-controls="listado_1" aria-expanded="false" class="btn-collapse d-block w-100 text-left" data-toggle="collapse" href="#listado_1" role="button">
+       <span class="btn-collapse__text">
+        Ver listado completo de cookies de análisis
+       </span>
+      </a>
+      <div class="collapse" id="listado_1" style="">
+       <div class="card card-body">
+        <table>
+         <thead>
+          <tr>
+           <th>
+            Denominación
+           </th>
+           <th>
+            Titular
+           </th>
+           <th>
+            Duración
+           </th>
+           <th>
+            Finalidad
+           </th>
+          </tr>
+         </thead>
+         <tbody>
+          <tr>
+           <td>
+            ASP.NET_SessionId
+           </td>
+           <td>
+            Atención Médica Ocaso
+           </td>
+           <td>
+            Sesión
+           </td>
+           <td>
+            Control de sesiones
+           </td>
+          </tr>
+          <tr>
+           <td>
+            jwplayer.captionLabel
+           </td>
+           <td>
+            Atención Médica Ocaso
+           </td>
+           <td>
+            Sesión
+           </td>
+           <td>
+            Guarda los ajustes sobre los vídeos de la web de cara a las siguientes reproducciones.
+           </td>
+          </tr>
+          <tr>
+           <td>
+            __RequestVerificationToken
+           </td>
+           <td>
+            Atención Médica Ocaso
+           </td>
+           <td>
+            Sesión
+           </td>
+           <td>
+            Indica si el usuario ha aceptado la política de cookies.
+           </td>
+          </tr>
+          <tr>
+           <td>
+            OcasoAuthCookie
+           </td>
+           <td>
+            Atención Médica Ocaso
+           </td>
+           <td>
+            30 minutos
+           </td>
+           <td>
+            Indica si el usuario ha aceptado la política de cookies.
+           </td>
+          </tr>
+          <tr>
+           <td>
+            cookiesConfig
+           </td>
+           <td>
+            Atención Médica Ocaso
+           </td>
+           <td>
+            1 año
+           </td>
+           <td>
+            Indica si el usuario ha aceptado la política de cookies.
+           </td>
+          </tr>
+         </tbody>
+        </table>
+       </div>
+      </div>
+     </div>
+     <h5>
+      <strong>
+       ANALÍTICAS
+      </strong>
+     </h5>
+     <p>
+      <input id="cbox2" name="cbox" type="checkbox" value="analisis"/>
+      <strong>
+       Cookies de análisis.
+      </strong>
+      - Las cookies analíticas, que no son necesarias para que el sitio web funcione, las utilizamos específicamente para conocer mejor cómo interactúas por nuestro sitio web. Esto nos ayuda a seguir mejorando nuestros contenidos, y la experiencia de usuario.
+     </p>
+     <div class="swipe-configuration__footer">
+      <a aria-controls="listado_2" aria-expanded="false" class="btn-collapse d-block w-100 text-left" data-toggle="collapse" href="#listado_2" role="button">
+       <span class="btn-collapse__text">
+        Ver listado completo de cookies de análisis
+       </span>
+      </a>
+      <div class="collapse" id="listado_2" style="">
+       <div class="card card-body">
+        <table>
+         <thead>
+          <tr>
+           <th>
+            Denominación
+           </th>
+           <th>
+            Titular
+           </th>
+           <th>
+            Duración
+           </th>
+           <th>
+            Finalidad
+           </th>
+          </tr>
+         </thead>
+         <tbody>
+          <tr>
+           <td>
+            _ga
+           </td>
+           <td>
+            Google
+           </td>
+           <td>
+            2 años
+           </td>
+           <td>
+            Identificador utilizado por Google Analytics para distinguir usuarios
+           </td>
+          </tr>
+          <tr>
+           <td>
+            _gid
+           </td>
+           <td>
+            Google
+           </td>
+           <td>
+            1 día
+           </td>
+           <td>
+            Identificador utilizado por Google Analytics para distinguir usuarios
+           </td>
+          </tr>
+          <tr>
+           <td>
+            _gat
+           </td>
+           <td>
+            Google
+           </td>
+           <td>
+            1 minuto
+           </td>
+           <td>
+            Se usa para limitar el porcentaje de solicitudes.
+           </td>
+          </tr>
+          <tr>
+           <td>
+            _ga_ID
+           </td>
+           <td>
+            Google
+           </td>
+           <td>
+            2 años
+           </td>
+           <td>
+            Se usa para mantener el estado de la sesión
+           </td>
+          </tr>
+         </tbody>
+        </table>
+       </div>
+      </div>
+     </div>
+     <div class="modal-footer">
+      <button class="btn_popup mx-auto" data-dismiss="modal" id="btnAceptarModal" onclick="analyticCookies();setCookie('cookiesConfig', '1', 365)" type="button">
+       Guardar configuración
+      </button>
+      <button class="btn_popup mx-auto" data-dismiss="modal" id="btnCerrarModal" onclick="clickOptionInPanel()" type="button">
+       Cerrar
+      </button>
+     </div>
+    </div>
+   </div>
+  </div>
+  <script>
+   $('body').addClass('noLoged');
+  </script>
+  <script type="text/javascript">
+   $(document).ready(function () {
+            // Verifica si la cookie existe
+            if (getCookie("cookiesConfig")) {
+                //si sí existe, no mostramos el panel
+                //$("#cuadroCookies").css("display", "none");
+                $(".panelGestCookies").css("display", "block");
+            } else {
+                $("#cuadroCookies").css("display", "block");
+            }
+        });
+
+        function setCookie(name, value, days) {
+            var expires = "";
+            if (days) {
+                var date = new Date();
+                date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+                expires = "; expires=" + date.toUTCString();
+            }
+            document.cookie = name + "=" + value + expires + "; path=/";
+        }
+
+        function cookiesPanel() {
+            $('.modal-content .collapse').each(function (index) {
+                $(this).removeClass("show");
+            });
+
+            var acepted = cookiesAcepted();
+            $(".modalDialogCookies").modal("show");
+            if (acepted) {
+                document.getElementById("cbox2").checked = true;
+            }
+            
+        }
+
+        function clickOptionInPanel() {
+            $(".modalDialogCookies").modal("hide");
+        }
+
+        function cookiesAcepted() {
+            var acepted = false;
+
+            var cookies = document.cookie.split(';');
+
+            // Iterar a través de las cookies y verificar si alguna contiene el nombre deseado
+            for (var i = 0; i < cookies.length; i++) {
+                var cookie = cookies[i].trim();
+                // Verificar si la cookie comienza con el nombre deseado
+                if (cookie.indexOf('_g') === 0) {
+                    acepted = true;
+                }
+            }
+
+            return acepted;
+        }
+
+        function analyticCookies() {
+            var isChecked = document.getElementById('cbox2').checked;
+            if (isChecked == true) {
+                window.ga = window.ga || function () { (ga.q = ga.q || []).push(arguments) }; ga.l = +new Date;
+                ga('create', 'UA-64597784-5', 'auto');
+                ga('require', 'outboundLinkTracker');
+
+                ga('send', 'pageview');
+            } else {
+                var cookies = document.cookie.split(';'); // Obtener todas las cookies
+                var cookiesToDelete = [];
+
+                // Filtrar y obtener las cookies que empiezan con "_g"
+                for (var i = 0; i < cookies.length; i++) {
+                    var cookie = cookies[i].trim();
+                    if (cookie.indexOf('_g') === 0) {
+                        cookiesToDelete.push(cookie);
+                    }
+                }
+                var domain = window.location.host;
+                var cleanDomain = domain.split('.');
+                // Borrar las cookies
+                for (var j = 0; j < cookiesToDelete.length; j++) {
+                    var cookieName = cookiesToDelete[j].split('=')[0];
+                    //el primero siver solo para local
+                    //document.cookie = cookieName + '=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;';
+                    document.cookie = cookieName + '=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/; domain=' + cleanDomain[1] + '.' + cleanDomain[2] + ';';
+                }
+
+            }
+
+            $(".modalDialogCookies").modal("hide");
+            $("#cuadroCookies").css("display", "none");
+            $(".panelGestCookies").css("display", "block");
+        }
+
+        function allCookies() {
+            window.ga = window.ga || function () { (ga.q = ga.q || []).push(arguments) }; ga.l = +new Date;
+            ga('create', 'UA-64597784-5', 'auto');
+            ga('require', 'outboundLinkTracker');
+
+            ga('send', 'pageview');
+
+            $("#cuadroCookies").css("display", "none");
+            $(".panelGestCookies").css("display", "block");
+        }
+
+        function refuseAll() {
+            $("#cuadroCookies").css("display", "none");
+            $(".panelGestCookies").css("display", "block");
+        }
+
+        function getCookie(name) {
+            var cookieName = name + "=";
+            var decodedCookie = decodeURIComponent(document.cookie);
+            var cookieArray = decodedCookie.split(';');
+
+            for (var i = 0; i < cookieArray.length; i++) {
+                var cookie = cookieArray[i];
+                while (cookie.charAt(0) === ' ') {
+                    cookie = cookie.substring(1);
+                }
+                if (cookie.indexOf(cookieName) === 0) {
+                    return cookie.substring(cookieName.length, cookie.length);
+                }
+            }
+            return null;
+        }
+  </script>
+  <script type="text/javascript">
+   function showLoginError() {
+            $("#modalErrorLogin").modal("show");
+        }
+        function showLogin() {
+            $("#modalLogin").modal("show");
+        }
+  </script>
+  <script src="/Scripts/jquery.cubeportfolio.js" type="text/javascript">
+  </script>
+  <script src="/Scripts/main-cube.js" type="text/javascript">
+  </script>
+  <div class="panelGestCookies" style="display: none;">
+   <p onclick="cookiesPanel()">
+    Panel de configuración de cookies
+   </p>
+  </div>
+ </body>
+</html>

@@ -1,0 +1,1525 @@
+<html>
+ <head>
+  <title>
+   Legálitas Salud
+  </title>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1, user-scalable=no" name="viewport"/>
+  <meta content="telephone=no" name="format-detection"/>
+  <link href="/images/favicon.ico" rel="icon" type="image/x-icon"/>
+  <!-- Google tag (gtag.js) -->
+  <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-BWPQH02F5J">
+  </script>
+  <script>
+   window.dataLayer = window.dataLayer || []; function gtag() { dataLayer.push(arguments); } gtag('js', new Date()); gtag('config', 'G-BWPQH02F5J');
+  </script>
+  <script src="/Scripts/autotrack.js">
+  </script>
+  <link href="/Content/css/boostrap/bootstrap.css" rel="stylesheet"/>
+  <link href="/Content/css/base.css" rel="stylesheet"/>
+  <link href="/images/favicon.ico" rel="shortcut icon" type="image/x-icon"/>
+  <script src="/Scripts/jquery-3.4.1.min.js">
+  </script>
+  <script src="https://code.highcharts.com/highcharts.js" type="text/javascript">
+  </script>
+  <script src="https://code.highcharts.com/highcharts-more.js" type="text/javascript">
+  </script>
+  <script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js" type="text/javascript">
+  </script>
+  <script src="/Scripts/moment.js" type="text/javascript">
+  </script>
+  <link href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css" rel="stylesheet"/>
+ </head>
+ <body class="is-preload homepage">
+  <div id="page-wrapper">
+   <!-- Header -->
+   <div class="container-fluid" id="header-wrapper">
+    <header id="header">
+     <div class="ocasoHeader">
+      <p>
+       Servicio para asegurados de Ocaso
+      </p>
+     </div>
+     <div class="ContactHeader row">
+      <!-- Logo -->
+      <div class="container">
+       <div id="logo">
+        <a href="/" id="iconoHome">
+         <img src="/images/Logo_Salud_Positivo_RGB.png"/>
+        </a>
+       </div>
+       <div id="contactHeader">
+        <ul class="justify-content-end">
+         <li class="nav-item hablaMedico" id="hablaMedico" onclick="abrirEnlaceGadaca()">
+          <p class="titleContact">
+           Vídeo Consulta
+          </p>
+          <p class="txtContact">
+           de Urgencias
+          </p>
+         </li>
+         <li class="nav-item contactTef" onclick="window.location.href='tel:+34917039024'">
+          <p class="titleContact">
+           Teléfono
+          </p>
+          <p class="txtContact">
+           917 039 024
+          </p>
+         </li>
+         <li class="nav-item contactWhats" onclick="window.location.href='https://api.whatsapp.com/send?phone=34696091138'">
+          <p class="titleContact">
+           Contacta por
+          </p>
+          <p class="txtContact">
+           WhatsApp
+          </p>
+         </li>
+        </ul>
+       </div>
+      </div>
+     </div>
+     <div class="menuHeader row">
+      <div class="container">
+       <!-- Nav -->
+       <nav class="navbar navbar-expand-lg custom-toggler">
+        <button aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler" data-target="#navbarSupportedContent" data-toggle="collapse" type="button">
+         <span class="navbar-toggler-icon">
+         </span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+         <ul class="navbar-nav mr-auto">
+          <li class="dropdown">
+           <a href="/">
+            Home
+           </a>
+          </li>
+          <li class="current serviciosSalud dropdown">
+           <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+            Servicios de Salud
+           </a>
+           <ul class="dropdown-menu">
+            <li class="ss-salud-mujer">
+             <a href="/servicios-de-salud/salud-mujer">
+              Salud Mujer
+             </a>
+            </li>
+            <li class="ss-salud-varon">
+             <a href="/servicios-de-salud/salud-hombre">
+              Salud Hombre
+             </a>
+            </li>
+            <li class="ss-paciente-mayor">
+             <a href="/servicios-de-salud/salud-senior">
+              Salud Senior
+             </a>
+            </li>
+            <li class="ss-pediatria">
+             <a href="/servicios-de-salud/pediatria">
+              Pediatría
+             </a>
+            </li>
+            <li class="ss-dental">
+             <a href="https://ocaso.giradental.com/">
+              Dental
+             </a>
+            </li>
+            <li class="ss-podologia">
+             <a href="/servicios-de-salud/podologia">
+              Podología
+             </a>
+            </li>
+            <li class="ss-genetica">
+             <a href="/servicios-de-salud/genetica">
+              Genética
+             </a>
+            </li>
+            <li class="ss-oftalmologia">
+             <a href="/servicios-de-salud/oftalmologia">
+              Oftalmología
+             </a>
+            </li>
+           </ul>
+          </li>
+          <li class="cuadroMedico dropdown">
+           <a href="/buscador-medico/">
+            Cuadro Médico
+           </a>
+          </li>
+          <li class="planVida dropdown">
+           <a href="/plan-de-vida-saludable/">
+            Plan de Vida Saludable
+           </a>
+           <ul class="dropdown-menu">
+            <li class="">
+            </li>
+           </ul>
+          </li>
+          <li class="garantia dropdown">
+           <a href="/garantia-asistencia-medica/">
+            Garantía Asistencia Médica
+           </a>
+          </li>
+          <!--Boton para sacar Modal para el login (alojado en OcasoWebBase.cshtml)-->
+          <!--<button class="btn btn-primary LoginBtn" type="submit" data-toggle="modal" onclick="window.open('https://clientes.ocaso.es/login', '_blank')">Iniciar Sesión</button>-->
+          <a class="btn btn-primary LoginBtn" href="https://clientes.ocaso.es/login" target="_blank">
+           Iniciar Sesión
+          </a>
+          <div class="alert-dark" id="device">
+          </div>
+         </ul>
+        </div>
+       </nav>
+       <script>
+        var isMobile = {
+        Android: function () {
+            return navigator.userAgent.match(/Android/i);
+        },
+        BlackBerry: function () {
+            return navigator.userAgent.match(/BlackBerry/i);
+        },
+        iOS: function () {
+            return navigator.userAgent.match(/iPhone|iPad|iPod/i);
+        },
+        Opera: function () {
+            return navigator.userAgent.match(/Opera Mini/i);
+        },
+        Windows: function () {
+            return navigator.userAgent.match(/IEMobile/i);
+        },
+        any: function () {
+            return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows());
+        }
+    };
+
+    //$(document).ready(function () {
+    //    var content = $("#device");
+    //    if (isMobile.Windows)
+    //        content.html = "Windows";
+    //    if (isMobile.Android)
+    //        content.html = "Android";
+    //    if (isMobile.iOS)
+    //        content.html = "iOS";
+    //    if (isMobile.Opera)
+    //        content.html = "Opera";
+    //});
+       </script>
+       <div class="modal fade" id="modalLogin">
+        <script async="" defer="" src="https://www.google.com/recaptcha/api.js">
+        </script>
+        <div class="modal-dialog">
+         <div class="modal-content row no-gutters row-eq-height">
+          <div class="col-12 col-md-6 box-left-login">
+           <div class="PositionEnd">
+            <img src="/images/logos/Logo_Salud_Negativo_RGB.png">
+             <!--<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla maximus posuere orci non finibus. Morbi vulputate sagittis laoreet. Suspendisse convallis.  Nulla maximus posuere orci non finibus.</p>-->
+            </img>
+           </div>
+          </div>
+          <div class="col-12 col-md-6 box-rigth-login">
+           <form action="/servicios-de-salud/genetica" autocomplete="off" enctype="multipart/form-data" method="post">
+            <div class="modal-body">
+             <h1>
+              Iniciar Sesión
+             </h1>
+             <input name="__RequestVerificationToken" type="hidden" value="OpkReFaZHutXs6hPLmxZkHkdZlqduFS7GL_J7lYdLPopWVD2RVgxkaVeos2lj58cmVfBWwyRj5t1FmB2Ffq1IyUXBrWoFd-scr0NdKJ9Rbw1"/>
+             <div class="form-group">
+             </div>
+             <div class="row form-group">
+              <div class="col-12">
+               <input id="Id" name="Id" placeholder="Usuario" required="required" type="text" value=""/>
+              </div>
+             </div>
+             <div class="row form-group">
+              <div class="col-12">
+               <input id="Psswd" name="Psswd" placeholder="Contraseña" required="required" type="password" value=""/>
+               <button id="eye" type="button">
+                <img alt="eye" src="/images/icon/eye_login.png"/>
+               </button>
+              </div>
+             </div>
+             <div class="row">
+              <div class="col-12 g-recaptcha" data-sitekey="6LfsBG8pAAAAAN2SYPXQP11ZZyEyvfKYvPInuPPW">
+              </div>
+             </div>
+             <div style="text-align:left;">
+              <button class="btn btn-primary BtnLogin">
+               Acceder
+              </button>
+             </div>
+             <div class="recordPassword">
+              <a href="/Recordar-Psswd">
+               ¿Olvidé la contraseña?
+              </a>
+             </div>
+             <div class="regUsuario">
+              <p>
+               Si aún no tiene cuenta,
+               <a href="/Registro">
+                regístrese
+               </a>
+              </p>
+             </div>
+            </div>
+            <input name="ufprt" type="hidden" value="45326BA6C132451B980FC823208A9211C02012B41DE544518DD7EBD765FA33155BA6616F36F97EBED30B0DFBB99FDB551DC460F6ED2E1D42FB1BC9EACE9E8B74BB59495013231AAA7AA3324C8C36447956519E21F6C8413A8FEFCFC5CAA8090B88062D492F3D893DD46F40C2647E1332A132F7EDA52077CFAFFE3FD4B0479A6B"/>
+           </form>
+          </div>
+         </div>
+         <!-- /.modal-content -->
+        </div>
+        <!-- /.modal-dialog -->
+       </div>
+       <script>
+        function show() {
+        var p = document.getElementById('Psswd');
+        p.setAttribute('type', 'text');
+    }
+
+    function hide() {
+        var p = document.getElementById('Psswd');
+        p.setAttribute('type', 'password');
+    }
+
+    var pwShown = 0;
+
+    document.getElementById("eye").addEventListener("click", function () {
+        if (pwShown == 0) {
+            pwShown = 1;
+            show();
+        } else {
+            pwShown = 0;
+            hide();
+        }
+    }, false);
+       </script>
+      </div>
+     </div>
+    </header>
+   </div>
+   <script src="https://cdn.jsdelivr.net/npm/ismobilejs@0.5.1/dist/isMobile.min.js">
+   </script>
+   <script>
+    $(document).ready(function () {
+        if (isMobile.apple.device || isMobile.android.device)
+        {
+            $('#hablaMedico').removeAttr('hidden');
+        }
+        else
+        {
+            //$('#hablaMedico').attr('hidden','hidden');
+        }
+    })
+    
+
+
+    function abrirEnlaceGadaca() {
+        if (isMobile.apple.device || isMobile.android.device) {
+
+            if (isMobile.apple.device) {
+                //window.location.href = 'https://itunes.apple.com/es/app/gadaca/id1327347501?mt=8';
+                window.location.href = 'https://itunes.apple.com/es/app/video-consulta-medica/id1453412803';
+            }
+            else {
+                //window.location.href = 'https://play.google.com/store/apps/details?id=com.lorentech.gadaca&hl=es'                
+                window.location.href = 'https://play.google.com/store/apps/details?id=com.gadaca.videoconsultamedica'
+            }
+
+        } else {
+            window.location.href = '/seccion-home-banner/banner-videoconsulta/';
+        }
+    }
+   </script>
+   <script src="/Scripts/script.js">
+   </script>
+   <div class="OnlyImg">
+    <img alt="banner" class="d-block w-100" src="/images/background/banner-genetica1.jpg"/>
+    <div class="Tex--OnlyImg">
+     <h5 class="genericbannerh5">
+      Genética
+     </h5>
+    </div>
+   </div>
+   <div class="container-fluid bgwhite">
+    <div class="row" id="MenuFixed">
+     <div class="col-md-3 menu-ginecologia">
+      <a href="#personalizada">
+       Nutrición Personalizada
+      </a>
+     </div>
+     <div class="col-md-3 menu-ginecologia">
+      <a href="#cardio">
+       Cardio
+      </a>
+     </div>
+     <div class="col-md-3 menu-ginecologia">
+      <a href="#edadsalud">
+       Edad y Salud
+      </a>
+     </div>
+     <div class="col-md-3 menu-ginecologia">
+      <a href="#bienestar">
+       Bienestar - Prevencion
+      </a>
+     </div>
+     <div class="col-md-2 menu-ginecologia">
+      <a href="#rendimiento">
+       Rendimiento Deportivo
+      </a>
+     </div>
+     <div class="col-md-3 menu-ginecologia">
+      <a href="#prevencioncancer">
+       Prevención de Cancer
+      </a>
+     </div>
+     <div class="col-md-3 menu-ginecologia">
+      <a href="#futurospadres">
+       Futuros padres
+      </a>
+     </div>
+     <div class="col-md-2 menu-ginecologia">
+      <a href="#promociones">
+       Promociones
+      </a>
+     </div>
+     <div class="col-md-2 menu-ginecologia noborder">
+      <a href="#otros">
+       Otros
+      </a>
+     </div>
+    </div>
+   </div>
+   <div class="container" id="Scrolling">
+    <div id="personalizada">
+     <div class="row margintop35">
+      <div class="col-md-12">
+       <img class="img-mesa" src="/images/genetica/genetica-icon1.png">
+        <h2>
+         Nutrición Personalizada
+        </h2>
+       </img>
+      </div>
+     </div>
+     <div class="row margintop35">
+      <div class="col-md-3">
+       <img class="img-eco" src="/images/genetica/genetica-img-icon1.png"/>
+       <h4 class="p-eco margintop15">
+        Intolerancias Alimentarias
+       </h4>
+       <p class="p-eco">
+        El test de intolerancia alimentaria A200 evalúa la respuesta del sistema inmune frente a más de 200 alimentos habituales en la dieta mediterránea.
+       </p>
+      </div>
+      <div class="col-md-3">
+       <img class="img-eco" src="/images/genetica/genetica-img-icon2.png"/>
+       <h4 class="p-eco margintop15">
+        Nutrigenética
+       </h4>
+       <p class="p-eco">
+        Personas que deseen adaptar su dieta en función a su genética y conocer sus necesidades nutricionales específicas de manera personalizada.
+       </p>
+      </div>
+      <div class="col-md-3">
+       <img class="img-eco" src="/images/genetica/genetica-img-icon3.png"/>
+       <h4 class="p-eco margintop15">
+        MigraTest
+       </h4>
+       <p class="p-eco">
+        Indicada en el caso de personas que padezcan migrañas y quieran saber si el origen está relacionado con un déficit de la actividad de la enzima DAO.
+       </p>
+      </div>
+      <div class="col-md-3">
+       <img class="img-eco" src="/images/genetica/genetica-img-icon4.png"/>
+       <h4 class="p-eco margintop15">
+        Cuidado intestinal
+       </h4>
+       <p class="p-eco">
+        Lactosa Test consiste en un estudio genético de intolerancia a la lactosa, a través de una muestra de raspado bucal.
+       </p>
+      </div>
+     </div>
+    </div>
+    <div id="cardio">
+     <div class="row margintop35">
+      <div class="col-md-12">
+       <img class="img-mesa" src="/images/genetica/genetica-icon2.png"/>
+       <h2>
+        Cardio
+       </h2>
+      </div>
+     </div>
+     <div class="row margintop35">
+      <div class="col-md-4">
+       <img class="img-eco" src="/images/genetica/genetica-img-icon5.png"/>
+       <h4 class="p-eco margintop15">
+        CardioScore
+       </h4>
+       <p class="p-eco">
+        Se basa en una extracción de sangre que permitirá una evaluación clínico-genética del riesgo cardiovascular real.
+       </p>
+      </div>
+      <div class="col-md-4">
+       <img class="img-eco" src="/images/genetica/genetica-img-icon6.png"/>
+       <h4 class="p-eco margintop15">
+        Omega-3
+       </h4>
+       <p class="p-eco">
+        Indicador para la prevención de enfermedades cardiovasculares y cerebrovasculares.
+       </p>
+      </div>
+      <div class="col-md-4">
+       <img class="img-eco" src="/images/genetica/genetica-img-icon7.png"/>
+       <h4 class="p-eco margintop15">
+        Perfil Cardiovascular
+       </h4>
+       <p class="p-eco">
+        Permite obtener información sobre los niveles de colesterol (HDL y LDL), triglicéridos, homocisteína, proteína C reactiva, índice aterogénico, lipoproteína (a) y hemoglobina glicosilada.
+       </p>
+      </div>
+     </div>
+    </div>
+    <div id="edadsalud">
+     <div class="row margintop35">
+      <div class="col-md-12">
+       <img class="img-mesa" src="/images/genetica/genetica-icon3.png"/>
+       <h2>
+        Edad y Salud
+       </h2>
+      </div>
+     </div>
+     <div class="row margintop35">
+      <div class="col-md-5">
+       <img class="img-proposito" src="/images/genetica/genetica1.png"/>
+      </div>
+      <div class="col-md-7">
+       <h3>
+        Longitud Telomérica
+       </h3>
+       <p>
+        Te permitirá conocer la edad biológica de tu organismo frente a tu edad cronológica. Si la prueba resulta desfavorable, la incorporación de hábitos de vida saludables te ayudará a mejorar tu longitud telomérica y edad biológica en el plazo de un año.
+       </p>
+       <br/>
+       <h3>
+        Alteraciones del Sueño
+       </h3>
+       <p>
+        Permite determinar los niveles de melatonina en saliva en diferentes momentos de la noche pudiendo detectar cualquier desviación respecto al nivel normal, tanto en horarios como en intensidad. Con ello, se puede observar si la producción de melatonina es o no suficiente para la conciliación del sueño.
+       </p>
+       <br/>
+       <h3>
+        Valoración del Estrés
+       </h3>
+       <p>
+        Comparar los niveles de cortisol y DHEA con los valores normales, aportando información acerca de la fase de estrés en la que se encuentra el individuo.
+       </p>
+      </div>
+     </div>
+    </div>
+    <div id="bienestar">
+     <div class="row margintop35">
+      <div class="col-md-12">
+       <img class="img-mesa" src="/images/genetica/genetica-icon4.png"/>
+       <h2>
+        Bienestar – Prevención
+       </h2>
+      </div>
+     </div>
+     <div class="row margintop35">
+      <div class="col-md-6">
+       <img class="img-eco" src="/images/genetica/genetica-img-icon8.png"/>
+       <h4 class="p-eco margintop15">
+        Prevención Check
+       </h4>
+       <p class="p-eco">
+        Personas que deseen mantener y mejorar su estado de salud actual, previniendo, en la medida de lo posible, las enfermedades crónicas frecuentes de la edad adulta.
+       </p>
+      </div>
+      <div class="col-md-6">
+       <img class="img-eco" src="/images/genetica/genetica-img-icon9.png"/>
+       <h4 class="p-eco margintop15">
+        Chequeo Completo por sexo
+       </h4>
+       <p class="p-eco">
+        La detección de posibles alteraciones bioquímicas relacionadas con determinadas patologías, a través de una muestra de sangre y de orina. El chequeo incluye un hemograma completo y parámetros bioquímicos claves para la realización de una revisión general.
+       </p>
+      </div>
+     </div>
+    </div>
+    <div id="rendimiento">
+     <div class="row margintop35">
+      <div class="col-md-12">
+       <img class="img-mesa" src="/images/genetica/genetica-icon5.png"/>
+       <h2>
+        Rendimiento Deportivo
+       </h2>
+      </div>
+     </div>
+     <div class="row margintop35">
+      <div class="col-md-6">
+       <img class="img-eco" src="/images/genetica/genetica-img-icon10.png"/>
+       <h4 class="p-eco margintop15">
+        Chequeo deportivo avanzado
+       </h4>
+       <p class="p-eco">
+        Evalúa diferentes parámetros analíticos claves para un correcto estado de salud y un óptimo rendimiento deportivo, permitiéndote conocer cuáles son susceptibles de mejora.
+       </p>
+      </div>
+      <div class="col-md-6">
+       <img class="img-eco" src="/images/genetica/genetica-img-icon11.png"/>
+       <h4 class="p-eco margintop15">
+        Test Lesiones
+       </h4>
+       <p class="p-eco">
+        Información acerca de la susceptibilidad a sufrir lesiones durante el entrenamiento, así como la respuesta en función del tipo de ejercicio de forma individualizada.
+       </p>
+      </div>
+     </div>
+    </div>
+    <div id="prevencioncancer">
+     <div class="row margintop35">
+      <div class="col-md-12">
+       <img class="img-mesa" src="/images/genetica/genetica-icon6.png"/>
+       <h2>
+        Prevención de Cancer
+       </h2>
+      </div>
+     </div>
+     <div class="row margintop35">
+      <div class="col-md-5">
+       <img class="img-proposito" src="/images/genetica/genetica2.png"/>
+      </div>
+      <div class="col-md-7">
+       <h3>
+        Tipología de Test en Oncología:
+       </h3>
+       <p>
+        <strong>
+         Colón.
+        </strong>
+        Detección precoz del cáncer de colon mediante un análisis de sangre.
+        <br/>
+        <strong>
+         Biopsia líquida
+        </strong>
+        mediante secuenciación para tumores sólidos en estadios avanzados (73 genes).
+       </p>
+       <ul class="plan-vida-p">
+        <li>
+         <span>
+          Análisis dirigido de mutaciones tumorales en sangre (3 genes).
+         </span>
+        </li>
+        <li>
+         <span>
+          Detección del cáncer de próstata.
+         </span>
+        </li>
+       </ul>
+       <p>
+        <strong>
+         Test Onco Farmacogenética
+        </strong>
+        del tratamiento con
+       </p>
+       <ul class="plan-vida-p">
+        <li>
+         <span>
+          5 fluorouracilo (capecitabina).
+         </span>
+        </li>
+        <li>
+         <span>
+          Irinotecan.
+         </span>
+        </li>
+        <li>
+         <span>
+          Lapatinib.
+         </span>
+        </li>
+        <li>
+         <span>
+          Metrotrexato.
+         </span>
+        </li>
+        <li>
+         <span>
+          Tamoxifeno.
+         </span>
+        </li>
+        <li>
+         <span>
+          Tiopurinas.
+         </span>
+        </li>
+        <li>
+         <span>
+          Cisplatino.
+         </span>
+        </li>
+       </ul>
+      </div>
+     </div>
+    </div>
+    <div id="futurospadres">
+     <div class="row margintop35">
+      <div class="col-md-12">
+       <img class="img-mesa" src="/images/genetica/genetica-icon7.png"/>
+       <h2>
+        Futuros Padres
+       </h2>
+      </div>
+     </div>
+     <div class="row margintop35">
+      <div class="col-md-7">
+       <h3>
+        Test Prenatal
+       </h3>
+       <p>
+        Analiza el ADN libre fetal presente en la sangre materna para determinar el riesgo de que el feto sea portador de las anomalías cromosómicas estudiadas. La prueba está indicada en embarazadas con al menos 10 semanas de gestación, en las siguientes situaciones:
+       </p>
+       <ul class="plan-vida-p">
+        <li>
+         <span>
+          Embarazo único o gemelar (2 fetos).
+         </span>
+        </li>
+        <li>
+         <span>
+          Embarazos por FIV.
+         </span>
+        </li>
+        <li>
+         <span>
+          Casos de ovodonación.
+         </span>
+        </li>
+        <li>
+         <span>
+          La prueba debe ser prescrita por un especialista.
+         </span>
+        </li>
+       </ul>
+      </div>
+      <div class="col-md-5">
+       <img class="img-proposito" src="/images/genetica/genetica3.png"/>
+      </div>
+     </div>
+     <div class="row margintop35">
+      <div class="col-md-5">
+       <img class="img-proposito" src="/images/genetica/genetica4.png"/>
+      </div>
+      <div class="col-md-7">
+       <h3>
+        Test Genético
+       </h3>
+       <p>
+        Analiza tu ADN, determinando si eres portador o no de alguna alteración en tus genes. El test analiza 176 enfermedades monogénicas seleccionadas por su gravedad y prevalencia, excluyendo las enfermedades sin relevancia clínica incluidas en otras pruebas.
+                    Si ambos progenitores sois portadores de la misma enfermedad, se debe acudir a un especialista para recibir un asesoramiento genético apropiado.
+       </p>
+      </div>
+     </div>
+    </div>
+    <div id="otros">
+     <div class="row margintop35">
+      <div class="col-md-12">
+       <img class="img-mesa" src="/images/genetica/genetica-icon8.png"/>
+       <h2>
+        Otros
+       </h2>
+      </div>
+     </div>
+     <div class="row margintop35">
+      <div class="col-md-3">
+       <img class="img-eco" src="/images/genetica/genetica-img-icon12.png"/>
+       <h4 class="p-eco margintop15">
+        Farmacogenética
+       </h4>
+       <p class="p-eco">
+        Análisis de toxicidad de los fármacos de uso habitual para determinar la elección más adecuada.
+       </p>
+      </div>
+      <div class="col-md-3">
+       <img class="img-eco" src="/images/genetica/genetica-img-icon13.png"/>
+       <h4 class="p-eco margintop15">
+        Glaucoma PEX test
+       </h4>
+       <p class="p-eco">
+        Riesgo genético de padecer glaucoma pseudoexfoliativo.
+       </p>
+      </div>
+      <div class="col-md-3">
+       <img class="img-eco" src="/images/genetica/genetica-img-icon14.png"/>
+       <h4 class="p-eco margintop15">
+        Macula Test
+       </h4>
+       <p class="p-eco">
+        Riesgo genético de padecer degeneración macular asociada a la edad.
+       </p>
+      </div>
+      <div class="col-md-3">
+       <img class="img-eco" src="/images/genetica/genetica-img-icon15.png"/>
+       <h4 class="p-eco margintop15">
+        Metales en el Organismo
+       </h4>
+       <p class="p-eco">
+        Análisis en cabello de la presencia de metales para evaluar una posible toxicidad en tu dieta o en tu entorno.
+       </p>
+      </div>
+      <div class="row margintop35">
+       <div class="col-md-3">
+        <img class="img-eco" src="/images/genetica/genetica-img-icon16.png"/>
+        <h4 class="p-eco margintop15">
+         Huella Genética
+        </h4>
+        <p class="p-eco">
+         Conserva tu DNI genético para el futuro.
+        </p>
+       </div>
+       <div class="col-md-3">
+        <img class="img-eco" src="/images/genetica/genetica-img-icon17.png"/>
+        <h4 class="p-eco margintop15">
+         Test de Paternidad
+        </h4>
+        <p class="p-eco">
+         Prueba de ADN para determinar la paternidad biológica.
+        </p>
+       </div>
+       <div class="col-md-3">
+        <img class="img-eco" src="/images/genetica/genetica-img-icon7.png"/>
+        <h4 class="p-eco margintop15">
+         Test Linfocitario
+        </h4>
+        <p class="p-eco">
+         Evaluación del sistema inmunitario.
+        </p>
+       </div>
+      </div>
+     </div>
+    </div>
+    <div class="container">
+     <div class="row margintop100">
+      <div class="col-md-12">
+       <img class="img-mesa paddingtop40" src="/images/icon/mail.png"/>
+       <h2>
+        ¿Necesitas más información?
+       </h2>
+       <div class="mas-info">
+        <p>
+         Por favor, déjanos tu teléfono e email y nos pondremos en contacto contigo cuanto antes para explicarte todos los detalles.
+        </p>
+        <p>
+         <strong>
+          <em>
+           Horario de llamadas L-V de 8.00 a 21.00h.
+          </em>
+         </strong>
+        </p>
+       </div>
+      </div>
+      <div class="col-md-12">
+       <div>
+        <form action="/servicios-de-salud/genetica" enctype="multipart/form-data" id="solicitudInfoDonanteForm" method="post">
+         <input name="__RequestVerificationToken" type="hidden" value="pEaljyPwIUANWlhkMc3hq7pSeJd72dWd58irbiQWZWwu14QlbSkb2vWn0C8_6oB_bkKuaaUWmvrPhIvwE9jXlYkrQRnkzDPy2aUoKQPmu1c1"/>
+         <div class="form-group">
+         </div>
+         <div>
+          <input hidden="" id="Subject" name="Subject" type="text" value="SO88FL Consulta Web Ocaso Salud Genética General"/>
+         </div>
+         <div class="row marginbottom20">
+          <div class="col-md-6">
+           <div class="form-group form-salud">
+            <input class="form-control" id="Nombre" name="Nombre" placeholder="Nombre*" required="true" type="text" value="">
+            </input>
+           </div>
+          </div>
+          <div class="col-md-6">
+           <div class="form-group form-salud">
+            <input class="form-control" id="Apellidos" name="Apellidos" placeholder="Apellidos*" required="true" type="text" value=""/>
+           </div>
+          </div>
+         </div>
+         <div class="row marginbottom20">
+          <div class="col-md-6">
+           <div class="form-group form-salud">
+            <input class="form-control" id="Telefono" name="Telefono" pattern="[0-9]{9}" placeholder="Teléfono*" required="true" type="text" value=""/>
+           </div>
+          </div>
+          <div class="col-md-6">
+           <div class="form-group form-salud">
+            <input class="form-control" id="Mail" name="Mail" placeholder="Email*" required="true" type="text" value=""/>
+           </div>
+          </div>
+         </div>
+         <div class="row">
+          <div class="col-md-12">
+           <div class="form-group form-salud">
+            <textarea class="form-control" cols="20" id="TextoPregunta" name="TextoPregunta" placeholder="Tu pregunta*" required="true" rows="2">
+</textarea>
+            <label>
+             <input class="form-control" id="AceptoPolitica" name="AceptoPolitica" required="true" type="checkbox" value="true"/>
+             <input name="AceptoPolitica" type="hidden" value="false"/>
+             Acepto la
+             <a class="noHover" href="https://atencionmedica.legalitas.com/politica-privacidad/" target="_blank">
+              política de privacidad
+             </a>
+             de la web*
+            </label>
+            <p class="float-right">
+             <em>
+              <strong>
+               *Campos obligatorios
+              </strong>
+             </em>
+            </p>
+            <div class="buttonPassword btn-formulario">
+             <button class="btn_popup">
+              Enviar
+             </button>
+            </div>
+           </div>
+          </div>
+         </div>
+         <input name="ufprt" type="hidden" value="08BF9599EF87C6B94DAC3A1F68A30C7BC7213F254E99712ED4296E2FFCD24E08383F7BB7F258A823ADBB3A47E5270E4EA13962769E15460EB41A073D48FB18FDA4AC0DC3CC45B748725D0CF25EDCB7C07B111ACAABF445A3A5AEE0B04380748DE54BF2A0A73AD9457340F7B47CC478C0D1552C90E0109BE5CC5393FEE9D66429BFCAADC29C44DCB39CB903662EA89161E5EE16FFCB0831D84BFEEF1C9E72CD38017036BF50396E815650A5DCDC8FC6352462A20AA2E5417D61653E9A84FCF57C"/>
+        </form>
+       </div>
+      </div>
+     </div>
+    </div>
+    <div id="promociones">
+    </div>
+    <div id="actualidad">
+     <br/>
+     <div class="box container">
+      <h2 class="titleActualidad">
+       <img class="icoActualidad" src="/images/icon/ico-news.png"/>
+       Actualidad Genética
+      </h2>
+      <a href="/servicios-de-salud/genetica/actualidad-genetica?section=2101">
+       <img class="masActualidad" src="/images/icon/ico_mas.png"/>
+      </a>
+      <div class="row row-eq-height">
+       <div class="cbp-panel">
+        <div class="cbp-l-grid-clients" id="grid-container-news">
+         <div class="cbp-item">
+          <div class="cbp-caption-defaultWrap">
+           <div class="cbp-caption-defaultWrap">
+            <div class="contentNews">
+             <a class="image featured" href="/actualidad/prueba-genetica/">
+              <img alt="actualidad" class="imgActualidad" src="/media/1183/1a.jpg"/>
+             </a>
+             <div class="ContentPromotion">
+              <div class="inner">
+               <p>
+                <strong>
+                 Prueba genética
+                </strong>
+               </p>
+              </div>
+             </div>
+            </div>
+           </div>
+          </div>
+         </div>
+         <div class="cbp-item">
+          <div class="cbp-caption-defaultWrap">
+           <div class="cbp-caption-defaultWrap">
+            <div class="contentNews">
+             <a class="image featured" href="/actualidad/sindrome-de-down/">
+              <img alt="actualidad" class="imgActualidad" src="/media/1184/1b.jpg"/>
+             </a>
+             <div class="ContentPromotion">
+              <div class="inner">
+               <p>
+                <strong>
+                 Síndrome de Down
+                </strong>
+               </p>
+              </div>
+             </div>
+            </div>
+           </div>
+          </div>
+         </div>
+         <div class="cbp-item">
+          <div class="cbp-caption-defaultWrap">
+           <div class="cbp-caption-defaultWrap">
+            <div class="contentNews">
+             <a class="image featured" href="/actualidad/sindrome-de-klinefelter/">
+              <img alt="actualidad" class="imgActualidad" src="/media/1185/1c.jpg"/>
+             </a>
+             <div class="ContentPromotion">
+              <div class="inner">
+               <p>
+                <strong>
+                 Síndrome de Klinefelter
+                </strong>
+               </p>
+              </div>
+             </div>
+            </div>
+           </div>
+          </div>
+         </div>
+         <div class="cbp-item">
+          <div class="cbp-caption-defaultWrap">
+           <div class="cbp-caption-defaultWrap">
+            <div class="contentNews">
+             <a class="image featured" href="/actualidad/sindrome-de-turner/">
+              <img alt="actualidad" class="imgActualidad" src="/media/1186/1d.jpg"/>
+             </a>
+             <div class="ContentPromotion">
+              <div class="inner">
+               <p>
+                <strong>
+                 Síndrome de Turner
+                </strong>
+               </p>
+              </div>
+             </div>
+            </div>
+           </div>
+          </div>
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+   <div class="container-fluid container-cuadro-medico">
+    <a class="btn btn-primary btn-cuadro-medico" href="/buscador-medico/">
+     <strong>
+      ACCEDER AL CUADRO MÉDICO
+     </strong>
+    </a>
+   </div>
+   <div aria-hidden="true" class="modal fade" id="modalAvisos" role="dialog" tabindex="-1">
+    <div class="modal-dialog" role="document">
+     <div class="modal-content">
+      <div class="modal-body" id="textoModal">
+      </div>
+      <div class="modal-footer">
+       <button class="btn btn-secondary" data-dismiss="modal" type="button">
+        Cerrar
+       </button>
+      </div>
+     </div>
+    </div>
+   </div>
+   <script>
+    function mostrarModal() {
+        $('#modalAvisos').modal("show");
+    }
+   </script>
+   <!-- Footer -->
+   <!-- Footer -->
+   <div id="footer-wrapper">
+    <footer class="container" id="footer">
+     <div class="footerContent row row-eq-height">
+      <!-- Logo -->
+      <div class="col-12 col-sm-3 col-xl-2" id="logo">
+       <a href="/" id="iconoHome">
+        <img src="/images/Logo_Salud_Positivo_RGB.png"/>
+       </a>
+      </div>
+      <div class="col-12 col-sm-9 col-xl-4" id="quienes">
+       <p class="title">
+        ¿Quiénes somos?
+       </p>
+       <p>
+        Phasellus mi lectus, pellentesque eget sem interdum, pellentesque sagittis diam. Proin et ultricies elit.
+       </p>
+      </div>
+      <div class="contactFooter col-12 col-xl-6">
+       <ul class="nav justify-content-end">
+        <li class="nav-item hablaMedico" id="hablaMedico" onclick="abrirEnlaceGadaca()" style="cursor: pointer">
+         <p class="titleContact">
+          Vídeo Consulta
+         </p>
+         <p class="txtContact">
+          de Urgencias
+         </p>
+        </li>
+        <li class="nav-item contactTef" onclick="window.location.href='tel:+34917039024'">
+         <p class="titleContact">
+          Teléfono
+         </p>
+         <p class="txtContact">
+          917 039 024
+         </p>
+        </li>
+       </ul>
+      </div>
+     </div>
+    </footer>
+    <div class="copyrightFooter row">
+     <div class="container">
+      <div class="boxCookies">
+       <ul class="nav">
+        <li>
+         <a href="/cookies/">
+          Cookies
+         </a>
+        </li>
+        <li>
+         <a href="/aviso-legal/">
+          Aviso Legal
+         </a>
+        </li>
+        <li>
+         <a href="/politica-privacidad/">
+          Política de privacidad
+         </a>
+        </li>
+       </ul>
+      </div>
+      <div class="boxCopyright">
+       <p>
+        © Legálitas Salud 2025
+       </p>
+      </div>
+     </div>
+    </div>
+   </div>
+   <script src="https://cdn.jsdelivr.net/npm/ismobilejs@0.5.1/dist/isMobile.min.js">
+   </script>
+   <script>
+    $(document).ready(function () {
+    if (isMobile.apple.device || isMobile.android.device) {
+      $('#hablaMedico').removeAttr('hidden');
+    }
+    else {
+      //$('#hablaMedico').attr('hidden','hidden');
+    }
+  })
+
+
+
+  function abrirEnlaceGadaca() {
+    if (isMobile.apple.device || isMobile.android.device) {
+
+      if (isMobile.apple.device) {
+        //window.location.href = 'https://itunes.apple.com/es/app/gadaca/id1327347501?mt=8';
+        window.location.href = 'https://itunes.apple.com/es/app/video-consulta-medica/id1453412803';
+      }
+      else {
+        //window.location.href = 'https://play.google.com/store/apps/details?id=com.lorentech.gadaca&hl=es'
+        window.location.href = 'https://play.google.com/store/apps/details?id=com.gadaca.videoconsultamedica'
+      }
+
+    } else {
+      window.location.href = '/seccion-home-banner/banner-videoconsulta/';
+    }
+  }
+   </script>
+  </div>
+  <script src="/Scripts/jquery.validate.min.js">
+  </script>
+  <script src="/Scripts/bootstrap/bootstrap.min.js">
+  </script>
+  <script src="/Scripts/Quodem/quodem-cookies.1.0.js" type="text/javascript">
+  </script>
+  <script src="/Scripts/Quodem/js.cookie.js" type="text/javascript">
+  </script>
+  <div class="cookies_box custom-cookies" id="cuadroCookies" style="display:none;">
+   <h3>
+    Configuración de Cookies
+   </h3>
+   <p class="textoPanelCookies">
+    En LEGALITAS SALUD utilizamos cookies propias técnicas y de terceros para permitir el
+        correcto funcionamiento de este sitio, así como cookies con fines analíticos. Puedes encontrar
+        más detalles en nuestra
+    <a href="/Cookies/">
+     Política de Cookies.
+    </a>
+   </p>
+   <button onclick="allCookies();setCookie('cookiesConfig', '1', 365)">
+    ACEPTAR TODAS LAS COOKIES
+   </button>
+   <button onclick="cookiesPanel()">
+    CONFIGURACIÓN DE COOKIES
+   </button>
+   <button onclick="refuseAll();setCookie('cookiesConfig', '1', 365)">
+    RECHAZAR TODAS LAS COOKIES
+   </button>
+  </div>
+  <!--------Ventana Configuración COOKIES ---->
+  <div class="modalDialogCookies modal fade" style="display:none;">
+   <div class="modal-dialog">
+    <div class="modal-content">
+     <div class="modal-header mx-auto">
+      <h4 class="modal-title">
+       CONFIGURACIÓN DE COOKIES
+      </h4>
+     </div>
+     <p>
+      Puede escoger sus preferencias sobre qué cookies acepta o no, marcando a continuación las opciones que usted elija:
+     </p>
+     <h5>
+      <strong>
+       NECESARIAS
+      </strong>
+     </h5>
+     <p>
+      <strong>
+       Cookies básicas e imprescindibles
+      </strong>
+      .- Las cookies necesarias son absolutamente esenciales para que el sitio web funcione correctamente. Esta categoría solo incluye cookies que garantizan funcionalidades básicas y características de seguridad del sitio web. Estas cookies no almacenan ninguna información personal.
+     </p>
+     <div class="swipe-configuration__footer">
+      <a aria-controls="listado_1" aria-expanded="false" class="btn-collapse d-block w-100 text-left" data-toggle="collapse" href="#listado_1" role="button">
+       <span class="btn-collapse__text">
+        Ver listado completo de cookies de análisis
+       </span>
+      </a>
+      <div class="collapse" id="listado_1" style="">
+       <div class="card card-body">
+        <table>
+         <thead>
+          <tr>
+           <th>
+            Denominación
+           </th>
+           <th>
+            Titular
+           </th>
+           <th>
+            Duración
+           </th>
+           <th>
+            Finalidad
+           </th>
+          </tr>
+         </thead>
+         <tbody>
+          <tr>
+           <td>
+            ASP.NET_SessionId
+           </td>
+           <td>
+            Atención Médica Ocaso
+           </td>
+           <td>
+            Sesión
+           </td>
+           <td>
+            Control de sesiones
+           </td>
+          </tr>
+          <tr>
+           <td>
+            jwplayer.captionLabel
+           </td>
+           <td>
+            Atención Médica Ocaso
+           </td>
+           <td>
+            Sesión
+           </td>
+           <td>
+            Guarda los ajustes sobre los vídeos de la web de cara a las siguientes reproducciones.
+           </td>
+          </tr>
+          <tr>
+           <td>
+            __RequestVerificationToken
+           </td>
+           <td>
+            Atención Médica Ocaso
+           </td>
+           <td>
+            Sesión
+           </td>
+           <td>
+            Indica si el usuario ha aceptado la política de cookies.
+           </td>
+          </tr>
+          <tr>
+           <td>
+            OcasoAuthCookie
+           </td>
+           <td>
+            Atención Médica Ocaso
+           </td>
+           <td>
+            30 minutos
+           </td>
+           <td>
+            Indica si el usuario ha aceptado la política de cookies.
+           </td>
+          </tr>
+          <tr>
+           <td>
+            cookiesConfig
+           </td>
+           <td>
+            Atención Médica Ocaso
+           </td>
+           <td>
+            1 año
+           </td>
+           <td>
+            Indica si el usuario ha aceptado la política de cookies.
+           </td>
+          </tr>
+         </tbody>
+        </table>
+       </div>
+      </div>
+     </div>
+     <h5>
+      <strong>
+       ANALÍTICAS
+      </strong>
+     </h5>
+     <p>
+      <input id="cbox2" name="cbox" type="checkbox" value="analisis"/>
+      <strong>
+       Cookies de análisis.
+      </strong>
+      - Las cookies analíticas, que no son necesarias para que el sitio web funcione, las utilizamos específicamente para conocer mejor cómo interactúas por nuestro sitio web. Esto nos ayuda a seguir mejorando nuestros contenidos, y la experiencia de usuario.
+     </p>
+     <div class="swipe-configuration__footer">
+      <a aria-controls="listado_2" aria-expanded="false" class="btn-collapse d-block w-100 text-left" data-toggle="collapse" href="#listado_2" role="button">
+       <span class="btn-collapse__text">
+        Ver listado completo de cookies de análisis
+       </span>
+      </a>
+      <div class="collapse" id="listado_2" style="">
+       <div class="card card-body">
+        <table>
+         <thead>
+          <tr>
+           <th>
+            Denominación
+           </th>
+           <th>
+            Titular
+           </th>
+           <th>
+            Duración
+           </th>
+           <th>
+            Finalidad
+           </th>
+          </tr>
+         </thead>
+         <tbody>
+          <tr>
+           <td>
+            _ga
+           </td>
+           <td>
+            Google
+           </td>
+           <td>
+            2 años
+           </td>
+           <td>
+            Identificador utilizado por Google Analytics para distinguir usuarios
+           </td>
+          </tr>
+          <tr>
+           <td>
+            _gid
+           </td>
+           <td>
+            Google
+           </td>
+           <td>
+            1 día
+           </td>
+           <td>
+            Identificador utilizado por Google Analytics para distinguir usuarios
+           </td>
+          </tr>
+          <tr>
+           <td>
+            _gat
+           </td>
+           <td>
+            Google
+           </td>
+           <td>
+            1 minuto
+           </td>
+           <td>
+            Se usa para limitar el porcentaje de solicitudes.
+           </td>
+          </tr>
+          <tr>
+           <td>
+            _ga_ID
+           </td>
+           <td>
+            Google
+           </td>
+           <td>
+            2 años
+           </td>
+           <td>
+            Se usa para mantener el estado de la sesión
+           </td>
+          </tr>
+         </tbody>
+        </table>
+       </div>
+      </div>
+     </div>
+     <div class="modal-footer">
+      <button class="btn_popup mx-auto" data-dismiss="modal" id="btnAceptarModal" onclick="analyticCookies();setCookie('cookiesConfig', '1', 365)" type="button">
+       Guardar configuración
+      </button>
+      <button class="btn_popup mx-auto" data-dismiss="modal" id="btnCerrarModal" onclick="clickOptionInPanel()" type="button">
+       Cerrar
+      </button>
+     </div>
+    </div>
+   </div>
+  </div>
+  <script>
+   $('body').addClass('noLoged');
+  </script>
+  <script type="text/javascript">
+   $(document).ready(function () {
+            // Verifica si la cookie existe
+            if (getCookie("cookiesConfig")) {
+                //si sí existe, no mostramos el panel
+                //$("#cuadroCookies").css("display", "none");
+                $(".panelGestCookies").css("display", "block");
+            } else {
+                $("#cuadroCookies").css("display", "block");
+            }
+        });
+
+        function setCookie(name, value, days) {
+            var expires = "";
+            if (days) {
+                var date = new Date();
+                date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+                expires = "; expires=" + date.toUTCString();
+            }
+            document.cookie = name + "=" + value + expires + "; path=/";
+        }
+
+        function cookiesPanel() {
+            $('.modal-content .collapse').each(function (index) {
+                $(this).removeClass("show");
+            });
+
+            var acepted = cookiesAcepted();
+            $(".modalDialogCookies").modal("show");
+            if (acepted) {
+                document.getElementById("cbox2").checked = true;
+            }
+            
+        }
+
+        function clickOptionInPanel() {
+            $(".modalDialogCookies").modal("hide");
+        }
+
+        function cookiesAcepted() {
+            var acepted = false;
+
+            var cookies = document.cookie.split(';');
+
+            // Iterar a través de las cookies y verificar si alguna contiene el nombre deseado
+            for (var i = 0; i < cookies.length; i++) {
+                var cookie = cookies[i].trim();
+                // Verificar si la cookie comienza con el nombre deseado
+                if (cookie.indexOf('_g') === 0) {
+                    acepted = true;
+                }
+            }
+
+            return acepted;
+        }
+
+        function analyticCookies() {
+            var isChecked = document.getElementById('cbox2').checked;
+            if (isChecked == true) {
+                window.ga = window.ga || function () { (ga.q = ga.q || []).push(arguments) }; ga.l = +new Date;
+                ga('create', 'UA-64597784-5', 'auto');
+                ga('require', 'outboundLinkTracker');
+
+                ga('send', 'pageview');
+            } else {
+                var cookies = document.cookie.split(';'); // Obtener todas las cookies
+                var cookiesToDelete = [];
+
+                // Filtrar y obtener las cookies que empiezan con "_g"
+                for (var i = 0; i < cookies.length; i++) {
+                    var cookie = cookies[i].trim();
+                    if (cookie.indexOf('_g') === 0) {
+                        cookiesToDelete.push(cookie);
+                    }
+                }
+                var domain = window.location.host;
+                var cleanDomain = domain.split('.');
+                // Borrar las cookies
+                for (var j = 0; j < cookiesToDelete.length; j++) {
+                    var cookieName = cookiesToDelete[j].split('=')[0];
+                    //el primero siver solo para local
+                    //document.cookie = cookieName + '=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;';
+                    document.cookie = cookieName + '=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/; domain=' + cleanDomain[1] + '.' + cleanDomain[2] + ';';
+                }
+
+            }
+
+            $(".modalDialogCookies").modal("hide");
+            $("#cuadroCookies").css("display", "none");
+            $(".panelGestCookies").css("display", "block");
+        }
+
+        function allCookies() {
+            window.ga = window.ga || function () { (ga.q = ga.q || []).push(arguments) }; ga.l = +new Date;
+            ga('create', 'UA-64597784-5', 'auto');
+            ga('require', 'outboundLinkTracker');
+
+            ga('send', 'pageview');
+
+            $("#cuadroCookies").css("display", "none");
+            $(".panelGestCookies").css("display", "block");
+        }
+
+        function refuseAll() {
+            $("#cuadroCookies").css("display", "none");
+            $(".panelGestCookies").css("display", "block");
+        }
+
+        function getCookie(name) {
+            var cookieName = name + "=";
+            var decodedCookie = decodeURIComponent(document.cookie);
+            var cookieArray = decodedCookie.split(';');
+
+            for (var i = 0; i < cookieArray.length; i++) {
+                var cookie = cookieArray[i];
+                while (cookie.charAt(0) === ' ') {
+                    cookie = cookie.substring(1);
+                }
+                if (cookie.indexOf(cookieName) === 0) {
+                    return cookie.substring(cookieName.length, cookie.length);
+                }
+            }
+            return null;
+        }
+  </script>
+  <script type="text/javascript">
+   function showLoginError() {
+            $("#modalErrorLogin").modal("show");
+        }
+        function showLogin() {
+            $("#modalLogin").modal("show");
+        }
+  </script>
+  <script src="/Scripts/jquery.cubeportfolio.js" type="text/javascript">
+  </script>
+  <script src="/Scripts/main-cube.js" type="text/javascript">
+  </script>
+  <div class="panelGestCookies" style="display: none;">
+   <p onclick="cookiesPanel()">
+    Panel de configuración de cookies
+   </p>
+  </div>
+ </body>
+</html>

@@ -1,0 +1,1371 @@
+<html>
+ <head>
+  <title>
+   Legálitas Salud
+  </title>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1, user-scalable=no" name="viewport"/>
+  <meta content="telephone=no" name="format-detection"/>
+  <link href="/images/favicon.ico" rel="icon" type="image/x-icon"/>
+  <!-- Google tag (gtag.js) -->
+  <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-BWPQH02F5J">
+  </script>
+  <script>
+   window.dataLayer = window.dataLayer || []; function gtag() { dataLayer.push(arguments); } gtag('js', new Date()); gtag('config', 'G-BWPQH02F5J');
+  </script>
+  <script src="/Scripts/autotrack.js">
+  </script>
+  <link href="/Content/css/boostrap/bootstrap.css" rel="stylesheet"/>
+  <link href="/Content/css/base.css" rel="stylesheet"/>
+  <link href="/images/favicon.ico" rel="shortcut icon" type="image/x-icon"/>
+  <script src="/Scripts/jquery-3.4.1.min.js">
+  </script>
+  <script src="https://code.highcharts.com/highcharts.js" type="text/javascript">
+  </script>
+  <script src="https://code.highcharts.com/highcharts-more.js" type="text/javascript">
+  </script>
+  <script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js" type="text/javascript">
+  </script>
+  <script src="/Scripts/moment.js" type="text/javascript">
+  </script>
+  <link href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css" rel="stylesheet"/>
+ </head>
+ <body class="is-preload homepage">
+  <div id="page-wrapper">
+   <!-- Header -->
+   <div class="container-fluid" id="header-wrapper">
+    <header id="header">
+     <div class="ocasoHeader">
+      <p>
+       Servicio para asegurados de Ocaso
+      </p>
+     </div>
+     <div class="ContactHeader row">
+      <!-- Logo -->
+      <div class="container">
+       <div id="logo">
+        <a href="/" id="iconoHome">
+         <img src="/images/Logo_Salud_Positivo_RGB.png"/>
+        </a>
+       </div>
+       <div id="contactHeader">
+        <ul class="justify-content-end">
+         <li class="nav-item hablaMedico" id="hablaMedico" onclick="abrirEnlaceGadaca()">
+          <p class="titleContact">
+           Vídeo Consulta
+          </p>
+          <p class="txtContact">
+           de Urgencias
+          </p>
+         </li>
+         <li class="nav-item contactTef" onclick="window.location.href='tel:+34917039024'">
+          <p class="titleContact">
+           Teléfono
+          </p>
+          <p class="txtContact">
+           917 039 024
+          </p>
+         </li>
+         <li class="nav-item contactWhats" onclick="window.location.href='https://api.whatsapp.com/send?phone=34696091138'">
+          <p class="titleContact">
+           Contacta por
+          </p>
+          <p class="txtContact">
+           WhatsApp
+          </p>
+         </li>
+        </ul>
+       </div>
+      </div>
+     </div>
+     <div class="menuHeader row">
+      <div class="container">
+       <!-- Nav -->
+       <nav class="navbar navbar-expand-lg custom-toggler">
+        <button aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler" data-target="#navbarSupportedContent" data-toggle="collapse" type="button">
+         <span class="navbar-toggler-icon">
+         </span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+         <ul class="navbar-nav mr-auto">
+          <li class="dropdown">
+           <a href="/">
+            Home
+           </a>
+          </li>
+          <li class="current serviciosSalud dropdown">
+           <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+            Servicios de Salud
+           </a>
+           <ul class="dropdown-menu">
+            <li class="ss-salud-mujer">
+             <a href="/servicios-de-salud/salud-mujer">
+              Salud Mujer
+             </a>
+            </li>
+            <li class="ss-salud-varon">
+             <a href="/servicios-de-salud/salud-hombre">
+              Salud Hombre
+             </a>
+            </li>
+            <li class="ss-paciente-mayor">
+             <a href="/servicios-de-salud/salud-senior">
+              Salud Senior
+             </a>
+            </li>
+            <li class="ss-pediatria">
+             <a href="/servicios-de-salud/pediatria">
+              Pediatría
+             </a>
+            </li>
+            <li class="ss-dental">
+             <a href="https://ocaso.giradental.com/">
+              Dental
+             </a>
+            </li>
+            <li class="ss-podologia">
+             <a href="/servicios-de-salud/podologia">
+              Podología
+             </a>
+            </li>
+            <li class="ss-genetica">
+             <a href="/servicios-de-salud/genetica">
+              Genética
+             </a>
+            </li>
+            <li class="ss-oftalmologia">
+             <a href="/servicios-de-salud/oftalmologia">
+              Oftalmología
+             </a>
+            </li>
+           </ul>
+          </li>
+          <li class="cuadroMedico dropdown">
+           <a href="/buscador-medico/">
+            Cuadro Médico
+           </a>
+          </li>
+          <li class="planVida dropdown">
+           <a href="/plan-de-vida-saludable/">
+            Plan de Vida Saludable
+           </a>
+           <ul class="dropdown-menu">
+            <li class="">
+            </li>
+           </ul>
+          </li>
+          <li class="garantia dropdown">
+           <a href="/garantia-asistencia-medica/">
+            Garantía Asistencia Médica
+           </a>
+          </li>
+          <!--Boton para sacar Modal para el login (alojado en OcasoWebBase.cshtml)-->
+          <!--<button class="btn btn-primary LoginBtn" type="submit" data-toggle="modal" onclick="window.open('https://clientes.ocaso.es/login', '_blank')">Iniciar Sesión</button>-->
+          <a class="btn btn-primary LoginBtn" href="https://clientes.ocaso.es/login" target="_blank">
+           Iniciar Sesión
+          </a>
+          <div class="alert-dark" id="device">
+          </div>
+         </ul>
+        </div>
+       </nav>
+       <script>
+        var isMobile = {
+        Android: function () {
+            return navigator.userAgent.match(/Android/i);
+        },
+        BlackBerry: function () {
+            return navigator.userAgent.match(/BlackBerry/i);
+        },
+        iOS: function () {
+            return navigator.userAgent.match(/iPhone|iPad|iPod/i);
+        },
+        Opera: function () {
+            return navigator.userAgent.match(/Opera Mini/i);
+        },
+        Windows: function () {
+            return navigator.userAgent.match(/IEMobile/i);
+        },
+        any: function () {
+            return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows());
+        }
+    };
+
+    //$(document).ready(function () {
+    //    var content = $("#device");
+    //    if (isMobile.Windows)
+    //        content.html = "Windows";
+    //    if (isMobile.Android)
+    //        content.html = "Android";
+    //    if (isMobile.iOS)
+    //        content.html = "iOS";
+    //    if (isMobile.Opera)
+    //        content.html = "Opera";
+    //});
+       </script>
+       <div class="modal fade" id="modalLogin">
+        <script async="" defer="" src="https://www.google.com/recaptcha/api.js">
+        </script>
+        <div class="modal-dialog">
+         <div class="modal-content row no-gutters row-eq-height">
+          <div class="col-12 col-md-6 box-left-login">
+           <div class="PositionEnd">
+            <img src="/images/logos/Logo_Salud_Negativo_RGB.png">
+             <!--<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla maximus posuere orci non finibus. Morbi vulputate sagittis laoreet. Suspendisse convallis.  Nulla maximus posuere orci non finibus.</p>-->
+            </img>
+           </div>
+          </div>
+          <div class="col-12 col-md-6 box-rigth-login">
+           <form action="/servicios-de-salud/salud-mujer/landings-salud-mujer/onco-gine" autocomplete="off" enctype="multipart/form-data" method="post">
+            <div class="modal-body">
+             <h1>
+              Iniciar Sesión
+             </h1>
+             <input name="__RequestVerificationToken" type="hidden" value="UM3Ssr_T1LN0A9Z10SPdmPf29OWNtdGb8oMENOnWWYEXg_xM9r9MAm1I0cw9kQPW_uvrjIQkj220X_STyis_YQViqV7nai3Yt_AlNnnA0cU1"/>
+             <div class="form-group">
+             </div>
+             <div class="row form-group">
+              <div class="col-12">
+               <input id="Id" name="Id" placeholder="Usuario" required="required" type="text" value=""/>
+              </div>
+             </div>
+             <div class="row form-group">
+              <div class="col-12">
+               <input id="Psswd" name="Psswd" placeholder="Contraseña" required="required" type="password" value=""/>
+               <button id="eye" type="button">
+                <img alt="eye" src="/images/icon/eye_login.png"/>
+               </button>
+              </div>
+             </div>
+             <div class="row">
+              <div class="col-12 g-recaptcha" data-sitekey="6LfsBG8pAAAAAN2SYPXQP11ZZyEyvfKYvPInuPPW">
+              </div>
+             </div>
+             <div style="text-align:left;">
+              <button class="btn btn-primary BtnLogin">
+               Acceder
+              </button>
+             </div>
+             <div class="recordPassword">
+              <a href="/Recordar-Psswd">
+               ¿Olvidé la contraseña?
+              </a>
+             </div>
+             <div class="regUsuario">
+              <p>
+               Si aún no tiene cuenta,
+               <a href="/Registro">
+                regístrese
+               </a>
+              </p>
+             </div>
+            </div>
+            <input name="ufprt" type="hidden" value="5237972E9B2F12FA0146D960C4846DD8FFC4D81AD93A5BBB9FC6675A8AB5C9FBCE9395CF9B6AB60F1239397309FFC70C8DEEA85D27CCF18FD3517BCB8EDE3AC7FF91E40E99E5374020D2348DB5819CF02E34EDEC97B4AB21E729382565E5F117959E60BE1A16F1A1DE3A04550704DBDFBD475277E87EBE3584EB596048B97542"/>
+           </form>
+          </div>
+         </div>
+         <!-- /.modal-content -->
+        </div>
+        <!-- /.modal-dialog -->
+       </div>
+       <script>
+        function show() {
+        var p = document.getElementById('Psswd');
+        p.setAttribute('type', 'text');
+    }
+
+    function hide() {
+        var p = document.getElementById('Psswd');
+        p.setAttribute('type', 'password');
+    }
+
+    var pwShown = 0;
+
+    document.getElementById("eye").addEventListener("click", function () {
+        if (pwShown == 0) {
+            pwShown = 1;
+            show();
+        } else {
+            pwShown = 0;
+            hide();
+        }
+    }, false);
+       </script>
+      </div>
+     </div>
+    </header>
+   </div>
+   <script src="https://cdn.jsdelivr.net/npm/ismobilejs@0.5.1/dist/isMobile.min.js">
+   </script>
+   <script>
+    $(document).ready(function () {
+        if (isMobile.apple.device || isMobile.android.device)
+        {
+            $('#hablaMedico').removeAttr('hidden');
+        }
+        else
+        {
+            //$('#hablaMedico').attr('hidden','hidden');
+        }
+    })
+    
+
+
+    function abrirEnlaceGadaca() {
+        if (isMobile.apple.device || isMobile.android.device) {
+
+            if (isMobile.apple.device) {
+                //window.location.href = 'https://itunes.apple.com/es/app/gadaca/id1327347501?mt=8';
+                window.location.href = 'https://itunes.apple.com/es/app/video-consulta-medica/id1453412803';
+            }
+            else {
+                //window.location.href = 'https://play.google.com/store/apps/details?id=com.lorentech.gadaca&hl=es'                
+                window.location.href = 'https://play.google.com/store/apps/details?id=com.gadaca.videoconsultamedica'
+            }
+
+        } else {
+            window.location.href = '/seccion-home-banner/banner-videoconsulta/';
+        }
+    }
+   </script>
+   <script src="/Scripts/script.js">
+   </script>
+   <div class="OnlyImg">
+    <img alt="banner" class="d-block w-100" src="/images/background/banner-oncogine.png"/>
+    <div class="Tex--OnlyImg">
+     <h5 class="genericbannerh5">
+      Oncogine
+     </h5>
+    </div>
+   </div>
+   <div class="container-fluid bgwhite">
+    <div class="row" id="MenuFixed">
+     <div class="col-md-3 menu-ginecologia menu-oncogine oncogine">
+      <a href="#recomendaciones">
+       Recomendaciones
+      </a>
+     </div>
+     <div class="col-md-2 menu-ginecologia menu-oncogine oncogine">
+      <a href="#valoracion">
+       Valoración
+      </a>
+     </div>
+     <div class="col-md-2 menu-ginecologia menu-oncogine oncogine">
+      <a href="#tratamiento">
+       Tratamiento
+      </a>
+     </div>
+     <div class="col-md-2 menu-ginecologia menu-oncogine oncogine">
+      <a href="#otros">
+       Otros
+      </a>
+     </div>
+     <div class="col-md-3 menu-ginecologia menu-oncogine oncogine noborder">
+      <a href="#pruebasdiagnosticas">
+       Pruebas Diagnósticas
+      </a>
+     </div>
+    </div>
+   </div>
+   <div class="container container-pink">
+    <div id="recomendaciones">
+     <div class="row margintop35">
+      <div class="col-md-12">
+       <img class="img-mesa" src="/images/icon/icon-oncogine1.png">
+        <h2>
+         Nuestras recomendaciones preventivas para ti
+        </h2>
+       </img>
+      </div>
+     </div>
+     <div class="row margintop35">
+      <div class="col-md-12">
+       <p>
+        Realiza un tratamiento integral del cáncer en la mujer, desde su diagnóstico hasta su curación, lo que implica la puesta en marcha de un programa de detección precoz (chequeos), tratamiento de la enfermedad primaria y recidivante.
+       </p>
+       <br/>
+       <p>
+        Los tipos de tumores que se tratan son: tumores de mama, ovario, trompas de Falopio, cuello uterino, endometrio, miometrio, vulva, vagina, y peritoneo.
+       </p>
+      </div>
+     </div>
+     <div class="row margintop35">
+      <div class="col-md-6">
+       <img class="img-proposito" src="/images/saludmujer/img-oncogine1.png"/>
+      </div>
+      <div class="col-md-6">
+       <ul class="plan-vida-p">
+        <li>
+         <span>
+          <strong>
+           Exploración Ginecológica:
+          </strong>
+          Se buscarán signos y síntomas en genitales externos y tacto vaginal, permitiendo la valoración de útero y ovarios.
+         </span>
+        </li>
+        <li>
+         <span>
+          Mamografías.
+         </span>
+        </li>
+        <li>
+         <span>
+          Eco Abdomino-Pélvica.
+         </span>
+        </li>
+        <li>
+         <span>
+          <strong>
+           Eco Transvaginal:
+          </strong>
+          Visualizamos útero, trompas y ovarios buscando masas sugestivas.
+         </span>
+        </li>
+        <li>
+         <span>
+          <strong>
+           Histeroscopia Diagnóstica:
+          </strong>
+          Si se confirma sospecha de tumor se introduce una cámara a través del cuello del útero, esta prueba es sencilla y se realiza de forma ambulatoria.
+         </span>
+        </li>
+        <li>
+         <span>
+          <strong>
+           Citología:
+          </strong>
+          Analizamos células del cérvix para detectar presencia de infecciones, lesiones precancerosas y cáncer.
+         </span>
+        </li>
+        <li>
+         <span>
+          <strong>
+           Colposcopia:
+          </strong>
+          Se realiza en la misma consulta y visualizamos el útero, vagina y vulva.
+         </span>
+        </li>
+        <li>
+         <span>
+          <strong>
+           Análisis de sangre:
+          </strong>
+          Nos da información adyuvante, dando parámetros que puedan ser sugestivos de presencia de cáncer.
+         </span>
+        </li>
+        <li>
+         <span>
+          <strong>
+           Biopsia:
+          </strong>
+          Con sospecha positiva es necesario extraer muestras para analizarlas.
+         </span>
+        </li>
+        <li>
+         <span>
+          Realización el ganglio centinela.
+         </span>
+        </li>
+       </ul>
+      </div>
+     </div>
+    </div>
+    <div id="valoracion">
+     <div class="row margintop35">
+      <div class="col-md-12">
+       <img class="img-mesa" src="/images/icon/icon-oncogine2.png"/>
+       <h2>
+        Valoración en equipo multidisciplinar:
+       </h2>
+      </div>
+     </div>
+     <div class="row margintop35">
+      <div class="col-md-6">
+       <p>
+        Realiza un tratamiento integral del cáncer en la mujer, desde su diagnóstico hasta su curación, lo que implica la puesta en marcha de un programa de detección precoz (chequeos), tratamiento de la enfermedad primaria y recidivante.
+       </p>
+       <br/>
+       <p>
+        Los tipos de tumores que se tratan son: tumores de mama, ovario, trompas de Falopio, cuello uterino, endometrio, miometrio, vulva, vagina, y peritoneo.
+       </p>
+      </div>
+      <div class="col-md-6">
+       <img class="img-proposito" src="/images/saludmujer/img-oncogine2.png"/>
+      </div>
+     </div>
+    </div>
+    <div id="tratamiento">
+     <div class="row margintop35">
+      <div class="col-md-12">
+       <img class="img-mesa" src="/images/icon/icon-oncogine3.png"/>
+       <h2>
+        Tratamiento
+       </h2>
+      </div>
+     </div>
+     <div class="row margintop35">
+      <div class="col-md-6">
+       <img class="img-proposito" src="/images/saludmujer/img-oncogine3.png"/>
+      </div>
+      <div class="col-md-6">
+       <ul class="plan-vida-p">
+        <li>
+         <span>
+          Cirugía radical del cáncer ginecológico.
+         </span>
+        </li>
+        <li>
+         <span>
+          Cirugía mini-invasiva laparoscópica o robótica del cáncer ginecológico.
+         </span>
+        </li>
+        <li>
+         <span>
+          Conservación de la fertilidad en mujeres con cáncer ginecológico.
+         </span>
+        </li>
+        <li>
+         <span>
+          Quimioterapia.
+         </span>
+        </li>
+        <li>
+         <span>
+          Radioterapia.
+         </span>
+        </li>
+        <li>
+         <span>
+          Reconstrucción estética de la mama.
+         </span>
+        </li>
+       </ul>
+      </div>
+     </div>
+    </div>
+    <div id="otros">
+     <div class="row margintop35">
+      <div class="col-md-12">
+       <img class="img-mesa" src="/images/icon/icon-oncogine4.png"/>
+       <h2>
+        Otros
+       </h2>
+      </div>
+     </div>
+     <div class="row margintop35">
+      <div class="col-md-6">
+       <img class="img-proposito" src="/images/saludmujer/img-oncogine4.png"/>
+      </div>
+      <div class="col-md-6">
+       <h3>
+        Cáncer de piel:
+       </h3>
+       <p>
+        Cualquier persona que pasa tiempo bajo el sol puede padecer cáncer de piel. Las personas de piel blanca, especialmente las que tienen el cabello rubio o que son pelirrojas, tienen una mayor probabilidad de padecer este cáncer que las personas de piel más oscura. Las personas que hayan tenido un familiar cercano con melanoma y aquellas que han tenido quemaduras solares graves durante la niñez tienen una mayor probabilidad de padecer cáncer de piel.
+       </p>
+      </div>
+     </div>
+     <div class="row margintop35">
+      <p>
+       La mayoría de los cánceres de piel pueden prevenirse limitando la exposición a rayos ultravioleta (UV) provenientes del sol y de otras fuentes como las camas de bronceado.
+      </p>
+     </div>
+     <div class="row margintop35">
+      <div class="col-md-6">
+       <img class="img-eco" src="/images/saludmujer/img-oncogine5.png"/>
+       <p class="p-eco p-pink">
+        <span>
+         Examen de la piel:
+        </span>
+        <br>
+         Prestar atención a todos los lunares y las manchas de su piel.
+        </br>
+       </p>
+      </div>
+      <div class="col-md-6">
+       <img class="img-eco" src="/images/saludmujer/img-oncogine6.png"/>
+       <p class="p-eco p-pink">
+        <span>
+         Biopsia de piel:
+        </span>
+        <br/>
+        Se puede tomar una muestra de la piel sospechosa para realizar un análisis para diagnostico y saber el abordaje terapéutico.
+       </p>
+      </div>
+     </div>
+     <div class="row margintop35">
+      <div class="col-md-6">
+       <h3>
+        Cáncer de Pulmón
+       </h3>
+       <p>
+        Al menos 8 de cada 10 pacientes diagnosticados, se deben al hábito de fumar. Sin embargo, las personas que no fuman pueden también pueden padecerlo.
+       </p>
+       <p>
+        Es uno de los pocos cánceres que a menudo se puede prevenir: simplemente no fume.
+       </p>
+       <p>
+        Si fuma o es un exfumador, tiene de 55 a 74 años, y está relativamente bien de salud, usted podría beneficiarse de pruebas de imagen como Rx y/o tomografía computarizada realizada cada año como prueba de detección del cáncer de pulmón.
+       </p>
+      </div>
+      <div class="col-md-6">
+       <img class="img-proposito" src="/images/saludmujer/img-oncogine2.png"/>
+      </div>
+     </div>
+     <div class="row margintop35">
+      <div class="col-md-6">
+       <img class="img-proposito" src="/images/saludmujer/img-oncogine7.png"/>
+      </div>
+      <div class="col-md-6">
+       <h3>
+        Cáncer de Colon:
+       </h3>
+       <p>
+        Si existe un antecedente personal o familiar de este cáncer, o que tengan pólipos en el colon o el recto, o aquellas con enfermedad inflamatoria intestinal, son más propensas a padecer cáncer de colon. Además, el sobrepeso, la alimentación basada principalmente en alimentos con un alto contenido de grasa (especialmente de fuentes animales), fumar y la falta de ejercicio puede causar que una persona tenga más probabilidad de padecer este cáncer. Las pruebas pueden salvar vidas porque encuentran los pólipos antes de que se vuelvan cancerosos. Si se extirpan los pólipos precancerosos, se puede prevenir el cáncer de colon. El cribado de Ca Colorrectal se debe comenzar a los 45 años:
+       </p>
+       <br/>
+       <ul class="plan-vida-p">
+        <li>
+         <span>
+          Prueba inmunoquímica fecal altamente sensible (FIT) cada año.
+         </span>
+        </li>
+        <li>
+         <span>
+          Prueba de sangre oculta en heces fecales basada en guayacol (gFOBT)
+                            altamente sensible, cada año.
+         </span>
+        </li>
+        <li>
+         <span>
+          Prueba multidirigida de ADN en heces fecales cada 3 años.
+         </span>
+        </li>
+        <li>
+         <span>
+          Colonoscopia cada 10 años.
+         </span>
+        </li>
+        <li>
+         <span>
+          Colonografía CT (colonoscopia virtual) cada 5 años.
+         </span>
+        </li>
+        <li>
+         <span>
+          Sigmoidoscopia flexible cada 5 años.
+         </span>
+        </li>
+       </ul>
+      </div>
+     </div>
+    </div>
+    <div class="margin-bottom-35" id="pruebasdiagnosticas">
+     <div class="row margintop35">
+      <div class="col-md-12">
+       <img class="img-mesa" src="/images/icon/icon-oncogine4.png"/>
+       <h2>
+        Pruebas Diagnósticas
+       </h2>
+      </div>
+     </div>
+     <div class="row margintop35">
+      <div class="col-md-6">
+       <p>
+        Se han reseñado más de 50 síndromes hereditarios de cáncer. La mayoría de ellos son causados por mutaciones altamente penetrantes que se heredan en forma dominante. La lista a continuación incluye algunos de los síndromes hereditarios de cáncer más comunes para los que se dispone de pruebas genéticas; incluye también el gen o genes mutados en cada síndrome, así como los tipos de cáncer asociados con más frecuencia con estos síndromes.
+       </p>
+      </div>
+      <div class="col-md-6">
+       <img class="img-proposito" src="/images/saludmujer/img-oncogine8.png"/>
+      </div>
+     </div>
+     <div class="row margintop35">
+      <div class="col-md-12">
+       <div class="container-pruebas">
+        <h4>
+         Síndrome hereditario de cáncer de mama y de cáncer de ovario
+        </h4>
+        <p>
+         <strong>
+          Genes: BRCA1, BRCA2
+         </strong>
+        </p>
+        <p>
+         Tipos relacionados de cáncer: cáncer de mama en mujeres, cáncer de ovarios y otros cánceres, incluso de próstata, de páncreas y de seno en hombres
+        </p>
+       </div>
+       <div class="container-pruebas">
+        <h4>
+         Síndrome de Li-Fraumeni
+        </h4>
+        <p>
+         <strong>
+          Gen: TP53
+         </strong>
+        </p>
+        <p>
+         Tipos relacionados de cáncer: cáncer de mama, sarcoma de tejido blando, osteosarcoma (cáncer de hueso), leucemia, tumores cerebrales, carcinoma corticosuprarrenal (cáncer de glándulas suprarrenales) y otros cánceres
+        </p>
+       </div>
+       <div class="container-pruebas">
+        <h4>
+         Síndrome de Cowden (síndrome de hamartoma PTEN)
+        </h4>
+        <p>
+         <strong>
+          Gen: PTEN
+         </strong>
+        </p>
+        <p>
+         Tipos relacionados de cáncer: mama, tiroides, endometrio (revestimiento del útero), y otros cánceres
+        </p>
+       </div>
+       <div class="container-pruebas">
+        <h4>
+         Síndrome de Lynch (cáncer colorrectal hereditario sin poliposis)
+        </h4>
+        <p>
+         <strong>
+          Genes: MSH2, MLH1, MSH6, PMS2, EPCAM
+         </strong>
+        </p>
+        <p>
+         Tipos relacionados de cáncer: cáncer de colon y recto, de endometrio, ovarios, pelvis renal, páncreas, intestino delgado, hígado y vías biliares, de estómago, de cerebro y de seno
+        </p>
+       </div>
+       <div class="container-pruebas">
+        <h4>
+         Poliposis adenomatosa familiar
+        </h4>
+        <p>
+         <strong>
+          Gen: APC
+         </strong>
+        </p>
+        <p>
+         Tipos relacionados de cáncer: cáncer colorrectal, pólipos múltiples no cancerosos de colon, y tumores tanto benignos (no cancerosos) como cancerosos de intestino delgado, de cerebro, estómago, hueso, de piel y de otros tejidos
+        </p>
+       </div>
+       <div class="container-pruebas">
+        <h4>
+         Retinoblastoma
+        </h4>
+        <p>
+         <strong>
+          Gen: RB1
+         </strong>
+        </p>
+        <p>
+         Tipos relacionados de cáncer: cáncer de ojo (cáncer de retina), pinealoma (cáncer de glándula pineal), osteosarcoma, melanoma y sarcoma de tejido blando
+        </p>
+       </div>
+       <div class="container-pruebas">
+        <h4>
+         Neoplasia endocrina múltiple tipo 1 (síndrome de Wermer):
+        </h4>
+        <p>
+         <strong>
+          Gen: MEN1
+         </strong>
+        </p>
+        <p>
+         Tipos relacionados de cáncer: tumores endocrinos de páncreas y tumores (generalmente benignos) de glándula paratiroides y de glándula hipófisis
+        </p>
+       </div>
+       <div class="container-pruebas">
+        <h4>
+         Neoplasia endocrina múltiple tipo 2:
+        </h4>
+        <p>
+         <strong>
+          Gen: RET
+         </strong>
+        </p>
+        <p>
+         Tipos relacionados de cáncer: cáncer medular de tiroides y feocromocitoma (tumor benigno de glándulas suprarrenales)
+        </p>
+       </div>
+       <div class="container-pruebas">
+        <h4>
+         Síndrome de Von Hippel-Lindau:
+        </h4>
+        <p>
+         <strong>
+          Gen: VHL
+         </strong>
+        </p>
+        <p>
+         Tipos relacionados de cáncer: cáncer de riñón y muchos tumores no cancerosos, como el feocromocitoma
+        </p>
+       </div>
+      </div>
+     </div>
+     <div class="row margintop35">
+      <div class="col-md-6">
+       <h3>
+        Citogenética/FISH:
+       </h3>
+       <p>
+        Detección y confirmación de alteraciones génicas y cromosómicas (amplificaciones, traslocaciones o deleciones) únicas o en función del tipo de cáncer por paneles específicos:
+       </p>
+       <ul class="plan-vida-p">
+        <li>
+         <span>
+          AML FISH Panel: D8Z2, AML/ETO, MLL, PML/RARA.
+         </span>
+        </li>
+        <li>
+         <span>
+          CBFBNHL FISH Panel: ALK, BCL6, ATM, IGH, p53.
+         </span>
+        </li>
+       </ul>
+      </div>
+      <div class="col-md-6">
+       <h3>
+        Test Moleculares:
+       </h3>
+       <p>
+        Detección de mutaciones somáticas únicas en genes como BRCA, cKIT, AKT, EGFR, KRAS, PI3CA, etc, o de paneles genéticos específicos de cáncer:
+       </p>
+       <ul class="plan-vida-p">
+        <li>
+         <span>
+          AML Panel: FLT3 / NPM1Anti-EGFR.
+         </span>
+        </li>
+        <li>
+         <span>
+          Therapy Panel: EGFR/KRAS/BRAF/PI3CA/ALKT para el diagnóstico y pronóstico tumoral y la asociación a tratamientos oncológicos.
+         </span>
+        </li>
+        <li>
+         <span>
+          Pruebas para la la confirmación y detección de genes únicos en pacientes con historial de cáncer hereditario.
+         </span>
+        </li>
+       </ul>
+      </div>
+     </div>
+    </div>
+   </div>
+   <div class="container-fluid container-cuadro-medico">
+    <a class="btn btn-primary btn-cuadro-medico" href="/buscador-medico/">
+     <strong>
+      ACCEDER AL CUADRO MÉDICO
+     </strong>
+    </a>
+   </div>
+   <!-- Footer -->
+   <!-- Footer -->
+   <div id="footer-wrapper">
+    <footer class="container" id="footer">
+     <div class="footerContent row row-eq-height">
+      <!-- Logo -->
+      <div class="col-12 col-sm-3 col-xl-2" id="logo">
+       <a href="/" id="iconoHome">
+        <img src="/images/Logo_Salud_Positivo_RGB.png"/>
+       </a>
+      </div>
+      <div class="col-12 col-sm-9 col-xl-4" id="quienes">
+       <p class="title">
+        ¿Quiénes somos?
+       </p>
+       <p>
+        Phasellus mi lectus, pellentesque eget sem interdum, pellentesque sagittis diam. Proin et ultricies elit.
+       </p>
+      </div>
+      <div class="contactFooter col-12 col-xl-6">
+       <ul class="nav justify-content-end">
+        <li class="nav-item hablaMedico" id="hablaMedico" onclick="abrirEnlaceGadaca()" style="cursor: pointer">
+         <p class="titleContact">
+          Vídeo Consulta
+         </p>
+         <p class="txtContact">
+          de Urgencias
+         </p>
+        </li>
+        <li class="nav-item contactTef" onclick="window.location.href='tel:+34917039024'">
+         <p class="titleContact">
+          Teléfono
+         </p>
+         <p class="txtContact">
+          917 039 024
+         </p>
+        </li>
+       </ul>
+      </div>
+     </div>
+    </footer>
+    <div class="copyrightFooter row">
+     <div class="container">
+      <div class="boxCookies">
+       <ul class="nav">
+        <li>
+         <a href="/cookies/">
+          Cookies
+         </a>
+        </li>
+        <li>
+         <a href="/aviso-legal/">
+          Aviso Legal
+         </a>
+        </li>
+        <li>
+         <a href="/politica-privacidad/">
+          Política de privacidad
+         </a>
+        </li>
+       </ul>
+      </div>
+      <div class="boxCopyright">
+       <p>
+        © Legálitas Salud 2025
+       </p>
+      </div>
+     </div>
+    </div>
+   </div>
+   <script src="https://cdn.jsdelivr.net/npm/ismobilejs@0.5.1/dist/isMobile.min.js">
+   </script>
+   <script>
+    $(document).ready(function () {
+    if (isMobile.apple.device || isMobile.android.device) {
+      $('#hablaMedico').removeAttr('hidden');
+    }
+    else {
+      //$('#hablaMedico').attr('hidden','hidden');
+    }
+  })
+
+
+
+  function abrirEnlaceGadaca() {
+    if (isMobile.apple.device || isMobile.android.device) {
+
+      if (isMobile.apple.device) {
+        //window.location.href = 'https://itunes.apple.com/es/app/gadaca/id1327347501?mt=8';
+        window.location.href = 'https://itunes.apple.com/es/app/video-consulta-medica/id1453412803';
+      }
+      else {
+        //window.location.href = 'https://play.google.com/store/apps/details?id=com.lorentech.gadaca&hl=es'
+        window.location.href = 'https://play.google.com/store/apps/details?id=com.gadaca.videoconsultamedica'
+      }
+
+    } else {
+      window.location.href = '/seccion-home-banner/banner-videoconsulta/';
+    }
+  }
+   </script>
+  </div>
+  <script src="/Scripts/jquery.validate.min.js">
+  </script>
+  <script src="/Scripts/bootstrap/bootstrap.min.js">
+  </script>
+  <script src="/Scripts/Quodem/quodem-cookies.1.0.js" type="text/javascript">
+  </script>
+  <script src="/Scripts/Quodem/js.cookie.js" type="text/javascript">
+  </script>
+  <div class="cookies_box custom-cookies" id="cuadroCookies" style="display:none;">
+   <h3>
+    Configuración de Cookies
+   </h3>
+   <p class="textoPanelCookies">
+    En LEGALITAS SALUD utilizamos cookies propias técnicas y de terceros para permitir el
+        correcto funcionamiento de este sitio, así como cookies con fines analíticos. Puedes encontrar
+        más detalles en nuestra
+    <a href="/Cookies/">
+     Política de Cookies.
+    </a>
+   </p>
+   <button onclick="allCookies();setCookie('cookiesConfig', '1', 365)">
+    ACEPTAR TODAS LAS COOKIES
+   </button>
+   <button onclick="cookiesPanel()">
+    CONFIGURACIÓN DE COOKIES
+   </button>
+   <button onclick="refuseAll();setCookie('cookiesConfig', '1', 365)">
+    RECHAZAR TODAS LAS COOKIES
+   </button>
+  </div>
+  <!--------Ventana Configuración COOKIES ---->
+  <div class="modalDialogCookies modal fade" style="display:none;">
+   <div class="modal-dialog">
+    <div class="modal-content">
+     <div class="modal-header mx-auto">
+      <h4 class="modal-title">
+       CONFIGURACIÓN DE COOKIES
+      </h4>
+     </div>
+     <p>
+      Puede escoger sus preferencias sobre qué cookies acepta o no, marcando a continuación las opciones que usted elija:
+     </p>
+     <h5>
+      <strong>
+       NECESARIAS
+      </strong>
+     </h5>
+     <p>
+      <strong>
+       Cookies básicas e imprescindibles
+      </strong>
+      .- Las cookies necesarias son absolutamente esenciales para que el sitio web funcione correctamente. Esta categoría solo incluye cookies que garantizan funcionalidades básicas y características de seguridad del sitio web. Estas cookies no almacenan ninguna información personal.
+     </p>
+     <div class="swipe-configuration__footer">
+      <a aria-controls="listado_1" aria-expanded="false" class="btn-collapse d-block w-100 text-left" data-toggle="collapse" href="#listado_1" role="button">
+       <span class="btn-collapse__text">
+        Ver listado completo de cookies de análisis
+       </span>
+      </a>
+      <div class="collapse" id="listado_1" style="">
+       <div class="card card-body">
+        <table>
+         <thead>
+          <tr>
+           <th>
+            Denominación
+           </th>
+           <th>
+            Titular
+           </th>
+           <th>
+            Duración
+           </th>
+           <th>
+            Finalidad
+           </th>
+          </tr>
+         </thead>
+         <tbody>
+          <tr>
+           <td>
+            ASP.NET_SessionId
+           </td>
+           <td>
+            Atención Médica Ocaso
+           </td>
+           <td>
+            Sesión
+           </td>
+           <td>
+            Control de sesiones
+           </td>
+          </tr>
+          <tr>
+           <td>
+            jwplayer.captionLabel
+           </td>
+           <td>
+            Atención Médica Ocaso
+           </td>
+           <td>
+            Sesión
+           </td>
+           <td>
+            Guarda los ajustes sobre los vídeos de la web de cara a las siguientes reproducciones.
+           </td>
+          </tr>
+          <tr>
+           <td>
+            __RequestVerificationToken
+           </td>
+           <td>
+            Atención Médica Ocaso
+           </td>
+           <td>
+            Sesión
+           </td>
+           <td>
+            Indica si el usuario ha aceptado la política de cookies.
+           </td>
+          </tr>
+          <tr>
+           <td>
+            OcasoAuthCookie
+           </td>
+           <td>
+            Atención Médica Ocaso
+           </td>
+           <td>
+            30 minutos
+           </td>
+           <td>
+            Indica si el usuario ha aceptado la política de cookies.
+           </td>
+          </tr>
+          <tr>
+           <td>
+            cookiesConfig
+           </td>
+           <td>
+            Atención Médica Ocaso
+           </td>
+           <td>
+            1 año
+           </td>
+           <td>
+            Indica si el usuario ha aceptado la política de cookies.
+           </td>
+          </tr>
+         </tbody>
+        </table>
+       </div>
+      </div>
+     </div>
+     <h5>
+      <strong>
+       ANALÍTICAS
+      </strong>
+     </h5>
+     <p>
+      <input id="cbox2" name="cbox" type="checkbox" value="analisis"/>
+      <strong>
+       Cookies de análisis.
+      </strong>
+      - Las cookies analíticas, que no son necesarias para que el sitio web funcione, las utilizamos específicamente para conocer mejor cómo interactúas por nuestro sitio web. Esto nos ayuda a seguir mejorando nuestros contenidos, y la experiencia de usuario.
+     </p>
+     <div class="swipe-configuration__footer">
+      <a aria-controls="listado_2" aria-expanded="false" class="btn-collapse d-block w-100 text-left" data-toggle="collapse" href="#listado_2" role="button">
+       <span class="btn-collapse__text">
+        Ver listado completo de cookies de análisis
+       </span>
+      </a>
+      <div class="collapse" id="listado_2" style="">
+       <div class="card card-body">
+        <table>
+         <thead>
+          <tr>
+           <th>
+            Denominación
+           </th>
+           <th>
+            Titular
+           </th>
+           <th>
+            Duración
+           </th>
+           <th>
+            Finalidad
+           </th>
+          </tr>
+         </thead>
+         <tbody>
+          <tr>
+           <td>
+            _ga
+           </td>
+           <td>
+            Google
+           </td>
+           <td>
+            2 años
+           </td>
+           <td>
+            Identificador utilizado por Google Analytics para distinguir usuarios
+           </td>
+          </tr>
+          <tr>
+           <td>
+            _gid
+           </td>
+           <td>
+            Google
+           </td>
+           <td>
+            1 día
+           </td>
+           <td>
+            Identificador utilizado por Google Analytics para distinguir usuarios
+           </td>
+          </tr>
+          <tr>
+           <td>
+            _gat
+           </td>
+           <td>
+            Google
+           </td>
+           <td>
+            1 minuto
+           </td>
+           <td>
+            Se usa para limitar el porcentaje de solicitudes.
+           </td>
+          </tr>
+          <tr>
+           <td>
+            _ga_ID
+           </td>
+           <td>
+            Google
+           </td>
+           <td>
+            2 años
+           </td>
+           <td>
+            Se usa para mantener el estado de la sesión
+           </td>
+          </tr>
+         </tbody>
+        </table>
+       </div>
+      </div>
+     </div>
+     <div class="modal-footer">
+      <button class="btn_popup mx-auto" data-dismiss="modal" id="btnAceptarModal" onclick="analyticCookies();setCookie('cookiesConfig', '1', 365)" type="button">
+       Guardar configuración
+      </button>
+      <button class="btn_popup mx-auto" data-dismiss="modal" id="btnCerrarModal" onclick="clickOptionInPanel()" type="button">
+       Cerrar
+      </button>
+     </div>
+    </div>
+   </div>
+  </div>
+  <script>
+   $('body').addClass('noLoged');
+  </script>
+  <script type="text/javascript">
+   $(document).ready(function () {
+            // Verifica si la cookie existe
+            if (getCookie("cookiesConfig")) {
+                //si sí existe, no mostramos el panel
+                //$("#cuadroCookies").css("display", "none");
+                $(".panelGestCookies").css("display", "block");
+            } else {
+                $("#cuadroCookies").css("display", "block");
+            }
+        });
+
+        function setCookie(name, value, days) {
+            var expires = "";
+            if (days) {
+                var date = new Date();
+                date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+                expires = "; expires=" + date.toUTCString();
+            }
+            document.cookie = name + "=" + value + expires + "; path=/";
+        }
+
+        function cookiesPanel() {
+            $('.modal-content .collapse').each(function (index) {
+                $(this).removeClass("show");
+            });
+
+            var acepted = cookiesAcepted();
+            $(".modalDialogCookies").modal("show");
+            if (acepted) {
+                document.getElementById("cbox2").checked = true;
+            }
+            
+        }
+
+        function clickOptionInPanel() {
+            $(".modalDialogCookies").modal("hide");
+        }
+
+        function cookiesAcepted() {
+            var acepted = false;
+
+            var cookies = document.cookie.split(';');
+
+            // Iterar a través de las cookies y verificar si alguna contiene el nombre deseado
+            for (var i = 0; i < cookies.length; i++) {
+                var cookie = cookies[i].trim();
+                // Verificar si la cookie comienza con el nombre deseado
+                if (cookie.indexOf('_g') === 0) {
+                    acepted = true;
+                }
+            }
+
+            return acepted;
+        }
+
+        function analyticCookies() {
+            var isChecked = document.getElementById('cbox2').checked;
+            if (isChecked == true) {
+                window.ga = window.ga || function () { (ga.q = ga.q || []).push(arguments) }; ga.l = +new Date;
+                ga('create', 'UA-64597784-5', 'auto');
+                ga('require', 'outboundLinkTracker');
+
+                ga('send', 'pageview');
+            } else {
+                var cookies = document.cookie.split(';'); // Obtener todas las cookies
+                var cookiesToDelete = [];
+
+                // Filtrar y obtener las cookies que empiezan con "_g"
+                for (var i = 0; i < cookies.length; i++) {
+                    var cookie = cookies[i].trim();
+                    if (cookie.indexOf('_g') === 0) {
+                        cookiesToDelete.push(cookie);
+                    }
+                }
+                var domain = window.location.host;
+                var cleanDomain = domain.split('.');
+                // Borrar las cookies
+                for (var j = 0; j < cookiesToDelete.length; j++) {
+                    var cookieName = cookiesToDelete[j].split('=')[0];
+                    //el primero siver solo para local
+                    //document.cookie = cookieName + '=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;';
+                    document.cookie = cookieName + '=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/; domain=' + cleanDomain[1] + '.' + cleanDomain[2] + ';';
+                }
+
+            }
+
+            $(".modalDialogCookies").modal("hide");
+            $("#cuadroCookies").css("display", "none");
+            $(".panelGestCookies").css("display", "block");
+        }
+
+        function allCookies() {
+            window.ga = window.ga || function () { (ga.q = ga.q || []).push(arguments) }; ga.l = +new Date;
+            ga('create', 'UA-64597784-5', 'auto');
+            ga('require', 'outboundLinkTracker');
+
+            ga('send', 'pageview');
+
+            $("#cuadroCookies").css("display", "none");
+            $(".panelGestCookies").css("display", "block");
+        }
+
+        function refuseAll() {
+            $("#cuadroCookies").css("display", "none");
+            $(".panelGestCookies").css("display", "block");
+        }
+
+        function getCookie(name) {
+            var cookieName = name + "=";
+            var decodedCookie = decodeURIComponent(document.cookie);
+            var cookieArray = decodedCookie.split(';');
+
+            for (var i = 0; i < cookieArray.length; i++) {
+                var cookie = cookieArray[i];
+                while (cookie.charAt(0) === ' ') {
+                    cookie = cookie.substring(1);
+                }
+                if (cookie.indexOf(cookieName) === 0) {
+                    return cookie.substring(cookieName.length, cookie.length);
+                }
+            }
+            return null;
+        }
+  </script>
+  <script type="text/javascript">
+   function showLoginError() {
+            $("#modalErrorLogin").modal("show");
+        }
+        function showLogin() {
+            $("#modalLogin").modal("show");
+        }
+  </script>
+  <script src="/Scripts/jquery.cubeportfolio.js" type="text/javascript">
+  </script>
+  <script src="/Scripts/main-cube.js" type="text/javascript">
+  </script>
+  <div class="panelGestCookies" style="display: none;">
+   <p onclick="cookiesPanel()">
+    Panel de configuración de cookies
+   </p>
+  </div>
+ </body>
+</html>

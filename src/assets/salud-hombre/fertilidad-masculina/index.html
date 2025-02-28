@@ -1,0 +1,1218 @@
+<html>
+ <head>
+  <title>
+   Legálitas Salud
+  </title>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1, user-scalable=no" name="viewport"/>
+  <meta content="telephone=no" name="format-detection"/>
+  <link href="/images/favicon.ico" rel="icon" type="image/x-icon"/>
+  <!-- Google tag (gtag.js) -->
+  <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-BWPQH02F5J">
+  </script>
+  <script>
+   window.dataLayer = window.dataLayer || []; function gtag() { dataLayer.push(arguments); } gtag('js', new Date()); gtag('config', 'G-BWPQH02F5J');
+  </script>
+  <script src="/Scripts/autotrack.js">
+  </script>
+  <link href="/Content/css/boostrap/bootstrap.css" rel="stylesheet"/>
+  <link href="/Content/css/base.css" rel="stylesheet"/>
+  <link href="/images/favicon.ico" rel="shortcut icon" type="image/x-icon"/>
+  <script src="/Scripts/jquery-3.4.1.min.js">
+  </script>
+  <script src="https://code.highcharts.com/highcharts.js" type="text/javascript">
+  </script>
+  <script src="https://code.highcharts.com/highcharts-more.js" type="text/javascript">
+  </script>
+  <script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js" type="text/javascript">
+  </script>
+  <script src="/Scripts/moment.js" type="text/javascript">
+  </script>
+  <link href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css" rel="stylesheet"/>
+ </head>
+ <body class="is-preload homepage">
+  <div id="page-wrapper">
+   <!-- Header -->
+   <div class="container-fluid" id="header-wrapper">
+    <header id="header">
+     <div class="ocasoHeader">
+      <p>
+       Servicio para asegurados de Ocaso
+      </p>
+     </div>
+     <div class="ContactHeader row">
+      <!-- Logo -->
+      <div class="container">
+       <div id="logo">
+        <a href="/" id="iconoHome">
+         <img src="/images/Logo_Salud_Positivo_RGB.png"/>
+        </a>
+       </div>
+       <div id="contactHeader">
+        <ul class="justify-content-end">
+         <li class="nav-item hablaMedico" id="hablaMedico" onclick="abrirEnlaceGadaca()">
+          <p class="titleContact">
+           Vídeo Consulta
+          </p>
+          <p class="txtContact">
+           de Urgencias
+          </p>
+         </li>
+         <li class="nav-item contactTef" onclick="window.location.href='tel:+34917039024'">
+          <p class="titleContact">
+           Teléfono
+          </p>
+          <p class="txtContact">
+           917 039 024
+          </p>
+         </li>
+         <li class="nav-item contactWhats" onclick="window.location.href='https://api.whatsapp.com/send?phone=34696091138'">
+          <p class="titleContact">
+           Contacta por
+          </p>
+          <p class="txtContact">
+           WhatsApp
+          </p>
+         </li>
+        </ul>
+       </div>
+      </div>
+     </div>
+     <div class="menuHeader row">
+      <div class="container">
+       <!-- Nav -->
+       <nav class="navbar navbar-expand-lg custom-toggler">
+        <button aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler" data-target="#navbarSupportedContent" data-toggle="collapse" type="button">
+         <span class="navbar-toggler-icon">
+         </span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+         <ul class="navbar-nav mr-auto">
+          <li class="dropdown">
+           <a href="/">
+            Home
+           </a>
+          </li>
+          <li class="current serviciosSalud dropdown">
+           <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+            Servicios de Salud
+           </a>
+           <ul class="dropdown-menu">
+            <li class="ss-salud-mujer">
+             <a href="/servicios-de-salud/salud-mujer">
+              Salud Mujer
+             </a>
+            </li>
+            <li class="ss-salud-varon">
+             <a href="/servicios-de-salud/salud-hombre">
+              Salud Hombre
+             </a>
+            </li>
+            <li class="ss-paciente-mayor">
+             <a href="/servicios-de-salud/salud-senior">
+              Salud Senior
+             </a>
+            </li>
+            <li class="ss-pediatria">
+             <a href="/servicios-de-salud/pediatria">
+              Pediatría
+             </a>
+            </li>
+            <li class="ss-dental">
+             <a href="https://ocaso.giradental.com/">
+              Dental
+             </a>
+            </li>
+            <li class="ss-podologia">
+             <a href="/servicios-de-salud/podologia">
+              Podología
+             </a>
+            </li>
+            <li class="ss-genetica">
+             <a href="/servicios-de-salud/genetica">
+              Genética
+             </a>
+            </li>
+            <li class="ss-oftalmologia">
+             <a href="/servicios-de-salud/oftalmologia">
+              Oftalmología
+             </a>
+            </li>
+           </ul>
+          </li>
+          <li class="cuadroMedico dropdown">
+           <a href="/buscador-medico/">
+            Cuadro Médico
+           </a>
+          </li>
+          <li class="planVida dropdown">
+           <a href="/plan-de-vida-saludable/">
+            Plan de Vida Saludable
+           </a>
+           <ul class="dropdown-menu">
+            <li class="">
+            </li>
+           </ul>
+          </li>
+          <li class="garantia dropdown">
+           <a href="/garantia-asistencia-medica/">
+            Garantía Asistencia Médica
+           </a>
+          </li>
+          <!--Boton para sacar Modal para el login (alojado en OcasoWebBase.cshtml)-->
+          <!--<button class="btn btn-primary LoginBtn" type="submit" data-toggle="modal" onclick="window.open('https://clientes.ocaso.es/login', '_blank')">Iniciar Sesión</button>-->
+          <a class="btn btn-primary LoginBtn" href="https://clientes.ocaso.es/login" target="_blank">
+           Iniciar Sesión
+          </a>
+          <div class="alert-dark" id="device">
+          </div>
+         </ul>
+        </div>
+       </nav>
+       <script>
+        var isMobile = {
+        Android: function () {
+            return navigator.userAgent.match(/Android/i);
+        },
+        BlackBerry: function () {
+            return navigator.userAgent.match(/BlackBerry/i);
+        },
+        iOS: function () {
+            return navigator.userAgent.match(/iPhone|iPad|iPod/i);
+        },
+        Opera: function () {
+            return navigator.userAgent.match(/Opera Mini/i);
+        },
+        Windows: function () {
+            return navigator.userAgent.match(/IEMobile/i);
+        },
+        any: function () {
+            return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows());
+        }
+    };
+
+    //$(document).ready(function () {
+    //    var content = $("#device");
+    //    if (isMobile.Windows)
+    //        content.html = "Windows";
+    //    if (isMobile.Android)
+    //        content.html = "Android";
+    //    if (isMobile.iOS)
+    //        content.html = "iOS";
+    //    if (isMobile.Opera)
+    //        content.html = "Opera";
+    //});
+       </script>
+       <div class="modal fade" id="modalLogin">
+        <script async="" defer="" src="https://www.google.com/recaptcha/api.js">
+        </script>
+        <div class="modal-dialog">
+         <div class="modal-content row no-gutters row-eq-height">
+          <div class="col-12 col-md-6 box-left-login">
+           <div class="PositionEnd">
+            <img src="/images/logos/Logo_Salud_Negativo_RGB.png">
+             <!--<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla maximus posuere orci non finibus. Morbi vulputate sagittis laoreet. Suspendisse convallis.  Nulla maximus posuere orci non finibus.</p>-->
+            </img>
+           </div>
+          </div>
+          <div class="col-12 col-md-6 box-rigth-login">
+           <form action="/servicios-de-salud/salud-hombre/landings-salud-hombre/fertilidad-masculina" autocomplete="off" enctype="multipart/form-data" method="post">
+            <div class="modal-body">
+             <h1>
+              Iniciar Sesión
+             </h1>
+             <input name="__RequestVerificationToken" type="hidden" value="L6JetCooVwM-pGyg9dYAnTGz6Rjse2LkTdlglSEilFkwTrIdRhkXCWoBG3p4WN-Bg3H2YAVB-zuG2XdGywa9_PVRWIYpqlz3J-ikdYpaF4o1"/>
+             <div class="form-group">
+             </div>
+             <div class="row form-group">
+              <div class="col-12">
+               <input id="Id" name="Id" placeholder="Usuario" required="required" type="text" value=""/>
+              </div>
+             </div>
+             <div class="row form-group">
+              <div class="col-12">
+               <input id="Psswd" name="Psswd" placeholder="Contraseña" required="required" type="password" value=""/>
+               <button id="eye" type="button">
+                <img alt="eye" src="/images/icon/eye_login.png"/>
+               </button>
+              </div>
+             </div>
+             <div class="row">
+              <div class="col-12 g-recaptcha" data-sitekey="6LfsBG8pAAAAAN2SYPXQP11ZZyEyvfKYvPInuPPW">
+              </div>
+             </div>
+             <div style="text-align:left;">
+              <button class="btn btn-primary BtnLogin">
+               Acceder
+              </button>
+             </div>
+             <div class="recordPassword">
+              <a href="/Recordar-Psswd">
+               ¿Olvidé la contraseña?
+              </a>
+             </div>
+             <div class="regUsuario">
+              <p>
+               Si aún no tiene cuenta,
+               <a href="/Registro">
+                regístrese
+               </a>
+              </p>
+             </div>
+            </div>
+            <input name="ufprt" type="hidden" value="9BFBDF6543DC000F06017296ECC893B19C4C7D492CEC44A4B041E8E995E103F2DDE2DE9742036889B33EC81CD6ACC2F05BB1A41435D4D9A91A50FE83051B5C001E913DB6EF4BB455B55E5B73B0D881704382A92C0BB68072E6F98B262D598B1F1E7FC47401012F592A28A064ADCF6821A670563617597D1AE5644BD72D645BE3"/>
+           </form>
+          </div>
+         </div>
+         <!-- /.modal-content -->
+        </div>
+        <!-- /.modal-dialog -->
+       </div>
+       <script>
+        function show() {
+        var p = document.getElementById('Psswd');
+        p.setAttribute('type', 'text');
+    }
+
+    function hide() {
+        var p = document.getElementById('Psswd');
+        p.setAttribute('type', 'password');
+    }
+
+    var pwShown = 0;
+
+    document.getElementById("eye").addEventListener("click", function () {
+        if (pwShown == 0) {
+            pwShown = 1;
+            show();
+        } else {
+            pwShown = 0;
+            hide();
+        }
+    }, false);
+       </script>
+      </div>
+     </div>
+    </header>
+   </div>
+   <script src="https://cdn.jsdelivr.net/npm/ismobilejs@0.5.1/dist/isMobile.min.js">
+   </script>
+   <script>
+    $(document).ready(function () {
+        if (isMobile.apple.device || isMobile.android.device)
+        {
+            $('#hablaMedico').removeAttr('hidden');
+        }
+        else
+        {
+            //$('#hablaMedico').attr('hidden','hidden');
+        }
+    })
+    
+
+
+    function abrirEnlaceGadaca() {
+        if (isMobile.apple.device || isMobile.android.device) {
+
+            if (isMobile.apple.device) {
+                //window.location.href = 'https://itunes.apple.com/es/app/gadaca/id1327347501?mt=8';
+                window.location.href = 'https://itunes.apple.com/es/app/video-consulta-medica/id1453412803';
+            }
+            else {
+                //window.location.href = 'https://play.google.com/store/apps/details?id=com.lorentech.gadaca&hl=es'                
+                window.location.href = 'https://play.google.com/store/apps/details?id=com.gadaca.videoconsultamedica'
+            }
+
+        } else {
+            window.location.href = '/seccion-home-banner/banner-videoconsulta/';
+        }
+    }
+   </script>
+   <div class="OnlyImg">
+    <img alt="banner" class="d-block w-100" src="/images/background/banner-fertilidad.jpg"/>
+    <div class="Tex--OnlyImg">
+     <h5 class="genericbannerh5">
+      Fertilidad Masculina
+     </h5>
+    </div>
+   </div>
+   <div class="container saludvaroncontainer">
+    <div class="row margintop85">
+     <div class="col-md-12">
+      <p>
+       En general, las causas principales de la infertilidad masculina son las siguientes: poca calidad del semen, oclusiones, factores hereditarios, eyaculación retrógrada, criptorquidia, varicocele, trastornos hormonales, vasectomía, enfermedades crónicas o infecciosas.
+      </p>
+     </div>
+    </div>
+    <div class="row margintop35">
+     <div class="col-md-5">
+      <img class="img-proposito" src="/images/saludhombre/fertilidad1.png">
+      </img>
+     </div>
+     <div class="col-md-7">
+      <h3>
+       Poca calidad del semen:
+      </h3>
+      <p>
+       Algunos problemas hormonales, anatómicos e inmunitarios, e incluso factores ambientales, pueden provocar una carencia de espermatozoides y otros trastornos del semen. El análisis de una muestra de semen en el laboratorio (espermograma) proporciona información sobre la cantidad y la calidad de los espermatozoides. Diagnósticos diferenciales:
+      </p>
+      <br/>
+      <ul class="plan-vida-p">
+       <li>
+        <span>
+         <strong>
+          Azoospermia:
+         </strong>
+         El semen no contiene espermatozoides.
+        </span>
+       </li>
+       <li>
+        <span>
+         <strong>
+          Oligospermia:
+         </strong>
+         El semen contiene una cantidad muy pequeña de espermatozoides.
+        </span>
+       </li>
+       <li>
+        <span>
+         <strong>
+          Astenospermia:
+         </strong>
+         Los espermatozoides tienen poca movilidad.
+        </span>
+       </li>
+       <li>
+        <span>
+         <strong>
+          Teratospermia:
+         </strong>
+         Malformaciones de los espermatozoides.
+        </span>
+       </li>
+      </ul>
+     </div>
+    </div>
+    <div class="row margintop35">
+     <div class="col-md-7">
+      <h3>
+       Obstrucciones:
+      </h3>
+      <p>
+       Cualquier obstrucción de los conductos espermáticos, del conducto eyaculador o de la uretra puede impedir la eyaculación del semen. Las oclusiones son una causa habitual de infertilidad. Pueden deberse a infecciones (entre ellas, las enfermedades de transmisión sexual - ETS) y en ocasiones se pueden eliminar para restablecer la fertilidad. Si hay una oclusión estructural, puede ser necesaria la cirugía, mientras que una oclusión de origen infeccioso se puede tratar con antibióticos. Si no se puede suprimir la obstrucción estructural, se realiza una biopsia o una punción de los testículos para obtener semen.
+      </p>
+     </div>
+     <div class="col-md-5">
+      <img class="img-proposito" src="/images/saludhombre/fertilidad2.png"/>
+     </div>
+    </div>
+    <div class="row margintop35">
+     <div class="col-md-5">
+      <img class="img-proposito" src="/images/saludhombre/fertilidad3.png"/>
+     </div>
+     <div class="col-md-7">
+      <h3>
+       Factores hereditarios:
+      </h3>
+      <p>
+       En ocasiones, los conductos deferentes presentan deficiencias. Se producen espermatozoides, pero la anomalía anatómica les impide llegar al eyaculado. Sin cirugía, se pone en peligro el éxito de la fecundación. Hay muchas patologías genéticas, necesitaría estudio genético.
+      </p>
+     </div>
+    </div>
+    <div class="row margintop35">
+     <div class="col-md-7">
+      <h3>
+       Eyaculación retrógrada:
+      </h3>
+      <p>
+       Cuando un varón presenta eyaculación retrógrada, los espermatozoides toman la dirección equivocada durante la eyaculación y van a la vejiga en vez de ser expulsados por la uretra. La eyaculación retrógrada es un defecto de las válvulas que regulan el flujo de orina con respecto al del esperma en la uretra; este trastorno infrecuente es a veces una consecuencia de la diabetes o de la prostatectomía.
+      </p>
+     </div>
+     <div class="col-md-5">
+      <img class="img-proposito" src="/images/saludhombre/fertilidad4.png"/>
+     </div>
+    </div>
+    <div class="row margintop35">
+     <div class="col-md-5">
+      <img class="img-proposito" src="/images/saludhombre/fertilidad5.png"/>
+     </div>
+     <div class="col-md-7">
+      <h3>
+       Testículos no descendidos (criptorquidia):
+      </h3>
+      <p>
+       Si los testículos no descienden al escroto en el primer mes después del nacimiento, pueden surgir problemas de fertilidad. Un tratamiento quirúrgico precoz puede restablecer la migración testicular y aumentar las posibilidades de fertilidad.
+      </p>
+      <br/>
+      <h3>
+       Varices en el escroto (varicocele):
+      </h3>
+      <p>
+       Se pueden formar varices (venas dilatadas) en el escroto. Estas venas aumentan la temperatura en los testículos. Este calor debilita el semen y afecta a la producción de espermatozoides. Se puede proponer un tratamiento quirúrgico, sin garantía de eficacia terapéutica.
+      </p>
+     </div>
+    </div>
+    <div class="row margintop35">
+     <div class="col-md-7">
+      <h3>
+       Trastornos hormonales:
+      </h3>
+      <p>
+       Un varón puede ser infértil si su organismo no produce suficiente testosterona o gonadotropinas (FSH y LH). La disminución de la calidad del semen de origen hormonal es un fenómeno más bien infrecuente. Los deportistas de alto nivel que recurren a determinadas formas de dopaje hormonal experimentan una alteración de su fertilidad (este fenómeno desaparece en algunos casos una vez que se interrumpe el dopaje).
+      </p>
+     </div>
+     <div class="col-md-5">
+      <img class="img-proposito" src="/images/saludhombre/fertilidad6.png"/>
+     </div>
+    </div>
+    <div class="row margintop35">
+     <div class="col-md-5">
+      <img class="img-proposito" src="/images/saludhombre/fertilidad7.png"/>
+     </div>
+     <div class="col-md-7">
+      <h3>
+       Vasectomía (esterilización):
+      </h3>
+      <p>
+       La ausencia de semen puede deberse a esterilización previa (vasectomía). El éxito del tratamiento quirúrgico considerado para restablecer la fertilidad está influido por la antigüedad del procedimiento (es menor en las vasectomías de más de 2 años).
+      </p>
+      <br/>
+      <h3>
+       Alteraciones de la sexualidad:
+      </h3>
+      <p>
+       También pueden afectar a la fertilidad, Asimismo, la obligación de tener relaciones sexuales "por necesidad" para tener un niño puede crear tensión en la pareja.
+      </p>
+     </div>
+    </div>
+    <div class="row margintop35">
+     <div class="col-md-7">
+      <h3>
+       Edad:
+      </h3>
+      <p>
+       Aunque la edad influye más en la fertilidad femenina que en la masculina, los varones no deben minimizar este factor. En efecto, se pueden producir diversos cambios en el varón:
+      </p>
+      <br/>
+      <ul class="plan-vida-p">
+       <li>
+        <span>
+         Disminución de la función de los testículos.
+        </span>
+       </li>
+       <li>
+        <span>
+         Bajas concentraciones de hormonas.
+        </span>
+       </li>
+       <li>
+        <span>
+         Disminución de la producción de semen.
+        </span>
+       </li>
+       <li>
+        <span>
+         Aumento de posibles problemas de la eyaculación.
+        </span>
+       </li>
+       <li>
+        <span>
+         Aumento del riesgo de anomalías genéticas.
+        </span>
+       </li>
+      </ul>
+     </div>
+     <div class="col-md-5">
+      <img class="img-proposito" src="/images/saludhombre/fertilidad8.png"/>
+     </div>
+    </div>
+    <div class="row margintop35">
+     <div class="col-md-5">
+      <img class="img-proposito" src="/images/saludhombre/fertilidad9.png"/>
+     </div>
+     <div class="col-md-7">
+      <h3>
+       Peso:
+      </h3>
+      <p>
+       Los extremos sobrepeso o delgadez excesiva, puede disminuir la fertilidad en los varones y las mujeres. Sin embargo, el factor ponderal influye algo más en la fertilidad femenina que en la masculina. En último término, el posible efecto del peso en la fertilidad del varón depende de la calidad inicial de su semen. Se recomienda una vida sana y equilibrada en todos los casos.
+      </p>
+     </div>
+    </div>
+    <div class="row margintop35">
+     <div class="col-md-12">
+      <h3>
+       Tratamiento
+      </h3>
+      <p>
+       A menudo no se puede identificar la causa exacta de la infertilidad. Aún si no está clara la causa exacta se puede indicar algún tratamiento:
+      </p>
+      <br/>
+      <ul class="metodos-anti padding0">
+       <li class="tratamiento1">
+        <strong>
+         Cirugía:
+        </strong>
+        Por ejemplo, un varicocele se puede corregir de forma quirúrgica o se pueden reparar los conductos deferentes obstruidos. Se pueden revertir las vasectomías. En aquellos casos en los que no hay espermatozoides en la eyaculación, estos se pueden obtener directamente desde los testículos o del epidídimo mediante técnicas de recuperación de espermatozoides.
+       </li>
+       <li class="tratamiento2 height47">
+        <strong>
+         Tratamiento con antibióticos:
+        </strong>
+        puede curar una infección en el tracto reproductor, pero no siempre se recupera la fertilidad.
+       </li>
+       <li class="tratamiento3">
+        <strong>
+         Problemas con las relaciones sexuales.
+        </strong>
+        La administración de medicamentos o las sesiones de terapia pueden mejorar los trastornos tales como la disfunción eréctil o la eyaculación precoz.
+       </li>
+       <li class="tratamiento4">
+        <strong>
+         Tratamientos hormonales.
+        </strong>
+        Se puede recomendar terapia de reemplazo hormonal o medicamentos en aquellos casos en los cuales la infertilidad se produce por niveles altos o bajos de ciertas hormonas, o por problemas con la manera en que el cuerpo usa las hormonas.
+       </li>
+       <li class="tratamiento5">
+        <strong>
+         Reproducción asistida (RA).
+        </strong>
+        Los tratamientos de RA implican la obtención de espermatozoides a través de la eyaculación normal, la extracción quirúrgica o donantes individuales, según el caso y los deseos específicos. Luego, se insertan los espermatozoides en el tracto genital femenino, o se usan para realizar la fertilización in vitro o la inyección intracitoplásmica de espermatozoides.
+       </li>
+      </ul>
+      <p class="p-fertilidad">
+       <strong>
+        Nota:
+       </strong>
+       Si los tratamientos no funcionan y es imposible que un hombre sea el padre de un niño. El médico podría sugerir que tú y tu pareja consideren utilizar el esperma de un donante o adoptar un niño.
+      </p>
+     </div>
+    </div>
+   </div>
+   <div class="container">
+    <div class="row margintop35">
+     <div class="col-md-12">
+      <img class="img-mesa paddingtop40" src="/images/icon/mail.png"/>
+      <h2>
+       ¿Necesitas más información?
+      </h2>
+      <div class="mas-info">
+       <p>
+        Por favor, déjanos tu teléfono e email y nos pondremos en contacto contigo cuanto antes para explicarte todos los detalles.
+       </p>
+       <p>
+        <strong>
+         <em>
+          Horario de llamadas L-V de 8.00 a 21.00h.
+         </em>
+        </strong>
+       </p>
+      </div>
+     </div>
+     <div class="col-md-12">
+      <div>
+       <form action="/servicios-de-salud/salud-hombre/landings-salud-hombre/fertilidad-masculina" enctype="multipart/form-data" id="solicitudInfoDonanteForm" method="post">
+        <input name="__RequestVerificationToken" type="hidden" value="9G8n52QlSwwUc8eW8plLJrD4BRmFGVrn7KG_YLw24k3xwDBMZ-J2kssFsPUJWc6WAggSpV3foy-iAhub72aFUe-TxivLxcjN3Ljia3x9aDo1"/>
+        <div class="form-group">
+        </div>
+        <div>
+         <input hidden="" id="Subject" name="Subject" type="text" value="SO88FL Consulta Salud Hombre Fertilidad"/>
+        </div>
+        <div class="row marginbottom20">
+         <div class="col-md-6">
+          <div class="form-group form-salud">
+           <input class="form-control" id="Nombre" name="Nombre" placeholder="Nombre*" required="true" type="text" value="">
+           </input>
+          </div>
+         </div>
+         <div class="col-md-6">
+          <div class="form-group form-salud">
+           <input class="form-control" id="Apellidos" name="Apellidos" placeholder="Apellidos*" required="true" type="text" value=""/>
+          </div>
+         </div>
+        </div>
+        <div class="row marginbottom20">
+         <div class="col-md-6">
+          <div class="form-group form-salud">
+           <input class="form-control" id="Telefono" name="Telefono" pattern="[0-9]{9}" placeholder="Teléfono*" required="true" type="text" value=""/>
+          </div>
+         </div>
+         <div class="col-md-6">
+          <div class="form-group form-salud">
+           <input class="form-control" id="Mail" name="Mail" placeholder="Email*" required="true" type="text" value=""/>
+          </div>
+         </div>
+        </div>
+        <div class="row">
+         <div class="col-md-12">
+          <div class="form-group form-salud">
+           <textarea class="form-control" cols="20" id="TextoPregunta" name="TextoPregunta" placeholder="Tu pregunta*" required="true" rows="2">
+</textarea>
+           <label>
+            <input class="form-control" id="AceptoPolitica" name="AceptoPolitica" required="true" type="checkbox" value="true"/>
+            <input name="AceptoPolitica" type="hidden" value="false"/>
+            Acepto la
+            <a class="noHover" href="https://atencionmedica.legalitas.com/politica-privacidad/" target="_blank">
+             política de privacidad
+            </a>
+            de la web*
+           </label>
+           <p class="float-right">
+            <em>
+             <strong>
+              *Campos obligatorios
+             </strong>
+            </em>
+           </p>
+           <div class="buttonPassword btn-formulario">
+            <button class="btn_popup">
+             Enviar
+            </button>
+           </div>
+          </div>
+         </div>
+        </div>
+        <input name="ufprt" type="hidden" value="3940744F1C4D6126531A1F0A2A42E27D251613C3338D50E3FAC5ABFE00E4C66A495176D87FD316416BF58E8DA876905D31DDDE020525314ECBAA536E5A337876CE5F6CDEC68456D070B2A85BCC6CD1067522390D8481F6A01DCAE0913DAEFDBF1EBE0967FD2C20985781D9AC41631F0B2CAB9D9A2AB9677E7525376EA0F6223021C7162A49BBCD263E4967E8D1F11191DBBBC8538250800E45FA3C25AC09FF50E32AAA703929A86C8962B2167AF4E7B321AE72986A22BF52927C7699BB37867A"/>
+       </form>
+      </div>
+     </div>
+    </div>
+   </div>
+   <div class="container-fluid container-cuadro-medico">
+    <a class="btn btn-primary btn-cuadro-medico" href="/buscador-medico/">
+     <strong>
+      ACCEDER AL CUADRO MÉDICO
+     </strong>
+    </a>
+   </div>
+   <div aria-hidden="true" class="modal fade" id="modalAvisos" role="dialog" tabindex="-1">
+    <div class="modal-dialog" role="document">
+     <div class="modal-content">
+      <div class="modal-body" id="textoModal">
+      </div>
+      <div class="modal-footer">
+       <button class="btn btn-secondary" data-dismiss="modal" type="button">
+        Cerrar
+       </button>
+      </div>
+     </div>
+    </div>
+   </div>
+   <script>
+    function mostrarModal() {
+        $('#modalAvisos').modal("show");
+    }
+   </script>
+   <!-- Footer -->
+   <!-- Footer -->
+   <div id="footer-wrapper">
+    <footer class="container" id="footer">
+     <div class="footerContent row row-eq-height">
+      <!-- Logo -->
+      <div class="col-12 col-sm-3 col-xl-2" id="logo">
+       <a href="/" id="iconoHome">
+        <img src="/images/Logo_Salud_Positivo_RGB.png"/>
+       </a>
+      </div>
+      <div class="col-12 col-sm-9 col-xl-4" id="quienes">
+       <p class="title">
+        ¿Quiénes somos?
+       </p>
+       <p>
+        Phasellus mi lectus, pellentesque eget sem interdum, pellentesque sagittis diam. Proin et ultricies elit.
+       </p>
+      </div>
+      <div class="contactFooter col-12 col-xl-6">
+       <ul class="nav justify-content-end">
+        <li class="nav-item hablaMedico" id="hablaMedico" onclick="abrirEnlaceGadaca()" style="cursor: pointer">
+         <p class="titleContact">
+          Vídeo Consulta
+         </p>
+         <p class="txtContact">
+          de Urgencias
+         </p>
+        </li>
+        <li class="nav-item contactTef" onclick="window.location.href='tel:+34917039024'">
+         <p class="titleContact">
+          Teléfono
+         </p>
+         <p class="txtContact">
+          917 039 024
+         </p>
+        </li>
+       </ul>
+      </div>
+     </div>
+    </footer>
+    <div class="copyrightFooter row">
+     <div class="container">
+      <div class="boxCookies">
+       <ul class="nav">
+        <li>
+         <a href="/cookies/">
+          Cookies
+         </a>
+        </li>
+        <li>
+         <a href="/aviso-legal/">
+          Aviso Legal
+         </a>
+        </li>
+        <li>
+         <a href="/politica-privacidad/">
+          Política de privacidad
+         </a>
+        </li>
+       </ul>
+      </div>
+      <div class="boxCopyright">
+       <p>
+        © Legálitas Salud 2025
+       </p>
+      </div>
+     </div>
+    </div>
+   </div>
+   <script src="https://cdn.jsdelivr.net/npm/ismobilejs@0.5.1/dist/isMobile.min.js">
+   </script>
+   <script>
+    $(document).ready(function () {
+    if (isMobile.apple.device || isMobile.android.device) {
+      $('#hablaMedico').removeAttr('hidden');
+    }
+    else {
+      //$('#hablaMedico').attr('hidden','hidden');
+    }
+  })
+
+
+
+  function abrirEnlaceGadaca() {
+    if (isMobile.apple.device || isMobile.android.device) {
+
+      if (isMobile.apple.device) {
+        //window.location.href = 'https://itunes.apple.com/es/app/gadaca/id1327347501?mt=8';
+        window.location.href = 'https://itunes.apple.com/es/app/video-consulta-medica/id1453412803';
+      }
+      else {
+        //window.location.href = 'https://play.google.com/store/apps/details?id=com.lorentech.gadaca&hl=es'
+        window.location.href = 'https://play.google.com/store/apps/details?id=com.gadaca.videoconsultamedica'
+      }
+
+    } else {
+      window.location.href = '/seccion-home-banner/banner-videoconsulta/';
+    }
+  }
+   </script>
+  </div>
+  <script src="/Scripts/jquery.validate.min.js">
+  </script>
+  <script src="/Scripts/bootstrap/bootstrap.min.js">
+  </script>
+  <script src="/Scripts/Quodem/quodem-cookies.1.0.js" type="text/javascript">
+  </script>
+  <script src="/Scripts/Quodem/js.cookie.js" type="text/javascript">
+  </script>
+  <div class="cookies_box custom-cookies" id="cuadroCookies" style="display:none;">
+   <h3>
+    Configuración de Cookies
+   </h3>
+   <p class="textoPanelCookies">
+    En LEGALITAS SALUD utilizamos cookies propias técnicas y de terceros para permitir el
+        correcto funcionamiento de este sitio, así como cookies con fines analíticos. Puedes encontrar
+        más detalles en nuestra
+    <a href="/Cookies/">
+     Política de Cookies.
+    </a>
+   </p>
+   <button onclick="allCookies();setCookie('cookiesConfig', '1', 365)">
+    ACEPTAR TODAS LAS COOKIES
+   </button>
+   <button onclick="cookiesPanel()">
+    CONFIGURACIÓN DE COOKIES
+   </button>
+   <button onclick="refuseAll();setCookie('cookiesConfig', '1', 365)">
+    RECHAZAR TODAS LAS COOKIES
+   </button>
+  </div>
+  <!--------Ventana Configuración COOKIES ---->
+  <div class="modalDialogCookies modal fade" style="display:none;">
+   <div class="modal-dialog">
+    <div class="modal-content">
+     <div class="modal-header mx-auto">
+      <h4 class="modal-title">
+       CONFIGURACIÓN DE COOKIES
+      </h4>
+     </div>
+     <p>
+      Puede escoger sus preferencias sobre qué cookies acepta o no, marcando a continuación las opciones que usted elija:
+     </p>
+     <h5>
+      <strong>
+       NECESARIAS
+      </strong>
+     </h5>
+     <p>
+      <strong>
+       Cookies básicas e imprescindibles
+      </strong>
+      .- Las cookies necesarias son absolutamente esenciales para que el sitio web funcione correctamente. Esta categoría solo incluye cookies que garantizan funcionalidades básicas y características de seguridad del sitio web. Estas cookies no almacenan ninguna información personal.
+     </p>
+     <div class="swipe-configuration__footer">
+      <a aria-controls="listado_1" aria-expanded="false" class="btn-collapse d-block w-100 text-left" data-toggle="collapse" href="#listado_1" role="button">
+       <span class="btn-collapse__text">
+        Ver listado completo de cookies de análisis
+       </span>
+      </a>
+      <div class="collapse" id="listado_1" style="">
+       <div class="card card-body">
+        <table>
+         <thead>
+          <tr>
+           <th>
+            Denominación
+           </th>
+           <th>
+            Titular
+           </th>
+           <th>
+            Duración
+           </th>
+           <th>
+            Finalidad
+           </th>
+          </tr>
+         </thead>
+         <tbody>
+          <tr>
+           <td>
+            ASP.NET_SessionId
+           </td>
+           <td>
+            Atención Médica Ocaso
+           </td>
+           <td>
+            Sesión
+           </td>
+           <td>
+            Control de sesiones
+           </td>
+          </tr>
+          <tr>
+           <td>
+            jwplayer.captionLabel
+           </td>
+           <td>
+            Atención Médica Ocaso
+           </td>
+           <td>
+            Sesión
+           </td>
+           <td>
+            Guarda los ajustes sobre los vídeos de la web de cara a las siguientes reproducciones.
+           </td>
+          </tr>
+          <tr>
+           <td>
+            __RequestVerificationToken
+           </td>
+           <td>
+            Atención Médica Ocaso
+           </td>
+           <td>
+            Sesión
+           </td>
+           <td>
+            Indica si el usuario ha aceptado la política de cookies.
+           </td>
+          </tr>
+          <tr>
+           <td>
+            OcasoAuthCookie
+           </td>
+           <td>
+            Atención Médica Ocaso
+           </td>
+           <td>
+            30 minutos
+           </td>
+           <td>
+            Indica si el usuario ha aceptado la política de cookies.
+           </td>
+          </tr>
+          <tr>
+           <td>
+            cookiesConfig
+           </td>
+           <td>
+            Atención Médica Ocaso
+           </td>
+           <td>
+            1 año
+           </td>
+           <td>
+            Indica si el usuario ha aceptado la política de cookies.
+           </td>
+          </tr>
+         </tbody>
+        </table>
+       </div>
+      </div>
+     </div>
+     <h5>
+      <strong>
+       ANALÍTICAS
+      </strong>
+     </h5>
+     <p>
+      <input id="cbox2" name="cbox" type="checkbox" value="analisis"/>
+      <strong>
+       Cookies de análisis.
+      </strong>
+      - Las cookies analíticas, que no son necesarias para que el sitio web funcione, las utilizamos específicamente para conocer mejor cómo interactúas por nuestro sitio web. Esto nos ayuda a seguir mejorando nuestros contenidos, y la experiencia de usuario.
+     </p>
+     <div class="swipe-configuration__footer">
+      <a aria-controls="listado_2" aria-expanded="false" class="btn-collapse d-block w-100 text-left" data-toggle="collapse" href="#listado_2" role="button">
+       <span class="btn-collapse__text">
+        Ver listado completo de cookies de análisis
+       </span>
+      </a>
+      <div class="collapse" id="listado_2" style="">
+       <div class="card card-body">
+        <table>
+         <thead>
+          <tr>
+           <th>
+            Denominación
+           </th>
+           <th>
+            Titular
+           </th>
+           <th>
+            Duración
+           </th>
+           <th>
+            Finalidad
+           </th>
+          </tr>
+         </thead>
+         <tbody>
+          <tr>
+           <td>
+            _ga
+           </td>
+           <td>
+            Google
+           </td>
+           <td>
+            2 años
+           </td>
+           <td>
+            Identificador utilizado por Google Analytics para distinguir usuarios
+           </td>
+          </tr>
+          <tr>
+           <td>
+            _gid
+           </td>
+           <td>
+            Google
+           </td>
+           <td>
+            1 día
+           </td>
+           <td>
+            Identificador utilizado por Google Analytics para distinguir usuarios
+           </td>
+          </tr>
+          <tr>
+           <td>
+            _gat
+           </td>
+           <td>
+            Google
+           </td>
+           <td>
+            1 minuto
+           </td>
+           <td>
+            Se usa para limitar el porcentaje de solicitudes.
+           </td>
+          </tr>
+          <tr>
+           <td>
+            _ga_ID
+           </td>
+           <td>
+            Google
+           </td>
+           <td>
+            2 años
+           </td>
+           <td>
+            Se usa para mantener el estado de la sesión
+           </td>
+          </tr>
+         </tbody>
+        </table>
+       </div>
+      </div>
+     </div>
+     <div class="modal-footer">
+      <button class="btn_popup mx-auto" data-dismiss="modal" id="btnAceptarModal" onclick="analyticCookies();setCookie('cookiesConfig', '1', 365)" type="button">
+       Guardar configuración
+      </button>
+      <button class="btn_popup mx-auto" data-dismiss="modal" id="btnCerrarModal" onclick="clickOptionInPanel()" type="button">
+       Cerrar
+      </button>
+     </div>
+    </div>
+   </div>
+  </div>
+  <script>
+   $('body').addClass('noLoged');
+  </script>
+  <script type="text/javascript">
+   $(document).ready(function () {
+            // Verifica si la cookie existe
+            if (getCookie("cookiesConfig")) {
+                //si sí existe, no mostramos el panel
+                //$("#cuadroCookies").css("display", "none");
+                $(".panelGestCookies").css("display", "block");
+            } else {
+                $("#cuadroCookies").css("display", "block");
+            }
+        });
+
+        function setCookie(name, value, days) {
+            var expires = "";
+            if (days) {
+                var date = new Date();
+                date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+                expires = "; expires=" + date.toUTCString();
+            }
+            document.cookie = name + "=" + value + expires + "; path=/";
+        }
+
+        function cookiesPanel() {
+            $('.modal-content .collapse').each(function (index) {
+                $(this).removeClass("show");
+            });
+
+            var acepted = cookiesAcepted();
+            $(".modalDialogCookies").modal("show");
+            if (acepted) {
+                document.getElementById("cbox2").checked = true;
+            }
+            
+        }
+
+        function clickOptionInPanel() {
+            $(".modalDialogCookies").modal("hide");
+        }
+
+        function cookiesAcepted() {
+            var acepted = false;
+
+            var cookies = document.cookie.split(';');
+
+            // Iterar a través de las cookies y verificar si alguna contiene el nombre deseado
+            for (var i = 0; i < cookies.length; i++) {
+                var cookie = cookies[i].trim();
+                // Verificar si la cookie comienza con el nombre deseado
+                if (cookie.indexOf('_g') === 0) {
+                    acepted = true;
+                }
+            }
+
+            return acepted;
+        }
+
+        function analyticCookies() {
+            var isChecked = document.getElementById('cbox2').checked;
+            if (isChecked == true) {
+                window.ga = window.ga || function () { (ga.q = ga.q || []).push(arguments) }; ga.l = +new Date;
+                ga('create', 'UA-64597784-5', 'auto');
+                ga('require', 'outboundLinkTracker');
+
+                ga('send', 'pageview');
+            } else {
+                var cookies = document.cookie.split(';'); // Obtener todas las cookies
+                var cookiesToDelete = [];
+
+                // Filtrar y obtener las cookies que empiezan con "_g"
+                for (var i = 0; i < cookies.length; i++) {
+                    var cookie = cookies[i].trim();
+                    if (cookie.indexOf('_g') === 0) {
+                        cookiesToDelete.push(cookie);
+                    }
+                }
+                var domain = window.location.host;
+                var cleanDomain = domain.split('.');
+                // Borrar las cookies
+                for (var j = 0; j < cookiesToDelete.length; j++) {
+                    var cookieName = cookiesToDelete[j].split('=')[0];
+                    //el primero siver solo para local
+                    //document.cookie = cookieName + '=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;';
+                    document.cookie = cookieName + '=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/; domain=' + cleanDomain[1] + '.' + cleanDomain[2] + ';';
+                }
+
+            }
+
+            $(".modalDialogCookies").modal("hide");
+            $("#cuadroCookies").css("display", "none");
+            $(".panelGestCookies").css("display", "block");
+        }
+
+        function allCookies() {
+            window.ga = window.ga || function () { (ga.q = ga.q || []).push(arguments) }; ga.l = +new Date;
+            ga('create', 'UA-64597784-5', 'auto');
+            ga('require', 'outboundLinkTracker');
+
+            ga('send', 'pageview');
+
+            $("#cuadroCookies").css("display", "none");
+            $(".panelGestCookies").css("display", "block");
+        }
+
+        function refuseAll() {
+            $("#cuadroCookies").css("display", "none");
+            $(".panelGestCookies").css("display", "block");
+        }
+
+        function getCookie(name) {
+            var cookieName = name + "=";
+            var decodedCookie = decodeURIComponent(document.cookie);
+            var cookieArray = decodedCookie.split(';');
+
+            for (var i = 0; i < cookieArray.length; i++) {
+                var cookie = cookieArray[i];
+                while (cookie.charAt(0) === ' ') {
+                    cookie = cookie.substring(1);
+                }
+                if (cookie.indexOf(cookieName) === 0) {
+                    return cookie.substring(cookieName.length, cookie.length);
+                }
+            }
+            return null;
+        }
+  </script>
+  <script type="text/javascript">
+   function showLoginError() {
+            $("#modalErrorLogin").modal("show");
+        }
+        function showLogin() {
+            $("#modalLogin").modal("show");
+        }
+  </script>
+  <script src="/Scripts/jquery.cubeportfolio.js" type="text/javascript">
+  </script>
+  <script src="/Scripts/main-cube.js" type="text/javascript">
+  </script>
+  <div class="panelGestCookies" style="display: none;">
+   <p onclick="cookiesPanel()">
+    Panel de configuración de cookies
+   </p>
+  </div>
+ </body>
+</html>
