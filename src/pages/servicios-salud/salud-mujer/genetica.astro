@@ -5,15 +5,16 @@ import Hero from "../../../components/Hero.astro";
 
 <BaseLayout>
   <Hero
-    imageSrc="../../../src/assets/salud-mujer/HeroSaludMujer.jpg"
+    imageSrc="../../../src/assets/salud-mujer/genetica/banner-genetica.png"
     showMedicalSearch={false}
   />
 
   <div class="items-center max-w-5xl mx-auto my-10">
     <div>
       <div>
-        <div>
-          <img src="/src/assets/icon/icon-genetica1.png" /><h2>Cordón Umbilical</h2>
+        <div class="inline-flex items-center justify-content-center pb-10">
+          <img src="/src/assets/icon/icon-genetica1.png" />
+          <h2 class="ml-5 mt-3 title">Cordón Umbilical</h2>
         </div>
       </div>
       <div>
@@ -25,7 +26,7 @@ import Hero from "../../../components/Hero.astro";
           </p>
         </div>
       </div>
-      <section class="grid grid-col-1 lg:grid-cols-2 py-10">
+      <section class="grid grid-col-1 lg:grid-cols-2">
         <div>
           <h3>¿Qué son las células madre?</h3>
           <p>
@@ -49,12 +50,12 @@ import Hero from "../../../components/Hero.astro";
             graves*.
           </p>
         </div>
-        <div>
+        <div class="flex items-center justify-center">
           <img src="/src/assets/salud-mujer/genetica/img-genetica1.png" />
         </div>
       </section>
-      <section class="grid grid-col-1 lg:grid-cols-2 py-10">
-        <div>
+      <section class="grid grid-col-1 lg:grid-cols-2">
+        <div class="flex items-center justify-center">
           <img src="/src/assets/salud-mujer/genetica/img-genetica2.png" />
         </div>
         <div>
@@ -76,9 +77,9 @@ import Hero from "../../../components/Hero.astro";
           </p>
         </div>
       </section>
-      <section class="grid grid-col-1 lg:grid-cols-2 py-10">
+      <section class="grid grid-col-1 lg:grid-cols-2">
         <div>
-          <h3>¿Por que conservar?</h3>
+          <h3>¿Por qué conservar?</h3>
           <p>
             Estas células madre pueden generar glóbulos rojos (para transportar
             el oxígeno por el torrente sanguíneo), glóbulos blancos (para
@@ -114,13 +115,13 @@ import Hero from "../../../components/Hero.astro";
             de SCU.
           </p>
         </div>
-        <div>
+        <div class="flex items-center justify-center">
           <img src="/src/assets/salud-mujer/genetica/img-genetica3.png" />
         </div>
       </section>
 
       <!-- Qué enfermedades pueden tratarse -->
-      <section class="grid grid-col-1 py-10">
+      <section class="grid grid-col-1">
         <div>
           <h3>¿Qué enfermedades pueden tratarse?</h3>
           <p>
@@ -131,7 +132,7 @@ import Hero from "../../../components/Hero.astro";
         </div>
       </section>
 
-      <section class="grid grid-col-1 lg:grid-cols-2 py-10">
+      <section class="grid grid-col-1 lg:grid-cols-2">
         <div>
           <ul>
             <li><span>Enfermedades Neoplásicas 73% de los casos.</span></li>
@@ -176,16 +177,16 @@ import Hero from "../../../components/Hero.astro";
           </ul>
         </div>
       </section>
-      <section class="grid grid-col-1 py-10">
+      <section class="grid grid-col-1">
         <div>
-          <h3 class="text-orange">
+          <h3 class="text-orange text-center">
             Beneficios en conservar las células madre del cordón umbilical de tu
             bebé
           </h3>
         </div>
       </section>
-      <div>
-        <div>
+      <section class="grid grid-cols-2 items-center">
+        <div class="flex items-center justify-center">
           <img src="/src/assets/salud-mujer/genetica/img-genetica4.png" />
         </div>
         <div>
@@ -207,195 +208,211 @@ import Hero from "../../../components/Hero.astro";
             la disponibilidad de la muestra es inmediata.
           </p>
         </div>
-      </div>
+      </section>
     </div>
     <div>
       <div>
-        <div>
-          <img src="/src/assets/icon/icon-genetica2.png" /><h2>Genética</h2>
+        <div class="inline-flex items-center justify-content-center pb-10">
+          <img src="/src/assets/salud-mujer/genetica/icon-genetica2.png" />
+          <h2 class="ml-5 mt-3 title">Genética</h2>
         </div>
       </div>
       <div>
-        <div>
-          <img src="/src/assets/salud-mujer/genetica/lista-genetica1.png" />
-        </div>
-        <div>
-          <p>
-            <strong>Genética Clínica:</strong> Nos ayuda a conocer el grado de trasmisión
-            intergeneracional y si se expresaran en la descendencia. La cual se realiza
-            a través de los genes, que se heredan de padres a hijos, realizando una
-            orientación sobre diferentes probables herencias.
-          </p>
-        </div>
-        <div>
-          <img src="/src/assets/salud-mujer/genetica/lista-genetica2.png" />
-        </div>
-        <div>
-          <p>
-            <strong>Consejo Genético:</strong> Una consulta de consejo genético es
-            un servicio que proporciona información y apoyo a las personas y/o familias
-            que padecen o pueden tener riesgo de padecer un desorden genético. La
-            información recabada durante la consulta de consejo genético permite
-            determinar si es necesario realizar un análisis genético y la prueba
-            concreta que sería más adecuada, aunque la decisión de llevarla a cabo
-            o no depende de la persona afectada, que contará con la información necesaria
-            sobre las posibles consecuencias, para él o su descendencia, de los resultados
-            que se obtengan de los análisis genéticos, así como de sus ventajas,
-            riesgos, y posibles alternativas.
-          </p>
-
-          <div>
-            <h3>La nueva generación de Test Prenatal</h3>
+        <div class="grid grid-cols-12 gap-4">
+          <div class="col-span-12 md:col-span-1">
+            <img
+              class="w-15 h-15"
+              src="/src/assets/salud-mujer/genetica/lista-genetica1.png"
+            />
+          </div>
+          <div class="col-span-12 md:col-span-11">
             <p>
-              Las anomalías cromosómicas, como la trisomía 21 (Síndrome de
-              Down), están presentes en el 1-2% de los fetos. Hay un amplio
-              abanico de pruebas disponibles para evaluar el correcto desarrollo
-              del futuro bebé antes de su nacimiento.
+              <strong>Genética Clínica:</strong> Nos ayuda a conocer el grado de
+              trasmisión intergeneracional y si se expresaran en la descendencia.
+              La cual se realiza a través de los genes, que se heredan de padres
+              a hijos, realizando una orientación sobre diferentes probables herencias.
             </p>
           </div>
-
-          <div>
-            <div>
-              <img src="/src/assets/salud-mujer/genetica/img-genetica5.png" />
-            </div>
-            <div>
-              <h3>Valor terapéutico</h3>
-              <p>
-                Las células madre del cordón umbilical pueden ser de ayuda en
-                algunas enfermedades hematológicas.
-              </p>
-              <br />
-              <h3>Gran potencial futuro</h3>
-              <p>
-                Potencial terapéutico reflejado en múltiples programas de
-                investigación enfocados al tratamiento de enfermedades graves.
-              </p>
-              <br />
-              <h3>Utilidad intrafamiliar y disponibilidad inmediata</h3>
-              <p>
-                Las células madre del cordón umbilical pueden ser útiles para el
-                tratamiento de enfermedades en el paciente que las generó (muy
-                poco probable) y también en sus familiares directos (hermanos).
-                Además, la disponibilidad de la muestra es inmediata.
-              </p>
-            </div>
+        </div>
+        <div class="grid grid-cols-12 gap-4">
+          <div class="col-span-12 md:col-span-1">
+            <img
+              class="w-15 h-15"
+              src="/src/assets/salud-mujer/genetica/lista-genetica2.png"
+            />
           </div>
-
-          <div>
-            <h3>Estoy embarazada, ¿puedo realizarme un test?</h3>
+          <div class="col-span-12 md:col-span-11">
             <p>
-              Está indicado a partir de la 10ª semana de gestación (10 semanas +
-              0 días). Puede realizarse en casos de reproducción asistida,
-              incluso FIV por donación de gametos. Es apto para gestaciones
-              gemelares. Un test genético de cribado y como tal debe ser
-              prescrito por un médico.
+              <strong>Consejo Genético:</strong> Una consulta de consejo genético
+              es un servicio que proporciona información y apoyo a las personas y/o
+              familias que padecen o pueden tener riesgo de padecer un desorden genético.
+              La información recabada durante la consulta de consejo genético permite
+              determinar si es necesario realizar un análisis genético y la prueba
+              concreta que sería más adecuada, aunque la decisión de llevarla a cabo
+              o no depende de la persona afectada, que contará con la información
+              necesaria sobre las posibles consecuencias, para él o su descendencia,
+              de los resultados que se obtengan de los análisis genéticos, así como
+              de sus ventajas, riesgos, y posibles alternativas.
             </p>
-          </div>
 
-          <div>
-            <img src="/src/assets/salud-mujer/genetica/img-genetica6.png" />
-          </div>
+            <section>
+              <h3>La nueva generación de Test Prenatal</h3>
+              <p>
+                Las anomalías cromosómicas, como la trisomía 21 (Síndrome de
+                Down), están presentes en el 1-2% de los fetos. Hay un amplio
+                abanico de pruebas disponibles para evaluar el correcto
+                desarrollo del futuro bebé antes de su nacimiento.
+              </p>
+            </section>
 
-          <div>
-            <div>
-              <h3>¿Qué tipo de anomalías cromosómicas detecta?</h3>
-              <p><strong>1. Trisomías más frecuentes</strong></p>
-              <p>
-                Una trisomía se produce por la presencia de tres copias de un
-                cromosoma en lugar de las dos habituales.
-              </p><br />
-              <p>
-                Trisomía 21 o síndrome de Down, es la más frecuente. Los niños
-                con esta afección pueden padecer discapacidad intelectual de
-                leve a moderada, defectos cardiacos y/u otros trastornos.
-              </p><br />
-              <p>
-                Trisomía 18 o síndrome de Edwards, presenta un elevado índice de
-                aborto espontáneo. Los bebés con esta afección normalmente
-                presentan malformaciones severas y retraso mental. Por lo
-                general no sobreviven más allá del primer año.
-              </p><br />
-              <p>
-                Trisomía 13 o síndrome de Patau, está relacionado con un índice
-                elevado de aborto espontáneo. Los bebés nacidos con síndrome de
-                Patau tienen retraso mental severo y pueden presentar severas
-                malformaciones cardíacas congénitas, así como otras patologías.
-                Raramente sobreviven más allá del primer año.
-              </p>
+            <div class="grid grid-cols-12 gap-4">
+              <div class="col-span-12 md:col-span-5">
+                <img src="/src/assets/salud-mujer/genetica/img-genetica5.png" />
+              </div>
+              <div class="col-span-12 md:col-span-7">
+                <h3>Valor terapéutico</h3>
+                <p>
+                  Las células madre del cordón umbilical pueden ser de ayuda en
+                  algunas enfermedades hematológicas.
+                </p>
+                <br />
+                <h3>Gran potencial futuro</h3>
+                <p>
+                  Potencial terapéutico reflejado en múltiples programas de
+                  investigación enfocados al tratamiento de enfermedades graves.
+                </p>
+                <br />
+                <h3>Utilidad intrafamiliar y disponibilidad inmediata</h3>
+                <p>
+                  Las células madre del cordón umbilical pueden ser útiles para
+                  el tratamiento de enfermedades en el paciente que las generó
+                  (muy poco probable) y también en sus familiares directos
+                  (hermanos). Además, la disponibilidad de la muestra es
+                  inmediata.
+                </p>
+              </div>
             </div>
-            <div>
-              <img src="/src/assets/salud-mujer/genetica/img-genetica7.png" />
-            </div>
-          </div>
 
-          <div>
-            <div>
-              <img src="/src/assets/salud-mujer/genetica/img-genetica8.png" />
-            </div>
-            <div>
-              <p><strong>2. Alteraciones de los cromosomas sexuales</strong></p>
+            <section>
+              <h3>Estoy embarazada, ¿puedo realizarme un test?</h3>
               <p>
-                Detecta alteraciones en el número de cromosomas sexuales, que
-                pueden estar asociadas con una variedad de condiciones leves,
-                incluyendo:
-              </p><br />
-              <p>
-                Síndrome de Turner (45,X), ausencia de un cromosoma X en
-                mujeres.
-              </p><br />
-              <p>
-                Síndrome de Klinefelter (47,XXY), presencia de una copia extra
-                del cromosoma X en hombres.
-              </p><br />
-              <p><strong>3. Microdeleciones y otras aneuploidías</strong></p>
-              <p>
-                Ofrece adicionalmente el análisis de alteraciones pequeñas y
-                poco frecuentes en los cromosomas, llamadas microdeleciones, así
-                como de aneuploidías en todos los cromosomas.
+                Está indicado a partir de la 10ª semana de gestación (10 semanas
+                + 0 días). Puede realizarse en casos de reproducción asistida,
+                incluso FIV por donación de gametos. Es apto para gestaciones
+                gemelares. Un test genético de cribado y como tal debe ser
+                prescrito por un médico.
               </p>
-            </div>
-          </div>
+            </section>
 
-          <div>
             <div>
-              <h3>Tipos de pruebas</h3>
-              <p>
-                Hay diferentes opciones disponibles, tu médico deberá evaluar
-                cuál es la más apropiada para tu caso. Nuestro dpto médico le
-                puede asesorar.
-              </p><br />
-              <h3>Beneficios</h3>
-              <p>
-                Más fiable que el cribado combinado del primer trimestre. Puede
-                realizarse en embarazos gemelares*, gemelos evanescentes y
-                donación de óvulos. Para mujeres de cualquier edad, con
-                independencia del índice de masa corporal o de la etnia. Puede
-                dar resultados con una fracción fetal menor del 4%.
-              </p><br />
-              <p>
-                El test prenatal no invasivo reduce el número de amniocentesis
-                innecesarias. La detección de los 24 cromosomas e identifica
-                cinco microdeleciones que están asociadas con importantes
-                síndromes genéticos.
-              </p>
-              <br />
-              <h3>Preocupación innecesaria</h3>
-              <p>
-                De cada 20 mujeres que obtienen resultados positivos para el
-                síndrome de Down, sólo una concebirá un bebé que lo padezca.
-              </p><br />
-              <h3>Falsa sensación de seguridad</h3>
-              <p>
-                De cada 20 mujeres que conciban un bebé con síndrome de Down, 3
-                obtendrán resultados negativos mediante el cribado bioquímico.
-              </p>
+              <img src="/src/assets/salud-mujer/genetica/img-genetica6.png" />
+            </div>
+
+            <section class="grid grid-cols-12 gap-4">
+              <div class="col-span-12 md:col-span-7">
+                <h3>¿Qué tipo de anomalías cromosómicas detecta?</h3>
+                <p><strong>1. Trisomías más frecuentes</strong></p>
+                <p>
+                  Una trisomía se produce por la presencia de tres copias de un
+                  cromosoma en lugar de las dos habituales.
+                </p><br />
+                <p>
+                  Trisomía 21 o síndrome de Down, es la más frecuente. Los niños
+                  con esta afección pueden padecer discapacidad intelectual de
+                  leve a moderada, defectos cardiacos y/u otros trastornos.
+                </p><br />
+                <p>
+                  Trisomía 18 o síndrome de Edwards, presenta un elevado índice
+                  de aborto espontáneo. Los bebés con esta afección normalmente
+                  presentan malformaciones severas y retraso mental. Por lo
+                  general no sobreviven más allá del primer año.
+                </p><br />
+                <p>
+                  Trisomía 13 o síndrome de Patau, está relacionado con un
+                  índice elevado de aborto espontáneo. Los bebés nacidos con
+                  síndrome de Patau tienen retraso mental severo y pueden
+                  presentar severas malformaciones cardíacas congénitas, así
+                  como otras patologías. Raramente sobreviven más allá del
+                  primer año.
+                </p>
+              </div>
+              <div class="col-span-12 md:col-span-5">
+                <img src="/src/assets/salud-mujer/genetica/img-genetica7.png" />
+              </div>
+            </section>
+
+            <section class="grid grid-cols-12 gap-4">
+              <div class="col-span-12 md:col-span-5">
+                <img src="/src/assets/salud-mujer/genetica/img-genetica8.png" />
+              </div>
+              <div class="col-span-12 md:col-span-7">
+                <p>
+                  <strong>2. Alteraciones de los cromosomas sexuales</strong>
+                </p>
+                <p>
+                  Detecta alteraciones en el número de cromosomas sexuales, que
+                  pueden estar asociadas con una variedad de condiciones leves,
+                  incluyendo:
+                </p><br />
+                <p>
+                  Síndrome de Turner (45,X), ausencia de un cromosoma X en
+                  mujeres.
+                </p><br />
+                <p>
+                  Síndrome de Klinefelter (47,XXY), presencia de una copia extra
+                  del cromosoma X en hombres.
+                </p><br />
+                <p><strong>3. Microdeleciones y otras aneuploidías</strong></p>
+                <p>
+                  Ofrece adicionalmente el análisis de alteraciones pequeñas y
+                  poco frecuentes en los cromosomas, llamadas microdeleciones,
+                  así como de aneuploidías en todos los cromosomas.
+                </p>
+              </div>
+            </section>
+
+            <div>
+              <div>
+                <h3>Tipos de pruebas</h3>
+                <p>
+                  Hay diferentes opciones disponibles, tu médico deberá evaluar
+                  cuál es la más apropiada para tu caso. Nuestro dpto médico le
+                  puede asesorar.
+                </p><br />
+                <h3>Beneficios</h3>
+                <p>
+                  Más fiable que el cribado combinado del primer trimestre.
+                  Puede realizarse en embarazos gemelares*, gemelos evanescentes
+                  y donación de óvulos. Para mujeres de cualquier edad, con
+                  independencia del índice de masa corporal o de la etnia. Puede
+                  dar resultados con una fracción fetal menor del 4%.
+                </p><br />
+                <p>
+                  El test prenatal no invasivo reduce el número de amniocentesis
+                  innecesarias. La detección de los 24 cromosomas e identifica
+                  cinco microdeleciones que están asociadas con importantes
+                  síndromes genéticos.
+                </p>
+                <br />
+                <h3>Preocupación innecesaria</h3>
+                <p>
+                  De cada 20 mujeres que obtienen resultados positivos para el
+                  síndrome de Down, sólo una concebirá un bebé que lo padezca.
+                </p><br />
+                <h3>Falsa sensación de seguridad</h3>
+                <p>
+                  De cada 20 mujeres que conciban un bebé con síndrome de Down,
+                  3 obtendrán resultados negativos mediante el cribado
+                  bioquímico.
+                </p>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-  </div></BaseLayout
->
+  </div>
+</BaseLayout>
 
 <style>
   h2 {
@@ -413,5 +430,18 @@ import Hero from "../../../components/Hero.astro";
   }
   p {
     margin-bottom: 10px;
+  }
+  section {
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+  }
+  ul {
+    list-style-type: disc;
+    padding-left: 20px;
+  }
+  li {
+    font-size: 14px;
+    padding-bottom: 5px;
+    font-weight: 300;
   }
 </style>
