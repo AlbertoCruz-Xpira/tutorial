@@ -1,394 +1,386 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import HeroSmall from '/src/components/HeroSmall.astro';
 const pageTitle = "Plan de vida saludable";
+const url = "/src/assets/plan-de-vida-saludable/banner.png";
 ---
 
 <BaseLayout>
+
+    <HeroSmall name={pageTitle} url={url} alternativeText={pageTitle}/>
+
+    <div>
+        <a>
+            <h5>Haz tu vida más saludable</h5>
+            <p>Utiliza la calculadora, sigue los menús recomendados y disfruta tus platos saludables.</p>
+        </a>
+    </div>
     
     <div class="items-center max-w-5xl px-10 sm:px-10 md:px-10 lg:mx-auto pt-10 pb-5 service-page">
-   <div>
-    <img/>
-    <div>
-     <a>
-      <h5>
-       Haz tu vida más saludable
-      </h5>
-      <p>
-       Utiliza la calculadora, sigue los menús recomendados y disfruta tus platos saludables.
-      </p>
-     </a>
-    </div>
-   </div>
-   <!-- Sección de Consejos Prácticos -->
-   <!--<img src="~/images/background/bg_calculadora.jpg" alt="calculadora vida saludable"/>-->
-   <div class="container">
-    <div>
-     <div>
-      <h3>
-       Calculadora Saludable
-      </h3>
-     </div>
-     <div>
-      <!--<img class="img-fluid" src="~/images/icon/down_arrow.png" alt="calculadora"/>-->
-     </div>
-    </div>
-    <form>
-     <input/>
-     <div>
-      <div>
-       <img/>
-       <h2>
-        Plan de Vida Saludable
-       </h2>
-       <div>
-        <h3>
-         Accede a tu plan personalizado para clientes de Ocaso
-        </h3>
-        <p>
-         Controla  tu peso, recibe consejos para mejorar tus hábitos,
 
-                        entra a tu plan de vida saludable.
-        </p>
-        <a>
-         Plan de Hábitos de Vida Saludable
-        </a>
-       </div>
-      </div>
-      <div>
-       <img/>
-       <h2>
-        Calculadora
-       </h2>
-       <div>
-        <div>
-         <h5>
-          Introduce tus datos y obtendrás unas pautas útiles para llevar una dieta equilibrada y saludable:
-         </h5>
-        </div>
-        <div>
-         <!--<h5>Datos</h5><br />-->
-         <div>
-          <label>
-           Sexo:
-          </label>
-         </div>
-         <div>
-          <div>
-           <p>
-            Hombre
+        <!-- Sección de Consejos Prácticos -->
+        <div class="container">
+            <div>
+                <div>
+                    <h3>Calculadora Saludable</h3>
+                </div>
+                <div>
+                <!--<img class="img-fluid" src="~/images/icon/down_arrow.png" alt="calculadora"/>-->
+                </div>
+                </div>
+                <form>
+                <input/>
+                <div>
+            
+                <div class="inline-flex items-center justify-content-center">
+                    <img src="/src/assets/plan-de-vida-saludable/icon-calculadora.png" />
+                    <h2 class="ml-5 title">Plan de Vida Saludable</h2>
+                <div>
+
+                <h3>
+                Accede a tu plan personalizado para clientes de Ocaso
+                </h3>
+                <p>
+                Controla  tu peso, recibe consejos para mejorar tus hábitos,
+
+                                entra a tu plan de vida saludable.
+                </p>
+                <a>
+                Plan de Hábitos de Vida Saludable
+                </a>
+            </div>
+            </div>
+            <div class="inline-flex items-center justify-content-center">
+                <img src="/src/assets/plan-de-vida-saludable/icon-calculadora.png" />
+                <h2 class="ml-5 title">Calculadora</h2>
+            <div>
+                <div>
+                <h5>
+                Introduce tus datos y obtendrás unas pautas útiles para llevar una dieta equilibrada y saludable:
+                </h5>
+                </div>
+                <div>
+                <!--<h5>Datos</h5><br />-->
+                <div>
+                <label>
+                Sexo:
+                </label>
+                </div>
+                <div>
+                <div>
+                <p>
+                    Hombre
+                    <input/>
+                </p>
+                </div>
+                <div>
+                <p>
+                    Mujer
+                    <input/>
+                </p>
+                </div>
+                </div>
+                </div>
+                <div>
+                </div>
+                <div>
+                <div>
+                <p>
+                <label>
+                    Altura:
+                </label>
+                </p>
+                <input/>
+                <div>
+                <p>
+                    cm
+                </p>
+                </div>
+                </div>
+                <div>
+                <p>
+                <label>
+                    Peso:
+                </label>
+                </p>
+                <input/>
+                <div>
+                <p>
+                    kg
+                </p>
+                </div>
+                </div>
+                <div>
+                <p>
+                <label>
+                    Edad:
+                </label>
+                </p>
+                <input/>
+                <div>
+                <p>
+                    años
+                </p>
+                </div>
+                </div>
+                </div>
+                <div>
+                </div>
+                <div>
+                <label>
+                Factor Actividad:
+                </label>
+                <div>
+                <p>
+                Ejercicio:
+                </p>
+                </div>
+                <div>
+                <div>
+                <p>
+                    En cama o mínima
+                </p>
+                <input/>
+                </div>
+                <div>
+                <p>
+                    Ligero
+                </p>
+                <input/>
+                </div>
+                <div>
+                <p>
+                    Medio
+                </p>
+                <input/>
+                </div>
+                <div>
+                <p>
+                    Intenso:
+                </p>
+                <input/>
+                </div>
+                <div>
+                <p>
+                    Muy intenso
+                </p>
+                <input/>
+                </div>
+                </div>
+                </div>
+                <div>
+                </div>
+                <div>
+                <button>
+                Ir a dieta recomendada
+                </button>
+                </div>
+            </div>
+            </div>
+            </div>
             <input/>
-           </p>
-          </div>
-          <div>
-           <p>
-            Mujer
-            <input/>
-           </p>
-          </div>
-         </div>
+            </form>
+            <div class="container">
+            <div>
+            <div class="inline-flex items-center justify-content-center">
+                <img src="/src/assets/plan-de-vida-saludable/icon-mesa.png" />
+                <h2 class="ml-5 title">Ponga la mesa</h2>
+            </div>
+            <div>
+            <div>
+                <a>
+                <img class="h-15" src="/src/assets/plan-de-vida-saludable/icon-pdf.png" />
+                </a>
+                <a>
+                Descarga tu plato de vida saludable
+                </a>
+            </div>
+            </div>
+            <!-- Únicamente se dispone una imagen: NO QUEREMOS CAROUSEL -->
+            <!-- Pintar aqui la imagen -->
+            <div>
+            <div>
+                <div>
+                <img src="/src/assets/plan-de-vida-saludable/menu-para-bajar-de-peso-3-1.png" />
+                <div>
+                <a>
+                </a>
+                </div>
+                </div>
+            </div>
+            <div>
+                <h3>
+                Haga que la variedad juegue a su favor
+                </h3>
+                <p>
+                <ul>
+                <li>
+                <span>
+                    Ingiera distintas piezas de frutas y verduras de colores vistosos.
+                </span>
+                </li>
+                <li>
+                <span>
+                    Elija pequeñas cantidades de cereales, alubias y verduras con almidón saludables.
+                </span>
+                </li>
+                <li>
+                <span>
+                    Incluya una pequeña ración de proteínas en cada comida. Tome algunas raciones de leche o yogur semidesnatado o desnatado.
+                </span>
+                </li>
+                </ul>
+                </p>
+            </div>
+            </div>
+            <!-- Únicamente se dispone una imagen: NO QUEREMOS CAROUSEL -->
+            <!-- Pintar aqui la imagen -->
+            <div>
+            <div>
+                <h3>
+                Ponga límite a los alimentos no saludables
+                </h3>
+                <p>
+                <ul>
+                <li>
+                <span>
+                    Utilice solo pequeñas cantidades de grasas saludables (insaturadas), como aceite de oliva, girasol o maíz ,para preparar sus comidas.
+                </span>
+                </li>
+                <li>
+                <span>
+                    Consuma pequeñas cantidades de aguacates, nueces y pipas de calabaza como parte de su dieta diaria.
+                </span>
+                </li>
+                <li>
+                <span>
+                    Evite las grasas saturadas (animales), el aceite de coco o palma y los alimentos que contengan estas grasas
+                </span>
+                .
+                </li>
+                <li>
+                <span>
+                    Evite las grasas trans, como la manteca y la margarina, y los alimentos procesados preparados con ellas, como la pastelería, las galletas y las patatas fritas.
+                </span>
+                </li>
+                </ul>
+                </p>
+            </div>
+            <div>
+                <div>
+                <img src="/src/assets/plan-de-vida-saludable/limite.png" />
+                <div>
+                <a>
+                </a>
+                </div>
+                </div>
+            </div>
+            </div>
+            <!-- Únicamente se dispone una imagen: NO QUEREMOS CAROUSEL -->
+            <!-- Pintar aqui la imagen -->
+            <div>
+            <div>
+                <h3>
+                </h3>
+                <p>
+                <h3>
+                <strong>
+                Verduras: ponga color en su plato
+                </strong>
+                </h3>
+                <p>
+                Coma de 3 a 5 raciones al día. Las verduras son ricas en vitaminas, minerales y fibra, y contienen muy poca grasa. Mezcle y agrupe los colores para crear una comida saludable. Puede comer tantas verduras sin almidón como desee.
+                </p>
+                <p>
+                Considere la posibilidad de utilizar verduras frescas, congeladas o envasadas con bajo contenido en sodio o satisfaga ss papilas gustativas con refrescantes pures/cremas de verduras. Las verduras también aportan sabor a sopas y guisos, y mejoran los bocadillos.
+                </p>
+                <p>
+                </p>
+                <h3>
+                <strong>
+                Carne: mejor poca y magra
+                </strong>
+                </h3>
+                <p>
+                Sólo necesita entre 115 y 170 gramos de proteínas al día. La carne aporta las proteínas necesarias a su organismo. Ingiera raciones pequeñas, preferentemente pollo sin piel y filetes magros de carne con poca grasa visible. Considere también otras fuentes de proteínas, como el salmón, las lentejas, las judías pintas y los huevos. Una ración de guiso, como la lasaña, equivalente a una ración de carne y cereales.
+                </p>
+                <p>
+                </p>
+                <h3>
+                <strong>
+                Cereales, pasta, féculas: a su elección
+                </strong>
+                </h3>
+                <p>
+                Tome de 6 a 11 raciones cada día. Los panes integrales, los cereales y la pasta son mejores que los elaborados con harina blanca procesada. Los alimentos más sanos incluyen en su lista de ingredientes el trigo u otros cereales integrales como uno de los principales componentes. Sorprenda a sus papilas gustativas con diferentes cereales integralse, como el arroz integral, la avena y el maíz.
+                </p>
+                </p>
+            </div>
+            <div>
+                <div>
+                <img src="/src/assets/plan-de-vida-saludable/verduras.png" />
+                <div>
+                <a>
+                </a>
+                </div>
+                </div>
+            </div>
+            </div>
+            <!-- Únicamente se dispone una imagen: NO QUEREMOS CAROUSEL -->
+            <div>
+            <div>
+                <p>
+                <p>
+                Las comidas ligeras y atractivas pueden ayudarle a controlar su diabetes
+                </p>
+                </p>
+            </div>
+            </div>
+            <!-- Únicamente se dispone una imagen: NO QUEREMOS CAROUSEL -->
+            <!-- Pintar aqui la imagen -->
+            <div>
+            <div>
+                <div>
+                <img src="/src/assets/plan-de-vida-saludable/glucosa.png" />
+                <div>
+                <a>
+                </a>
+                </div>
+                </div>
+            </div>
+            <div>
+                <h3>
+                Colabore para tener el nivel de glucosa dentro de los límites normales
+                </h3>
+                <p>
+                <ul>
+                <li>
+                <span>
+                    Planifique y respete el horario de comidas y tentempiés.
+                </span>
+                </li>
+                <li>
+                <span>
+                    Controle la cantidad de alimentos que ingiere en cada comida.
+                </span>
+                </li>
+                <li>
+                <span>
+                    Elija alimentos saludables, como verduras sin almidón.
+                </span>
+                </li>
+                </ul>
+                <p>
+                Recuerde que es más sencillo realizar estos cambios poco a poco.
+                </p>
+                <p>
+                Con el tiempo, van sumándose hasta lograr un gran éxito.
+                </p>
+                </p>
+            </div>
+            </div>
+            </div>
+            </div>
         </div>
-        <div>
-        </div>
-        <div>
-         <div>
-          <p>
-           <label>
-            Altura:
-           </label>
-          </p>
-          <input/>
-          <div>
-           <p>
-            cm
-           </p>
-          </div>
-         </div>
-         <div>
-          <p>
-           <label>
-            Peso:
-           </label>
-          </p>
-          <input/>
-          <div>
-           <p>
-            kg
-           </p>
-          </div>
-         </div>
-         <div>
-          <p>
-           <label>
-            Edad:
-           </label>
-          </p>
-          <input/>
-          <div>
-           <p>
-            años
-           </p>
-          </div>
-         </div>
-        </div>
-        <div>
-        </div>
-        <div>
-         <label>
-          Factor Actividad:
-         </label>
-         <div>
-          <p>
-           Ejercicio:
-          </p>
-         </div>
-         <div>
-          <div>
-           <p>
-            En cama o mínima
-           </p>
-           <input/>
-          </div>
-          <div>
-           <p>
-            Ligero
-           </p>
-           <input/>
-          </div>
-          <div>
-           <p>
-            Medio
-           </p>
-           <input/>
-          </div>
-          <div>
-           <p>
-            Intenso:
-           </p>
-           <input/>
-          </div>
-          <div>
-           <p>
-            Muy intenso
-           </p>
-           <input/>
-          </div>
-         </div>
-        </div>
-        <div>
-        </div>
-        <div>
-         <button>
-          Ir a dieta recomendada
-         </button>
-        </div>
-       </div>
-      </div>
-     </div>
-     <input/>
-    </form>
-    <div class="container">
-     <div>
-      <div>
-       <img/>
-       <h2>
-        Ponga la mesa
-       </h2>
-      </div>
-      <div>
-       <div>
-        <a>
-         <img/>
-        </a>
-        <a>
-         Descarga tu plato de vida saludable
-        </a>
-       </div>
-      </div>
-      <!-- Únicamente se dispone una imagen: NO QUEREMOS CAROUSEL -->
-      <!-- Pintar aqui la imagen -->
-      <div>
-       <div>
-        <div>
-         <img/>
-         <div>
-          <a>
-          </a>
-         </div>
-        </div>
-       </div>
-       <div>
-        <h3>
-         Haga que la variedad juegue a su favor
-        </h3>
-        <p>
-         <ul>
-          <li>
-           <span>
-            Ingiera distintas piezas de frutas y verduras de colores vistosos.
-           </span>
-          </li>
-          <li>
-           <span>
-            Elija pequeñas cantidades de cereales, alubias y verduras con almidón saludables.
-           </span>
-          </li>
-          <li>
-           <span>
-            Incluya una pequeña ración de proteínas en cada comida. Tome algunas raciones de leche o yogur semidesnatado o desnatado.
-           </span>
-          </li>
-         </ul>
-        </p>
-       </div>
-      </div>
-      <!-- Únicamente se dispone una imagen: NO QUEREMOS CAROUSEL -->
-      <!-- Pintar aqui la imagen -->
-      <div>
-       <div>
-        <h3>
-         Ponga límite a los alimentos no saludables
-        </h3>
-        <p>
-         <ul>
-          <li>
-           <span>
-            Utilice solo pequeñas cantidades de grasas saludables (insaturadas), como aceite de oliva, girasol o maíz ,para preparar sus comidas.
-           </span>
-          </li>
-          <li>
-           <span>
-            Consuma pequeñas cantidades de aguacates, nueces y pipas de calabaza como parte de su dieta diaria.
-           </span>
-          </li>
-          <li>
-           <span>
-            Evite las grasas saturadas (animales), el aceite de coco o palma y los alimentos que contengan estas grasas
-           </span>
-           .
-          </li>
-          <li>
-           <span>
-            Evite las grasas trans, como la manteca y la margarina, y los alimentos procesados preparados con ellas, como la pastelería, las galletas y las patatas fritas.
-           </span>
-          </li>
-         </ul>
-        </p>
-       </div>
-       <div>
-        <div>
-         <img/>
-         <div>
-          <a>
-          </a>
-         </div>
-        </div>
-       </div>
-      </div>
-      <!-- Únicamente se dispone una imagen: NO QUEREMOS CAROUSEL -->
-      <!-- Pintar aqui la imagen -->
-      <div>
-       <div>
-        <h3>
-        </h3>
-        <p>
-         <h3>
-          <strong>
-           Verduras: ponga color en su plato
-          </strong>
-         </h3>
-         <p>
-          Coma de 3 a 5 raciones al día. Las verduras son ricas en vitaminas, minerales y fibra, y contienen muy poca grasa. Mezcle y agrupe los colores para crear una comida saludable. Puede comer tantas verduras sin almidón como desee.
-         </p>
-         <p>
-          Considere la posibilidad de utilizar verduras frescas, congeladas o envasadas con bajo contenido en sodio o satisfaga ss papilas gustativas con refrescantes pures/cremas de verduras. Las verduras también aportan sabor a sopas y guisos, y mejoran los bocadillos.
-         </p>
-         <p>
-         </p>
-         <h3>
-          <strong>
-           Carne: mejor poca y magra
-          </strong>
-         </h3>
-         <p>
-          Sólo necesita entre 115 y 170 gramos de proteínas al día. La carne aporta las proteínas necesarias a su organismo. Ingiera raciones pequeñas, preferentemente pollo sin piel y filetes magros de carne con poca grasa visible. Considere también otras fuentes de proteínas, como el salmón, las lentejas, las judías pintas y los huevos. Una ración de guiso, como la lasaña, equivalente a una ración de carne y cereales.
-         </p>
-         <p>
-         </p>
-         <h3>
-          <strong>
-           Cereales, pasta, féculas: a su elección
-          </strong>
-         </h3>
-         <p>
-          Tome de 6 a 11 raciones cada día. Los panes integrales, los cereales y la pasta son mejores que los elaborados con harina blanca procesada. Los alimentos más sanos incluyen en su lista de ingredientes el trigo u otros cereales integrales como uno de los principales componentes. Sorprenda a sus papilas gustativas con diferentes cereales integralse, como el arroz integral, la avena y el maíz.
-         </p>
-        </p>
-       </div>
-       <div>
-        <div>
-         <img/>
-         <div>
-          <a>
-          </a>
-         </div>
-        </div>
-       </div>
-      </div>
-      <!-- Únicamente se dispone una imagen: NO QUEREMOS CAROUSEL -->
-      <div>
-       <div>
-        <p>
-         <p>
-          Las comidas ligeras y atractivas pueden ayudarle a controlar su diabetes
-         </p>
-        </p>
-       </div>
-      </div>
-      <!-- Únicamente se dispone una imagen: NO QUEREMOS CAROUSEL -->
-      <!-- Pintar aqui la imagen -->
-      <div>
-       <div>
-        <div>
-         <img/>
-         <div>
-          <a>
-          </a>
-         </div>
-        </div>
-       </div>
-       <div>
-        <h3>
-         Colabore para tener el nivel de glucosa dentro de los límites normales
-        </h3>
-        <p>
-         <ul>
-          <li>
-           <span>
-            Planifique y respete el horario de comidas y tentempiés.
-           </span>
-          </li>
-          <li>
-           <span>
-            Controle la cantidad de alimentos que ingiere en cada comida.
-           </span>
-          </li>
-          <li>
-           <span>
-            Elija alimentos saludables, como verduras sin almidón.
-           </span>
-          </li>
-         </ul>
-         <p>
-          Recuerde que es más sencillo realizar estos cambios poco a poco.
-         </p>
-         <p>
-          Con el tiempo, van sumándose hasta lograr un gran éxito.
-         </p>
-        </p>
-       </div>
-      </div>
-     </div>
     </div>
-   </div>
-</div>
 </BaseLayout>
