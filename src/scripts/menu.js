@@ -14,13 +14,12 @@ document.querySelectorAll(".menu-item").forEach((menuItem) => {
 
   menuItem.addEventListener("click", (event) => {
     event.preventDefault(); // Evita que el enlace navegue a "#"
-
     if (submenu) {
       submenu.classList.toggle("expanded");
     }
   });
 
-  // 🔥 Detener la propagación en los enlaces del submenú
+  // Detener la propagación en los enlaces del submenú
   submenu?.querySelectorAll("a").forEach((link) => {
     link.addEventListener("click", (event) => {
       event.stopPropagation(); // Permite que los enlaces sean clickeables

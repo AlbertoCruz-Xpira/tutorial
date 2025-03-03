@@ -1,10 +1,15 @@
 ---
-import MoreInformacionForm from "../../components/MoreInformacionForm.astro";
 import BaseLayout from "../../layouts/BaseLayout.astro";
+import HeroSmall from "/src/components/HeroSmall.astro";
+import MoreInformacionForm from "../../components/MoreInformacionForm.astro";
 const pageTitle = "Genética";
+const url = "/src/assets/genetica/banner-genetica1.jpg";
 ---
 
 <BaseLayout>
+
+  <HeroSmall name={pageTitle} url={url} alternativeText={pageTitle}/>
+
   <div class="items-center max-w-5xl mx-auto my-10">
     <!-- Nutrición personalizada -->
     <section>
@@ -95,15 +100,17 @@ const pageTitle = "Genética";
         </div>
       </section>
 
+
+
+
       <!-- Edad y salud -->
       <div id="edadsalud">
-        <div class="row margintop35">
-          <div class="col-md-12">
-            <img
-              src="/src/assets/genetica/genetica-icon3.png"
-              class="img-mesa"
-            /><h2>Edad y Salud</h2>
-          </div>
+        <div class="inline-flex items-center justify-content-center">
+          <img
+            src="/src/assets/genetica/genetica-icon3.png"
+            class="img-mesa"
+          />
+          <h2 class="ml-5 title">Edad y Salud</h2>
         </div>
         <div class="row margintop35">
           <div class="col-md-5">
@@ -137,14 +144,16 @@ const pageTitle = "Genética";
           </div>
         </div>
       </div>
+
+      
+      <!-- Bienestar -->
       <div id="bienestar">
-        <div class="row margintop35">
-          <div class="col-md-12">
-            <img
-              src="/src/assets/genetica/genetica-icon4.png"
-              class="img-mesa"
-            /><h2>Bienestar – Prevención</h2>
-          </div>
+        <div class="inline-flex items-center justify-content-center">
+          <img
+            src="/src/assets/genetica/genetica-icon4.png"
+            class="img-mesa"
+          />
+          <h2 class="ml-5 title">Bienestar – Prevención</h2>
         </div>
         <div class="row margintop35">
           <div class="col-md-6">
@@ -175,14 +184,15 @@ const pageTitle = "Genética";
           </div>
         </div>
       </div>
+
+      <!-- Rendimiento -->
       <div id="rendimiento">
-        <div class="row margintop35">
-          <div class="col-md-12">
-            <img
-              src="/src/assets/genetica/genetica-icon5.png"
-              class="img-mesa"
-            /><h2>Rendimiento Deportivo</h2>
-          </div>
+        <div class="inline-flex items-center justify-content-center">
+          <img
+            src="/src/assets/genetica/genetica-icon5.png"
+            class="img-mesa"
+          />
+          <h2 class="ml-5 title">Rendimiento Deportivo</h2>
         </div>
         <div class="row margintop35">
           <div class="col-md-6">
@@ -212,14 +222,15 @@ const pageTitle = "Genética";
           </div>
         </div>
       </div>
+
+      <!-- Prevención -->
       <div id="prevencioncancer">
-        <div class="row margintop35">
-          <div class="col-md-12">
-            <img
-              src="/src/assets/genetica/genetica-icon6.png"
-              class="img-mesa"
-            /><h2>Prevención de Cancer</h2>
-          </div>
+        <div class="inline-flex items-center justify-content-center">
+          <img
+            src="/src/assets/genetica/genetica-icon6.png"
+            class="img-mesa"
+          />
+          <h2 class="ml-5 title">Prevención de Cancer</h2>
         </div>
         <div class="row margintop35">
           <div class="col-md-5">
@@ -260,14 +271,15 @@ const pageTitle = "Genética";
           </div>
         </div>
       </div>
+
+      <!-- FUTUROS PADRES -->
       <div id="futurospadres">
-        <div class="row margintop35">
-          <div class="col-md-12">
-            <img
-              src="/src/assets/genetica/genetica-icon7.png"
-              class="img-mesa"
-            /><h2>Futuros Padres</h2>
-          </div>
+        <div class="inline-flex items-center justify-content-center">
+          <img
+            src="/src/assets/genetica/genetica-icon7.png"
+            class="img-mesa"
+          />
+          <h2 class="ml-5 title">Futuros Padres</h2>
         </div>
         <div class="row margintop35">
           <div class="col-md-7">
@@ -316,14 +328,15 @@ const pageTitle = "Genética";
           </div>
         </div>
       </div>
+
+      <!-- OTROS -->
       <div id="otros">
-        <div class="row margintop35">
-          <div class="col-md-12">
-            <img
-              src="/src/assets/genetica/genetica-icon8.png"
-              class="img-mesa"
-            /><h2>Otros</h2>
-          </div>
+        <div class="inline-flex items-center justify-content-center">
+          <img
+            src="/src/assets/genetica/genetica-icon8.png"
+            class="img-mesa"
+          />
+          <h2 class="ml-5 title">Otros</h2>
         </div>
         <div class="row margintop35">
           <div class="col-md-3">

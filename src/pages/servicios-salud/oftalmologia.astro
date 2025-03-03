@@ -1,28 +1,20 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
+import HeroSmall from "/src/components/HeroSmall.astro";
 const pageTitle = "Oftalmología";
+const url = "/src/assets/oftalmologia/banner-oftalmologia.jpg";
 ---
 
-<BaseLayout pageTitle={pageTitle}>
-    
-   <div>
-    <img/>
-    <div>
-     <h5>
-      Oftalmología
-     </h5>
-    </div>
-   </div>
+<BaseLayout>
+
+   <HeroSmall name={pageTitle} url={url} alternativeText={pageTitle}/>
+
    <div class="items-center max-w-5xl px-10 sm:px-10 md:px-10 lg:mx-auto pt-10 pb-5 service-detail" id="Scrolling">
     <div>
-     <div>
-      <div>
-       <img/>
-       <h2>
-        Unidad de Oftalmología
-       </h2>
+      <div class="inline-flex items-center justify-content-center">
+       <img src="/src/assets/oftalmologia/oftalmologia-icon1.png"/>
+       <h2 class="ml-5 title">Unidad de Oftalmología</h2>
       </div>
-     </div>
      <div>
       <div>
        <h3>
@@ -33,12 +25,12 @@ const pageTitle = "Oftalmología";
        </p>
       </div>
       <div>
-       <img/>
+       <img src="/src/assets/oftalmologia/oftalmologia1.png"/>
       </div>
      </div>
      <div>
       <div>
-       <img/>
+       <img src="/src/assets/oftalmologia/oftalmologia2.png"/>
       </div>
       <div>
        <h3>
@@ -63,12 +55,12 @@ const pageTitle = "Oftalmología";
        </p>
       </div>
       <div>
-       <img/>
+       <img src="/src/assets/oftalmologia/oftalmologia3.png"/>
       </div>
      </div>
      <div>
       <div>
-       <img/>
+       <img src="/src/assets/oftalmologia/oftalmologia4.png"/>
       </div>
       <div>
        <h3>
@@ -86,14 +78,10 @@ const pageTitle = "Oftalmología";
      </div>
     </div>
     <div>
-     <div>
-      <div>
-       <img/>
-       <h2>
-        Enfermedades de los ojos
-       </h2>
+      <div class="inline-flex items-center justify-content-center">
+       <img src="/src/assets/oftalmologia/oftalmologia-icon2.png"/>
+       <h2 class="ml-5 title">Enfermedades de los ojos</h2>
       </div>
-     </div>
      <div>
       <div>
        <h2>
@@ -118,12 +106,12 @@ const pageTitle = "Oftalmología";
        </p>
       </div>
       <div>
-       <img/>
+       <img src="/src/assets/oftalmologia/oftalmologia5.png"/>
       </div>
      </div>
      <div>
       <div>
-       <img/>
+       <img src="/src/assets/oftalmologia/oftalmologia6.png"/>
       </div>
       <div>
        <h3>
@@ -165,7 +153,7 @@ const pageTitle = "Oftalmología";
        </p>
       </div>
       <div>
-       <img/>
+       <img src="/src/assets/oftalmologia/oftalmologia7.png"/>
       </div>
      </div>
     </div>

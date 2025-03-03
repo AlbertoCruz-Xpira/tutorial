@@ -1,13 +1,13 @@
 ---
 const submenuItems = [
+  { name: "Salud Mujer", link: "/servicios-salud/salud-mujer" },
+  { name: "Salud Hombre", link: "/servicios-salud/salud-hombre" },
+  { name: "Salud Senior", link: "/servicios-salud/salud-senior" },
+  { name: "Pediatría", link: "/servicios-salud/pediatria" },
   { name: "Dental", link: "/servicios-salud/dental" },
+  { name: "Podología", link: "/servicios-salud/podologia" },
   { name: "Genética", link: "/servicios-salud/genetica" },
   { name: "Oftalmología", link: "/servicios-salud/oftalmologia" },
-  { name: "Pediatría", link: "/servicios-salud/pediatria" },
-  { name: "Podología", link: "/servicios-salud/podologia" },
-  { name: "Salud Hombre", link: "/servicios-salud/salud-hombre" },
-  { name: "Salud Mujer", link: "/servicios-salud/salud-mujer" },
-  { name: "Salud Senior", link: "/servicios-salud/salud-senior" },
 ];
 ---
 
@@ -68,7 +68,7 @@ const submenuItems = [
     display: none;
     position: absolute;
     background: white;
-    top: 100%;
+    top: 50px;
     left: 0;
     list-style: none;
     padding: 0px;
@@ -83,7 +83,7 @@ const submenuItems = [
     padding: 20px 5px;
   }
 
-  .menu-item:hover .submenu {
+  .submenu.expanded {
     display: block;
   }
 

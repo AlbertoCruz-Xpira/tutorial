@@ -1,7 +1,9 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
-const pageTitle = "Salud senior";
+import HeroSmall from "/src/components/HeroSmall.astro";
 import ServiceMenu from "../../components/ServiceMenu.astro";
+const pageTitle = "Salud senior";
+const url = "/src/assets/salud-senior/cabecera-viajes.png";
 
 const services = [
   {
@@ -44,12 +46,8 @@ const services = [
 ---
 
 <BaseLayout>
-    <div class="min-h-[15rem] px-10 items-center grid" style="background-image: url(/src/assets/salud-senior/cabecera-viajes.png)">
-        <div>
-            <h5 class="color-turquoise text-lg">Salud Senior</h5>
-        </div>
-    </div>
 
+  <HeroSmall name={pageTitle} url={url} alternativeText={pageTitle}/>
 
     <div class="bg-white">
         <div class="grid lg:grid-cols-2 lg:grid-col-1 gap-4 p-5 items-center max-w-5xl px-10 sm:px-10 md:px-10 lg:mx-auto">

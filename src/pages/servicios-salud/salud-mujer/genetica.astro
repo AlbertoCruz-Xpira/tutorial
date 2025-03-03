@@ -1,13 +1,13 @@
 ---
 import BaseLayout from "../../../layouts/BaseLayout.astro";
-import Hero from "../../../components/Hero.astro";
+import HeroSmall from "/src/components/HeroSmall.astro";
+const pageTitle = "Genética";
+const url = "/src/assets/salud-mujer/genetica/banner-genetica.png";
 ---
 
 <BaseLayout>
-  <Hero
-    imageSrc="../../../src/assets/salud-mujer/genetica/banner-genetica.png"
-    showMedicalSearch={false}
-  />
+
+  <HeroSmall name={pageTitle} url={url} alternativeText={pageTitle}/>
 
   <div
     class="items-center max-w-5xl px-10 sm:px-10 md:px-10 lg:mx-auto pt-10 pb-5 service-detail"

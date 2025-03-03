@@ -1,14 +1,15 @@
 ---
 import BaseLayout from "../../../layouts/BaseLayout.astro";
-import Hero from "../../../components/Hero.astro";
+import HeroSmall from "../../../components/HeroSmall.astro";
 import MoreInformacionForm from "../../../components/MoreInformacionForm.astro";
+const pageTitle = "Preserva";
+const url = "/src/assets/salud-mujer/preserva/banner-preserva.png";
 ---
 
 <BaseLayout>
-  <Hero
-    imageSrc="../../../src/assets/salud-mujer/preserva/banner-preserva.png"
-    showMedicalSearch={false}
-  />
+
+  <HeroSmall name={pageTitle} url={url} alternativeText={pageTitle}/>
+
   <div
     class="items-center max-w-5xl px-10 sm:px-10 md:px-10 lg:mx-auto pt-10 pb-5 service-detail"
   >

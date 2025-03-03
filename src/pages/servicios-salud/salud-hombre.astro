@@ -1,10 +1,11 @@
 ---
-import Hero from "../../components/Hero.astro";
+import HeroSmall from "/src/components/HeroSmall.astro";
 import PostsResume from "../../components/PostsResume.astro";
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import ServiceMenu from "../../components/ServiceMenu.astro";
 
 const pageTitle = "Salud hombre";
+const url = "/src/assets/salud-hombre/banner-saludvaron.jpg";
 
 const services = [
   {
@@ -59,10 +60,7 @@ const postsResumeData = {
 ---
 
 <BaseLayout>
-  <Hero
-    imageSrc="../../../src/assets/salud-hombre/banner-saludvaron.jpg"
-    showMedicalSearch={true}
-  />
+  <HeroSmall name={pageTitle} url={url} alternativeText={pageTitle} showMedicalSearch={true} />
   <ServiceMenu services={services} cols='2'/>
   <PostsResume postsResumeData={postsResumeData} />
 </BaseLayout>

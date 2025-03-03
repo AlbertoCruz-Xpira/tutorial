@@ -1,19 +1,12 @@
 ---
 import MedicalSearch from "./MedicalSearch.astro";
-
-export const title = "Título de la sección";
-export const content = "Este es el contenido de la sección.";
-
 const { imageSrc, showMedicalSearch } = Astro.props;
 ---
 
-<section
-  class="relative w-full h-screen bg-cover bg-center bg-no-repeat
-grid grid-cols-1 items-end"
-  style={`background-image: url(${imageSrc});`}
->
+<section class="relative">
+  <img class="w-full" src={imageSrc} />
   <!-- Capa negra con opacidad -->
-  <div class="absolute inset-0 bg-black opacity-20"></div>
-
-  {showMedicalSearch && <MedicalSearch />}
+  <div class="absolute inset-0 flex items-center justify-left bg-black/20 pt-20">
+    {showMedicalSearch && <MedicalSearch />}
+  </div>
 </section>
