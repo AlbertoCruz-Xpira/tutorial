@@ -9,15 +9,13 @@ import Hero from "../../../components/Hero.astro";
     showMedicalSearch={false}
   />
 
-  <div class="items-center max-w-5xl mx-auto content-wrapper">
+  <div
+    class="items-center max-w-5xl px-10 sm:px-10 md:px-10 lg:mx-auto pt-10 pb-5 service-detail"
+  >
     <div>
       <div>
         <div class="inline-flex items-center justify-content-center pb-10">
-          <img
-            class="py-2"
-            class="py-2"
-            src="/src/assets/icon/icon-genetica1.png"
-          />
+          <img class="py-5" src="/src/assets/icon/icon-genetica1.png" />
           <h2 class="ml-5 mt-3 title">Cordón Umbilical</h2>
         </div>
       </div>
@@ -56,7 +54,7 @@ import Hero from "../../../components/Hero.astro";
         </div>
         <div class="flex items-center justify-center">
           <img
-            class="py-2"
+            class="py-5"
             src="/src/assets/salud-mujer/genetica/img-genetica1.png"
           />
         </div>
@@ -64,7 +62,7 @@ import Hero from "../../../components/Hero.astro";
       <section class="grid grid-col-1 lg:grid-cols-2">
         <div class="flex items-center justify-center">
           <img
-            class="py-2"
+            class="py-5"
             src="/src/assets/salud-mujer/genetica/img-genetica2.png"
           />
         </div>
@@ -127,7 +125,7 @@ import Hero from "../../../components/Hero.astro";
         </div>
         <div class="flex items-center justify-center">
           <img
-            class="py-2"
+            class="py-5"
             src="/src/assets/salud-mujer/genetica/img-genetica3.png"
           />
         </div>
@@ -198,10 +196,12 @@ import Hero from "../../../components/Hero.astro";
           </h3>
         </div>
       </section>
-      <section class="grid grid-col-1 lg:grid-cols-2 items-center">
+      <section
+        class="grid grid-col-1 lg:grid-cols-2 items-center justify-items-center"
+      >
         <div>
           <img
-            class="py-2"
+            class="py-5"
             src="/src/assets/salud-mujer/genetica/img-genetica4.png"
           />
         </div>
@@ -230,7 +230,7 @@ import Hero from "../../../components/Hero.astro";
       <div>
         <div class="inline-flex items-center justify-content-center pb-10">
           <img
-            class="py-2"
+            class="py-5"
             src="/src/assets/salud-mujer/genetica/icon-genetica2.png"
           />
           <h2 class="ml-5 mt-3 title">Genética</h2>
@@ -240,7 +240,7 @@ import Hero from "../../../components/Hero.astro";
         <div class="grid grid-cols-12 gap-4">
           <div class="col-span-12 md:col-span-1">
             <img
-              class="w-15 h-15 py-2"
+              class="w-15 py-5"
               src="/src/assets/salud-mujer/genetica/lista-genetica1.png"
             />
           </div>
@@ -256,7 +256,7 @@ import Hero from "../../../components/Hero.astro";
         <div class="grid grid-cols-12 gap-4">
           <div class="col-span-12 md:col-span-1">
             <img
-              class="w-15 h-15 py-2"
+              class="w-15 py-5"
               src="/src/assets/salud-mujer/genetica/lista-genetica2.png"
             />
           </div>
@@ -285,9 +285,9 @@ import Hero from "../../../components/Hero.astro";
             </section>
 
             <div class="grid grid-cols-12 gap-4">
-              <div class="col-span-12 md:col-span-5">
+              <div class="col-span-12 md:col-span-5 justify-items-center">
                 <img
-                  class="py-2"
+                  class="py-5"
                   src="/src/assets/salud-mujer/genetica/img-genetica5.png"
                 />
               </div>
@@ -328,7 +328,7 @@ import Hero from "../../../components/Hero.astro";
 
             <div>
               <img
-                class="py-2"
+                class="py-5"
                 src="/src/assets/salud-mujer/genetica/img-genetica6.png"
               />
             </div>
@@ -361,18 +361,18 @@ import Hero from "../../../components/Hero.astro";
                   primer año.
                 </p>
               </div>
-              <div class="col-span-12 md:col-span-5">
+              <div class="col-span-12 md:col-span-5 justify-items-center">
                 <img
-                  class="py-2"
+                  class="py-5"
                   src="/src/assets/salud-mujer/genetica/img-genetica7.png"
                 />
               </div>
             </section>
 
             <section class="grid grid-cols-12 gap-4">
-              <div class="col-span-12 md:col-span-5">
+              <div class="col-span-12 md:col-span-5 justify-items-center">
                 <img
-                  class="py-2"
+                  class="py-5"
                   src="/src/assets/salud-mujer/genetica/img-genetica8.png"
                 />
               </div>
@@ -444,38 +444,3 @@ import Hero from "../../../components/Hero.astro";
     </div>
   </div>
 </BaseLayout>
-
-<style>
-  h2 {
-    color: var(--color-turquoise-500);
-    margin-bottom: 20px;
-  }
-  h3 {
-    color: var(--color-turquoise-500);
-    margin-bottom: 10px;
-    font-size: 1.2rem;
-    font-weight: 400;
-  }
-  h3.text-orange {
-    color: #feb44c;
-  }
-  p {
-    margin-bottom: 10px;
-  }
-  section {
-    margin-top: 3rem;
-    margin-bottom: 3rem;
-  }
-  ul {
-    list-style-type: disc;
-    padding-left: 20px;
-  }
-  li {
-    font-size: 14px;
-    padding-bottom: 5px;
-    font-weight: 300;
-  }
-  .content-wrapper {
-    margin: 2rem;
-  }
-</style>

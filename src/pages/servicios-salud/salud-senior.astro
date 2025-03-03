@@ -1,8 +1,99 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
 const pageTitle = "Salud senior";
+import ServiceMenu from "../../components/ServiceMenu.astro";
+
+const services = [
+  {
+    heading: "Limpieza",
+    link: "#",
+    icon: "/src/assets/salud-senior/icon-limpieza.png",
+    imageSrc: "/src/assets/salud-senior/limpieza.jpg",
+  },
+  {
+    heading: "Estimulación cognitiva",
+    link: "#",
+    icon: "/src/assets/salud-senior/icon-estimulacion.png",
+    imageSrc: "/src/assets/salud-senior/estimulacion-cognitiva.jpg",
+  },
+  {
+    heading: "Material ortopédico",
+    link: "#",
+    icon: "/src/assets/salud-senior/icon-material.png",
+    imageSrc: "/src/assets/salud-senior/material-ortopedico.jpg",
+  },
+  {
+    heading: "Fisioterapia a domicilio",
+    link: "#",
+    icon: "/src/assets/salud-senior/icon-fisio.png",
+    imageSrc: "/src/assets/salud-senior/fisio-domicilio.jpg",
+  },
+  {
+    heading: "Teleasistencia y telemonitorización",
+    link: "#",
+    icon: "/src/assets/salud-senior/icon-teleasistencia.png",
+    imageSrc: "/src/assets/salud-senior/teleasistencia.jpg",
+  },
+  {
+    heading: "Ocio en casa",
+    link: "#",
+    icon: "/src/assets/salud-senior/icon-casa.png",
+    imageSrc: "/src/assets/salud-senior/ocio.jpg",
+  },
+];
 ---
 
-<BaseLayout pageTitle={pageTitle}>
+<BaseLayout>
+    <div class="min-h-[15rem] px-10 items-center grid" style="background-image: url(/src/assets/salud-senior/cabecera-viajes.png)">
+        <div>
+            <h5 class="color-turquoise text-lg">Salud Senior</h5>
+        </div>
+    </div>
 
+
+    <div class="bg-white">
+        <div class="grid lg:grid-cols-2 lg:grid-col-1 gap-4 p-5 items-center max-w-5xl px-10 sm:px-10 md:px-10 lg:mx-auto">
+            <div>
+                <img src="/src/assets/salud-senior/ico-viajes.png" />
+            </div>
+            <div>
+                <p>
+                    Nuevas necesidades post covid 19 en la atención domiciliaria por
+                    empresas especializadas para desarrollar los servicios en su hogar.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="items-center max-w-5xl px-10 sm:px-10 md:px-10 lg:mx-auto pt-10 pb-5 service-page">
+        <div class="grid lg:grid-cols-3 grid-col-1 gap-4">
+            <div class="bg-white justify-items-center grid p-10 gap-5">
+                <img src="/src/assets/salud-senior/img-viajes-box1.png" />
+                <h3>Cuidadora interna</h3>
+                <p>Tranquilidad garantizada. Cuidados de confianza las 24h en casa.</p>
+                <a> + información </a>
+            </div>
+            <div class="bg-white justify-items-center grid p-10 gap-5">
+                <img src="/src/assets/salud-senior/img-viajes-box2.png" />
+                <h3>Cuidadora por horas</h3>
+                <p>
+                    Nos adaptamos a tus necesidades. Cuidadoras a jornada completa, media
+                    jornada y por horas.
+                </p>
+                <a> + información </a>
+            </div>
+            <div class="bg-white justify-items-center grid p-10 gap-5">
+                <img src="/src/assets/salud-senior/img-viajes-box3.png" />
+                <h3>Acompañamiento en residencia u hospital</h3>
+                <p>Si ya tienes una cuidadora, nosotros nos ocupamos de todo lo demás.</p>
+                <a> + información </a>
+            </div>
+        </div>
+
+        <div class="mt-10 text-center">
+            <h2>Servicios asistenciales</h2>
+        </div>
+
+        <ServiceMenu services={services} cols='3' />
+    </div>
 </BaseLayout>

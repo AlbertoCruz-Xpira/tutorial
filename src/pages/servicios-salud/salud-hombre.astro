@@ -1,8 +1,68 @@
 ---
+import Hero from "../../components/Hero.astro";
+import PostsResume from "../../components/PostsResume.astro";
 import BaseLayout from "../../layouts/BaseLayout.astro";
+import ServiceMenu from "../../components/ServiceMenu.astro";
+
 const pageTitle = "Salud hombre";
+
+const services = [
+  {
+    heading: "Fertilidad Masculina",
+    link: "./salud-hombre/fertilidad-masculina",
+    icon: "/src/assets/salud-hombre/fertilidad-icon.png",
+    imageSrc: "/src/assets/salud-hombre/fertilidadmasculina.jpg",
+  },
+  {
+    heading: "Uro-Oncología",
+    link: "./salud-hombre/uro-oncologia",
+    icon: "/src/assets/salud-hombre/ico-urooncologia.png",
+    imageSrc: "/src/assets/salud-hombre/uro-oncologia.jpg",
+  },
+  {
+    heading: "La disfunción erectil (impotencia)",
+    link: "./salud-hombre/disfuncion-erectil",
+    icon: "/src/assets/salud-hombre/icon-disfuncion.png",
+    imageSrc: "/src/assets/salud-hombre/disfuncion.jpg",
+  },
+  {
+    heading: "Urología clínica",
+    link: "./salud-hombre/urologia-clinica",
+    icon: "/src/assets/salud-hombre/icon-urologia-clinica.png",
+    imageSrc: "/src/assets/salud-hombre/urologia_clinica.jpg",
+  }
+];
+
+const postsResumeData = {
+  title: "Publicaciones",
+  posts: [
+    {
+      heading: "La vida y la edad",
+      category: "Salud",
+      description:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec molestie turpis id odio blandit, dignissim tincidunt arcu bibendum.",
+      imageSrc: "/src/assets/posts/De-que-se-ocupa-un-oftalmologo.jpg",
+      buttonText: "Leer más",
+      buttonLink: "/",
+    },
+    {
+      heading: "El cuidado de la piel en verano",
+      category: "Salud",
+      description:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec molestie turpis id odio blandit, dignissim tincidunt arcu bibendum.",
+      imageSrc: "/src/assets/posts/El-cuidado-de-la-piel-en-verano.jpg",
+      buttonText: "Leer más",
+      buttonLink: "/",
+    },
+  ],
+};
 ---
 
-<BaseLayout pageTitle={pageTitle}>
-
+<BaseLayout>
+  <Hero
+    imageSrc="../../../src/assets/salud-hombre/banner-saludvaron.jpg"
+    showMedicalSearch={true}
+  />
+  <ServiceMenu services={services} cols='2'/>
+  <PostsResume postsResumeData={postsResumeData} />
 </BaseLayout>

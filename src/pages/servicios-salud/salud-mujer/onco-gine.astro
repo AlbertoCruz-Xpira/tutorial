@@ -5,17 +5,23 @@ import Hero from "../../../components/Hero.astro";
 
 <BaseLayout>
   <Hero
-    imageSrc="../../../src/assets/salud-mujer/HeroSaludMujer.jpg"
+    imageSrc="../../../src/assets/salud-mujer/onco-gine/banner-oncogine.png"
     showMedicalSearch={false}
   />
-  <div>
+  <div
+    class="items-center max-w-5xl px-10 sm:px-10 md:px-10 lg:mx-auto pt-10 pb-5 service-detail"
+  >
     <div>
       <div>
-        <img src="/images/icon/icon-oncogine1.png" alt="Icono 1" />
+        <img
+          src="/src/assets/salud-mujer/onco-gine/icon-oncogine1.png"
+          alt="Icono 1"
+        />
         <h2>Nuestras recomendaciones preventivas para ti</h2>
       </div>
     </div>
-    <div>
+
+    <section>
       <div>
         <p>
           Realiza un tratamiento integral del cáncer en la mujer, desde su
@@ -29,10 +35,14 @@ import Hero from "../../../components/Hero.astro";
           vagina, y peritoneo.
         </p>
       </div>
-    </div>
-    <div>
+    </section>
+
+    <section class="grid grid-col-1 lg:grid-cols-2">
       <div>
-        <img src="/images/saludmujer/img-oncogine1.png" alt="Imagen 1" />
+        <img
+          src="/src/assets/salud-mujer/onco-gine/img-oncogine1.png"
+          alt="Imagen 1"
+        />
       </div>
       <div>
         <ul>
@@ -71,40 +81,51 @@ import Hero from "../../../components/Hero.astro";
           <li>Realización el ganglio centinela.</li>
         </ul>
       </div>
-    </div>
-  </div>
-  <div>
-    <div>
-      <img src="/images/icon/icon-oncogine2.png" alt="Icono 2" />
-      <h2>Valoración en equipo multidisciplinar:</h2>
-    </div>
+    </section>
+
     <div>
       <div>
-        <p>
-          Realiza un tratamiento integral del cáncer en la mujer, desde su
-          diagnóstico hasta su curación, lo que implica la puesta en marcha de
-          un programa de detección precoz (chequeos), tratamiento de la
-          enfermedad primaria y recidivante.
-        </p><br />
-        <p>
-          Los tipos de tumores que se tratan son: tumores de mama, ovario,
-          trompas de Falopio, cuello uterino, endometrio, miometrio, vulva,
-          vagina, y peritoneo.
-        </p>
+        <img
+          src="/src/assets/salud-mujer/onco-gine/icon-oncogine2.png"
+          alt="Icono 2"
+        />
+        <h2>Valoración en equipo multidisciplinar:</h2>
       </div>
       <div>
-        <img src="/images/saludmujer/img-oncogine2.png" alt="Imagen 2" />
+        <div>
+          <p>
+            Realiza un tratamiento integral del cáncer en la mujer, desde su
+            diagnóstico hasta su curación, lo que implica la puesta en marcha de
+            un programa de detección precoz (chequeos), tratamiento de la
+            enfermedad primaria y recidivante.
+          </p><br />
+          <p>
+            Los tipos de tumores que se tratan son: tumores de mama, ovario,
+            trompas de Falopio, cuello uterino, endometrio, miometrio, vulva,
+            vagina, y peritoneo.
+          </p>
+        </div>
+        <div>
+          <img
+            src="/src/assets/salud-mujer/onco-gine/img-oncogine2.png"
+            alt="Imagen 2"
+          />
+        </div>
       </div>
     </div>
-  </div>
-  <div>
     <div>
-      <img src="/images/icon/icon-oncogine3.png" alt="Icono 3" />
+      <img
+        src="/src/assets/salud-mujer/onco-gine/icon-oncogine3.png"
+        alt="Icono 3"
+      />
       <h2>Tratamiento</h2>
     </div>
     <div>
       <div>
-        <img src="/images/saludmujer/img-oncogine3.png" alt="Imagen 3" />
+        <img
+          src="/src/assets/salud-mujer/onco-gine/img-oncogine3.png"
+          alt="Imagen 3"
+        />
       </div>
       <div>
         <ul>
@@ -122,15 +143,19 @@ import Hero from "../../../components/Hero.astro";
         </ul>
       </div>
     </div>
-  </div>
-  <div>
     <div>
-      <img src="/images/icon/icon-oncogine4.png" alt="Icono 4" />
+      <img
+        src="/src/assets/salud-mujer/onco-gine/icon-oncogine4.png"
+        alt="Icono 4"
+      />
       <h2>Otros</h2>
     </div>
     <div>
       <div>
-        <img src="/images/saludmujer/img-oncogine4.png" alt="Imagen 4" />
+        <img
+          src="/src/assets/salud-mujer/onco-gine/img-oncogine4.png"
+          alt="Imagen 4"
+        />
       </div>
       <div>
         <h3>Cáncer de piel:</h3>
@@ -154,14 +179,20 @@ import Hero from "../../../components/Hero.astro";
     </div>
     <div>
       <div>
-        <img src="/images/saludmujer/img-oncogine5.png" alt="Imagen 5" />
+        <img
+          src="/src/assets/salud-mujer/onco-gine/img-oncogine5.png"
+          alt="Imagen 5"
+        />
         <p>
           <span>Examen de la piel:</span><br />
           Prestar atención a todos los lunares y las manchas de su piel.
         </p>
       </div>
       <div>
-        <img src="/images/saludmujer/img-oncogine6.png" alt="Imagen 6" />
+        <img
+          src="/src/assets/salud-mujer/onco-gine/img-oncogine6.png"
+          alt="Imagen 6"
+        />
         <p>
           <span>Biopsia de piel: </span><br />
           Se puede tomar una muestra de la piel sospechosa para realizar un análisis
@@ -189,12 +220,18 @@ import Hero from "../../../components/Hero.astro";
         </p>
       </div>
       <div>
-        <img src="/images/saludmujer/img-oncogine2.png" alt="Imagen 7" />
+        <img
+          src="/src/assets/salud-mujer/onco-gine/img-oncogine2.png"
+          alt="Imagen 7"
+        />
       </div>
     </div>
     <div>
       <div>
-        <img src="/images/saludmujer/img-oncogine7.png" alt="Imagen 8" />
+        <img
+          src="/src/assets/salud-mujer/onco-gine/img-oncogine7.png"
+          alt="Imagen 8"
+        />
       </div>
       <div>
         <h3>Cáncer de Colon:</h3>
@@ -224,10 +261,11 @@ import Hero from "../../../components/Hero.astro";
         </ul>
       </div>
     </div>
-  </div>
-  <div>
     <div>
-      <img src="/images/icon/icon-oncogine4.png" alt="Icono 9" />
+      <img
+        src="/src/assets/salud-mujer/onco-gine/icon-oncogine4.png"
+        alt="Icono 9"
+      />
       <h2>Pruebas Diagnósticas</h2>
     </div>
     <div>
@@ -253,7 +291,10 @@ import Hero from "../../../components/Hero.astro";
         </ul>
       </div>
       <div>
-        <img src="/images/saludmujer/img-oncogine8.png" alt="Imagen 9" />
+        <img
+          src="/src/assets/salud-mujer/onco-gine/img-oncogine8.png"
+          alt="Imagen 9"
+        />
       </div>
     </div>
   </div>

@@ -1,18 +1,100 @@
 ---
-import BaseLayout from "../../layouts/BaseLayout.astro";
-import PrivateAreaLayout from "../../layouts/PrivateAreaLayout.astro";
-
-const nombre = "Juan";
-const apellido = "Pérez";
-const tituloPagina = "Mis Datos";
+import BaseLayout from '/src/layouts/BaseLayout.astro';
+import PrivateAreaLayout from '/src/layouts/PrivateAreaLayout.astro';
+const pageTitle = "Atención médica telefónica";
 ---
+<PrivateAreaLayout>
+    <div class="max-w-4xl mx-auto p-6 bg-white rounded-lg">
+      <section class="grid grid-cols-12 p-5 bg-[#F2F3F7] items-center mb-5">
+        <div class="col-span-1">
+          <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18.5 4h-13m13 16h-13M8 20v-3.333a2 2 0 0 1 .4-1.2L10 12.6a1 1 0 0 0 0-1.2L8.4 8.533a2 2 0 0 1-.4-1.2V4h8v3.333a2 2 0 0 1-.4 1.2L13.957 11.4a1 1 0 0 0 0 1.2l1.643 2.867a2 2 0 0 1 .4 1.2V20H8Z"/>
+          </svg>
+        </div>
+        <p class="col-span-11">La orientación médica ofrece una respueta sobre cualquier dude médica o problemas de salud así como
+          las primeras medidas a adoptar hasta recibir la asistencia médica. Este servicio es gratuito para usted
+          y será atendido por médicos con disponibilidad las 24 horas del año, 365 días del año.</p>
+      </section>
 
-<BaseLayout>
-  <PrivateAreaLayout
-    nombre={nombre}
-    apellido={apellido}
-    tituloPagina={tituloPagina}
-  >
-    <p>{tituloPagina}</p>
-  </PrivateAreaLayout>
-</BaseLayout>
+      <section>
+        <h4>Llámenos al 91 703 90 24</h4>
+        <p>Un profesional experto le atenderá y aconsejará sobre todas las cuestiones relativas a su salud durante 24 horas, los 365 días del año. Médicos y operadores con formación específica en Atención Telefónica Sanitaria estarán a su disposición en el teléfono 91 703 90 24. Si lo prefiere puede indicar su número de teléfono y una franja horaria para que un médico experto contacte directamente con usted.</p>
+
+        <h4>Le llamamos</h4>
+        <p>Verifique el perfil e indiquenos su preferencia horaria y nos pondremos en contacto con usted.</p>
+      </section>
+
+      <p>Escribe aquí tu consulta. El departamento médico te contestará en la dirección de correo indicada.</p>
+      <form>
+          <div class="grid grid-cols-1 gap-4">
+              <div>
+                <label for="phone" class="block text-sm font-medium text-gray-700 mt-4">Teléfono</label>
+                <input type="text" id="phone" name="phone" class="mt-1 p-2 w-full border rounded-md" />
+
+                <label for="horarioAttmedica" class="block text-sm font-medium text-gray-700 mt-4">Franja horaria en la que desea ser llamado</label>
+                <select id="horarioAttmedica" name="horarioAttmedica" class="valid" aria-invalid="false">
+                    <option value="00:00-01:00">00:00-01:00</option>
+                    <option value="01:00-02:00">01:00-02:00</option>
+                    <option value="02:00-03:00">02:00-03:00</option>
+                    <option value="03:00-04:00">03:00-04:00</option>
+                    <option value="04:00-05:00">04:00-05:00</option>
+                    <option value="05:00-06:00">05:00-06:00</option>
+                    <option value="06:00-07:00">06:00-07:00</option>
+                    <option value="07:00-08:00">07:00-08:00</option>
+                    <option value="08:00-09:00">08:00-09:00</option>
+                    <option value="09:00-10:00">09:00-10:00</option>
+                    <option value="10:00-11:00">10:00-11:00</option>
+                    <option value="11:00-12:00">11:00-12:00</option>
+                    <option value="12:00-13:00">12:00-13:00</option>
+                    <option value="13:00-14:00">13:00-14:00</option>
+                    <option value="14:00-15:00">14:00-15:00</option>
+                    <option value="15:00-16:00">15:00-16:00</option>
+                    <option value="16:00-17:00">16:00-17:00</option>
+                    <option value="17:00-18:00">17:00-18:00</option>
+                    <option value="18:00-19:00">18:00-19:00</option>
+                    <option value="19:00-20:00">19:00-20:00</option>
+                    <option value="20:00-21:00">20:00-21:00</option>
+                    <option value="21:00-22:00">21:00-22:00</option>
+                    <option value="22:00-23:00">22:00-23:00</option>
+                    <option value="23:00-24:00">23:00-24:00</option>
+                  </select>
+              </div>
+          </div>
+
+          <div class="mt-6">
+              <button type="submit" class="bg-[#009494] font-bold uppercase
+                  text-white text-[0.9rem]
+                  tracking-widest px-5 py-3
+                  transform transition-all duration-300 hover:scale-110 hover:bg-[#007e7e]
+                  inline-flex items-center cursor-pointer rounded-full">
+                  Solicitar llamada
+              </button>
+          </div>
+      </form>
+    </div>
+</PrivateAreaLayout>
+
+
+
+<style>
+    form input,
+    form select {
+        border: 1px solid #dfdfdf;
+        font-size: 0.8rem;
+    }
+    form select {
+      border-radius:5px;
+      padding:5px 10px;
+      margin-top:5px;
+    }
+    form label {
+        color: var(--color-turquoise-500);
+    }
+
+    h4 {
+      font-size: 1rem;
+      color: var(--color-turquoise-500);
+      margin-top:1rem;
+      margin-bottom:1rem;
+    }
+</style>

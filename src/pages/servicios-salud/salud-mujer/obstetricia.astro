@@ -5,20 +5,24 @@ import Hero from "../../../components/Hero.astro";
 
 <BaseLayout>
   <Hero
-    imageSrc="../../../src/assets/salud-mujer/HeroSaludMujer.jpg"
+    imageSrc="../../../src/assets/salud-mujer/obstetricia/banner-obstetricia.jpg"
     showMedicalSearch={false}
   />
-  <div>
+  <div
+    class="items-center max-w-5xl px-10 sm:px-10 md:px-10 lg:mx-auto pt-10 pb-5 service-detail"
+  >
     <div>
       <div>
-        <img src="/images/icon/icon-caracteristicas.png" /><h2>
-          Características
-        </h2>
+        <img
+          src="/src/assets/salud-mujer/obstetricia/icon-caracteristicas.png"
+        /><h2>Características</h2>
       </div>
     </div>
     <div>
       <div>
-        <img src="/images/icon/caracteristica1-obstetricia.png" />
+        <img
+          src="/src/assets/salud-mujer/obstetricia/caracteristica1-obstetricia.png"
+        />
       </div>
       <div>
         <h3>Embarazo y Parto normal:</h3>
@@ -39,7 +43,9 @@ import Hero from "../../../components/Hero.astro";
     </div>
     <div>
       <div>
-        <img src="/images/icon/caracteristica2-obstetricia.png" />
+        <img
+          src="/src/assets/salud-mujer/obstetricia/caracteristica2-obstetricia.png"
+        />
       </div>
       <div>
         <h3>Alto Riesgo Obstétrico:</h3>
@@ -53,7 +59,9 @@ import Hero from "../../../components/Hero.astro";
     </div>
     <div>
       <div>
-        <img src="/images/icon/caracteristica3-obstetricia.png" />
+        <img
+          src="/src/assets/salud-mujer/obstetricia/caracteristica3-obstetricia.png"
+        />
       </div>
       <div>
         <h3>Diagnóstico Prenatal:</h3>
@@ -64,144 +72,151 @@ import Hero from "../../../components/Hero.astro";
         </p>
       </div>
     </div>
-  </div>
-  <div>
     <div>
-      <img src="/images/icon/icon-pruebas.png" /><h2>
-        Pruebas que se realizan:
-      </h2>
+      <div>
+        <img src="/src/assets/salud-mujer/obstetricia/icon-pruebas.png" /><h2>
+          Pruebas que se realizan:
+        </h2>
+      </div>
+      <div>
+        <div>
+          <img
+            src="/src/assets/salud-mujer/obstetricia/valoracion-ginecologia-3.png"
+          />
+        </div>
+        <div>
+          <ul>
+            <li>
+              <span
+                ><strong>Ecografía de viabilidad:</strong> Nos permite observar la
+                localización, tamaño y frecuencia cardiaca del embrión. Se realiza
+                entre la semana 6 y 9 de embarazo.</span
+              >
+            </li>
+            <li>
+              <span
+                ><strong>Cribaje de primer trimestre:</strong> Descarta alteraciones
+                de los cromosomas, como por ejemplo el Síndrome de Down. Consta de
+                una analítica de sangre (semana 8-10) y una ecografía detallada (semana
+                11-13)</span
+              >
+            </li>
+            <li>
+              <span
+                ><strong>Ecografía semana 20-22:</strong> Durante la misma se observa
+                la morfología del feto.</span
+              >
+            </li>
+          </ul>
+        </div>
+        <div>
+          <h3>También existen otras pruebas específicas como:</h3>
+          <ul>
+            <li><span>Doppler obstétrico.</span></li>
+            <li>
+              <span
+                >Biopsia de vellosidades coriales y amniocentesis
+                (procedimientos invasivos).</span
+              >
+            </li>
+            <li><span>Ecocardiografía fetal.</span></li>
+            <li><span>Perfil biofísico fetal.</span></li>
+            <li><span>Consulta genética.</span></li>
+          </ul>
+        </div>
+        <div>
+          <img src="/src/assets/salud-mujer/obstetricia/img-obstetricia.png" />
+        </div>
+      </div>
     </div>
     <div>
       <div>
-        <img src="/images/saludmujer/valoracion-ginecologia-3.png" />
+        <img src="/src/assets/salud-mujer/obstetricia/icon-screening.png" /><h2>
+          Screening combinado de primer trimestre (triple screening)
+        </h2>
       </div>
       <div>
-        <ul>
-          <li>
-            <span
-              ><strong>Ecografía de viabilidad:</strong> Nos permite observar la
-              localización, tamaño y frecuencia cardiaca del embrión. Se realiza
-              entre la semana 6 y 9 de embarazo.</span>
-          </li>
-          <li>
-            <span
-              ><strong>Cribaje de primer trimestre:</strong> Descarta alteraciones
-              de los cromosomas, como por ejemplo el Síndrome de Down. Consta de
-              una analítica de sangre (semana 8-10) y una ecografía detallada (semana
-              11-13)</span>
-          </li>
-          <li>
-            <span
-              ><strong>Ecografía semana 20-22:</strong> Durante la misma se observa
-              la morfología del feto.</span>
-          </li>
-        </ul>
-      </div>
-      <div>
-        <h3>También existen otras pruebas específicas como:</h3>
-        <ul>
-          <li><span>Doppler obstétrico.</span></li>
-          <li>
-            <span
-              >Biopsia de vellosidades coriales y amniocentesis (procedimientos
-              invasivos).</span>
-          </li>
-          <li><span>Ecocardiografía fetal.</span></li>
-          <li><span>Perfil biofísico fetal.</span></li>
-          <li><span>Consulta genética.</span></li>
-        </ul>
-      </div>
-      <div>
-        <img src="/images/saludmujer/img-obstetricia.png" />
-      </div>
-    </div>
-  </div>
-  <div>
-    <div>
-      <img src="/images/icon/icon-screening.png" /><h2>
-        Screening combinado de primer trimestre (triple screening)
-      </h2>
-    </div>
-    <div>
-      <p>
-        Se recomienda la utilización conjunta de: Pruebas bioquímicas (PAPP-A,
-        BHCG libre), Ecográfica TN (Translucencia nucal) y Edad materna, como
-        cribado de cromosomopatías en primer trimestre de la gestación.
-      </p>
-      <h4>Unidad de Ecografía Obstétrica:</h4>
-      <p>
-        Está recomendada para realizar la valoración continua del embarazo:
-        desde su inicio, a lo largo de todo el desarrollo y hasta su
-        finalización.<br />
-        Durante el control de un embarazo el número de ecografías a realizar puede
-        varias según distintos factores, por ejemplo si es un embarazo bajo riesgo
-        o de un embarazo de alto riesgo obstétrico. El especialista en ginecología
-        planificará cuantas ecografías son necesarias realizar.
-      </p>
-    </div>
-    <div>
-      <div>
-        <img src="/images/icon/ecografia1.png" />
         <p>
-          <span>Ecografía del primer trimestre</span><br />
-          Se realiza entre la 6ª y 10ª semana.
+          Se recomienda la utilización conjunta de: Pruebas bioquímicas (PAPP-A,
+          BHCG libre), Ecográfica TN (Translucencia nucal) y Edad materna, como
+          cribado de cromosomopatías en primer trimestre de la gestación.
+        </p>
+        <h4>Unidad de Ecografía Obstétrica:</h4>
+        <p>
+          Está recomendada para realizar la valoración continua del embarazo:
+          desde su inicio, a lo largo de todo el desarrollo y hasta su
+          finalización.<br />
+          Durante el control de un embarazo el número de ecografías a realizar puede
+          varias según distintos factores, por ejemplo si es un embarazo bajo riesgo
+          o de un embarazo de alto riesgo obstétrico. El especialista en ginecología
+          planificará cuantas ecografías son necesarias realizar.
         </p>
       </div>
       <div>
-        <img src="/images/icon/ecografia2.png" />
-        <p>
-          <span>Ecografía del segundo trimestre</span><br />
-          Se realiza entre la 11ª y 13ª semana
-        </p>
+        <div>
+          <img src="/src/assets/salud-mujer/obstetricia/ecografia1.png" />
+          <p>
+            <span>Ecografía del primer trimestre</span><br />
+            Se realiza entre la 6ª y 10ª semana.
+          </p>
+        </div>
+        <div>
+          <img src="/src/assets/salud-mujer/obstetricia/ecografia2.png" />
+          <p>
+            <span>Ecografía del segundo trimestre</span><br />
+            Se realiza entre la 11ª y 13ª semana
+          </p>
+        </div>
+        <div>
+          <img src="/src/assets/salud-mujer/obstetricia/ecografia3.png" />
+          <p>
+            <span>Ecografía morfológica</span><br />
+            Se realiza entre la 20ª y 22ª semana. Esta es la ecografía obstétrica
+            más minuciosa del embarazo.
+          </p>
+        </div>
+        <div>
+          <img src="/src/assets/salud-mujer/obstetricia/ecografia4.png" />
+          <p>
+            <span>Ecografía del tercer trimestre</span><br />
+            Se realiza entre la 30ª y 34ª semana.
+          </p>
+        </div>
       </div>
       <div>
-        <img src="/images/icon/ecografia3.png" />
-        <p>
-          <span>Ecografía morfológica</span><br />
-          Se realiza entre la 20ª y 22ª semana. Esta es la ecografía obstétrica más
-          minuciosa del embarazo.
-        </p>
+        <div>
+          <h3>También disponemos de las Eco 3D y 4D</h3>
+        </div>
       </div>
       <div>
-        <img src="/images/icon/ecografia4.png" />
-        <p>
-          <span>Ecografía del tercer trimestre</span><br />
-          Se realiza entre la 30ª y 34ª semana.
-        </p>
-      </div>
-    </div>
-    <div>
-      <div>
-        <h3>También disponemos de las Eco 3D y 4D</h3>
-      </div>
-    </div>
-    <div>
-      <div>
-        <img src="/images/saludmujer/img-obstetricia2.png" />
-      </div>
-      <div>
-        <h4>Ecografía 3D:</h4>
-        <p>
-          Es una ecografía en la que se ven imágenes fijas en 3 dimensiones a
-          partir de la ecografía en dos dimensiones que se realiza
-          habitualmente.
-        </p><br />
-        <h4>Ecografía 4D:</h4>
-        <p>
-          Es una técnica no invasiva y sin riesgo para el bebé ni para la mujer
-          embarazada. Se muestran movimiento y en tiempo real permitiendo ver
-          las imágenes que se van captando y que revelan detalles del feto.
-        </p><br />
-        <p>
-          <strong>Semanas 16-20:</strong> Podrás ver a tu bebé de cuerpo entero y
-          emocionarte al ver sus primeros gestos.<br />
-          <strong>Semana 20-26:</strong> El pequeño ya está más formado. Podrás emocionarte
-          viendo en detalle cómo es su carita, manos y, quién sabe, igual alguna
-          de sus primeras patadas.<br />
-          <strong>Semana 27-30:</strong> Podrás ver y disfrutar de tu bebé, viendo
-          sus gestos, bostezos, sonrisas o incluso ver cómo se coge las manitas o
-          se chupa el dedo.
-        </p>
+        <div>
+          <img src="/src/assets/salud-mujer/obstetricia/img-obstetricia2.png" />
+        </div>
+        <div>
+          <h4>Ecografía 3D:</h4>
+          <p>
+            Es una ecografía en la que se ven imágenes fijas en 3 dimensiones a
+            partir de la ecografía en dos dimensiones que se realiza
+            habitualmente.
+          </p><br />
+          <h4>Ecografía 4D:</h4>
+          <p>
+            Es una técnica no invasiva y sin riesgo para el bebé ni para la
+            mujer embarazada. Se muestran movimiento y en tiempo real
+            permitiendo ver las imágenes que se van captando y que revelan
+            detalles del feto.
+          </p><br />
+          <p>
+            <strong>Semanas 16-20:</strong> Podrás ver a tu bebé de cuerpo entero
+            y emocionarte al ver sus primeros gestos.<br />
+            <strong>Semana 20-26:</strong> El pequeño ya está más formado. Podrás
+            emocionarte viendo en detalle cómo es su carita, manos y, quién sabe,
+            igual alguna de sus primeras patadas.<br />
+            <strong>Semana 27-30:</strong> Podrás ver y disfrutar de tu bebé, viendo
+            sus gestos, bostezos, sonrisas o incluso ver cómo se coge las manitas
+            o se chupa el dedo.
+          </p>
+        </div>
       </div>
     </div>
   </div>

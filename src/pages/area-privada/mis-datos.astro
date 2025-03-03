@@ -1,156 +1,85 @@
 ---
-import BaseLayout from "../../layouts/BaseLayout.astro";
-import PrivateAreaLayout from "../../layouts/PrivateAreaLayout.astro";
-
-const nombre = "Juan";
-const apellido = "Pérez";
-const tituloPagina = "Mis Datos";
+import BaseLayout from '/src/layouts/BaseLayout.astro';
+import PrivateAreaLayout from '/src/layouts/PrivateAreaLayout.astro';
+const pageTitle = "Área privada";
 ---
+<PrivateAreaLayout>
+    <form class="max-w-4xl mx-auto p-6 bg-white shadow-md rounded-lg">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-4">
+            <!-- Primera columna -->
+            <div>
+            <label for="id" class="block text-sm font-medium text-gray-700">ID</label>
+            <input type="text" id="id" name="id" class="mt-1 p-2 w-full border rounded-md" />
 
-<BaseLayout>
-  <PrivateAreaLayout
-    nombre={nombre}
-    apellido={apellido}
-    tituloPagina={tituloPagina}
-  >
-    <section class="max-w-4xl mx-auto bg-white shadow-md rounded-lg p-6">
-      <h2 class="text-xl font-semibold mb-4">Editar Mis Datos</h2>
+            <label for="email" class="block text-sm font-medium text-gray-700 mt-4">Email</label>
+            <input type="email" id="email" name="email" class="mt-1 p-2 w-full border rounded-md" />
 
-      <form method="post" class="grid grid-cols-1 md:grid-cols-2 gap-4">
-        <!-- Columna Izquierda -->
-        <div>
-          <label for="id" class="block font-medium">ID</label>
-          <input type="text" id="id" name="id" class="input-field" readonly />
+            <label for="nombre" class="block text-sm font-medium text-gray-700 mt-4">Nombre</label>
+            <input type="text" id="nombre" name="nombre" class="mt-1 p-2 w-full border rounded-md" />
 
-          <label for="email" class="block font-medium mt-3">Email</label>
-          <input type="email" id="email" name="email" class="input-field" />
+            <label for="primer-apellido" class="block text-sm font-medium text-gray-700 mt-4">Primer Apellido</label>
+            <input type="text" id="primer-apellido" name="primer-apellido" class="mt-1 p-2 w-full border rounded-md" />
 
-          <label for="nombre" class="block font-medium mt-3">Nombre</label>
-          <input type="text" id="nombre" name="nombre" class="input-field" />
+            <label for="segundo-apellido" class="block text-sm font-medium text-gray-700 mt-4">Segundo Apellido</label>
+            <input type="text" id="segundo-apellido" name="segundo-apellido" class="mt-1 p-2 w-full border rounded-md" />
 
-          <label for="apellido1" class="block font-medium mt-3"
-            >Primer Apellido</label
-          >
-          <input
-            type="text"
-            id="apellido1"
-            name="apellido1"
-            class="input-field"
-          />
+            <label for="fecha-nacimiento" class="block text-sm font-medium text-gray-700 mt-4">Fecha de Nacimiento</label>
+            <input type="date" id="fecha-nacimiento" name="fecha-nacimiento" class="mt-1 p-2 w-full border rounded-md" />
 
-          <label for="apellido2" class="block font-medium mt-3"
-            >Segundo Apellido</label
-          >
-          <input
-            type="text"
-            id="apellido2"
-            name="apellido2"
-            class="input-field"
-          />
+            <label for="sexo" class="block text-sm font-medium text-gray-700 mt-4">Sexo</label>
+            <select id="sexo" name="sexo" class="mt-1 p-2 w-full border rounded-md">
+                <option value="masculino">Masculino</option>
+                <option value="femenino">Femenino</option>
+                <option value="otro">Otro</option>
+            </select>
+            </div>
 
-          <label for="fecha_nacimiento" class="block font-medium mt-3"
-            >Fecha de Nacimiento</label
-          >
-          <input
-            type="date"
-            id="fecha_nacimiento"
-            name="fecha_nacimiento"
-            class="input-field"
-          />
+            <!-- Segunda columna -->
+            <div>
+            <label for="telefono" class="block text-sm font-medium text-gray-700">Teléfono</label>
+            <input type="tel" id="telefono" name="telefono" class="mt-1 p-2 w-full border rounded-md" />
 
-          <label for="sexo" class="block font-medium mt-3">Sexo</label>
-          <select id="sexo" name="sexo" class="input-field">
-            <option value="masculino">Masculino</option>
-            <option value="femenino">Femenino</option>
-            <option value="otro">Otro</option>
-          </select>
+            <label for="tipo-via" class="block text-sm font-medium text-gray-700 mt-4">Tipo de Vía</label>
+            <input type="text" id="tipo-via" name="tipo-via" class="mt-1 p-2 w-full border rounded-md" />
+
+            <label for="nombre-via" class="block text-sm font-medium text-gray-700 mt-4">Nombre de Vía</label>
+            <input type="text" id="nombre-via" name="nombre-via" class="mt-1 p-2 w-full border rounded-md" />
+
+            <label for="codigo-postal" class="block text-sm font-medium text-gray-700 mt-4">Código Postal</label>
+            <input type="text" id="codigo-postal" name="codigo-postal" class="mt-1 p-2 w-full border rounded-md" />
+
+            <label for="poblacion" class="block text-sm font-medium text-gray-700 mt-4">Población</label>
+            <input type="text" id="poblacion" name="poblacion" class="mt-1 p-2 w-full border rounded-md" />
+
+            <label for="provincia" class="block text-sm font-medium text-gray-700 mt-4">Provincia</label>
+            <input type="text" id="provincia" name="provincia" class="mt-1 p-2 w-full border rounded-md" />
+
+            <label for="pais" class="block text-sm font-medium text-gray-700 mt-4">País</label>
+            <input type="text" id="pais" name="pais" class="mt-1 p-2 w-full border rounded-md" />
+            </div>
         </div>
 
-        <!-- Columna Derecha -->
-        <div>
-          <label for="telefono" class="block font-medium">Teléfono</label>
-          <input type="tel" id="telefono" name="telefono" class="input-field" />
-
-          <label for="tipo_via" class="block font-medium mt-3"
-            >Tipo de Vía</label
-          >
-          <input
-            type="text"
-            id="tipo_via"
-            name="tipo_via"
-            class="input-field"
-          />
-
-          <label for="nombre_via" class="block font-medium mt-3"
-            >Nombre de Vía</label
-          >
-          <input
-            type="text"
-            id="nombre_via"
-            name="nombre_via"
-            class="input-field"
-          />
-
-          <label for="codigo_postal" class="block font-medium mt-3"
-            >Código Postal</label
-          >
-          <input
-            type="text"
-            id="codigo_postal"
-            name="codigo_postal"
-            class="input-field"
-          />
-
-          <label for="poblacion" class="block font-medium mt-3">Población</label
-          >
-          <input
-            type="text"
-            id="poblacion"
-            name="poblacion"
-            class="input-field"
-          />
-
-          <label for="provincia" class="block font-medium mt-3">Provincia</label
-          >
-          <input
-            type="text"
-            id="provincia"
-            name="provincia"
-            class="input-field"
-          />
-
-          <label for="pais" class="block font-medium mt-3">País</label>
-          <input type="text" id="pais" name="pais" class="input-field" />
+        <div class="mt-6">
+            <button type="submit" class="bg-[#009494] font-bold uppercase
+                text-white text-[0.9rem]
+                tracking-widest px-5 py-3
+                transform transition-all duration-300 hover:scale-110 hover:bg-[#007e7e]
+                inline-flex items-center cursor-pointer rounded-full">
+                Modificar perfil
+            </button>
         </div>
+    </form>
+</PrivateAreaLayout>
 
-        <!-- Botón Guardar -->
-        <div class="col-span-1 md:col-span-2 flex justify-center mt-6">
-          <button type="submit" class="btn-primary">Guardar</button>
-        </div>
-      </form>
-    </section>
-  </PrivateAreaLayout>
-</BaseLayout>
+
 
 <style>
-  .input-field {
-    width: 100%;
-    padding: 8px;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    margin-top: 4px;
-  }
-
-  .btn-primary {
-    background-color: var(--color-turquoise-500);
-    color: white;
-    padding: 10px 20px;
-    border-radius: 5px;
-    font-weight: bold;
-    transition: background 0.3s;
-  }
-
-  .btn-primary:hover {
-    background-color: var(--color-turquoise-700);
-  }
+    form input,
+    form select {
+        border-color: #dfdfdf;
+        font-size: 0.8rem;
+    }
+    form label {
+        color: var(--color-turquoise-500);
+    }
 </style>

@@ -26,7 +26,7 @@ const submenuItems = [
   <a href="/blog">Artículos</a>
   <a href="/plan-de-vida-saludable">Plan de vida saludable</a>
   <a href="/otros-servicios">Otros servicios</a>
-  <a class="orange" href="/area-privada">Área privada</a>
+  <a class="orange" href="/area-privada/mis-datos">Área privada</a>
 </div>
 
 <style>
@@ -47,17 +47,17 @@ const submenuItems = [
     display: inline-block;
     width: 100%;
     text-align: center;
-    padding: 2rem 1rem;
     text-decoration: none;
     font-size: 0.8rem;
     font-weight: 400;
     text-transform: uppercase;
     color: black;
+    padding:0px .5rem
   }
 
   .nav-links a:hover,
   a:focus {
-    background-color: #efefef;
+    color: grey;
   }
 
   .menu-item {
@@ -89,13 +89,14 @@ const submenuItems = [
 
   .nav-links .orange {
     background-color: #ffb023;
+    padding: 2rem 1rem 2rem 1.5rem;
     border-top-left-radius: 50px;
     color: white;
     border-bottom-left-radius: 50px;
-    padding-left: 1.5rem;
   }
 
   .nav-links .orange:hover {
     background-color: #f19f0b;
+    color: white;
   }
 </style>

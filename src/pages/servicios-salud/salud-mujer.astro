@@ -3,6 +3,7 @@ import Hero from "../../components/Hero.astro";
 import PostsResume from "../../components/PostsResume.astro";
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import ServiceMenu from "../../components/ServiceMenu.astro";
+
 const pageTitle = "Salud mujer";
 
 const postsResumeData = {
@@ -74,6 +75,6 @@ const services = [
     imageSrc="../../../src/assets/salud-mujer/HeroSaludMujer.jpg"
     showMedicalSearch={true}
   />
-  <ServiceMenu services={services} />
+  <ServiceMenu services={services} cols='3' />
   <PostsResume postsResumeData={postsResumeData} />
 </BaseLayout>
