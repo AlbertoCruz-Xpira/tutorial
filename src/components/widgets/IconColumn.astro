@@ -1,0 +1,21 @@
+---
+const { imageSrc, title, text } = Astro.props;
+---
+
+<div class="grid justify-items-center text-center">
+  <img src={imageSrc} />
+  <h4 class="pt-4 pb-1">{title}</h4>
+  <p>{text}</p>
+</div>
+
+<style>
+  h4 {
+    color: var(--color-turquoise-500);
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+    font-weight: 400;
+  }
+  p {
+    margin-bottom: 10px;
+  }
+</style>

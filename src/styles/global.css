@@ -90,6 +90,10 @@ p {
   margin-bottom: 20px;
 }
 
+.service-page .icon-line h2 {
+  margin-bottom: 2px;
+}
+
 .service-page h3,
 .service-detail h3 {
   color: var(--color-turquoise-500);

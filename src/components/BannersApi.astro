@@ -1,5 +1,16 @@
 ---
+export interface BaseContent {
+  component: string;
+  icon: string;
+  title: string;
+  text: string;
+  image: string;
+}
+
 const apiUrl =
+  "http://10.230.1.100:3000/api/pageContent?where[title][equals]=ServiciosGenetica";
+
+const apiUrl2 =
   "http://10.230.1.100:3000/api/banners?where[title][equals]=Example";
 const apiKey = "aa8d5dc7-6a44-4f8e-ab9f-6637bd4cc8c9";
 
@@ -21,7 +32,6 @@ try {
   error = err.message;
 }
 ---
-
 
 BANNER API
 <div class="p-6 max-w-5xl mx-auto">

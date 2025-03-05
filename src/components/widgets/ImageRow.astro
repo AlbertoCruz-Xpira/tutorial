@@ -1,0 +1,13 @@
+---
+import HtmlBlock from "/src/components/simple/HtmlBlock.astro";
+const { imageSrc, html } = Astro.props;
+---
+
+<div class="grid grid-cols-12 gap-4">
+  <div class="col-span-12 md:col-span-5">
+    <img src={imageSrc} />
+  </div>
+  <div class="col-span-12 md:col-span-7">
+    <HtmlBlock html={html} />
+  </div>
+</div>

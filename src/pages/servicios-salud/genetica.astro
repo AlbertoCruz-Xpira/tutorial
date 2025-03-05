@@ -2,423 +2,191 @@
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import HeroSmall from "/src/components/HeroSmall.astro";
 import MoreInformacionForm from "../../components/MoreInformacionForm.astro";
-const pageTitle = "Genética";
-const url = "/src/assets/genetica/banner-genetica1.jpg";
+import IconRow from "/src/components/widgets/IconRow.astro";
+import IconColumn from "/src/components/widgets/IconColumn.astro";
+import ImageRow from "/src/components/widgets/ImageRow.astro";
+import Column from "/src/components/widgets/Column.astro";
+import { content } from "./genetica-content";
 ---
 
 <BaseLayout>
+  <HeroSmall
+    name={content[0].pageTitle}
+    url={content[0].imageSrc}
+    alternativeText={content[0].pageTitle}
+  />
 
-  <HeroSmall name={pageTitle} url={url} alternativeText={pageTitle}/>
-
-  <div class="items-center max-w-5xl mx-auto my-10">
-    <!-- Nutrición personalizada -->
+  <div
+    class="items-center max-w-5xl mx-auto my-10 px-5 gap-20 grid grid-cols-1"
+  >
+    <!-- Nutrición Personalizada -->
     <section>
-      <div>
-        <div class="inline-flex items-center justify-content-center">
-          <img src="/src/assets/genetica/genetica-icon1.png" />
-          <h2 class="ml-5 title">Nutrición Personalizada</h2>
-        </div>
-      </div>
+      <IconRow imageSrc={content[1].imageSrc} title={content[1].title} />
 
-      <section
-        class="grid grid-col-1 lg:grid-cols-4 py-10 gap-10 text-[0.7rem]"
-      >
-        <div class="grid justify-items-center text-center">
-          <img src="/src/assets/genetica/genetica-img-icon1.png" />
-          <h4 class="pt-4 pb-1">Intolerancias Alimentarias</h4>
-          <p>
-            El test de intolerancia alimentaria A200 evalúa la respuesta del
-            sistema inmune frente a más de 200 alimentos habituales en la dieta
-            mediterránea.
-          </p>
-        </div>
-        <div>
-          <img src="/src/assets/genetica/genetica-img-icon2.png" />
-          <h4 class="pt-4 pb-1">Nutrigenética</h4>
-          <p>
-            Personas que deseen adaptar su dieta en función a su genética y
-            conocer sus necesidades nutricionales específicas de manera
-            personalizada.
-          </p>
-        </div>
-        <div>
-          <img src="/src/assets/genetica/genetica-img-icon3.png" />
-          <h4 class="pt-4 pb-1">MigraTest</h4>
-          <p>
-            Indicada en el caso de personas que padezcan migrañas y quieran
-            saber si el origen está relacionado con un déficit de la actividad
-            de la enzima DAO.
-          </p>
-        </div>
-        <div>
-          <img src="/src/assets/genetica/genetica-img-icon4.png" />
-          <h4 class="pt-4 pb-1">Cuidado intestinal</h4>
-          <p>
-            Lactosa Test consiste en un estudio genético de intolerancia a la
-            lactosa, a través de una muestra de raspado bucal.
-          </p>
-        </div>
-      </section>
+        <Column number="4">
+          <IconColumn
+            imageSrc={content[2].imageSrc}
+            title={content[2].title}
+            text={content[2].text}
+          />
+
+          <IconColumn
+            imageSrc={content[3].imageSrc}
+            title={content[3].title}
+            text={content[3].text}
+          />
+
+          <IconColumn
+            imageSrc={content[4].imageSrc}
+            title={content[4].title}
+            text={content[4].text}
+          />
+
+          <IconColumn
+            imageSrc={content[5].imageSrc}
+            title={content[5].title}
+            text={content[5].text}
+          />
+        </Column>
     </section>
 
     <!-- Cardio -->
-    <div>
-      <div>
-        <div class="inline-flex items-center justify-content-center">
-          <img src="/src/assets/genetica/genetica-icon2.png" />
-          <h2 class="ml-5 title">Cardio</h2>
-        </div>
-      </div>
+    <section>
+      <IconRow imageSrc={content[6].imageSrc} title={content[6].title} />
 
-      <section
-        class="grid grid-col-1 lg:grid-cols-3 py-10 gap-10 text-[0.7rem]"
-      >
-        <div class="grid justify-items-center text-center">
-          <img src="/src/assets/genetica/genetica-img-icon5.png" />
-          <h4>CardioScore</h4>
-          <p>
-            Se basa en una extracción de sangre que permitirá una evaluación
-            clínico-genética del riesgo cardiovascular real.
-          </p>
-        </div>
-        <div class="grid justify-items-center text-center">
-          <img src="/src/assets/genetica/genetica-img-icon6.png" />
-          <h4>Omega-3</h4>
-          <p>
-            Indicador para la prevención de enfermedades cardiovasculares y
-            cerebrovasculares.
-          </p>
-        </div>
-        <div class="grid justify-items-center text-center">
-          <img src="/src/assets/genetica/genetica-img-icon7.png" />
-          <h4>Perfil Cardiovascular</h4>
-          <p>
-            Permite obtener información sobre los niveles de colesterol (HDL y
-            LDL), triglicéridos, homocisteína, proteína C reactiva, índice
-            aterogénico, lipoproteína (a) y hemoglobina glicosilada.
-          </p>
-        </div>
+      <section class="grid grid-col-1 lg:grid-cols-3 gap-10 text-[0.7rem]">
+        <IconColumn
+          imageSrc={content[7].imageSrc}
+          title={content[7].title}
+          text={content[7].text}
+        />
+
+        <IconColumn
+          imageSrc={content[8].imageSrc}
+          title={content[8].title}
+          text={content[8].text}
+        />
+
+        <IconColumn
+          imageSrc={content[9].imageSrc}
+          title={content[9].title}
+          text={content[9].text}
+        />
+      </section>
+    </section>
+
+    <!-- Edad y salud -->
+    <section id="edadsalud">
+      <IconRow imageSrc={content[10].imageSrc} title={content[10].title} />
+
+      <ImageRow imageSrc={content[11].imageSrc} html={content[11].html} />
+    </section>
+
+    <!-- Bienestar -->
+    <section id="bienestar">
+      <IconRow imageSrc={content[12].imageSrc} title={content[12].title} />
+
+      <section class="grid grid-col-1 lg:grid-cols-2 gap-10 text-[0.7rem]">
+        <IconColumn
+          imageSrc={content[13].imageSrc}
+          title={content[13].title}
+          text={content[13].text}
+        />
+
+        <IconColumn
+          imageSrc={content[14].imageSrc}
+          title={content[14].title}
+          text={content[14].text}
+        />
+      </section>
+    </section>
+
+    <!-- Rendimiento -->
+    <section id="rendimiento">
+      <IconRow imageSrc={content[15].imageSrc} title={content[15].title} />
+
+      <section class="grid grid-col-1 lg:grid-cols-2 gap-10 text-[0.7rem]">
+        <IconColumn
+          imageSrc={content[16].imageSrc}
+          title={content[16].title}
+          text={content[16].text}
+        />
+
+        <IconColumn
+          imageSrc={content[17].imageSrc}
+          title={content[17].title}
+          text={content[17].text}
+        />
+      </section>
+    </section>
+
+    <!-- Prevención -->
+    <section id="prevencioncancer">
+      <IconRow imageSrc={content[18].imageSrc} title={content[18].title} />
+
+      <ImageRow imageSrc={content[19].imageSrc} html={content[19].html} />
+    </section>
+
+    <!-- FUTUROS PADRES -->
+    <section id="futurospadres">
+      <IconRow imageSrc={content[20].imageSrc} title={content[20].title} />
+
+      <ImageRow imageSrc={content[21].imageSrc} html={content[21].html} />
+
+      <ImageRow imageSrc={content[22].imageSrc} html={content[22].html} />
+    </section>
+
+    <!-- OTROS -->
+    <section id="otros">
+      <IconRow imageSrc={content[23].imageSrc} title={content[23].title} />
+
+      <section class="grid grid-col-1 lg:grid-cols-4 gap-10 text-[0.7rem]">
+        <IconColumn
+          imageSrc={content[24].imageSrc}
+          title={content[24].title}
+          text={content[24].text}
+        />
+
+        <IconColumn
+          imageSrc={content[25].imageSrc}
+          title={content[25].title}
+          text={content[25].text}
+        />
+
+        <IconColumn
+          imageSrc={content[26].imageSrc}
+          title={content[26].title}
+          text={content[26].text}
+        />
+
+        <IconColumn
+          imageSrc={content[27].imageSrc}
+          title={content[27].title}
+          text={content[27].text}
+        />
       </section>
 
+      <section class="grid grid-col-1 lg:grid-cols-3 gap-10 text-[0.7rem]">
+        <IconColumn
+          imageSrc={content[28].imageSrc}
+          title={content[28].title}
+          text={content[28].text}
+        />
 
+        <IconColumn
+          imageSrc={content[29].imageSrc}
+          title={content[29].title}
+          text={content[29].text}
+        />
 
-
-      <!-- Edad y salud -->
-      <div id="edadsalud">
-        <div class="inline-flex items-center justify-content-center">
-          <img
-            src="/src/assets/genetica/genetica-icon3.png"
-            class="img-mesa"
-          />
-          <h2 class="ml-5 title">Edad y Salud</h2>
-        </div>
-        <div class="row margintop35">
-          <div class="col-md-5">
-            <img
-              src="/src/assets/genetica/genetica1.png"
-              class="img-proposito"
-            />
-          </div>
-          <div class="col-md-7">
-            <h3>Longitud Telomérica</h3>
-            <p>
-              Te permitirá conocer la edad biológica de tu organismo frente a tu
-              edad cronológica. Si la prueba resulta desfavorable, la
-              incorporación de hábitos de vida saludables te ayudará a mejorar
-              tu longitud telomérica y edad biológica en el plazo de un año.
-            </p><br />
-            <h3>Alteraciones del Sueño</h3>
-            <p>
-              Permite determinar los niveles de melatonina en saliva en
-              diferentes momentos de la noche pudiendo detectar cualquier
-              desviación respecto al nivel normal, tanto en horarios como en
-              intensidad. Con ello, se puede observar si la producción de
-              melatonina es o no suficiente para la conciliación del sueño.
-            </p><br />
-            <h3>Valoración del Estrés</h3>
-            <p>
-              Comparar los niveles de cortisol y DHEA con los valores normales,
-              aportando información acerca de la fase de estrés en la que se
-              encuentra el individuo.
-            </p>
-          </div>
-        </div>
-      </div>
-
-      
-      <!-- Bienestar -->
-      <div id="bienestar">
-        <div class="inline-flex items-center justify-content-center">
-          <img
-            src="/src/assets/genetica/genetica-icon4.png"
-            class="img-mesa"
-          />
-          <h2 class="ml-5 title">Bienestar – Prevención</h2>
-        </div>
-        <div class="row margintop35">
-          <div class="col-md-6">
-            <img
-              src="/src/assets/genetica/genetica-img-icon8.png"
-              class="img-eco"
-            />
-            <h4 class="p-eco margintop15">Prevención Check</h4>
-            <p class="p-eco">
-              Personas que deseen mantener y mejorar su estado de salud actual,
-              previniendo, en la medida de lo posible, las enfermedades crónicas
-              frecuentes de la edad adulta.
-            </p>
-          </div>
-          <div class="col-md-6">
-            <img
-              src="/src/assets/genetica/genetica-img-icon9.png"
-              class="img-eco"
-            />
-
-            <h4 class="p-eco margintop15">Chequeo Completo por sexo</h4>
-            <p class="p-eco">
-              La detección de posibles alteraciones bioquímicas relacionadas con
-              determinadas patologías, a través de una muestra de sangre y de
-              orina. El chequeo incluye un hemograma completo y parámetros
-              bioquímicos claves para la realización de una revisión general.
-            </p>
-          </div>
-        </div>
-      </div>
-
-      <!-- Rendimiento -->
-      <div id="rendimiento">
-        <div class="inline-flex items-center justify-content-center">
-          <img
-            src="/src/assets/genetica/genetica-icon5.png"
-            class="img-mesa"
-          />
-          <h2 class="ml-5 title">Rendimiento Deportivo</h2>
-        </div>
-        <div class="row margintop35">
-          <div class="col-md-6">
-            <img
-              src="/src/assets/genetica/genetica-img-icon10.png"
-              class="img-eco"
-            />
-            <h4 class="p-eco margintop15">Chequeo deportivo avanzado</h4>
-            <p class="p-eco">
-              Evalúa diferentes parámetros analíticos claves para un correcto
-              estado de salud y un óptimo rendimiento deportivo, permitiéndote
-              conocer cuáles son susceptibles de mejora.
-            </p>
-          </div>
-          <div class="col-md-6">
-            <img
-              src="/src/assets/genetica/genetica-img-icon11.png"
-              class="img-eco"
-            />
-
-            <h4 class="p-eco margintop15">Test Lesiones</h4>
-            <p class="p-eco">
-              Información acerca de la susceptibilidad a sufrir lesiones durante
-              el entrenamiento, así como la respuesta en función del tipo de
-              ejercicio de forma individualizada.
-            </p>
-          </div>
-        </div>
-      </div>
-
-      <!-- Prevención -->
-      <div id="prevencioncancer">
-        <div class="inline-flex items-center justify-content-center">
-          <img
-            src="/src/assets/genetica/genetica-icon6.png"
-            class="img-mesa"
-          />
-          <h2 class="ml-5 title">Prevención de Cancer</h2>
-        </div>
-        <div class="row margintop35">
-          <div class="col-md-5">
-            <img
-              src="/src/assets/genetica/genetica2.png"
-              class="img-proposito"
-            />
-          </div>
-          <div class="col-md-7">
-            <h3>Tipología de Test en Oncología:</h3>
-            <p>
-              <strong>Colón.</strong> Detección precoz del cáncer de colon mediante
-              un análisis de sangre.<br />
-              <strong>Biopsia líquida</strong> mediante secuenciación para tumores
-              sólidos en estadios avanzados (73 genes).
-            </p>
-            <ul class="plan-vida-p">
-              <li>
-                <span
-                  >Análisis dirigido de mutaciones tumorales en sangre (3
-                  genes).</span
-                >
-              </li>
-              <li><span>Detección del cáncer de próstata.</span></li>
-            </ul>
-            <p>
-              <strong>Test Onco Farmacogenética</strong> del tratamiento con
-            </p>
-            <ul class="plan-vida-p">
-              <li><span>5 fluorouracilo (capecitabina).</span></li>
-              <li><span>Irinotecan.</span></li>
-              <li><span>Lapatinib.</span></li>
-              <li><span>Metrotrexato.</span></li>
-              <li><span>Tamoxifeno.</span></li>
-              <li><span>Tiopurinas.</span></li>
-              <li><span>Cisplatino.</span></li>
-            </ul>
-          </div>
-        </div>
-      </div>
-
-      <!-- FUTUROS PADRES -->
-      <div id="futurospadres">
-        <div class="inline-flex items-center justify-content-center">
-          <img
-            src="/src/assets/genetica/genetica-icon7.png"
-            class="img-mesa"
-          />
-          <h2 class="ml-5 title">Futuros Padres</h2>
-        </div>
-        <div class="row margintop35">
-          <div class="col-md-7">
-            <h3>Test Prenatal</h3>
-            <p>
-              Analiza el ADN libre fetal presente en la sangre materna para
-              determinar el riesgo de que el feto sea portador de las anomalías
-              cromosómicas estudiadas. La prueba está indicada en embarazadas
-              con al menos 10 semanas de gestación, en las siguientes
-              situaciones:
-            </p>
-            <ul class="plan-vida-p">
-              <li><span>Embarazo único o gemelar (2 fetos).</span></li>
-              <li><span>Embarazos por FIV.</span></li>
-              <li><span>Casos de ovodonación.</span></li>
-              <li>
-                <span>La prueba debe ser prescrita por un especialista.</span>
-              </li>
-            </ul>
-          </div>
-          <div class="col-md-5">
-            <img
-              src="/src/assets/genetica/genetica3.png"
-              class="img-proposito"
-            />
-          </div>
-        </div>
-        <div class="row margintop35">
-          <div class="col-md-5">
-            <img
-              src="/src/assets/genetica/genetica4.png"
-              class="img-proposito"
-            />
-          </div>
-          <div class="col-md-7">
-            <h3>Test Genético</h3>
-            <p>
-              Analiza tu ADN, determinando si eres portador o no de alguna
-              alteración en tus genes. El test analiza 176 enfermedades
-              monogénicas seleccionadas por su gravedad y prevalencia,
-              excluyendo las enfermedades sin relevancia clínica incluidas en
-              otras pruebas. Si ambos progenitores sois portadores de la misma
-              enfermedad, se debe acudir a un especialista para recibir un
-              asesoramiento genético apropiado.
-            </p>
-          </div>
-        </div>
-      </div>
-
-      <!-- OTROS -->
-      <div id="otros">
-        <div class="inline-flex items-center justify-content-center">
-          <img
-            src="/src/assets/genetica/genetica-icon8.png"
-            class="img-mesa"
-          />
-          <h2 class="ml-5 title">Otros</h2>
-        </div>
-        <div class="row margintop35">
-          <div class="col-md-3">
-            <img
-              src="/src/assets/genetica/genetica-img-icon12.png"
-              class="img-eco"
-            />
-            <h4 class="p-eco margintop15">Farmacogenética</h4>
-            <p class="p-eco">
-              Análisis de toxicidad de los fármacos de uso habitual para
-              determinar la elección más adecuada.
-            </p>
-          </div>
-          <div class="col-md-3">
-            <img
-              src="/src/assets/genetica/genetica-img-icon13.png"
-              class="img-eco"
-            />
-
-            <h4 class="p-eco margintop15">Glaucoma PEX test</h4>
-            <p class="p-eco">
-              Riesgo genético de padecer glaucoma pseudoexfoliativo.
-            </p>
-          </div>
-          <div class="col-md-3">
-            <img
-              src="/src/assets/genetica/genetica-img-icon14.png"
-              class="img-eco"
-            />
-
-            <h4 class="p-eco margintop15">Macula Test</h4>
-            <p class="p-eco">
-              Riesgo genético de padecer degeneración macular asociada a la
-              edad.
-            </p>
-          </div>
-          <div class="col-md-3">
-            <img
-              src="/src/assets/genetica/genetica-img-icon15.png"
-              class="img-eco"
-            />
-
-            <h4 class="p-eco margintop15">Metales en el Organismo</h4>
-            <p class="p-eco">
-              Análisis en cabello de la presencia de metales para evaluar una
-              posible toxicidad en tu dieta o en tu entorno.
-            </p>
-          </div>
-          <div class="row margintop35">
-            <div class="col-md-3">
-              <img
-                src="/src/assets/genetica/genetica-img-icon16.png"
-                class="img-eco"
-              />
-              <h4 class="p-eco margintop15">Huella Genética</h4>
-              <p class="p-eco">Conserva tu DNI genético para el futuro.</p>
-            </div>
-            <div class="col-md-3">
-              <img
-                src="/src/assets/genetica/genetica-img-icon17.png"
-                class="img-eco"
-              />
-
-              <h4 class="p-eco margintop15">Test de Paternidad</h4>
-              <p class="p-eco">
-                Prueba de ADN para determinar la paternidad biológica.
-              </p>
-            </div>
-            <div class="col-md-3">
-              <img
-                src="/src/assets/genetica/genetica-img-icon7.png"
-                class="img-eco"
-              />
-
-              <h4 class="p-eco margintop15">Test Linfocitario</h4>
-              <p class="p-eco">Evaluación del sistema inmunitario.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <MoreInformacionForm />
-    </div>
+        <IconColumn
+          imageSrc={content[30].imageSrc}
+          title={content[30].title}
+          text={content[30].text}
+        />
+      </section>
+    </section>
+    <MoreInformacionForm />
   </div>
 </BaseLayout>
 

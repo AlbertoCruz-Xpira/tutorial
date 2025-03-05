@@ -4,9 +4,21 @@ const { imageSrc, showMedicalSearch } = Astro.props;
 ---
 
 <section class="relative">
-  <img class="w-full" src={imageSrc} />
+  <div
+    class="image bg-cover bg-center"
+    style={{ backgroundImage: `url(${imageSrc})` }}
+  >
+  </div>
   <!-- Capa negra con opacidad -->
-  <div class="absolute inset-0 flex items-center justify-left bg-black/20 pt-20">
+  <div
+    class="absolute inset-0 flex items-center justify-left bg-black/20 pt-20"
+  >
     {showMedicalSearch && <MedicalSearch />}
   </div>
 </section>
+
+<style>
+  .image {
+    min-height: 40vw;
+  }
+</style>
