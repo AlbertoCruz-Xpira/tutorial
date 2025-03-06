@@ -1,0 +1,239 @@
+---
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+import HeroSmall from "/src/components/HeroSmall.astro";
+const pageTitle = "Ginecología";
+const url = "/src/assets/salud-mujer/ginecologia/banner-ginecologia.jpg";
+---
+
+<BaseLayout>
+  
+  <HeroSmall name={pageTitle} url={url} alternativeText={pageTitle}/>
+
+  <div
+    class="items-center max-w-5xl px-10 sm:px-10 md:px-10 lg:mx-auto pt-10 pb-5 service-detail"
+  >
+    <!-- SECTION 1 -->
+    <div class="inline-flex items-center justify-content-center">
+      <img
+        src="/src/assets/salud-mujer/ginecologia/icon-proposito-ginecologia.png"
+      />
+      <h2 class="ml-5 mt-3 title">El propósito de estas visitas</h2>
+    </div>
+
+    <section class="grid grid-col-1 lg:grid-cols-2 gap-4">
+      <div>
+        <img
+          src="/src/assets/salud-mujer/ginecologia/proposito-ginecologia.png"
+        />
+      </div>
+      <div>
+        <ul>
+          <li><span>Prevención de enfermedades.</span></li>
+          <li><span>Detectar riesgo de problemas médicos futuros.</span></li>
+          <li><span>Orientar sobre estilos y calidad de vida.</span></li>
+          <li>
+            <span
+              >Revisión y recomendación de las vacunas correspondientes.</span
+            >
+          </li>
+          <li>
+            <span>Seguimiento y control por un médico de forma directa.</span>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- SECTION 2 -->
+    <div class="inline-flex items-center justify-content-center">
+      <img
+        src="/src/assets/salud-mujer/ginecologia/icon-evaluacion-ginecologia.png"
+      />
+      <h2 class="ml-5 mt-3 title">Evaluación ginecológico anual</h2>
+    </div>
+    <section class="grid lg:grid-cols-2 grid-col-1 gap-4">
+      <div>
+        <ul>
+          <li><span>Consulta inicial (exploración y pruebas).</span></li>
+          <li><span>Citología.</span></li>
+          <li><span>Ecografía abdominal o transvaginal.</span></li>
+          <li><span>Consulta de Reevaluación.</span></li>
+        </ul>
+      </div>
+      <div>
+        <img
+          src="/src/assets/salud-mujer/ginecologia/evaluacion-ginecologia.png"
+        />
+      </div>
+    </section>
+
+    <!-- SECTION 3 -->
+    <section>
+      <div class="inline-flex items-center justify-content-center pb-5">
+        <img
+          src="/src/assets/salud-mujer/ginecologia/icon-prevencion-ginecologia.png"
+        />
+        <h2 class="ml-5 mt-3 title">Valoración y prevención</h2>
+      </div>
+      <div class="pb-5">
+        <p>
+          Las valoraciones ginecológicas periódicas nos ayudan a la detección
+          temprana de posibles problemas de salud, que con un diagnóstico precoz
+          lograremos una resolución satisfactoria. Es importante mantener unos
+          hábitos de vida saludable, para controlar la tensión arterial,
+          colesterol y azúcar en sangre.
+        </p>
+      </div>
+    </section>
+
+    <section class="grid lg:grid-cols-2 grid-col-1 gap-4">
+      <div>
+        <img
+          src="/src/assets/salud-mujer/ginecologia/valoracion-ginecologia.png"
+        />
+        <p>
+          Nota: Si padece cardiopatía, problemas renales o algunas otras
+          afecciones, es posible que necesite un control más estricto.
+        </p>
+      </div>
+      <div>
+        <ul>
+          <li><span>Orientación sobre hábitos de vida saludable.</span></li>
+          <li><span>Control de Talla Peso e IMC.</span></li>
+          <li><span>Medición de la presión arterial.</span></li>
+          <li>
+            <span
+              >Control analítico que incluye Hemograma y bioquímica completa.</span
+            >
+          </li>
+          <li><span>Examen de colesterol.</span></li>
+          <li><span>Examen para diabetes.</span></li>
+          <li><span>Pruebas de función tiroidea.</span></li>
+          <li><span>Radiografía de tórax PA y Lateral.</span></li>
+          <li><span>Ecografía abdominal.</span></li>
+          <li><span>Audiometría tonal bilateral.</span></li>
+          <li><span>Espirometría.</span></li>
+          <li>
+            <span
+              >Revisión por cardiólogo: electrocardiograma y prueba de esfuerzo.</span
+            >
+          </li>
+          <li>
+            <span
+              >Revisión oftalmológica por optometrista (óptica): tonometría,
+              agudeza visual y exploración del fondo de ojo.</span
+            >
+          </li>
+          <li>
+            <span
+              >Revisión ginecológica: consulta con un especialista del
+              Departamento de Ginecología y Obstetricia, citología vaginal y
+              ecografía ginecológica. Mamografía y ecografía mamaria a criterio
+              de ginecólogo. También disponer de estudios genéticos con alta
+              sensibilidad diagnostica.</span
+            >
+          </li>
+          <li>
+            <span
+              >Visite al odontólogo cada año para un examen y limpieza dentales.</span
+            >
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="grid lg:grid-cols-2 grid-col-1 gap-4">
+      <div>
+        <h3>Vacunas</h3>
+        <ul>
+          <li><span>Vacuna antigripal anual.</span></li>
+          <li><span>Vacuna contra el tétanos, difteria y tos ferina.</span></li>
+          <li><span>Vacuna contra el VPH (18-26 años).</span></li>
+          <li>
+            <span>Vacuna contra la varicela si no ha pasado la enfermedad.</span
+            >
+          </li>
+          <li><span>Otras vacunas según riesgos específicos.</span></li>
+        </ul>
+        <p>
+          Cada mujer debe realizarse un autoexamen de mamas. El médico debe
+          hacer un examen completo cada tres años para mujeres de 20 a 40 años.
+        </p>
+      </div>
+      <div class="inline-flex items-center justify-content-center pb-5">
+        <img
+          src="/src/assets/salud-mujer/ginecologia/valoracion-ginecologia-2.png"
+        />
+      </div>
+    </section>
+
+    <section class="grid lg:grid-cols-2 grid-col-1 gap-4">
+      <div>
+        <img
+          src="/src/assets/salud-mujer/ginecologia/valoracion-ginecologia-3.png"
+        />
+      </div>
+      <div>
+        <h3>Examen pélvico y citología vaginal</h3>
+        <p>
+          A partir de los 21 años, o también antes si se han mantenido ya
+          relaciones sexuales, y repetirla al menos cada 3 años hasta los 65 si
+          se han obteniendo resultados normales en las últimas valoraciones,
+          para vigilar los primeros signos de patología de cuello uterino. En
+          mujeres sexualmente activas se realizan pruebas de detección para
+          infección por clamidia y/o ITS.
+        </p>
+      </div>
+    </section>
+
+    <section class="grid lg:grid-cols-2 grid-col-1 gap-4">
+      <div>
+        <h3>Ecografía Mamaria</h3>
+        <p>
+          Es útil para distinguir estructuras líquidas de sólidas y por lo tanto
+          a menudo se usa como recurso para detectar quistes (estructuras
+          pequeñas rellenas de líquido) dentro de la mama. Y nos ayuda a
+          diferencias entre masas sólidas y decidir necesidad de biopsia.
+        </p>
+        <h3>Mamografía</h3>
+        <p>Depende de la clínica puede utilizarse como método de:</p>
+        <ul>
+          <li>
+            <span
+              >Mamografías de screening o cribado: No existe clínica y de
+              realiza para buscar signos precoces. Se comienza a realizar a
+              partir de los 40 años se deben practicar una mamografía cada 1 a 2
+              años, dependiendo de los factores de riesgo.</span
+            >
+          </li>
+          <li>
+            <span
+              >Mamografía diagnostica: Se realiza si hay sospecha o signos
+              clínicos sugestivos, o un resultado indeterminado de la prueba de
+              screening.</span
+            >
+          </li>
+        </ul>
+      </div>
+      <div>
+        <img
+          src="/src/assets/salud-mujer/ginecologia/valoracion-ginecologia-4.png"
+        />
+      </div>
+    </section>
+
+    <div>
+      <img
+        src="/src/assets/salud-mujer/ginecologia/valoracion-ginecologia-5.png"
+      />
+    </div>
+    <section class="grid grid-cols-12 gap-4"></section>
+    <div>
+      <h3>Ecografía ginecológica</h3>
+      <p>Visualización de órganos genitales femeninos.</p>
+      <ul>
+        <li><span>Transabdominal: mayor área, menor definición.</span></li>
+        <li><span>Transvaginal: mejor definición, área menor.</span></li>
+      </ul>
+    </div>
+  </div>
+</BaseLayout>

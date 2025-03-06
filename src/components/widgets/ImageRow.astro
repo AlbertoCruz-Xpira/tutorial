@@ -1,13 +1,34 @@
 ---
 import HtmlBlock from "/src/components/simple/HtmlBlock.astro";
-const { imageSrc, html } = Astro.props;
+const { imageSrc, imageDesc, orientation, html } = Astro.props;
 ---
 
-<div class="grid grid-cols-12 gap-4">
-  <div class="col-span-12 md:col-span-5">
-    <img src={imageSrc} />
-  </div>
-  <div class="col-span-12 md:col-span-7">
-    <HtmlBlock html={html} />
-  </div>
-</div>
+{
+  orientation > 0 ? (
+    // IMAGEN DERECHA
+    <div class="grid grid-cols-12 gap-4">
+      <div class="col-span-12 md:col-span-7">
+        <HtmlBlock html={html} />
+      </div>
+      <div class="col-span-12 md:col-span-5">
+        <img src={imageSrc} alt="Image description" />
+        <p class="py-2">
+          <HtmlBlock html={imageDesc} />
+        </p>
+      </div>
+    </div>
+  ) : (
+    // IMAGEN IZQUIERDA
+    <div class="grid grid-cols-12 gap-4">
+      <div class="col-span-12 md:col-span-5">
+        <img src={imageSrc} alt="Image description" />
+        <p class="py-2">
+          <HtmlBlock html={imageDesc} />
+        </p>
+      </div>
+      <div class="col-span-12 md:col-span-7">
+        <HtmlBlock html={html} />
+      </div>
+    </div>
+  )
+}

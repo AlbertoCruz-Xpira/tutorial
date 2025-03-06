@@ -1,0 +1,219 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import HeroSmall from "/src/components/HeroSmall.astro";
+import MoreInformacionForm from "../../components/MoreInformacionForm.astro";
+import IconRow from "/src/components/widgets/IconRow.astro";
+import IconColumn from "/src/components/widgets/IconColumn.astro";
+import ImageRow from "/src/components/widgets/ImageRow.astro";
+import Column from "/src/components/widgets/Column.astro";
+import { content } from "./genetica-content";
+---
+
+<BaseLayout>
+  <HeroSmall
+    name={content[0].pageTitle}
+    url={content[0].imageSrc}
+    alternativeText={content[0].pageTitle}
+  />
+
+  <div
+    class="items-center max-w-5xl mx-auto my-10 px-5 gap-20 grid grid-cols-1"
+  >
+    <!-- Nutrición Personalizada -->
+    <section>
+      <IconRow imageSrc={content[1].imageSrc} title={content[1].title} />
+
+      <Column number="4">
+        <IconColumn
+          imageSrc={content[2].imageSrc}
+          title={content[2].title}
+          text={content[2].text}
+        />
+
+        <IconColumn
+          imageSrc={content[3].imageSrc}
+          title={content[3].title}
+          text={content[3].text}
+        />
+
+        <IconColumn
+          imageSrc={content[4].imageSrc}
+          title={content[4].title}
+          text={content[4].text}
+        />
+
+        <IconColumn
+          imageSrc={content[5].imageSrc}
+          title={content[5].title}
+          text={content[5].text}
+        />
+      </Column>
+    </section>
+
+    <!-- Cardio -->
+    <section>
+      <IconRow imageSrc={content[6].imageSrc} title={content[6].title} />
+
+      <Column number="3">
+        <IconColumn
+        imageSrc={content[7].imageSrc}
+        title={content[7].title}
+        text={content[7].text}
+        />
+        
+        <IconColumn
+        imageSrc={content[8].imageSrc}
+        title={content[8].title}
+        text={content[8].text}
+        />
+        
+        <IconColumn
+        imageSrc={content[9].imageSrc}
+        title={content[9].title}
+        text={content[9].text}
+        />
+      </Column>
+    </section>
+
+    <!-- Edad y salud -->
+    <section id="edadsalud">
+      <IconRow imageSrc={content[10].imageSrc} title={content[10].title} />
+
+      <ImageRow imageSrc={content[11].imageSrc} html={content[11].html} />
+    </section>
+
+    <!-- Bienestar -->
+    <section id="bienestar">
+      <IconRow imageSrc={content[12].imageSrc} title={content[12].title} />
+
+      <section class="grid grid-col-1 lg:grid-cols-2 gap-10 text-[0.7rem]">
+        <IconColumn
+          imageSrc={content[13].imageSrc}
+          title={content[13].title}
+          text={content[13].text}
+        />
+
+        <IconColumn
+          imageSrc={content[14].imageSrc}
+          title={content[14].title}
+          text={content[14].text}
+        />
+      </section>
+    </section>
+
+    <!-- Rendimiento -->
+    <section id="rendimiento">
+      <IconRow imageSrc={content[15].imageSrc} title={content[15].title} />
+
+      <Column number="2">
+          <IconColumn
+          imageSrc={content[16].imageSrc}
+          title={content[16].title}
+          text={content[16].text}
+          />
+          
+          <IconColumn
+          imageSrc={content[17].imageSrc}
+          title={content[17].title}
+          text={content[17].text}
+          />
+      </Column>
+    </section>
+
+    <!-- Prevención -->
+    <section id="prevencioncancer">
+      <IconRow imageSrc={content[18].imageSrc} title={content[18].title} />
+
+      <ImageRow imageSrc={content[19].imageSrc} html={content[19].html} />
+    </section>
+
+    <!-- FUTUROS PADRES -->
+    <section id="futurospadres">
+      <IconRow imageSrc={content[20].imageSrc} title={content[20].title} />
+
+      <ImageRow imageSrc={content[21].imageSrc} html={content[21].html} />
+
+      <ImageRow imageSrc={content[22].imageSrc} html={content[22].html} />
+    </section>
+
+    <!-- OTROS -->
+    <section id="otros">
+      <IconRow imageSrc={content[23].imageSrc} title={content[23].title} />
+
+      <Column number="4">
+        <IconColumn
+          imageSrc={content[24].imageSrc}
+          title={content[24].title}
+          text={content[24].text}
+        />
+
+        <IconColumn
+          imageSrc={content[25].imageSrc}
+          title={content[25].title}
+          text={content[25].text}
+        />
+
+        <IconColumn
+          imageSrc={content[26].imageSrc}
+          title={content[26].title}
+          text={content[26].text}
+        />
+
+        <IconColumn
+          imageSrc={content[27].imageSrc}
+          title={content[27].title}
+          text={content[27].text}
+        />
+      </Column>
+
+      <Column number="3">
+        <IconColumn
+          imageSrc={content[28].imageSrc}
+          title={content[28].title}
+          text={content[28].text}
+        />
+
+        <IconColumn
+          imageSrc={content[29].imageSrc}
+          title={content[29].title}
+          text={content[29].text}
+        />
+
+        <IconColumn
+          imageSrc={content[30].imageSrc}
+          title={content[30].title}
+          text={content[30].text}
+        />
+      </Column>
+    </section>
+    <MoreInformacionForm />
+  </div>
+</BaseLayout>
+
+<style>
+  h2 {
+    color: var(--color-turquoise-500);
+    margin-bottom: 20px;
+  }
+  h3 {
+    color: var(--color-turquoise-500);
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+    font-weight: 400;
+  }
+  h4 {
+    color: var(--color-turquoise-500);
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+    font-weight: 400;
+  }
+  h3.text-orange {
+    color: #feb44c;
+  }
+  p {
+    margin-bottom: 10px;
+  }
+  .title {
+    margin-bottom: 2px;
+  }
+</style>
