@@ -2,15 +2,15 @@
 import HtmlBlock from "../../../components/simple/HtmlBlock.astro";
 import BaseLayout from "../../../layouts/BaseLayout.astro";
 import HeroSmall from "/src/components/HeroSmall.astro";
-const pageTitle = "Disfunción erectil";
-const url = "/src/assets/salud-hombre/disfuncion-erectil/banner-disfuncion.jpg";
 import ImageRow from "/src/components/widgets/ImageRow.astro";
-import HtmlBlock from "/src/components/simple/HtmlBlock.astro";
 import Column from "../../../components/widgets/Column.astro";
 import TextBlock from "../../../components/simple/TextBlock.astro";
-
-import { content } from "./disfuncion-erectil-content.ts";
 import IconColumn from "../../../components/widgets/IconColumn.astro";
+import MoreInformacionForm from "../../../components/MoreInformacionForm.astro";
+
+const pageTitle = "Disfunción erectil";
+const url = "/src/assets/salud-hombre/disfuncion-erectil/banner-disfuncion.jpg";
+import { content } from "./disfuncion-erectil-content.ts";
 ---
 
 <BaseLayout>
@@ -101,4 +101,5 @@ import IconColumn from "../../../components/widgets/IconColumn.astro";
       </Column>
     </section>
   </div>
+  <MoreInformacionForm />
 </BaseLayout>

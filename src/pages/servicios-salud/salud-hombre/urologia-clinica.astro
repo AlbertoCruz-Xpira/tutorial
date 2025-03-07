@@ -1,11 +1,12 @@
 ---
 import BaseLayout from "../../../layouts/BaseLayout.astro";
 import HeroSmall from "/src/components/HeroSmall.astro";
-const pageTitle = "Salud hombre";
-const url = "/src/assets/salud-hombre/urologia-clinica/banner-urologia.jpg";
 import ImageRow from "/src/components/widgets/ImageRow.astro";
 import HtmlBlock from "/src/components/simple/HtmlBlock.astro";
+import MoreInformacionForm from "../../../components/MoreInformacionForm.astro";
 
+const pageTitle = "Salud hombre";
+const url = "/src/assets/salud-hombre/urologia-clinica/banner-urologia.jpg";
 import { content } from "./urologia-clinica-content.ts";
 ---
 
@@ -51,4 +52,5 @@ import { content } from "./urologia-clinica-content.ts";
       <HtmlBlock html={content[5].description_1} />
     </section>
   </div>
+  <MoreInformacionForm />
 </BaseLayout>

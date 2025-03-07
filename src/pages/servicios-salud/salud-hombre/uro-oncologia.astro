@@ -1,10 +1,11 @@
 ---
 import BaseLayout from "../../../layouts/BaseLayout.astro";
 import HeroSmall from "../../../components/HeroSmall.astro";
-const pageTitle = "Uro oncología";
-const url = "/src/assets/salud-hombre/uro-oncologia/banner-urooncologia.jpg";
-
+import MoreInformacionForm from "../../../components/MoreInformacionForm.astro";
 import ImageRow from "/src/components/widgets/ImageRow.astro";
+
+const url = "/src/assets/salud-hombre/uro-oncologia/banner-urooncologia.jpg";
+const pageTitle = "Uro oncología";
 
 import { content } from "./uro-oncologia-content.ts";
 ---
@@ -43,4 +44,5 @@ import { content } from "./uro-oncologia-content.ts";
       />
     </section>
   </div>
+  <MoreInformacionForm />
 </BaseLayout>

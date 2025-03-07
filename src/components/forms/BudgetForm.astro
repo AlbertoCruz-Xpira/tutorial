@@ -4,23 +4,17 @@ import Button from "/src/components/buttons/Button.astro";
 ---
 
 <div class="container">
-  <div class="grid grid-col-1 gap-1">
-    <IconRow
-      imageSrc="/src/assets/mail.png"
-      title="¿Necesitas más información?"
-    />
+  <div class="grid grid-col-1 gap-1 py-5 lg:px-30">
+    <IconRow imageSrc="/src/assets/mail.png" title="Solicitar presupuesto" />
 
     <div class="mas-info">
       <p>
-        Por favor, déjanos tu teléfono e email y nos pondremos en contacto
-        contigo cuanto antes para explicarte todos los detalles.
-      </p>
-      <p>
-        <strong><em>Horario de llamadas L-V de 8.00 a 21.00h.</em></strong>
+        Benefíciate del acuerdo exclusivo de Legálitas salud para los asegurados
+        de Ocaso y solicita tu presupuesto
       </p>
     </div>
 
-    <div class="py-5">
+    <div class="">
       <div>
         <form
           action=""
@@ -75,6 +69,7 @@ import Button from "/src/components/buttons/Button.astro";
               </div>
             </div>
           </div>
+          <!-- TELÉFONO Y EMAIL -->
           <div class="grid grid-cols-2 gap-5">
             <div class="">
               <div class="form-group form-salud">
@@ -90,7 +85,6 @@ import Button from "/src/components/buttons/Button.astro";
                 />
               </div>
             </div>
-            <!-- TELÉFONO Y EMAIL -->
             <div class="">
               <div class="form-group form-salud">
                 <input
@@ -98,6 +92,35 @@ import Button from "/src/components/buttons/Button.astro";
                   id="Mail"
                   name="Mail"
                   placeholder="Email*"
+                  required="true"
+                  type="text"
+                  value=""
+                />
+              </div>
+            </div>
+          </div>
+          <!-- PROVINCIA Y LOCALIDAD -->
+          <div class="grid grid-cols-2 gap-5">
+            <div class="">
+              <div class="form-group form-salud">
+                <input
+                  class="w-full bg-white form-control border border-gray-300 rounded-md px-3 py-4 focus:outline-none focus:ring-1 focus:ring-grey-400 focus:border-grey-400"
+                  id="Provincia"
+                  name="Provincia"
+                  placeholder="Provincia*"
+                  required="true"
+                  type="text"
+                  value=""
+                />
+              </div>
+            </div>
+            <div class="">
+              <div class="form-group form-salud">
+                <input
+                  class="w-full bg-white form-control border border-gray-300 rounded-md px-3 py-4 focus:outline-none focus:ring-1 focus:ring-grey-400 focus:border-grey-400"
+                  id="Localidad"
+                  name="Localidad"
+                  placeholder="Localidad*"
                   required="true"
                   type="text"
                   value=""
@@ -113,7 +136,7 @@ import Button from "/src/components/buttons/Button.astro";
                   cols="20"
                   id="TextoPregunta"
                   name="TextoPregunta"
-                  placeholder="Tu pregunta*"
+                  placeholder="¿Qué estás buscando?*"
                   required="true"
                   rows="2"></textarea>
               </div>
@@ -122,7 +145,7 @@ import Button from "/src/components/buttons/Button.astro";
               <div class="form-group form-salud">
                 <label>
                   <input
-                    class="bg-white form-control border border-gray-300 rounded-md mr-1 py-4 focus:outline-none focus:ring-1 focus:ring-grey-400 focus:border-grey-400"
+                    class="bg-white form-control border border-gray-300 rounded-md mr-1 focus:outline-none focus:ring-1 focus:ring-grey-400 focus:border-grey-400"
                     id="AceptoPolitica"
                     name="AceptoPolitica"
                     required="true"
