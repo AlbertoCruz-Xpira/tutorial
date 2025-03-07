@@ -1,18 +1,19 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
+import VideoComponent from "../components/simple/VideoBlock.astro";
 ---
 
 <BaseLayout>
-  <div class="pt-5 pb-10">
-    <div class="container max-w-5xl mx-auto">
+  <div class="pt-5 pb-20">
+    <div class="container max-w-5xl mx-auto px-5">
       <div class="row">
         <div class="col-12">
           <div class="PageGaranti">
-            <h2 class="title color-turquoise">Garantía Asistencia médica</h2>
+            <section>
+              <!-- INTRODUCCION -->
+              <h2 class="title color-turquoise">Garantía Asistencia médica</h2>
 
-            <!-- INTRODUCCION -->
-            <section class="row">
-              <div class="col-md-12">
+              <div class="grid grid-col-1">
                 <div class="cont_parrafo">
                   <p>
                     Grupo Ocaso pone a disposición de sus <strong
@@ -31,26 +32,25 @@ import BaseLayout from "../layouts/BaseLayout.astro";
             </section>
 
             <!-- VIDEOS -->
-            <section class="grid grid-col-1 lg:grid-cols-2">
-              <div>
+            <section class="grid grid-col-1 lg:grid-cols-2 lg:gap-20 gap-5">
+              <div class="relative">
                 <h3 class="color-turquoise">
                   Descubre tu Garantía Médica Ocaso
                 </h3>
-                <div>
-                  <img
-                    src="/src/assets/garantias-asistencia/video1.jpg"
-                    alt="Video 1"
-                  />
-                </div>
+                <VideoComponent
+                  videoSrc="/src/assets/garantias-asistencia/Video_garantia_2.mp4"
+                  imageSrc="/src/assets/garantias-asistencia/video1.jpg"
+                  altText="Video garantia"
+                />
               </div>
+
               <div>
                 <h3 class="color-turquoise">¿Cómo utilizar la garantía?</h3>
-                <div>
-                  <img
-                    src="/src/assets/garantias-asistencia/video2.jpg"
-                    alt="Video 2"
-                  />
-                </div>
+                <VideoComponent
+                  videoSrc="/src/assets/garantias-asistencia/COMO_USAR_GARANTIA.mp4"
+                  imageSrc="/src/assets/garantias-asistencia/video2.jpg"
+                  altText="Video 2"
+                />
               </div>
             </section>
 
@@ -351,6 +351,9 @@ import BaseLayout from "../layouts/BaseLayout.astro";
     padding-top: 15px;
     padding-bottom: 15px;
   }
+  h4 {
+    font-size: 1rem;
+  }
   h5 {
     font-size: 12px;
   }
@@ -364,5 +367,9 @@ import BaseLayout from "../layouts/BaseLayout.astro";
   }
   strong {
     font-weight: bold;
+  }
+  section {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
   }
 </style>

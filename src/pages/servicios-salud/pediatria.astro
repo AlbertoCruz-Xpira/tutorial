@@ -1,205 +1,161 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import HeroSmall from "/src/components/HeroSmall.astro";
+import Column from "/src/components/widgets/Column.astro";
+import Button from "/src/components/buttons/Button.astro";
 const pageTitle = "Pediatría";
 const url = "/src/assets/pediatria/bg-dosis.png";
 ---
 
 <BaseLayout>
+  <HeroSmall name={pageTitle} url={url} alternativeText={pageTitle} />
 
-   <HeroSmall name={pageTitle} url={url} alternativeText={pageTitle}/>
-   
-   <div class="items-center max-w-5xl px-10 sm:px-10 md:px-10 lg:mx-auto pt-10 pb-5 service-detail">
-      <div>
-      <img/>
-      <div>
-      <a>
-         <h5>
-         Pediatría
-         </h5>
-         <p>
-         </p>
-      </a>
+  <div
+    class="items-center max-w-5xl px-10 sm:px-10 md:px-10 lg:mx-auto pt-10 pb-5"
+  >
+    <div class="bg-white">
+      <div class="container">
+        <div class="py-4 border-b border-gray-300 color-turquoise">
+          <h4>Calculadora de dosis</h4>
+        </div>
+        <form class="box py-5 px-10" id="quote-modal-dosis">
+          <div id="quote-modal-dosis" class="">
+            <div
+              id="modal-dialog-content-dosis"
+              class="grid grid-col-1 lg:grid-cols-2 lg:gap-10 gap-5 items-center justify-content-center"
+            >
+              <div class="col-md-6 col-xs-12 quote-dosis-left">
+                <div class="form-group grid gap-2">
+                  <div class="dosis-peso flex gap-5 items-center">
+                    <img src="/src/assets/pediatria/ico-dosis-peso.png" />
+                    <input
+                      id="PesoCalcDosis"
+                      class="border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-1 focus:ring-grey-400 focus:border-grey-400"
+                      name="Peso"
+                      pattern="^(([1-9])|([1-9][0-9]{1,1})|([1][0]{2}))$"
+                      placeholder="Peso"
+                      required="required"
+                      type="text"
+                      value=""
+                    />
+                    <p>kg</p>
+                  </div>
+                  <div class="dosis-edad flex gap-5 items-center">
+                    <img src="/src/assets/pediatria/ico-dosis-calendar.png" />
+                    <input
+                      id="EdadCalcDosis"
+                      class="border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-1 focus:ring-grey-400 focus:border-grey-400"
+                      name="Edad"
+                      pattern="^([0-9]|[1][0-8]{1})$"
+                      placeholder="Edad"
+                      required="required"
+                      type="text"
+                      value=""
+                    />
+                    <p>años</p>
+                  </div>
+
+                  <div class="dosis-pactivo flex gap-5 items-center">
+                    <img src="/src/assets/pediatria/ico-dosis-pactivo.png" />
+                    <label for="ListadoPrinActivo" class="hidden">ListadoPrinActivo</label>
+
+                    <select
+                      id="PrinActivo"
+                      name="PrinActivo"
+                      class="border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-1 focus:ring-grey-400 focus:border-grey-400"
+                      ><option value="2">Ambroxol</option>
+                      <option value="3">Amoxicilina</option>
+                      <option value="4">Amoxicilina-clavulánico</option>
+                      <option value="5">Azitromicina</option>
+                      <option value="7">Cefixima</option>
+                      <option value="8">Cefuroxima axetilo </option>
+                      <option value="9">Claritromicina</option>
+                      <option value="10">Cloperastina</option>
+                      <option value="11">Cloxacilina</option>
+                      <option value="12">Codeina</option>
+                      <option value="13">Deflazacor</option>
+                      <option value="14">Dexametasona</option>
+                      <option value="15">Dexclorfeniramina</option>
+                      <option value="16">Dextrometorfano</option>
+                      <option value="17">Diazepam (Rectal)</option>
+                      <option value="18">Domperidona</option>
+                      <option value="19">Eritromicina</option>
+                      <option value="20">Hidroxizina</option>
+                      <option value="21">Ibuprofeno</option>
+                      <option value="22">Loratadina</option>
+                      <option value="23">Metoclopramida</option>
+                      <option value="24">Paracetamol</option>
+                      <option value="25">Penicilina V</option>
+                      <option value="26">Penicilina V benzatina</option>
+                      <option value="27">Prednisolona</option>
+                      <option value="28">Salbutamol</option>
+                    </select>
+                  </div>
+
+                  <div class="botonDosis pt-2">
+                    <Button buttonLink="#" buttonText="Calcular Dosis" />
+                  </div>
+                </div>
+              </div>
+              <div class="quote-dosis-right flex items-center justify-center">
+                <p>Seleccionar Calcular Dosis para ver resultado</p>
+              </div>
+            </div>
+          </div>
+        </form>
       </div>
-      </div>
-      <form>
-      <input/>
-      <div class="container distTop">
-      <div>
-         <h4>
-         Calculadora de dosis
-         </h4>
-      </div>
-      <div class="box container" id="quote-modal-dosis">
-         <div>
-         <div>
-         <div>
-            <div>
-            <p>
-            <label>
-               Peso:
-            </label>
-            </p>
-            <input/>
-            <p>
-            kg
-            </p>
-            </div>
-            <div>
-            <p>
-            <label>
-               Edad:
-            </label>
-            </p>
-            <input/>
-            <p>
-            años
-            </p>
-            </div>
-            <div>
-            <label>
-            ListadoPrinActivo
-            </label>
-            <select>
-            <option>
-               Ambroxol
-            </option>
-            <option>
-               Amoxicilina
-            </option>
-            <option>
-               Amoxicilina-clavulánico
-            </option>
-            <option>
-               Azitromicina
-            </option>
-            <option>
-               Cefixima
-            </option>
-            <option>
-               Cefuroxima axetilo
-            </option>
-            <option>
-               Claritromicina
-            </option>
-            <option>
-               Cloperastina
-            </option>
-            <option>
-               Cloxacilina
-            </option>
-            <option>
-               Codeina
-            </option>
-            <option>
-               Deflazacor
-            </option>
-            <option>
-               Dexametasona
-            </option>
-            <option>
-               Dexclorfeniramina
-            </option>
-            <option>
-               Dextrometorfano
-            </option>
-            <option>
-               Diazepam (Rectal)
-            </option>
-            <option>
-               Domperidona
-            </option>
-            <option>
-               Eritromicina
-            </option>
-            <option>
-               Hidroxizina
-            </option>
-            <option>
-               Ibuprofeno
-            </option>
-            <option>
-               Loratadina
-            </option>
-            <option>
-               Metoclopramida
-            </option>
-            <option>
-               Paracetamol
-            </option>
-            <option>
-               Penicilina V
-            </option>
-            <option>
-               Penicilina V benzatina
-            </option>
-            <option>
-               Prednisolona
-            </option>
-            <option>
-               Salbutamol
-            </option>
-            </select>
-            </div>
-         </div>
-         <div>
-         </div>
-         <div>
-            <button>
-            Calcular Dosis
-            </button>
-         </div>
-         </div>
-         <div>
-         <p>
-            Calcule la dosis.
-         </p>
-         </div>
-         </div>
-         <!--Bloque buscador farmacias-->
-         <div>
-         <div>
-         <a>
-            <div>
-            <div>
-            <img/>
-            </div>
-            <div>
-            <h3>
-               <strong>
-               Accede aquí para consultar sobre vacunas y programas de vacunación
-               </strong>
-            </h3>
-            <p>
-            </p>
-            </div>
-            </div>
-         </a>
-         </div>
-         <div>
-         <a>
-            <div>
-            <div>
-            <img/>
-            </div>
-            <div>
-            <h3>
-               <strong>
-               Encuentra tu farmacia más cercana 24h
-               </strong>
-            </h3>
-            <p>
-            </p>
-            </div>
-            </div>
-         </a>
-         </div>
-         </div>
-         <!--fin Bloque buscador farmacias-->
-      </div>
-      </div>
-      <input/>
-      </form>
-   </div>
-   
+    </div>
+
+    <!--Bloque buscador farmacias-->
+    <section>
+      <Column number="2">
+        <div class="bg-white">
+          <a
+            href="https://www.mscbs.gob.es/profesionales/saludPublica/prevPromocion/vacunaciones/home.htm"
+            target="_blank"
+          >
+            <Column number="2">
+              <div>
+                <img src="/src/assets/pediatria/busca-farma-peq.jpg" />
+              </div>
+              <div class="grid grid-col-1 items-center p-3">
+                <h5 class="color-turquoise">
+                  Accede aquí para consultar sobre vacunas y programas de
+                  vacunación
+                </h5>
+              </div>
+            </Column>
+          </a>
+        </div>
+        <div class="bg-white">
+          <a
+            href="https://www.cofm.es/es/farmacias/buscador-de-farmacias/"
+            target="_blank"
+          >
+            <Column number="2">
+              <div>
+                <img src="/src/assets/pediatria/vademecum-peq.jpg" />
+              </div>
+              <div class="grid grid-col-1 items-center p-3">
+                <h5 class="color-turquoise">
+                  Encuentra tu farmacia más cercana 24h
+                </h5>
+              </div>
+            </Column>
+          </a>
+        </div>
+      </Column>
+    </section>
+  </div>
+  <!--fin Bloque buscador farmacias-->
+
+  <style>
+    section {
+      padding-top: 1rem;
+      padding-bottom: 1rem;
+    }
+    h5 {
+      font-size: 1rem;
+    }
+  </style>
 </BaseLayout>

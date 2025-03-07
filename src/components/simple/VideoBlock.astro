@@ -1,0 +1,23 @@
+---
+const { videoSrc, imageSrc, altText = "Video thumbnail" } = Astro.props;
+---
+
+<div x-data="{ playing: false }" class="relative w-full">
+  <!-- Imagen encima del video -->
+  <img
+    :class="{ 'hidden': playing }"
+    src={imageSrc}
+    alt={altText}
+    class="absolute top-0 left-0 w-full h-full object-cover cursor-pointer z-10"
+    @click="playing = true; $refs.video.play()"
+  />
+
+  <!-- Video con controles -->
+  <video
+    x-ref="video"
+    src={videoSrc}
+    class="w-full h-auto"
+    :controls="playing"
+    @click="playing = !playing; playing ? $refs.video.play() : $refs.video.pause()"
+  ></video>
+</div>

@@ -1,0 +1,212 @@
+{
+  "id": 1,
+  "main_image": {
+    "id": 6,
+    "alt": "Proposito ginecologia",
+    "foo": null,
+    "updatedAt": "2025-03-06T14:29:34.943Z",
+    "createdAt": "2025-03-06T14:29:34.341Z",
+    "url": "/api/media/file/proposito-ginecologia.png",
+    "thumbnailURL": "/api/media/file/proposito-ginecologia-400x300.png",
+    "filename": "proposito-ginecologia.png",
+    "mimeType": "image/png",
+    "filesize": 228616,
+    "width": 328,
+    "height": 338,
+    "focalX": 50,
+    "focalY": 50,
+    "sizes": {
+      "thumbnail": {
+        "url": "/api/media/file/proposito-ginecologia-400x300.png",
+        "width": 400,
+        "height": 300,
+        "mimeType": "image/png",
+        "filesize": 240444,
+        "filename": "proposito-ginecologia-400x300.png"
+      },
+      "card": {
+        "url": null,
+        "width": null,
+        "height": null,
+        "mimeType": null,
+        "filesize": null,
+        "filename": null
+      },
+      "tablet": {
+        "url": null,
+        "width": null,
+        "height": null,
+        "mimeType": null,
+        "filesize": null,
+        "filename": null
+      }
+    }
+  },
+  "image_description": "",
+  "orientation": "0",
+  "title": "El propósito de estas visitas",
+  "icon": {
+    "id": 7,
+    "alt": "Icono proposito ginecologia",
+    "foo": null,
+    "updatedAt": "2025-03-06T14:30:48.843Z",
+    "createdAt": "2025-03-06T14:30:47.982Z",
+    "url": "/api/media/file/icon-proposito-ginecologia.png",
+    "thumbnailURL": null,
+    "filename": "icon-proposito-ginecologia.png",
+    "mimeType": "image/png",
+    "filesize": 2120,
+    "width": 66,
+    "height": 66,
+    "focalX": 50,
+    "focalY": 50,
+    "sizes": {
+      "thumbnail": {
+        "url": null,
+        "width": null,
+        "height": null,
+        "mimeType": null,
+        "filesize": null,
+        "filename": null
+      },
+      "card": {
+        "url": null,
+        "width": null,
+        "height": null,
+        "mimeType": null,
+        "filesize": null,
+        "filename": null
+      },
+      "tablet": {
+        "url": null,
+        "width": null,
+        "height": null,
+        "mimeType": null,
+        "filesize": null,
+        "filename": null
+      }
+    }
+  },
+  "description": {
+    "root": {
+      "type": "root",
+      "format": "",
+      "indent": 0,
+      "version": 1,
+      "children": [
+        {
+          "tag": "ul",
+          "type": "list",
+          "start": 1,
+          "format": "",
+          "indent": 0,
+          "version": 1,
+          "children": [
+            {
+              "type": "listitem",
+              "value": 1,
+              "format": "",
+              "indent": 0,
+              "version": 1,
+              "children": [
+                {
+                  "mode": "normal",
+                  "text": "Prevención de enfermedades.",
+                  "type": "text",
+                  "style": "",
+                  "detail": 0,
+                  "format": 0,
+                  "version": 1
+                }
+              ],
+              "direction": "ltr"
+            },
+            {
+              "type": "listitem",
+              "value": 2,
+              "format": "",
+              "indent": 0,
+              "version": 1,
+              "children": [
+                {
+                  "mode": "normal",
+                  "text": "Detectar riesgo de problemas médicos futuros.",
+                  "type": "text",
+                  "style": "",
+                  "detail": 0,
+                  "format": 0,
+                  "version": 1
+                }
+              ],
+              "direction": "ltr"
+            },
+            {
+              "type": "listitem",
+              "value": 3,
+              "format": "",
+              "indent": 0,
+              "version": 1,
+              "children": [
+                {
+                  "mode": "normal",
+                  "text": "Orientar sobre estilos y calidad de vida.",
+                  "type": "text",
+                  "style": "",
+                  "detail": 0,
+                  "format": 0,
+                  "version": 1
+                }
+              ],
+              "direction": "ltr"
+            },
+            {
+              "type": "listitem",
+              "value": 4,
+              "format": "",
+              "indent": 0,
+              "version": 1,
+              "children": [
+                {
+                  "mode": "normal",
+                  "text": "Revisión y recomendación de las vacunas correspondientes.",
+                  "type": "text",
+                  "style": "",
+                  "detail": 0,
+                  "format": 0,
+                  "version": 1
+                }
+              ],
+              "direction": "ltr"
+            },
+            {
+              "type": "listitem",
+              "value": 5,
+              "format": "",
+              "indent": 0,
+              "version": 1,
+              "children": [
+                {
+                  "mode": "normal",
+                  "text": "Seguimiento y control por un médico de forma directa",
+                  "type": "text",
+                  "style": "",
+                  "detail": 0,
+                  "format": 0,
+                  "version": 1
+                }
+              ],
+              "direction": "ltr"
+            }
+          ],
+          "listType": "bullet",
+          "direction": "ltr"
+        }
+      ],
+      "direction": "ltr"
+    }
+  },
+  "description_2": null,
+  "content_html": "",
+  "updatedAt": "2025-03-06T14:32:26.214Z",
+  "createdAt": "2025-03-06T14:30:59.616Z"
+}

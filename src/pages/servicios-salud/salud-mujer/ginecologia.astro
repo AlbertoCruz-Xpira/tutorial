@@ -16,7 +16,7 @@ import HtmlBlock from "/src/components/simple/HtmlBlock.astro";
 //Si el BaseContent trae imageSrc, imageDesc, orientation y description se invoca al widget ImageRow
 //Si solo viene relleno el description_1 se invoca a un HtmlBlock
 
-import {content} from "./ginecologia-content.ts";
+import { content } from "./ginecologia-content.ts";
 ---
 
 <BaseLayout>
@@ -39,6 +39,7 @@ import {content} from "./ginecologia-content.ts";
       <IconRow imageSrc={content[1].icon} title={content[1].title} />
       <ImageRow
         imageSrc={content[1].imageSrc}
+        orientation={content[1].orientation}
         html={content[1].description_1}
       />
     </section>
