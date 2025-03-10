@@ -1,28 +1,47 @@
 ---
-import BaseLayout from '../../layouts/BaseLayout.astro';
-import BlogPost from '../../components/BlogPost.astro';
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import BlogPost from "../../components/BlogPost.astro";
+import SimpleButton from "../../components/buttons/SimpleButton.astro";
 
 export async function getStaticPaths() {
-  const allPosts: any = await Astro.glob('../posts/*.md');
+  const allPosts: any = await Astro.glob("../posts/*.md");
 
   return [
-    {params: {category: "salud"}, props: {posts: allPosts}},
-    {params: {category: "cuidado"}, props: {posts: allPosts}},
-    {params: {category: "promociones"}, props: {posts: allPosts}},
-  ]
+    { params: { category: "salud" }, props: { posts: allPosts } },
+    { params: { category: "cuidado" }, props: { posts: allPosts } },
+    { params: { category: "promociones" }, props: { posts: allPosts } },
+  ];
 }
 
 const { category } = Astro.params;
 const { posts } = Astro.props;
-const filteredPosts = posts.filter((post:any) => post.frontmatter.categories?.includes(category));
+const filteredPosts = posts.filter((post: any) =>
+  post.frontmatter.categories?.includes(category)
+);
 ---
-<BaseLayout pageTitle={category}>
 
-  <BlogPost url="/categories" title="Todas las categorias"/>
+<BaseLayout>
+  <div
+    class="items-center max-w-5xl px-10 sm:px-10 md:px-10 lg:mx-auto pt-10 pb-5 grid grid-col-1 gap-5"
+  >
+    <div class="grid grid-cols-2">
+      <h2 class="color-turquoise">
+        Categoría: <span class="italic">{category}</span>
+      </h2>
 
-  <p>Entradas etiquetadas con {category}</p>
-  <ul>
-    {filteredPosts.map((post:any) => <BlogPost url={post.url} title={post.frontmatter.title}/>)}
-  </ul>
+      <SimpleButton
+        buttonLink="/categories"
+        buttonText="Ir a todas las categorias"
+      />
+    </div>
+
+    <h3 class="color-turquoise">Entradas etiquetadas con {category}</h3>
+    <ul class="grid grid-col-1 gap-3">
+      {
+        filteredPosts.map((post: any) => (
+          <BlogPost url={post.url} title={post.frontmatter.title} />
+        ))
+      }
+    </ul>
+  </div>
 </BaseLayout>
-

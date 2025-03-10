@@ -1,35 +1,81 @@
 ---
-import 'keen-slider/keen-slider.min.css';
+import "keen-slider/keen-slider.min.css";
 import CarouselSlide from "./CarouselSlide.astro";
-const { slides } = Astro.props;
+const { slides, slidesPerView } = Astro.props;
 ---
 
-<section id="carousel" data-component="Carousel" class="keen-slider relative w-full h-full mx-auto overflow-hidden">
-
-   <!-- Botones de navegación -->
-  <button id="prev" class="absolute left-4 top-1/2 transform -translate-y-1/2 text-white p-2 rounded-full z-10">
-    <svg class="w-15 h-15 text-white dark:text-white cursor-pointer" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
-      <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m15 19-7-7 7-7"/>
-    </svg>    
+<section
+  id="carousel"
+  data-component="Carousel"
+  data-slides-per-view={slidesPerView}
+  class="keen-slider relative w-full h-full mx-auto overflow-hidden"
+>
+  <!-- Botones de navegación -->
+  <button
+    id="prev"
+    class="absolute left-4 top-1/2 transform -translate-y-1/2 text-white p-2 rounded-full z-10"
+  >
+    <svg
+      class="w-15 h-15 text-white dark:text-white cursor-pointer"
+      aria-hidden="true"
+      xmlns="http://www.w3.org/2000/svg"
+      width="24"
+      height="24"
+      fill="none"
+      viewBox="0 0 24 24"
+    >
+      <path
+        stroke="currentColor"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        stroke-width="2"
+        d="m15 19-7-7 7-7"></path>
+    </svg>
   </button>
-  <button id="next" class="absolute right-4 top-1/2 transform -translate-y-1/2 text-white p-2 rounded-full z-10">
-    <svg class="w-15 h-15 text-white dark:text-white cursor-pointer" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
-      <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m9 5 7 7-7 7"/>
+  <button
+    id="next"
+    class="absolute right-4 top-1/2 transform -translate-y-1/2 text-white p-2 rounded-full z-10"
+  >
+    <svg
+      class="w-15 h-15 text-white dark:text-white cursor-pointer"
+      aria-hidden="true"
+      xmlns="http://www.w3.org/2000/svg"
+      width="24"
+      height="24"
+      fill="none"
+      viewBox="0 0 24 24"
+    >
+      <path
+        stroke="currentColor"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        stroke-width="2"
+        d="m9 5 7 7-7 7"></path>
     </svg>
   </button>
 
   <!-- Contenedor de Imágenes -->
-  {slides.map((slide: any) => (
-    <div class="keen-slider__slide flex">
-        <CarouselSlide slide={slide}></CarouselSlide>
-    </div>
-  ))}
+  {
+    slides.map((slide: any) => (
+      <div class="keen-slider__slide flex">
+        <CarouselSlide slide={slide} />
+      </div>
+    ))
+  }
 
   <!-- Dots de navegación -->
-  <div id="dots" class="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex gap-2 cursor-pointer z-10">
-    {slides.map((_slide: any, index: number) => (
-      <button class="dot w-3 h-3 bg-gray-400 rounded-full transition-all duration-300 cursor-pointer" data-index={index}></button>
-    ))}
+  <div
+    id="dots"
+    class="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex gap-2 cursor-pointer z-10"
+  >
+    {
+      slides.map((_slide: any, index: number) => (
+        <button
+          class="dot w-3 h-3 bg-gray-400 rounded-full transition-all duration-300 cursor-pointer"
+          data-index={index}
+        />
+      ))
+    }
   </div>
 </section>
 
@@ -53,20 +99,23 @@ const { slides } = Astro.props;
   });
 
   function updateDots(slider: any) {
-    dots.forEach(dot => dot.classList.remove("bg-white"));
+    dots.forEach((dot) => dot.classList.remove("bg-white"));
     dots[slider.track.details.rel].classList.add("bg-white");
   }
+
+  const carousel = document.getElementById("carousel");
+  const slidesPerView = carousel ? parseInt(carousel.dataset.slidesPerView || '1', 10) : 1;
+
 
   // KEEN SLIDER
   const slider = new KeenSlider("#carousel", {
     loop: true,
-    slides: { perView: 1 },
+    slides: { perView: slidesPerView },
     created(s) {
       updateDots(s);
     },
     slideChanged(s) {
       updateDots(s);
-    }
+    },
   });
 </script>
-

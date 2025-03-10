@@ -6,8 +6,8 @@ import Carousel from "../components/Carousel.astro";
 import BannerOcaso from "../components/BannerOcaso.astro";
 import InfoBanner from "../components/InfoBanner.astro";
 import Promotions from "../components/Promotions.astro";
-import PostsResume from "../components/PostsResume.astro";
-import BannersApi from "../components/BannersApi.astro";
+import CarouselPromotions from "../components/CarouselPromotions.astro";
+import CarouselPosts from "../components/CarouselPosts.astro";
 
 const bannerData = {
   imageSrc: "/src/assets/chica-con-movil.jpg",
@@ -114,6 +114,24 @@ const postsResumeData = {
       buttonText: "Leer más",
       buttonLink: "/",
     },
+    {
+      heading: "Publicacion 3",
+      category: "Salud",
+      description:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec molestie turpis id odio blandit, dignissim tincidunt arcu bibendum.",
+      imageSrc: "/src/assets/posts/De-que-se-ocupa-un-oftalmologo.jpg",
+      buttonText: "Leer más",
+      buttonLink: "/",
+    },
+    {
+      heading: "Publicacion 4",
+      category: "Salud",
+      description:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec molestie turpis id odio blandit, dignissim tincidunt arcu bibendum.",
+      imageSrc: "/src/assets/posts/El-cuidado-de-la-piel-en-verano.jpg",
+      buttonText: "Leer más",
+      buttonLink: "/",
+    },
   ],
 };
 ---
@@ -121,9 +139,17 @@ const postsResumeData = {
 <BaseLayout>
   <Hero imageSrc="src/assets/HeroSection.jpg" showMedicalSearch={true} />
   <Banner bannerData={bannerData} />
-  <Carousel slides={slides} />
+  <Carousel slides={slides} slidesPerView="1" />
   <BannerOcaso bannerOcasoData={bannerOcasoData} />
   <InfoBanner infoBannerData={infoBannerData} />
-  <Promotions promotionsData={promotionsData} />
-  <PostsResume postsResumeData={postsResumeData} />
+  <CarouselPromotions
+    slides={promotionsData.promotions}
+    slidesPerView="3"
+    title={promotionsData.title}
+  />
+  <CarouselPosts
+    slides={postsResumeData.posts}
+    slidesPerView="2"
+    title={postsResumeData.title}
+  />
 </BaseLayout>

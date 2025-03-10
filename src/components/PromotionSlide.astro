@@ -1,0 +1,49 @@
+---
+import SimpleButton from "./buttons/SimpleButton.astro";
+
+const { slide } = Astro.props;
+const { imageSrc, heading, buttonText, buttonLink } = slide;
+---
+
+
+  <div
+    class="min-h-[20rem] w-full flex items-end bg-cover bg-center relative"
+    style={`background-image: url(${imageSrc});`}
+  >
+    <!-- Capa oscura para mejorar contraste -->
+    <div class="absolute inset-0 bg-black opacity-20"></div>
+
+    <!-- fila -->
+    <div class="flex flex-col grow">
+      <h5
+        class="text-[1.2] justify-start text-white font-bold transform px-8 py-5"
+      >
+        {heading}
+      </h5>
+      <div class="flex justify-end p-2">
+        <SimpleButton
+          class="justify-end"
+          buttonText={buttonText}
+          buttonLink={buttonLink}
+        >
+          <!-- chevron right icon -->
+          <svg
+            class="w-6 h-6 text-white dark:text-white"
+            aria-hidden="true"
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            fill="none"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="m10 16 4-4-4-4"></path>
+          </svg>
+        </SimpleButton>
+      </div>
+    </div>
+  </div>

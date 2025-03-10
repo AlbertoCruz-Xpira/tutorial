@@ -1,40 +1,33 @@
 ---
-import BaseLayout from '../../layouts/BaseLayout.astro';
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import SimpleButton from "../../components/buttons/SimpleButton.astro";
 
 // Obtiene todos los posts
-const allPosts: any = await Astro.glob('../posts/*.md');
+const allPosts: any = await Astro.glob("../posts/*.md");
 // Extrae todas las categorias únicas
-const categories = [...new Set(allPosts.map((post: any) => post.frontmatter.categories).flat())];
+const categories = [
+  ...new Set(allPosts.map((post: any) => post.frontmatter.categories).flat()),
+];
 const pageTitle = "Todas las categorias";
 ---
 
-<style>
-  a {
-    color: #00539F;
-  }
+<BaseLayout>
+  <div
+    class="items-center max-w-5xl px-10 sm:px-10 md:px-10 lg:mx-auto pt-10 pb-5 grid grid-col-1 gap-5"
+  >
+    <h2 class="color-turquoise">Todas las categorías</h2>
 
-  .categories {
-    display: flex;
-    flex-wrap: wrap;
-  }
-
-  .category {
-    margin: 0.25em;
-    border: dotted 1px #a1a1a1;
-    border-radius: .5em;
-    padding: .5em 1em;
-    font-size: 1.15em;
-    background-color: #F8FCFD;
-  }
-</style>
-
-<BaseLayout pageTitle={pageTitle}>
-
-  <div class="categories">
-    {categories.map((categoy) => (
-      <p class="category">
-        <a href={`/categories/${categoy}`}>{categoy}</a>
-      </p>
-    ))}
-  </ul>
+    <div class="categories flex gap-3">
+      {
+        categories.map((categoy) => (
+          <p class="category">
+            <SimpleButton
+        buttonLink={`/categories/${categoy}`}
+        buttonText={categoy}
+      />
+          </p>
+        ))
+      }
+    </div>
+  </div>
 </BaseLayout>

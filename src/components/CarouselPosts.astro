@@ -1,0 +1,142 @@
+---
+import "keen-slider/keen-slider.min.css";
+import PostSlide from "./PostSlide.astro";
+const { slides, slidesPerView, title } = Astro.props;
+---
+
+<!-- Carousel Posts -->
+<section class="bg-[#FFF] p-10" data-component="CarouselPosts">
+  <div class="items-center max-w-5xl mx-auto mb-10">
+    <h3 class="text-[1.2rem] font-bold pt-1">{title}</h3>
+  </div>
+
+  <div class="max-w-5xl mx-auto items-center">
+    <section
+      id="postsCarousel"
+      data-component="postsCarousel"
+      data-slides-per-view={slidesPerView}
+      class="keen-slider relative items-center overflow-hidden"
+    >
+      <!-- Botones de navegación -->
+      <button
+        id="prevPostsCarousel"
+        class="absolute left-4 transform -translate-y-1/2 text-white p-2 rounded-full z-10"
+      >
+        <svg
+          class="w-15 h-15 text-white dark:text-white cursor-pointer"
+          aria-hidden="true"
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          fill="none"
+          viewBox="0 0 24 24"
+        >
+          <path
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="m15 19-7-7 7-7"></path>
+        </svg>
+      </button>
+      <button
+        id="nextPostsCarousel"
+        class="absolute right-4 transform -translate-y-1/2 text-white p-2 rounded-full z-10"
+      >
+        <svg
+          class="w-15 h-15 text-white dark:text-white cursor-pointer"
+          aria-hidden="true"
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          fill="none"
+          viewBox="0 0 24 24"
+        >
+          <path
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="m9 5 7 7-7 7"></path>
+        </svg>
+      </button>
+
+      <!-- Contenedor de Imágenes -->
+      {
+        slides.map((slide: any) => (
+          <div class="keen-slider__slide flex">
+            <PostSlide slide={slide} />
+          </div>
+        ))
+      }
+
+      <!-- Dots de navegación -->
+      <div
+        id="dotsPostsCarousel"
+        class="absolute md:hidden top-[63%] left-1/2 transform -translate-x-1/2 flex gap-2 cursor-pointer z-10 border-grey"
+      >
+        {
+          slides.map((_slide: any, index: number) => (
+            <button
+              class="dot-post-carousel w-3 h-3 bg-gray-400 rounded-full transition-all duration-300 cursor-pointer"
+              data-index={index}
+            />
+          ))
+        }
+      </div>
+    </section>
+
+    <script>
+      import KeenSlider from "keen-slider";
+
+      // NAVIGATION ARROWS
+      let prevPostsCarousel = document.getElementById("prevPostsCarousel");
+      if (prevPostsCarousel) {
+        prevPostsCarousel.addEventListener("click", () => slider.prev());
+      }
+      let nextPostsCarousel = document.getElementById("nextPostsCarousel");
+      if (nextPostsCarousel) {
+        nextPostsCarousel.addEventListener("click", () => slider.next());
+      }
+
+      // DOTS POSTS CAROUSEL NAVIGATION
+      const dots = document.querySelectorAll(".dot-post-carousel");
+      dots.forEach((dot, index) => {
+        dot.addEventListener("click", () => slider.moveToIdx(index));
+      });
+
+      function updateDots(slider: any) {
+        dots.forEach((dot) => dot.classList.remove("bg-white"));
+        dots[slider.track.details.rel].classList.add("bg-white");
+      }
+
+      const postsCarousel = document.getElementById("postsCarousel");
+      const slidesPerView = postsCarousel
+        ? parseInt(postsCarousel.dataset.slidesPerView || "1", 10)
+        : 1;
+
+      // KEEN SLIDER
+      const slider = new KeenSlider("#postsCarousel", {
+        loop: true,
+        slides: {
+          perView: slidesPerView,
+          spacing: 35,
+        },
+        created(s) {
+          updateDots(s);
+        },
+        slideChanged(s) {
+          updateDots(s);
+        },
+        breakpoints: {
+          "(max-width: 640px)": {
+            slides: {
+              perView: 1,
+              spacing: 0,
+            },
+          },
+        },
+      });
+    </script>
+  </div>
+</section>
