@@ -5,7 +5,7 @@ const { imageSrc, showMedicalSearch } = Astro.props;
 
 <section class="relative">
   <div
-    class="image bg-cover bg-center"
+    class="image bg-cover bg-center min-h-[50vh] lg:min-h-[75vh]"
     style={{ backgroundImage: `url(${imageSrc})` }}
   >
   </div>
@@ -16,9 +16,3 @@ const { imageSrc, showMedicalSearch } = Astro.props;
     {showMedicalSearch && <MedicalSearch />}
   </div>
 </section>
-
-<style>
-  .image {
-    min-height: 40vw;
-  }
-</style>

@@ -4,6 +4,15 @@
   Cada ROW tiene un ARRAY de COL.
 */
 
+// Se define una interface que tenga todos los campos de la sección
+// El índice acordeón se conecta por cada campo title del objeto content
+
+//Lógica de visualización
+//Si el BaseContent trae Title e icono se abre sección, se conecta con índice y se invoca al widget IconRow
+//Si viene relleno description_2 se invoca un TextBlock
+//Si el BaseContent trae imageSrc, imageDesc, orientation y description se invoca al widget ImageRow
+//Si solo viene relleno el description_1 se invoca a un HtmlBlock
+
 export const content = [
   {
     rows: [

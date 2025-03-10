@@ -1,5 +1,5 @@
 ---
-import SquareButton from "./buttons/SquareButton.astro";
+import SimpleButton from "./buttons/SimpleButton.astro";
 
 const { postsResumeData } = Astro.props;
 const { title, posts } = postsResumeData;
@@ -7,7 +7,7 @@ const { title, posts } = postsResumeData;
 
 <section class="bg-[#FFF] p-10" data-component="PostsResume">
   <div class="items-center max-w-5xl mx-auto mb-10">
-    <h3 class="text-[1.2rem] font-bold">{title}</h3>
+    <h3 class="text-[1.2rem] font-bold pt-1">{title}</h3>
   </div>
 
   <!-- fila -->
@@ -17,13 +17,13 @@ const { title, posts } = postsResumeData;
         posts.map((post: any) => (
           <div class="grid grid-col-1 gap-3">
             <div
-              class="min-h-[20rem] flex justify-end items-end bg-cover bg-center relative"
+              class="min-h-[20rem] flex justify-end items-end bg-cover bg-center relative p-2"
               style={`background-image: url(${post.imageSrc});`}
             >
               <!-- Black layer -->
               <div class="absolute inset-0 bg-black opacity-10" />
 
-              <SquareButton
+              <SimpleButton
                 buttonText={post.buttonText}
                 buttonLink={post.buttonLink}
               >
@@ -31,10 +31,10 @@ const { title, posts } = postsResumeData;
                 <svg class="w-6 h-6 text-white dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
                   <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m10 16 4-4-4-4"/>
                 </svg>
-              </SquareButton>
+              </SimpleButton>
 
             </div>
-            <p class="text-[1.2rem] font-bold">{post.heading}</p>
+            <p class="text-[1.2rem] bold mt-2">{post.heading}</p>
             <p class="text-[1rem]">{post.category}</p>
             <p class="text-[1rem]">{post.description}</p>
           </div>

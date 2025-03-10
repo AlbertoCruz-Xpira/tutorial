@@ -1,5 +1,5 @@
 ---
-import SquareButton from "./buttons/SquareButton.astro";
+import SimpleButton from "./buttons/SimpleButton.astro";
 
 const { promotionsData } = Astro.props;
 const { title, promotions } = promotionsData;
@@ -7,7 +7,7 @@ const { title, promotions } = promotionsData;
 
 <section class="bg-[#F2F4F8] p-10" data-component="Promotions">
   <div class="items-center max-w-5xl mx-auto mb-10">
-    <h3 class="text-[1.2rem] font-bold">{title}</h3>
+    <h3 class="text-[1.2rem] font-bold pt-1">{title}</h3>
   </div>
 
   <!-- fila -->
@@ -23,11 +23,11 @@ const { title, promotions } = promotionsData;
 
             <!-- fila -->
             <div class="flex flex-col grow">
-              <p class="text-[1.2] justify-start text-white font-bold transform px-8 py-5">
+              <h5 class="text-[1.2] justify-start text-white font-bold transform px-8 py-5">
                 {promotion.heading}
-              </p>
-              <div class="flex justify-end">
-                <SquareButton class="justify-end"
+              </h5>
+              <div class="flex justify-end p-2">
+                <SimpleButton class="justify-end"
                   buttonText={promotion.buttonText}
                   buttonLink={promotion.buttonLink}
                   >
@@ -35,8 +35,8 @@ const { title, promotions } = promotionsData;
                   <svg class="w-6 h-6 text-white dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
                     <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m10 16 4-4-4-4"/>
                   </svg>
-                </SquareButton>
-                </div>
+                </SimpleButton>
+              </div>
             </div>
 
           </div>

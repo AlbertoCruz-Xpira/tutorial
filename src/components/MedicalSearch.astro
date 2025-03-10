@@ -1,8 +1,8 @@
 ---
-  import SearchIcon from '../icons/SearchIcon.astro';
-  import FilterIcon from '../icons/FilterIcon.astro';
+import SearchIcon from "../icons/SearchIcon.astro";
+import FilterIcon from "../icons/FilterIcon.astro";
 
-  const mockup = `{
+const mockup = `{
     "name": "Orthopedic Medicine and Rehabilitation Center",
     "address": {
       "street": "AV. Juan Antonio Cavestany 2 (Local)",
@@ -53,7 +53,7 @@
         "close": "Closed"
       }
     ]
-  }`
+  }`;
 ---
 
 <!-- Importar Alpine.js en la página si no está globalmente -->
@@ -66,7 +66,7 @@ mx-auto"
   data-component="MedicalSearch"
 >
   <div
-    class="relative z-10 flex flex-col items-center justify-left h-full text-start text-white px-6"
+    class="relative z-1000 flex flex-col items-center justify-left h-full text-start text-white px-6"
   >
     <div>
       <h3 class="text-4xl md:text-6xl font-bold">
@@ -98,7 +98,7 @@ mx-auto"
           class="absolute right-2 hover:bg-gray-300 p-3 rounded-full transition duration-300 cursor-pointer"
           @click="showFilters = !showFilters"
         >
-          <FilterIcon/>
+          <FilterIcon />
         </button>
 
         <!-- Filtros desplegables -->
@@ -106,25 +106,138 @@ mx-auto"
           x-show="showFilters"
           class="absolute top-full mt-2 w-full max-w-lg bg-white shadow-lg rounded-lg p-4 z-1000"
         >
-          <h3 class="text-lg font-semibold text-gray-900">Filtros</h3>
-          <div class="mt-2 space-y-2">
-            <label class="block text-gray-700">
-              <span>Especialidad:</span>
-              <select class="w-full mt-1 p-2 border border-gray-300 rounded-md">
-                <option>Cardiología</option>
-                <option>Neurología</option>
-                <option>Oftalmología</option>
-              </select>
-            </label>
+          <div class="grid grid-cols-1 gap-5">
+            <p class="text-lg font-semibold text-gray-900">
+              Introduce aquí los datos para una nueva búsqueda (Ciudad, C.P.,
+              dirección...)
+            </p>
 
-            <label class="block text-gray-700">
-              <span>Ubicación:</span>
-              <input
-                type="text"
-                class="w-full mt-1 p-2 border border-gray-300 rounded-md"
-                placeholder="Introduce una ciudad"
-              />
-            </label>
+            <section class="grid grid-cols-2 gap-5">
+              <label class="block text-gray-700">
+                <span>Distancia:</span>
+                <select
+                  id="range"
+                  name="Range"
+                  class="mt-1 p-2 border border-gray-300 rounded-md"
+                >
+                  <option value="20">20Km</option>
+                  <option value="15">15Km</option>
+                  <option value="10">10Km</option>
+                  <option value="5">5Km</option>
+                  <option value="2">2Km</option>
+                  <option value="1">1Km</option>
+                </select>
+              </label>
+
+              <label class="block text-gray-700">
+                <span>Ubicación:</span>
+                <input
+                  type="text"
+                  class="mt-1 p-2 border border-gray-300 rounded-md"
+                  placeholder="Introduce una ciudad"
+                />
+              </label>
+            </section>
+
+            <section class="grid grid-cols-2 gap-5">
+              <div class="mt-2 space-y-2 gap-5">
+                <label class="block text-gray-700">
+                  <span>Especialidad:</span>
+                  <select
+                    class="mt-1 p-2 border border-gray-300 rounded-md"
+                    name="IdEspecialidad"
+                    ><option value="00">- Todas -</option>
+                    <option value="96">A.T.S.</option>
+                    <option value="23">ACUPUNTURA</option>
+                    <option value="03">ALERGOLOGIA</option>
+                    <option value="04">ANALISIS CLINICOS</option>
+                    <option value="45">ANALISTA FARMACEUTICO</option>
+                    <option value="05">ANATOMIA PATOLOGIA</option>
+                    <option value="06">ANESTESIOLOGIA Y REANIMACION</option>
+                    <option value="07">ANGIOLOGIA Y CIRUGIA VASCULAR</option>
+                    <option value="08">APARATO DIGESTIVO</option>
+                    <option value="09">CARDIOLOGIA</option>
+                    <option value="304">CIRUGIA BARIATRICA</option>
+                    <option value="56">CIRUGIA BARIATRICA</option>
+                    <option value="10">CIRUGIA CARDIOVASCULAR</option>
+                    <option value="11"
+                      >CIRUGIA GENERAL Y DEL APARATO DIGESTIVO</option
+                    >
+                    <option value="12">CIRUGIA ORAL Y MAXILOFACIAL</option>
+                    <option value="40"
+                      >CIRUGIA ORTOPEDICA Y TRAUMATOLOGIA</option
+                    >
+                    <option value="13">CIRUGIA PEDIATRICA</option>
+                    <option value="14">CIRUGIA PLASTICA Y REPARADORA</option>
+                    <option value="15">CIRUGIA TORACICA</option>
+                    <option value="16"
+                      >DERMATOLOGIA MEDICO QUIRURGICA Y VENEREO</option
+                    >
+                    <option value="18">ENDOCRINOLOGIA Y NUTRICION</option>
+                    <option value="92">FISIOTERAPIA</option>
+                    <option value="84">GENETICA MEDICA</option>
+                    <option value="20">GERIATRIA</option>
+                    <option value="21">HEMATOLOGIA Y HEMOTERAPIA</option>
+                    <option value="95">HOMEOPATIA</option>
+                    <option value="301">HOSPITALIZACION</option>
+                    <option value="22">INMUNOLOGIA</option>
+                    <option value="104">LOGOPEDIA</option>
+                    <option value="97">MATRONA</option>
+                    <option value="106">MEDICINA BIOLOGICA</option>
+                    <option value="107">MEDICINA DE FAMILIA</option>
+                    <option value="109">MEDICINA DEPORTIVA</option>
+                    <option value="110">MEDICINA ESTETICA</option>
+                    <option value="37">MEDICINA FISICA Y REHABILITACION</option>
+                    <option value="01">MEDICINA GENERAL</option>
+                    <option value="24">MEDICINA INTERNA</option>
+                    <option value="59">MEDICINA NUCLEAR</option>
+                    <option value="26">NEFROLOGIA</option>
+                    <option value="27">NEUMOLOGIA</option>
+                    <option value="28">NEUROCIRUGIA</option>
+                    <option value="29">NEUROFISIOLOGIA CLINICA</option>
+                    <option value="30">NEUROLOGIA</option>
+                    <option value="153">NUTRICION Y DIETETICA</option>
+                    <option value="31">OBSTETRICIA Y GINECOLOGIA</option>
+                    <option value="32">OFTALMOLOGIA</option>
+                    <option value="33">ONCOLOGIA MEDICA</option>
+                    <option value="34">ONCOLOGIA RADIOTERAPICA</option>
+                    <option value="100">ORIENTACION MEDICA TELEFONICA</option>
+                    <option value="120">OSTEOPATIA</option>
+                    <option value="35">OTORRINOLARINGOLOGIA</option>
+                    <option value="02">PEDIATRIA</option>
+                    <option value="98">PODOLOGIA</option>
+                    <option value="99">PSICOLOGIA</option>
+                    <option value="36">PSIQUIATRIA</option>
+                    <option value="128">QUIROFANO</option>
+                    <option value="82">RADIODIAGNOSTICO</option>
+                    <option value="150">RADIODIAGNOSTICO VARIOS</option>
+                    <option value="300">RECONOCIMIENTO MEDICO</option>
+                    <option value="42">REPRODUCCION ASISTIDA</option>
+                    <option value="38">REUMATOLOGIA</option>
+                    <option value="19"
+                      >SERVICIO DENTAL (DESCUENTO GARANTIZADO)</option
+                    >
+                    <option value="138">TRASLADOS</option>
+                    <option value="39">TRATAMIENTO DEL DOLOR</option>
+                    <option value="90">URGENCIA DOMICILIARIA</option>
+                    <option value="143">URGENCIAS HOSPITALARIAS</option>
+                    <option value="41">UROLOGIA</option>
+                    <option value="43">VALORACION DAÑO CORPORAL</option>
+                    <option value="350">VENTA MATERIAL</option>
+                  </select>
+                </label>
+              </div>
+              <div>
+                <label for="Name">Nombre del médico:</label>
+                <input
+                  id="name"
+                  name="Name"
+                  pattern="[A-Za-zàáâäãåèéêëìíîïòóôöõøùúûüÿýñçčšžÀÁÂÄÃÅÈÉÊËÌÍÎÏÒÓÔÖÕØÙÚÛÜŸÝÑßÇŒÆČŠŽ∂ð ,.'-]+"
+                  type="text"
+                  value=""
+                />
+              </div>
+            </section>
 
             <button
               class="w-full bg-blue-600 hover:bg-blue-700 text-white py-2 rounded-md"
@@ -133,6 +246,7 @@ mx-auto"
             </button>
           </div>
         </div>
+        <!-- /Filtros desplegables -->
       </div>
     </div>
   </div>
