@@ -93,47 +93,7 @@ const promotionsData = {
   ],
 };
 
-const postsResumeData = {
-  title: "Publicaciones",
-  posts: [
-    {
-      heading: "La vida y la edad",
-      category: "Salud",
-      description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec molestie turpis id odio blandit, dignissim tincidunt arcu bibendum.",
-      imageSrc: "/src/assets/posts/De-que-se-ocupa-un-oftalmologo.jpg",
-      buttonText: "Leer más",
-      buttonLink: "/",
-    },
-    {
-      heading: "El cuidado de la piel en verano",
-      category: "Salud",
-      description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec molestie turpis id odio blandit, dignissim tincidunt arcu bibendum.",
-      imageSrc: "/src/assets/posts/El-cuidado-de-la-piel-en-verano.jpg",
-      buttonText: "Leer más",
-      buttonLink: "/",
-    },
-    {
-      heading: "Publicacion 3",
-      category: "Salud",
-      description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec molestie turpis id odio blandit, dignissim tincidunt arcu bibendum.",
-      imageSrc: "/src/assets/posts/De-que-se-ocupa-un-oftalmologo.jpg",
-      buttonText: "Leer más",
-      buttonLink: "/",
-    },
-    {
-      heading: "Publicacion 4",
-      category: "Salud",
-      description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec molestie turpis id odio blandit, dignissim tincidunt arcu bibendum.",
-      imageSrc: "/src/assets/posts/El-cuidado-de-la-piel-en-verano.jpg",
-      buttonText: "Leer más",
-      buttonLink: "/",
-    },
-  ],
-};
+import posts from "../data/posts";
 ---
 
 <BaseLayout>
@@ -148,8 +108,8 @@ const postsResumeData = {
     title={promotionsData.title}
   />
   <CarouselPosts
-    slides={postsResumeData.posts}
+    slides={posts}
     slidesPerView="2"
-    title={postsResumeData.title}
+    title="Publicaciones"
   />
 </BaseLayout>

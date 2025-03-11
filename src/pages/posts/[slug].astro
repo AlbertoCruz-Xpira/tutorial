@@ -1,0 +1,44 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import posts from "../../data/posts";
+import SimpleButton from "../../components/buttons/SimpleButton.astro";
+
+// Astro necesita generar las rutas dinámicas antes del build
+export async function getStaticPaths() {
+  return posts.map((post) => ({
+    params: { slug: post.buttonLink.replace("/posts/", "") }, // Extrae el slug de la URL
+    props: { post },
+  }));
+}
+
+// Obtener los datos del post actual basado en la URL
+const { post } = Astro.props;
+---
+
+<BaseLayout pageTitle={post.heading}>
+  <div
+    class="items-center max-w-5xl px-10 sm:px-10 md:px-10 lg:mx-auto pt-10 pb-10 grid grid-col-1 gap-5"
+  >
+    <div class="grid grid-cols-1 gap-2">
+      <h3 class="text-3xl font-bold color-turquoise">{post.heading}</h3>
+      <p class="color-turquoise">
+        por: <span class="italic">{post.author}</span>
+      </p>
+      <div class="flex gap-2">
+        <SimpleButton buttonText={post.category} buttonLink=`/categories/${post.category}`>
+          {post.category}
+        </SimpleButton>
+
+        <SimpleButton buttonText={post.tag} buttonLink=`/tags/${post.tag}`>
+          {post.category}
+        </SimpleButton>
+      </div>
+      <img
+        src={post.imageSrc}
+        alt={post.heading}
+        class="w-full h-64 object-cover my-4"
+      />
+      <article class="prose">{post.description}</article>
+    </div>
+  </div>
+</BaseLayout>

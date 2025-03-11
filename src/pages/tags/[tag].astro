@@ -1,39 +1,55 @@
 ---
-import BaseLayout from '../../layouts/BaseLayout.astro';
-import BlogPost from '../../components/BlogPost.astro';
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import BlogPost from "../../components/BlogPost.astro";
+import SimpleButton from "../../components/buttons/SimpleButton.astro";
+import allPosts from "../../data/posts"; // Importamos la lista de posts
+import type { Post } from "../../interface/Post";
 
-
-// Genera todas las rutas de las etiquetas
 export async function getStaticPaths() {
-  // Extrae todos los posts y los almacena en la variable allPosts
-  const allPosts: any = await Astro.glob('../posts/*.md');
-  // Extrae todas las etiquetas únicas de los posts y las almacena en la variable uniqueTags
-  const uniqueTags = [...new Set(allPosts.map((post:any) => post.frontmatter.tags).flat())];
+  // Obtener todas las categorías únicas
+  const tags: string[] = [
+    ...new Set(allPosts.map((post: Post) => post.tag)),
+  ];
 
-  //Por cada etiqueta extraida, filtra los posts que contienen esa etiqueta y los almacena en filteredPosts
-  return uniqueTags.map((tag) => {
-    const filteredPosts = allPosts.filter((post:any) => post.frontmatter.tags.includes(tag));
-    return {
-      params: { tag },
-      props: { posts: filteredPosts },
-    };
-  });
+  return tags.map((tag: string) => ({
+    params: { tag }, // Creamos una página para cada categoría
+    props: {
+      tag,
+      posts: allPosts.filter((post: Post) => post.tag === tag),
+    }, // Filtramos los posts por categoría
+  }));
 }
 
-//Propiedades que se pasan al layout
-//Astro.params contiene los parámetros de la URL
-const { tag } = Astro.params;
-const { posts } = Astro.props;
-const filteredPosts = posts.filter((post:any) => post.frontmatter.tags?.includes(tag));
+// Recibir props generadas en getStaticPaths()
+const { tag, posts }: { tag: string; posts: Post[] } = Astro.props;
 ---
 
-<BaseLayout pageTitle={tag}>
+<BaseLayout>
+  <div
+    class="items-center max-w-5xl px-10 sm:px-10 md:px-10 lg:mx-auto pt-10 pb-5 grid grid-col-1 gap-5"
+  >
+    <div class="grid grid-cols-2">
+      <h2 class="color-turquoise">
+        Etiquetas: <span class="italic">{tag}</span>
+      </h2>
+      <SimpleButton
+        buttonLink="/tags"
+        buttonText="Ir a todas las categorías"
+      />
+    </div>
 
-  <BlogPost url="/tags" title="Todas las etiquetas"/>
+    <h3 class="color-turquoise">Entradas etiquetadas con {tag}</h3>
 
-  <p>Entradas etiquetadas con {tag}</p>
-  <ul>
-    {filteredPosts.map((post:any) => <BlogPost url={post.url} title={post.frontmatter.title}/>)}
-  </ul>
+    {
+      posts.length > 0 ? (
+        <ul class="grid grid-col-1 gap-3">
+          {posts.map((post: Post) => (
+            <BlogPost url={post.buttonLink} title={post.heading} />
+          ))}
+        </ul>
+      ) : (
+        <p>No hay entradas en esta categoría.</p>
+      )
+    }
+  </div>
 </BaseLayout>
-
