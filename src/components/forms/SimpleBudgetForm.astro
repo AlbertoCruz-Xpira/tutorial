@@ -1,0 +1,107 @@
+---
+import Button from "/src/components/buttons/Button.astro";
+---
+
+<div class="grid grid-col-1 gap-1">
+  <div class="mas-info grid grid-col-1">
+    <h3 class="color-turquoise">Llamanos gratis</h3>
+    <h4 class="color-turquoise">91 703 90 24</h4>
+    <p>¿O prefieres que te llamemos?</p>
+  </div>
+
+  <div class="">
+    <div>
+      <form
+        action=""
+        enctype="multipart/form-data"
+        id="moreInformationForm"
+        method="post"
+        class="grid grid-col-1 gap-2"
+      >
+        <!-- NOMBRE Y APELLIDOS -->
+        <div class="">
+          <div class="form-group form-salud">
+            <input
+              id="NombreApellidos"
+              class="w-full bg-white form-control border border-gray-300 rounded-md px-3 py-4 focus:outline-none focus:ring-1 focus:ring-grey-400 focus:border-grey-400"
+              name="NombreApellidos"
+              placeholder="Nombre y Apellidos*"
+              required="true"
+              type="text"
+              value=""
+            />
+          </div>
+        </div>
+        <!-- TELÉFONO -->
+        <div class="form-group form-salud">
+          <input
+            class="w-full bg-white form-control border border-gray-300 rounded-md px-3 py-4 focus:outline-none focus:ring-1 focus:ring-grey-400 focus:border-grey-400"
+            id="Telefono"
+            name="Telefono"
+            pattern="[0-9]{9}"
+            placeholder="Teléfono*"
+            required="true"
+            type="text"
+            value=""
+          />
+        </div>
+        <!-- EMAIL -->
+        <div class="form-group form-salud">
+          <input
+            class="w-full bg-white form-control border border-gray-300 rounded-md px-3 py-4 focus:outline-none focus:ring-1 focus:ring-grey-400 focus:border-grey-400"
+            id="Mail"
+            name="Mail"
+            placeholder="Email*"
+            required="true"
+            type="text"
+            value=""
+          />
+        </div>
+      </form>
+      <div class="row">
+        <div class="grid grid-col-1 mt-2">
+          <div class="form-group form-salud">
+            <label class="flex">
+              <input
+                class="bg-white form-control border border-gray-300 rounded-md mr-1 focus:outline-none focus:ring-1 focus:ring-grey-400 focus:border-grey-400"
+                id="AceptoPolitica"
+                name="AceptoPolitica"
+                required="true"
+                type="checkbox"
+                value="true"
+              />
+              <input name="AceptoPolitica" type="hidden" value="false" />
+              <p>
+                Acepto la <a
+                  target="_blank"
+                  class="noHover"
+                  href="https://atencionmedica.legalitas.com/politica-privacidad/"
+                  >política de privacidad</a
+                > de la web*
+              </p>
+            </label>
+            <p class="pt-2 note">
+              *Campos obligatorios
+            </p>
+            <div
+              class="buttonPassword btn-formulario grid grid-column-1 items-center justify-center mt-7"
+            >
+              <Button buttonLink="#" buttonText="Enviar" />
+            </div>
+          </div>
+        </div>
+      </div>
+      <input
+        name="ufprt"
+        type="hidden"
+        value="366BB9322C8AA64B0CE35294C970FCF370042B6C44D88547D3B6626F7B3F442AE31A9B36E707A73F783CBF2D2C585CF07C61FE3E6DAEFD8BF17A8C3B2FE322DDD465E88F2FD74869DDD5D018D94C2DA9F91D5B02F822F5EFE4D296069F0A946404EB466B1D60D7F8FFB4BC778AC5E88C714B51AB0016CF74139A720A9D344CA158CDC48E66B5297385761D03E4679EA121795E32171C276AA317C5C8C01568463BB1905C2E098BA11DB018896F87456E7E7D8F182D8E2274F6399483BE4965A4"
+      />
+    </div>
+  </div>
+</div>
+
+<style>
+  .note {
+    font-size: 10px;
+  }
+</style>

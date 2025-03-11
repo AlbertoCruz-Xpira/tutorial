@@ -5,7 +5,6 @@ import Banner from "../components/Banner.astro";
 import Carousel from "../components/Carousel.astro";
 import BannerOcaso from "../components/BannerOcaso.astro";
 import InfoBanner from "../components/InfoBanner.astro";
-import Promotions from "../components/Promotions.astro";
 import CarouselPromotions from "../components/CarouselPromotions.astro";
 import CarouselPosts from "../components/CarouselPosts.astro";
 
@@ -69,30 +68,7 @@ const infoBannerData = {
   ],
 };
 
-const promotionsData = {
-  title: "Promociones destacadas",
-  promotions: [
-    {
-      heading: "Presbicia",
-      imageSrc: "/src/assets/promociones/Presbicia.jpg",
-      buttonText: "Más información",
-      buttonLink: "/",
-    },
-    {
-      heading: "Cataratas",
-      imageSrc: "/src/assets/promociones/Cataratas.jpg",
-      buttonText: "Más información",
-      buttonLink: "/",
-    },
-    {
-      heading: "Retina",
-      imageSrc: "/src/assets/promociones/Retina.jpg",
-      buttonText: "Más información",
-      buttonLink: "/",
-    },
-  ],
-};
-
+import promotions from "../data/promotions";
 import posts from "../data/posts";
 ---
 
@@ -103,13 +79,9 @@ import posts from "../data/posts";
   <BannerOcaso bannerOcasoData={bannerOcasoData} />
   <InfoBanner infoBannerData={infoBannerData} />
   <CarouselPromotions
-    slides={promotionsData.promotions}
+    slides={promotions}
     slidesPerView="3"
-    title={promotionsData.title}
+    title="Promociones destacadas"
   />
-  <CarouselPosts
-    slides={posts}
-    slidesPerView="2"
-    title="Publicaciones"
-  />
+  <CarouselPosts slides={posts} slidesPerView="2" title="Publicaciones" />
 </BaseLayout>
