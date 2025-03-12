@@ -4,28 +4,28 @@ import HeroSmall from "../../../components/HeroSmall.astro";
 import MoreInformacionForm from "../../../components/MoreInformacionForm.astro";
 const pageTitle = "Preserva";
 const url = "/src/assets/salud-mujer/preserva/banner-preserva.png";
----
 
-<BaseLayout>
+import type { BaseContent } from "../../../interface/BaseContent";
+import IconRow from "../../../components/widgets/IconRow.astro";
+import ImageRow from "../../../components/widgets/ImageRow.astro";
+import Column from "../../../components/widgets/Column.astro";
 
-  <HeroSmall name={pageTitle} url={url} alternativeText={pageTitle}/>
-
-  <div
-    class="items-center max-w-5xl px-10 sm:px-10 md:px-10 lg:mx-auto pt-10 pb-5 service-detail"
-  >
-    <div>
-      <div>
-        <div>
-          <div>
-            <img src="/src/assets/salud-mujer/preserva/icon-preserva1.png" /><h2>Preserva</h2>
-          </div>
-        </div>
-        <div>
-          <div>
-            <img src="/src/assets/salud-mujer/preserva/preserva1.png" />
-          </div>
-          <div>
-            <h3>Decidir ser madre es una decisión difícil de tomar</h3>
+export const content: BaseContent[] = [
+  {
+    icon: "/src/assets/salud-mujer/preserva/icon-preserva1.png",
+    title: "Nuestras recomendaciones preventivas para ti",
+    imageSrc: "",
+    imageDesc: "",
+    description_1: ``,
+    orientation: 0,
+    description_2: "",
+  },
+  {
+    icon: "",
+    title: "",
+    imageSrc: "/src/assets/salud-mujer/preserva/preserva1.png",
+    imageDesc: "",
+    description_1: `<h3>Decidir ser madre es una decisión difícil de tomar</h3>
             <p>
               La mujer nace con un número determinado de óvulos, que constituyen
               su reserva ovárica. Esta disminuye con los años, por lo que su
@@ -40,9 +40,29 @@ const url = "/src/assets/salud-mujer/preserva/banner-preserva.png";
                   >las posibilidades de quedarse embarazada se reducen un 5%?</strong
                 >
               </p>
-            </div>
-          </div>
-        </div>
+            </div>`,
+    orientation: 0,
+    description_2: "",
+  },
+];
+---
+
+<BaseLayout>
+  <HeroSmall name={pageTitle} url={url} alternativeText={pageTitle} />
+
+  <div
+    class="items-center max-w-5xl px-10 sm:px-10 md:px-10 lg:mx-auto pt-10 pb-5 service-detail"
+  >
+    <div>
+      <!-- Preserva -->
+      <section>
+        <IconRow imageSrc={content[0].icon} title={content[0].title} />
+        <ImageRow
+          imageSrc={content[1].imageSrc}
+          orientation={content[1].orientation}
+          html={content[1].description_1}
+        />
+
         <div>
           <div>
             <p>*probalidad de embarazo espontáneo tras un año</p>
@@ -68,12 +88,15 @@ const url = "/src/assets/salud-mujer/preserva/banner-preserva.png";
             </p>
           </div>
         </div>
-        <div>
+
+        <!-- Ventajas -->
+        <section>
           <div>
             <h3>Ventajas</h3>
           </div>
-        </div>
-        <div>
+        </section>
+
+        <section class="grid grid-col-1 lg:grid-cols-3 gap-5">
           <div>
             <img src="/src/assets/salud-mujer/preserva/preserva-ventaja1.png" />
             <h4>Tiempo</h4>
@@ -98,8 +121,8 @@ const url = "/src/assets/salud-mujer/preserva/banner-preserva.png";
               tus propios óvulos en edad óptima.
             </p>
           </div>
-        </div>
-        <div>
+        </section>
+        <section class="grid grid-col-1 lg:grid-cols-3 gap-5">
           <div>
             <img src="/src/assets/salud-mujer/preserva/preserva-ventaja4.png" />
             <h4>Hijos más sanos</h4>
@@ -124,7 +147,7 @@ const url = "/src/assets/salud-mujer/preserva/banner-preserva.png";
               tranquilidad de tener hijos saludables en el futuro.
             </p>
           </div>
-        </div>
+        </section>
         <div>
           <div>
             <p>
@@ -136,12 +159,12 @@ const url = "/src/assets/salud-mujer/preserva/banner-preserva.png";
             </p>
           </div>
         </div>
-        <div>
+        <section>
           <div>
             <h3>¿Cómo es el proceso?</h3>
           </div>
-        </div>
-        <div>
+        </section>
+        <div class="grid grid-col-1 lg:grid-cols-2 gap-5">
           <div>
             <img src="/src/assets/salud-mujer/preserva/preserva2.png" />
           </div>
@@ -172,7 +195,9 @@ const url = "/src/assets/salud-mujer/preserva/banner-preserva.png";
             </p>
           </div>
         </div>
-        <div>
+
+        <!-- ¿A quién va dirigido? -->
+        <section class="grid grid-col-1 lg:grid-cols-3 gap-5">
           <div>
             <h4>¿A quién va dirigido?</h4>
             <ul>
@@ -191,8 +216,9 @@ const url = "/src/assets/salud-mujer/preserva/banner-preserva.png";
           <div>
             <img src="/src/assets/salud-mujer/preserva/preserva3.png" />
           </div>
-        </div>
-        <div>
+        </section>
+
+        <section>
           <div>
             <h4>
               ¿Qué son los marcadores de reserva ovárica y como conocerlos?
@@ -206,13 +232,17 @@ const url = "/src/assets/salud-mujer/preserva/banner-preserva.png";
               directamente relacionada con la cantidad de óvulos.
             </p>
           </div>
-        </div>
-        <div>
+        </section>
+
+        <!-- ¿Qué pasa si no Preservas? -->
+        <section>
           <div>
             <h3>¿Qué pasa si no Preservas?</h3>
           </div>
-        </div>
-        <div>
+        </section>
+        <section
+          class="grid grid-col-1 lg:grid-cols-2 gap-5 items-center justify-center"
+        >
           <div>
             <img src="/src/assets/salud-mujer/preserva/preserva4.png" />
             <h4>30 años</h4>
@@ -229,13 +259,15 @@ const url = "/src/assets/salud-mujer/preserva/banner-preserva.png";
               quedarse embarazada cada mes.
             </p>
           </div>
-        </div>
-        <div>
+        </section>
+
+        <!-- ¿A qué edad se debe preservar? -->
+        <section>
           <div>
             <h3>¿A qué edad se debe preservar?</h3>
           </div>
-        </div>
-        <div>
+        </section>
+        <section>
           <div>
             <h4>El buen momento</h4>
             <p>
@@ -271,7 +303,8 @@ const url = "/src/assets/salud-mujer/preserva/banner-preserva.png";
               el futuro.
             </p>
           </div>
-        </div>
+        </section>
+
         <div>
           <div>
             <div>
@@ -283,7 +316,7 @@ const url = "/src/assets/salud-mujer/preserva/banner-preserva.png";
             </div>
           </div>
         </div>
-      </div>
+      </section>
       <div>
         <div>
           <a>
@@ -314,15 +347,19 @@ const url = "/src/assets/salud-mujer/preserva/banner-preserva.png";
         </div>
       </div>
     </div>
+
     <div>
       <div>
         <div>
-          <img src="/src/assets/salud-mujer/preserva/icon-ovodonacion.png" /><h2>
-            Donación de óvulos
-          </h2>
+          <IconRow
+            title="Donación de óvulos"
+            imageSrc="/src/assets/salud-mujer/preserva/icon-ovodonacion.png"
+          />
         </div>
       </div>
-      <div>
+      <div
+        class="grid grid-col-1 lg:grid-cols-2 gap-5 items-center justify-center"
+      >
         <div>
           <img src="/src/assets/salud-mujer/preserva/donacion1.png" />
         </div>
@@ -337,7 +374,9 @@ const url = "/src/assets/salud-mujer/preserva/banner-preserva.png";
           </p>
         </div>
       </div>
-      <div>
+      <section
+        class="grid grid-col-1 lg:grid-cols-2 gap-5 items-center justify-center"
+      >
         <div>
           <h3>¿Qué es?</h3>
           <p>
@@ -382,8 +421,9 @@ const url = "/src/assets/salud-mujer/preserva/banner-preserva.png";
         <div>
           <img src="/src/assets/salud-mujer/preserva/donacion2.png" />
         </div>
-      </div>
-      <div>
+      </section>
+
+      <section>
         <div>
           <h3>Ley de donación de óvulos</h3>
           <p>
@@ -395,8 +435,11 @@ const url = "/src/assets/salud-mujer/preserva/banner-preserva.png";
             informada y no renumerada.
           </p>
         </div>
-      </div>
-      <div>
+      </section>
+
+      <section
+        class="grid grid-col-1 lg:grid-cols-3 gap-5 items-center justify-center"
+      >
         <div>
           <img src="/src/assets/salud-mujer/preserva/donacion3.png" />
           <p>
@@ -417,8 +460,11 @@ const url = "/src/assets/salud-mujer/preserva/banner-preserva.png";
             escrito y firmado entre la donante y el centro médico
           </p>
         </div>
-      </div>
-      <div>
+      </section>
+
+      <section
+        class="grid grid-col-1 lg:grid-cols-2 gap-5 items-center justify-center"
+      >
         <div>
           <h3>Estudio previo de la donante</h3>
           <p>
@@ -460,18 +506,22 @@ const url = "/src/assets/salud-mujer/preserva/banner-preserva.png";
         <div>
           <img src="/src/assets/salud-mujer/preserva/donacion6.png" />
         </div>
-      </div>
+      </section>
+
       <div>
         <div>
           <h3>Proceso de donación</h3>
         </div>
       </div>
-      <div>
+
+      <section
+        class="grid grid-col-1 lg:grid-cols-2 gap-5 items-center justify-center"
+      >
         <div>
           <img src="/src/assets/salud-mujer/preserva/donacion7.png" />
         </div>
         <div>
-          <h4><span>1</span>Durante el proceso</h4>
+          <h4><span class="number-round">1</span>Durante el proceso</h4>
           <p>
             A diferencia de un ciclo normal, en el que la mujer produce un único
             óvulo cada mes, el proceso de la donación consiste en estimular los
@@ -495,11 +545,14 @@ const url = "/src/assets/salud-mujer/preserva/banner-preserva.png";
             o
           </p>
         </div>
-      </div>
-      <div>
+      </section>
+
+      <section
+        class="grid grid-col-1 lg:grid-cols-2 gap-5 items-center justify-center"
+      >
         <div>
           <h4>
-            <span>2</span>Tras el proceso
+            <span class="number-round">2</span>Tras el proceso
           </h4>
           <p>
             Una vez finalizado el proceso la donante puede hacer vida normal,
@@ -545,10 +598,30 @@ const url = "/src/assets/salud-mujer/preserva/banner-preserva.png";
           </ul>
         </div>
         <div>
-          <img src="/src/assets/salud-mujer/preserva/donacion8.png" class="img-proposito" />
+          <img
+            src="/src/assets/salud-mujer/preserva/donacion8.png"
+            class="img-proposito"
+          />
         </div>
-      </div>
+      </section>
     </div>
     <MoreInformacionForm />
-  </div></BaseLayout
->
+  </div>
+</BaseLayout>
+
+<style>
+  .number-round {
+    color: #ffffff;
+    background: #feb44c;
+    padding: 6px;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    float: left;
+    margin-right: 17px;
+    margin-top: -4px;
+    display: block;
+    text-align: center;
+    font-size: 18px;
+  }
+</style>
