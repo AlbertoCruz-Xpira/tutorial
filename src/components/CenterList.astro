@@ -1,34 +1,35 @@
---- 
+---
 export interface Address {
-    street: string;
-    city: string;
-    postal_code: string;
-    country: string;
+  street: string;
+  city: string;
+  postal_code: string;
+  country: string;
 }
 
 export interface Location {
-    latitude: number;
-    longitude: number;
+  latitude: number;
+  longitude: number;
 }
 
 export interface OpeningHours {
-    day: string;
-    open: Date;
-    close: Date;
+  day: string;
+  open: Date;
+  close: Date;
 }
 
 export interface Center {
-    name: string;
-    address: Address;
-    phone: string;
-    distance_km: number;
-    location: Location;
-    opening_hours: OpeningHours[];
+  name: string;
+  address: Address;
+  phone: string;
+  distance_km: number;
+  location: Location;
+  opening_hours: OpeningHours[];
 }
 
 export interface Props {
-    centers: Center[];
+  centers: Center[];
 }
+
 
 const { centers } = Astro.props;
 ---
@@ -39,98 +40,257 @@ const { centers } = Astro.props;
   </div>
 </div>
 
+<div x-data="{ view: 'list' }">
+  <!-- Tabs para cambiar entre vistas -->
+  <div>
+    <button
+      class="bg-[#009494] text-white
+        text-[0.93rem]
+        inline-flex p-2
+        transform hover:bg-[#007e7e]
+        text-white p-[0.9375rem] cursor-pointer
+        rounded-full"
+      @click="view = 'list'">Listado</button
+    >
+    <button
+      class="bg-[#009494] text-white
+        text-[0.93rem]
+        inline-flex p-2
+        transform hover:bg-[#007e7e]
+        text-white p-[0.9375rem] cursor-pointer
+        rounded-full"
+      @click="view = 'map'; initMap()">Mapa</button
+    >
+  </div>
+
+  <!-- Vista de listado -->
+  <div x-show="view === 'list'">
+    <div id="listaResultados" class="listaResultados">
+      <div id="listado ">
+        {
+          centers.map((center, index) => (
+            <div
+              class="bg-white p-5 grid grid-cols-2 mb-1"
+              id={`resultado${index}`}
+            >
+              <div class="leftLocation">
+                <div class="imgLocationList" />
+                <div class="textLocationList grid grid-col-1 gap-2">
+                  <div class="h5 bold_textLocationList">{center.name}</div>
+
+                  {/* ADDRESS */}
+                  <div class="flex gap-1">
+                    <span class="bold_textLocationList">
+                      {center.address.street}
+                    </span>
+                    <span>{center.address.postal_code}</span>
+                    <span>{center.address.city}</span>
+                  </div>
+
+                  {/* PHONE */}
+                  <div>
+                    <span class="bold_textLocationList">TELÉFONO: </span>
+                    {center.phone}
+                  </div>
+
+                  {/* DISTANCE */}
+                  <div>
+                    <span class="bold_textLocationList">DISTANCIA:</span>{" "}
+                    {center.distance_km}
+                  </div>
+                </div>
+              </div>
+              <div class="rightLocation grid grid-col-1">
+                <div>
+                  <a
+                    href="#"
+                    class="color-turquoise border-1 px-3 py-2 rounded-full hover:bg-[#009494] hover:text-white"
+                  >
+                    Pedir cita
+                  </a>
+                </div>
+
+                <div class="horario_consulta">
+                  <a
+                    class="btn_popup"
+                    href="javascript:void(0)"
+                    onclick="toggleVisibility('horario0')"
+                    class="color-turquoise border-1 px-3 py-2 rounded-full hover:bg-[#009494] hover:text-white"
+                  >
+                    Ver horario de consulta
+                  </a>
+                </div>
+              </div>
+              <div
+                id={`horario${index}`}
+                style="display:none;"
+                class="table-responsive-lg"
+              >
+                <table class="table">
+                  <tbody>
+                    <tr>
+                      <th>L</th>
+                      <th>M</th>
+                      <th>X</th>
+                      <th>J</th>
+                      <th>V</th>
+                      <th>S</th>
+                      <th>D</th>
+                      <th>F</th>
+                      <th>Desde</th>
+                      <th>Hasta</th>
+                    </tr>
+                    <tr>
+                      <td colspan="8">Cerrado</td>
+                      <td>00:00</td>
+                      <td>00:00</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          ))
+        }
+      </div>
+    </div>
+  </div>
+
+  <!-- Vista del mapa -->
+  <div x-show="view === 'map'">
+    <div id="map" style="width: 100%; height: 400px;"></div>
+  </div>
+</div>
+
+<div id="contenedorCantidadResultados">
+  <div class="resultados_location">
+    <p>Se han encontrado {centers.length} resultados</p>
+  </div>
+</div>
+
 {/* TABS */}
 <div class="flex justify-center space-x-4 my-4">
-  <button id="liMap" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" onclick="ShowMap()">
+  <button
+    id="liMap"
+    class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+    onclick="ShowMap()"
+  >
     Mapa
   </button>
-  <button id="liCenterList" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" onclick="ShowCenterList()">
+  <button
+    id="liCenterList"
+    class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+    onclick="ShowCenterList()"
+  >
     Listado
   </button>
 </div>
 
-
 <div id="resultadoBusqueda">
   <div id="listaResultados" class="listaResultados">
-    <div id="listado "> {centers.map((center, index) => ( <div class="bg-white p-5 grid grid-cols-2 mb-1" id={`resultado${index}`}>
-        <div class="leftLocation">
-          <div class="imgLocationList"></div>
-          <div class="textLocationList grid grid-col-1 gap-2">
-            <div class="h5 bold_textLocationList">{center.name}</div>
+    <div id="listado ">
+      {
+        centers.map((center, index) => (
+          <div
+            class="bg-white p-5 grid grid-cols-2 mb-1"
+            id={`resultado${index}`}
+          >
+            <div class="leftLocation">
+              <div class="imgLocationList" />
+              <div class="textLocationList grid grid-col-1 gap-2">
+                <div class="h5 bold_textLocationList">{center.name}</div>
 
-            {/* ADDRESS */}
-            <div class="flex gap-1">
-              <span class="bold_textLocationList">{center.address.street}</span>
-              <span>{center.address.postal_code}</span>
-              <span>{center.address.city}</span>
+                {/* ADDRESS */}
+                <div class="flex gap-1">
+                  <span class="bold_textLocationList">
+                    {center.address.street}
+                  </span>
+                  <span>{center.address.postal_code}</span>
+                  <span>{center.address.city}</span>
+                </div>
+
+                {/* PHONE */}
+                <div>
+                  <span class="bold_textLocationList">TELÉFONO: </span>
+                  {center.phone}
+                </div>
+
+                {/* DISTANCE */}
+                <div>
+                  <span class="bold_textLocationList">DISTANCIA:</span>{" "}
+                  {center.distance_km}
+                </div>
+              </div>
             </div>
+            <div class="rightLocation grid grid-col-1">
+              <div>
+                <a
+                  href="#"
+                  class="color-turquoise border-1 px-3 py-2 rounded-full hover:bg-[#009494] hover:text-white"
+                >
+                  Pedir cita
+                </a>
+              </div>
 
-            {/* PHONE */}
-            <div>
-              <span class="bold_textLocationList">TELÉFONO: </span>{center.phone}
+              <div class="horario_consulta">
+                <a
+                  class="btn_popup"
+                  href="javascript:void(0)"
+                  onclick="toggleVisibility('horario0')"
+                  class="color-turquoise border-1 px-3 py-2 rounded-full hover:bg-[#009494] hover:text-white"
+                >
+                  Ver horario de consulta
+                </a>
+              </div>
             </div>
-
-            {/* DISTANCE */}
-            <div>
-              <span class="bold_textLocationList">DISTANCIA:</span> {center.distance_km}
+            <div
+              id={`horario${index}`}
+              style="display:none;"
+              class="table-responsive-lg"
+            >
+              <table class="table">
+                <tbody>
+                  <tr>
+                    <th>L</th>
+                    <th>M</th>
+                    <th>X</th>
+                    <th>J</th>
+                    <th>V</th>
+                    <th>S</th>
+                    <th>D</th>
+                    <th>F</th>
+                    <th>Desde</th>
+                    <th>Hasta</th>
+                  </tr>
+                  <tr>
+                    <td colspan="8">Cerrado</td>
+                    <td>00:00</td>
+                    <td>00:00</td>
+                  </tr>
+                </tbody>
+              </table>
             </div>
           </div>
-        </div>
-        <div class="rightLocation grid grid-col-1">
-            <div>
-                <a href="#" class="color-turquoise border-1 px-3 py-2 rounded-full hover:bg-[#009494] hover:text-white">
-                    Pedir cita
-                </a>
-            </div>
-
-            <div class="horario_consulta">
-                <a class="btn_popup" href="javascript:void(0)" onclick="toggleVisibility('horario0')"
-                class="color-turquoise border-1 px-3 py-2 rounded-full hover:bg-[#009494] hover:text-white">
-                    Ver horario de consulta
-                    </a>
-            </div>
-        </div>
-        <div id={`horario${index}`} style="display:none;" class="table-responsive-lg">
-          <table class="table">
-            <tbody>
-              <tr>
-                <th>L</th>
-                <th>M</th>
-                <th>X</th>
-                <th>J</th>
-                <th>V</th>
-                <th>S</th>
-                <th>D</th>
-                <th>F</th>
-                <th>Desde</th>
-                <th>Hasta</th>
-              </tr>
-              <tr>
-                <td colspan="8">Cerrado</td>
-                <td>00:00</td>
-                <td>00:00</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-      </div> ))} </div>
+        ))
+      }
+    </div>
   </div>
 </div>
 
 <style>
-    .itemList {
-        background:white;
-    }
-    .itemList:not(:last) {
-        border-bottom: 1px solid grey;
-    }
+  .itemList {
+    background: white;
+  }
+  .itemList:not(:last) {
+    border-bottom: 1px solid grey;
+  }
 </style>
 
 <script>
-    function toggleVisibility(id: string): void {
-        const element = document.getElementById(id);
-        if (element) {
-            element.style.display = element.style.display === "none" ? "block" : "none";
-        }
+  function toggleVisibility(id: string): void {
+    const element = document.getElementById(id);
+    if (element) {
+      element.style.display =
+        element.style.display === "none" ? "block" : "none";
     }
+  }
 </script>
