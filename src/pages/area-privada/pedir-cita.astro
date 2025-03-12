@@ -1,58 +1,166 @@
 ---
-import BaseLayout from "/src/layouts/BaseLayout.astro";
-import PrivateAreaLayout from "/src/layouts/PrivateAreaLayout.astro";
+import BaseLayout from "../../layouts/BaseLayout.astro";
 const pageTitle = "Pedir cita";
 ---
 
-<PrivateAreaLayout pageTitle={pageTitle}>
-  <div class="max-w-4xl mx-auto p-6 bg-white rounded-lg">
-    <p>
-      Escribe aquí tu consulta. El departamento médico te contestará en la
-      dirección de correo indicada.
-    </p>
-    <form>
-      <div class="grid grid-cols-1 gap-4">
-        <div>
-          <label
-            for="email"
-            class="block text-sm font-medium text-gray-700 mt-4"
-            >Mi correo</label
-          >
+<BaseLayout pageTitle={pageTitle}>
+  <div class="max-w-4xl mx-auto my-10 p-6 bg-white rounded-lg">
+    <div id="quote_PedirCita" class="row">
+      <div class="quote_solicitudCita col-md-12">
+        <form
+          id="editUserForm"
+          method="post"
+          autocomplete="off"
+          class="grid grid-col-1 gap-3"
+        >
+          <h3>Solicitud de cita</h3>
+
           <input
-            type="email"
-            id="email"
-            name="email"
-            class="mt-1 p-2 w-full border rounded-md"
+            name="__RequestVerificationToken"
+            type="hidden"
+            value="LUfekn-sZtDgc5rNG4sokSdhITx_7hiWmoHfgqutKO8DZ1MWSraKFjaQLZ7KXeBFuvioKx3bceUsmNLeB4p0UcncJm4KOdju4DrA56G7LXkI4Lql8n0UOooQ6lZbqaTs0"
           />
+          <div class="form-group"></div>
 
-          <label
-            for="consulta"
-            class="block text-sm font-medium text-gray-700 mt-4"
-            >Mi consulta</label
-          >
-          <textarea
-            type="text"
-            id="consulta"
-            name="consulta"
-            class="mt-1 p-2 w-full border rounded-md"></textarea>
-        </div>
-      </div>
+          <div class="nombreLab mb-2">
+            <h3><label>INSTITUTO ANDALUZ DE PEDIATRIA</label></h3>
 
-      <div class="mt-6">
-        <button
-          type="submit"
-          class="bg-[#009494] font-bold uppercase
+            <div class="form-group">
+              <div>
+                <input
+                  type="text"
+                  name="Especialidad"
+                  id="Especialidad"
+                  value=""
+                  hidden=""
+                />
+              </div>
+            </div>
+
+            <h4><label>MATILDE CASANOVA S/N, 41980 ALGABA</label></h4>
+          </div>
+
+          <h4>1-Seleccione su preferencia de fecha:</h4>
+          <div class="dateCita grid grid-col-1 lg:grid-cols-2 gap-5">
+            <div class="form-group">
+              <div class="col-xs-3">
+                <h5>
+                  <label
+                    class="block text-sm font-medium text-gray-700"
+                    for="FechaDesde">Fecha Desde:</label
+                  >
+                </h5>
+              </div>
+              <div class="col-xs-9">
+                <input
+                  id="FechaDesde"
+                  min="2025-3-12"
+                  name="FechaDesde"
+                  required="required"
+                  type="date"
+                  value="2025-3-12"
+                  onclick="fijarMaximoDiaDesde()"
+                  class="mt-1 p-2 w-full border rounded-md"
+                />
+              </div>
+            </div>
+            <div class="form-group col-md-6">
+              <div class="col-xs-3">
+                <h5>
+                  <label
+                    class="block text-sm font-medium text-gray-700"
+                    for="FechaHasta">Fecha Hasta:</label
+                  >
+                </h5>
+              </div>
+              <div class="col-xs-9">
+                <input
+                  id="FechaHasta"
+                  name="FechaHasta"
+                  required="required"
+                  type="date"
+                  onclick="fijarMinimoDiaHasta()"
+                  class="mt-1 p-2 w-full border rounded-md"
+                />
+              </div>
+            </div>
+          </div>
+          <h4>2-Seleccione su preferencia de horario:</h4>
+          <div class="form-group row preferHorario">
+            <div class="col-md-6">
+              <div class="col-xs-3 labelHorario">
+                <label
+                  for="IntervaloHorario"
+                  class="block text-sm font-medium text-gray-700"
+                  >Preferencia horaria:</label
+                >
+              </div>
+              <div class="col-xs-9">
+                <select
+                  id="IntervaloHorario"
+                  name="IntervaloHorario"
+                  required="required"
+                  class="mt-1 p-1 w-full border border-[#dfdfdf] rounded-md text-[0.8rem]"
+                  ><option value="Mañana y Tarde">Cualquiera</option>
+                  <option value="Mañana ">Mañana</option>
+                  <option value="Tarde">Tarde</option>
+                </select>
+              </div>
+            </div>
+            <div class="col-md-6"></div>
+          </div>
+
+          <div class="form-group">
+            <div>
+              <input
+                type="text"
+                name="codEspecialidad"
+                id="codEspecialidad"
+                value="00"
+                hidden=""
+              />
+            </div>
+          </div>
+
+          <div class="form-group">
+            <div>
+              <input
+                type="text"
+                name="NombreCentro"
+                id="NombreCentro"
+                value="INSTITUTO ANDALUZ DE PEDIATRIA"
+                hidden=""
+              />
+            </div>
+          </div>
+
+          <div class="form-group">
+            <div>
+              <input
+                type="text"
+                name="DireccionCentro"
+                id="DireccionCentro"
+                value="MATILDE CASANOVA S/N, 41980 ALGABA"
+                hidden=""
+              />
+            </div>
+          </div>
+
+          <div class="botonPedirCita">
+            <button
+              class="btn_popup bg-[#009494] font-bold uppercase
                   text-white text-[0.9rem]
                   tracking-widest px-5 py-3
                   transform transition-all duration-300 hover:scale-110 hover:bg-[#007e7e]
                   inline-flex items-center cursor-pointer rounded-full"
-        >
-          Enviar al doctor
-        </button>
+              onclick="abrirModalConfirmacionCita()">Confirmar</button
+            >
+          </div>
+        </form>
       </div>
-    </form>
+    </div>
   </div>
-</PrivateAreaLayout>
+</BaseLayout>
 
 <style>
   form input,
