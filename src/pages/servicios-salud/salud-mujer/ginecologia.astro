@@ -1,12 +1,12 @@
 ---
 import BaseLayout from "../../../layouts/BaseLayout.astro";
 import HeroSmall from "/src/components/HeroSmall.astro";
-const pageTitle = "Ginecología";
-const url = "/src/assets/salud-mujer/ginecologia/banner-ginecologia.jpg";
 import IconRow from "/src/components/widgets/IconRow.astro";
 import ImageRow from "/src/components/widgets/ImageRow.astro";
 import HtmlBlock from "/src/components/simple/HtmlBlock.astro";
 
+const pageTitle = "Ginecología";
+const url = "/src/assets/salud-mujer/ginecologia/banner-ginecologia.jpg";
 import { content } from "./ginecologia-content.ts";
 ---
 
@@ -21,7 +21,8 @@ import { content } from "./ginecologia-content.ts";
       <IconRow imageSrc={content[0].icon} title={content[0].title} />
       <ImageRow
         imageSrc={content[0].imageSrc}
-        html={content[1].description_1}
+        orientation={content[0].orientation}
+        html={content[0].description_1}
       />
     </section>
 
@@ -42,6 +43,7 @@ import { content } from "./ginecologia-content.ts";
       <ImageRow
         imageSrc={content[2].imageSrc}
         imageDesc={content[2].imageDesc}
+        orientation={content[2].orientation}
         html={content[2].description_1}
       />
       <ImageRow
@@ -51,21 +53,24 @@ import { content } from "./ginecologia-content.ts";
       />
       <ImageRow
         imageSrc={content[4].imageSrc}
+        orientation={content[4].orientation}
         html={content[4].description_1}
       />
       <ImageRow
         imageSrc={content[5].imageSrc}
-        orientation={content[3].orientation}
+        orientation={content[5].orientation}
         html={content[5].description_1}
       />
       <ImageRow
         imageSrc={content[6].imageSrc}
+        orientation={content[6].orientation}
         html={content[6].description_1}
       />
       <!-- ESTÁTICO -->
       <HtmlBlock html={content[7].description_1} />
       <ImageRow
         imageSrc={content[8].imageSrc}
+        orientation={content[8].orientation}
         html={content[8].description_1}
       />
     </section>

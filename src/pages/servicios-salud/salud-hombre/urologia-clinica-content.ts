@@ -271,7 +271,7 @@ export const content: BaseContent[] = [
           </span>
         </li>
       </ul>
-      <h4>Valoración diagnóstica</h4>
+      <h4 class="py-3">Valoración diagnóstica</h4>
       <ul>
         <li>
           <span>

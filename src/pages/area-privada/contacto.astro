@@ -3,7 +3,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import PrivateAreaLayout from '/src/layouts/PrivateAreaLayout.astro';
 const pageTitle = "Área privada";
 ---
-<PrivateAreaLayout>
+<PrivateAreaLayout pageTitle={pageTitle}>
   <!-- Botones de contacto -->
   <div class="max-w-4xl mx-auto mt-6 flex flex-col justify-center md:flex-row gap-4 bg-white">
    <div class="grid grid-col-1 gap-5">

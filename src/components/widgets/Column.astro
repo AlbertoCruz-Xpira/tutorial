@@ -2,6 +2,6 @@
 const {number} = Astro.props;
 ---
 
-<section class=`grid grid-col-1 lg:grid-cols-${number} gap-10 text-[0.7rem]`>
+<section class={`grid grid-col-1 md:grid-cols-${number} gap-10 text-[0.7rem]`}>
     <slot/>
 </section>

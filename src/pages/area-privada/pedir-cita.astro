@@ -1,0 +1,66 @@
+---
+import BaseLayout from "/src/layouts/BaseLayout.astro";
+import PrivateAreaLayout from "/src/layouts/PrivateAreaLayout.astro";
+const pageTitle = "Pedir cita";
+---
+
+<PrivateAreaLayout pageTitle={pageTitle}>
+  <div class="max-w-4xl mx-auto p-6 bg-white rounded-lg">
+    <p>
+      Escribe aquí tu consulta. El departamento médico te contestará en la
+      dirección de correo indicada.
+    </p>
+    <form>
+      <div class="grid grid-cols-1 gap-4">
+        <div>
+          <label
+            for="email"
+            class="block text-sm font-medium text-gray-700 mt-4"
+            >Mi correo</label
+          >
+          <input
+            type="email"
+            id="email"
+            name="email"
+            class="mt-1 p-2 w-full border rounded-md"
+          />
+
+          <label
+            for="consulta"
+            class="block text-sm font-medium text-gray-700 mt-4"
+            >Mi consulta</label
+          >
+          <textarea
+            type="text"
+            id="consulta"
+            name="consulta"
+            class="mt-1 p-2 w-full border rounded-md"></textarea>
+        </div>
+      </div>
+
+      <div class="mt-6">
+        <button
+          type="submit"
+          class="bg-[#009494] font-bold uppercase
+                  text-white text-[0.9rem]
+                  tracking-widest px-5 py-3
+                  transform transition-all duration-300 hover:scale-110 hover:bg-[#007e7e]
+                  inline-flex items-center cursor-pointer rounded-full"
+        >
+          Enviar al doctor
+        </button>
+      </div>
+    </form>
+  </div>
+</PrivateAreaLayout>
+
+<style>
+  form input,
+  form textarea {
+    border-color: #dfdfdf;
+    font-size: 0.8rem;
+  }
+  form label {
+    color: var(--color-turquoise-500);
+  }
+</style>

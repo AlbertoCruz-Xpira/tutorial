@@ -1,34 +1,69 @@
 ---
-import HtmlBlock from "/src/components/simple/HtmlBlock.astro";
+import HtmlBlock from "../../components/simple/HtmlBlock.astro";
 const { imageSrc, imageDesc, orientation, html } = Astro.props;
+
+const mode = orientation;
+// mode = 0: Modo imagen a la izquierda
+// mode = 1: Modo imagen a la derecha
+// mode = 2: Modo imagen completa
 ---
 
-{
-  orientation > 0 ? (
-    // IMAGEN DERECHA
-    <div class="grid grid-cols-12 gap-4">
-      <div class="col-span-12 md:col-span-7">
-        <HtmlBlock html={html} />
+<div class="px-2">
+  {
+    orientation === 0 && (
+      // Imagen a la izquierda
+      <div class="grid grid-cols-12 gap-4">
+        <div class="col-span-12 md:col-span-6 grid items-center justify-center">
+          <img src={imageSrc} alt={imageDesc} />
+          {imageDesc && (
+            <p class="py-2">
+              <HtmlBlock html={imageDesc} />
+            </p>
+          )}
+        </div>
+        {html && (
+          <div class="col-span-12 md:col-span-6 grid md:mt-15">
+            <HtmlBlock html={html} />
+          </div>
+        )}
       </div>
-      <div class="col-span-12 md:col-span-5">
-        <img src={imageSrc} alt="Image description" />
-        <p class="py-2">
-          <HtmlBlock html={imageDesc} />
-        </p>
+    )
+  }
+
+  {
+    orientation === 1 && (
+      // Imagen a la derecha
+      <div class="grid grid-cols-12 gap-4">
+        {html && (
+          <div class="col-span-12 md:col-span-6 grid md:mt-15">
+            <HtmlBlock html={html} />
+          </div>
+        )}
+        <div class="col-span-12 md:col-span-6 grid items-center justify-center">
+          <img src={imageSrc} alt={imageDesc} />
+          {imageDesc && (
+            <p class="py-2">
+              <HtmlBlock html={imageDesc} />
+            </p>
+          )}
+        </div>
       </div>
-    </div>
-  ) : (
-    // IMAGEN IZQUIERDA
-    <div class="grid grid-cols-12 gap-4">
-      <div class="col-span-12 md:col-span-5">
-        <img src={imageSrc} alt="Image description" />
-        <p class="py-2">
-          <HtmlBlock html={imageDesc} />
-        </p>
+    )
+  }
+
+  {
+    orientation === 2 && (
+      // Imagen en modo full
+      <div class="grid grid-cols-1 gap-4">
+        <div class="grid items-center justify-center">
+          <img class="w-full" src={imageSrc} alt={imageDesc} />
+          {imageDesc && (
+            <p class="py-2">
+              <HtmlBlock html={imageDesc} />
+            </p>
+          )}
+        </div>
       </div>
-      <div class="col-span-12 md:col-span-7">
-        <HtmlBlock html={html} />
-      </div>
-    </div>
-  )
-}
+    )
+  }
+</div>

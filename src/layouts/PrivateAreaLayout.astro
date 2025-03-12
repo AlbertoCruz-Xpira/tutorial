@@ -1,30 +1,34 @@
 ---
-import BaseLayout from '../layouts/BaseLayout.astro';
-import PrivateAreaMenu from '../components/PrivateAreaMenu.astro';
-const pageTitle = "Área privada";
+import BaseLayout from "../layouts/BaseLayout.astro";
+import PrivateAreaMenu from "../components/PrivateAreaMenu.astro";
+const { pageTitle } = Astro.props;
 const nombre = "Iván Rodríguez";
 ---
 
-<BaseLayout>
-    <div class="items-center max-w-5xl px-10 sm:px-10 md:px-10 lg:mx-auto pt-10 pb-10">
-        <h2 class="mb-5">Bienvenido/a a tu área asegurado <strong>{nombre}</strong></h2>
-        <div class="grid grid-cols-12 gap-4">
-            <div class="col-span-12 md:col-span-4">
-                <PrivateAreaMenu/>
-            </div>
-            <div class="col-span-12 md:col-span-8 bg-white">
-                <slot/>
-            </div>
-        </div>
+<BaseLayout pageTitle={pageTitle}>
+  <div
+    class="items-center max-w-5xl px-10 sm:px-10 md:px-10 lg:mx-auto pt-10 pb-10"
+  >
+    <h2 class="mb-5">
+      Bienvenido/a a tu área asegurado <strong>{nombre}</strong>
+    </h2>
+    <div class="grid grid-cols-12 gap-4">
+      <div class="col-span-12 md:col-span-4">
+        <PrivateAreaMenu />
+      </div>
+      <div class="col-span-12 md:col-span-8 bg-white">
+        <slot />
+      </div>
     </div>
+  </div>
 </BaseLayout>
 
 <style>
-    h2 {
-        font-size: 1.3rem;
-        font-weight: 300;
-    }
-    strong {
-        font-weight: bold;
-    }
+  h2 {
+    font-size: 1.3rem;
+    font-weight: 300;
+  }
+  strong {
+    font-weight: bold;
+  }
 </style>

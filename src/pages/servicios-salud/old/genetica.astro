@@ -1,0 +1,99 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import HeroSmall from "/src/components/HeroSmall.astro";
+import MoreInformacionForm from "../../components/MoreInformacionForm.astro";
+import IconRow from "/src/components/widgets/IconRow.astro";
+import IconColumn from "/src/components/widgets/IconColumn.astro";
+import ImageRow from "/src/components/widgets/ImageRow.astro";
+import Column from "/src/components/widgets/Column.astro";
+import { content } from "./old/genetica-content";
+
+const pageTitle = "Genética";
+const imageSrc = "/src/assets/genetica/banner-genetica1.jpg";
+---
+
+<BaseLayout>
+  <HeroSmall name={pageTitle} url={imageSrc} alternativeText={pageTitle} />
+
+
+
+  <div class="items-center max-w-5xl mx-auto my-10 px-5 gap-20 grid grid-cols-1">
+    {
+      content.map((section, sectionIndex) => (
+        <section data-key={sectionIndex} class="section">
+          {section.rows.map((row, rowIndex) => (
+            <section data-key={rowIndex} class="row">
+              {row.length > 1 ? (
+                <Column number={row.length}>
+                  {row.map((col: any, colIndex: number) => {
+                    return (
+                      <div data-key={colIndex}>
+                        {col.component === "IconRow" ? (
+                          <IconRow imageSrc={col.imageSrc} title={col.title} />
+                        ) : col.component === "IconColumn" ? (
+                          <IconColumn
+                            imageSrc={col.imageSrc}
+                            title={col.title}
+                            text={col.text}
+                          />
+                        ) : col.component === "ImageRow" ? (
+                          <ImageRow imageSrc={col.imageSrc} html={col.html} />
+                        ) : null}
+                      </div>
+                    );
+                  })}
+                </Column>
+              ) : (
+                row.map((col: any, colIndex: number) => (
+                  <div data-key={colIndex}>
+                    {col.component === "IconRow" ? (
+                      <IconRow imageSrc={col.imageSrc} title={col.title} />
+                    ) : col.component === "IconColumn" ? (
+                      <IconColumn
+                        imageSrc={col.imageSrc}
+                        title={col.title}
+                        text={col.text}
+                      />
+                    ) : col.component === "ImageRow" ? (
+                      <ImageRow imageSrc={col.imageSrc} html={col.html} />
+                    ) : null}
+                  </div>
+                ))
+              )}
+            </section>
+          ))}
+        </section>
+      ))
+    }
+
+    <MoreInformacionForm />
+  </div>
+</BaseLayout>
+
+<style>
+  h2 {
+    color: var(--color-turquoise-500);
+    margin-bottom: 20px;
+  }
+  h3 {
+    color: var(--color-turquoise-500);
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+    font-weight: 400;
+  }
+  h4 {
+    color: var(--color-turquoise-500);
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+    font-weight: 400;
+  }
+  h3.text-orange {
+    color: #feb44c;
+  }
+  p {
+    margin-bottom: 10px;
+  }
+  .title {
+    margin-bottom: 2px;
+  }
+</style>

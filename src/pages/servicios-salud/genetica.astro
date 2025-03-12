@@ -12,58 +12,192 @@ const pageTitle = "Genética";
 const imageSrc = "/src/assets/genetica/banner-genetica1.jpg";
 ---
 
-<BaseLayout>
+<BaseLayout pageTitle={pageTitle}>
   <HeroSmall name={pageTitle} url={imageSrc} alternativeText={pageTitle} />
 
-  <div class="items-center max-w-5xl mx-auto my-10 px-5 gap-20 grid grid-cols-1">
-    {
-      content.map((section, sectionIndex) => (
-        <section data-key={sectionIndex} class="section">
-          {section.rows.map((row, rowIndex) => (
-            <section data-key={rowIndex} class="row">
-              {row.length > 1 ? (
-                <Column number={row.length}>
-                  {row.map((col: any, colIndex: number) => {
-                    return (
-                      <div data-key={colIndex}>
-                        {col.component === "IconRow" ? (
-                          <IconRow imageSrc={col.imageSrc} title={col.title} />
-                        ) : col.component === "IconColumn" ? (
-                          <IconColumn
-                            imageSrc={col.imageSrc}
-                            title={col.title}
-                            text={col.text}
-                          />
-                        ) : col.component === "ImageRow" ? (
-                          <ImageRow imageSrc={col.imageSrc} html={col.html} />
-                        ) : null}
-                      </div>
-                    );
-                  })}
-                </Column>
-              ) : (
-                row.map((col: any, colIndex: number) => (
-                  <div data-key={colIndex}>
-                    {col.component === "IconRow" ? (
-                      <IconRow imageSrc={col.imageSrc} title={col.title} />
-                    ) : col.component === "IconColumn" ? (
-                      <IconColumn
-                        imageSrc={col.imageSrc}
-                        title={col.title}
-                        text={col.text}
-                      />
-                    ) : col.component === "ImageRow" ? (
-                      <ImageRow imageSrc={col.imageSrc} html={col.html} />
-                    ) : null}
-                  </div>
-                ))
-              )}
-            </section>
-          ))}
-        </section>
-      ))
-    }
+  <div
+    class="items-center max-w-5xl px-10 sm:px-10 md:px-10 lg:mx-auto pt-10 pb-5 service-detail"
+  >
+    <!-- Nutrición Personalizada -->
+    <section>
+      <IconRow imageSrc={content[0].icon} title={content[0].title} />
 
+      <Column number="4">
+        <IconColumn
+          imageSrc={content[1].imageSrc}
+          title={content[1].title}
+          text={content[1].description_1}
+        />
+
+        <IconColumn
+          imageSrc={content[2].imageSrc}
+          title={content[2].title}
+          text={content[2].description_1}
+        />
+
+        <IconColumn
+          imageSrc={content[3].imageSrc}
+          title={content[3].title}
+          text={content[3].description_1}
+        />
+
+        <IconColumn
+          imageSrc={content[4].imageSrc}
+          title={content[4].title}
+          text={content[4].description_1}
+        />
+      </Column>
+    </section>
+
+    <!-- Cardio -->
+    <section>
+      <IconRow imageSrc={content[5].icon} title={content[5].title} />
+
+      <Column number="3">
+        <IconColumn
+          imageSrc={content[6].imageSrc}
+          title={content[6].title}
+          text={content[6].description_1}
+        />
+
+        <IconColumn
+          imageSrc={content[7].imageSrc}
+          title={content[7].title}
+          text={content[7].description_1}
+        />
+
+        <IconColumn
+          imageSrc={content[8].imageSrc}
+          title={content[8].title}
+          text={content[8].description_1}
+        />
+      </Column>
+    </section>
+
+    <!-- Edad y salud -->
+    <section id="edadsalud">
+      <IconRow imageSrc={content[9].icon} title={content[9].title} />
+
+      <ImageRow
+        imageSrc={content[10].imageSrc}
+        html={content[10].description_1}
+      />
+    </section>
+
+    <!-- Bienestar -->
+    <section id="bienestar">
+      <IconRow imageSrc={content[11].icon} title={content[11].title} />
+
+      <section class="grid grid-col-1 lg:grid-cols-2 gap-10 text-[0.7rem]">
+        <IconColumn
+          imageSrc={content[12].imageSrc}
+          title={content[12].title}
+          text={content[12].description_1}
+        />
+
+        <IconColumn
+          imageSrc={content[13].imageSrc}
+          title={content[13].title}
+          text={content[13].description_1}
+        />
+      </section>
+    </section>
+
+    <!-- Rendimiento -->
+    <section id="rendimiento">
+      <IconRow imageSrc={content[14].icon} title={content[14].title} />
+
+      <Column number="2">
+        <IconColumn
+          imageSrc={content[15].imageSrc}
+          title={content[15].title}
+          text={content[15].description_1}
+        />
+
+        <IconColumn
+          imageSrc={content[16].imageSrc}
+          title={content[16].title}
+          text={content[16].description_1}
+        />
+      </Column>
+    </section>
+
+    <!-- Prevención -->
+    <section id="prevencioncancer">
+      <IconRow imageSrc={content[17].icon} title={content[17].title} />
+
+      <ImageRow
+        imageSrc={content[18].imageSrc}
+        html={content[18].description_1}
+      />
+    </section>
+
+    <!-- FUTUROS PADRES -->
+    <section id="futurospadres">
+      <IconRow imageSrc={content[19].icon} title={content[19].title} />
+
+      <ImageRow
+        imageSrc={content[20].imageSrc}
+        html={content[20].description_1}
+        orientation={content[20].orientation}
+      />
+
+      <ImageRow
+        imageSrc={content[21].imageSrc}
+        html={content[21].description_1}
+      />
+    </section>
+
+    <!-- OTROS -->
+    <section id="otros">
+      <IconRow imageSrc={content[22].icon} title={content[22].title} />
+
+      <Column number="4">
+        <IconColumn
+          imageSrc={content[23].imageSrc}
+          title={content[23].title}
+          text={content[23].description_1}
+        />
+
+        <IconColumn
+          imageSrc={content[24].imageSrc}
+          title={content[24].title}
+          text={content[24].description_1}
+        />
+
+        <IconColumn
+          imageSrc={content[25].imageSrc}
+          title={content[25].title}
+          text={content[25].description_1}
+        />
+
+        <IconColumn
+          imageSrc={content[26].imageSrc}
+          title={content[26].title}
+          text={content[26].description_1}
+        />
+      </Column>
+
+      <div class="grid grid-col-1 md:grid-cols-3 gap-5">
+        <IconColumn
+          imageSrc={content[27].imageSrc}
+          title={content[27].title}
+          text={content[27].description_1}
+        />
+
+        <IconColumn
+          imageSrc={content[28].imageSrc}
+          title={content[28].title}
+          text={content[28].description_1}
+        />
+
+        <IconColumn
+          imageSrc={content[29].imageSrc}
+          title={content[29].title}
+          text={content[29].description_1}
+        />
+      </div>
+    </section>
     <MoreInformacionForm />
   </div>
 </BaseLayout>

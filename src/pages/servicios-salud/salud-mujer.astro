@@ -1,34 +1,11 @@
 ---
 import Hero from "../../components/Hero.astro";
-import PostsResume from "../../components/PostsResume.astro";
+import posts from "../../data/posts";
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import ServiceMenu from "../../components/ServiceMenu.astro";
+import CarouselPosts from "../../components/CarouselPosts.astro";
 
 const pageTitle = "Salud mujer";
-
-const postsResumeData = {
-  title: "Publicaciones",
-  posts: [
-    {
-      heading: "La vida y la edad",
-      category: "Salud",
-      description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec molestie turpis id odio blandit, dignissim tincidunt arcu bibendum.",
-      imageSrc: "/src/assets/posts/De-que-se-ocupa-un-oftalmologo.jpg",
-      buttonText: "Leer más",
-      buttonLink: "/",
-    },
-    {
-      heading: "El cuidado de la piel en verano",
-      category: "Salud",
-      description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec molestie turpis id odio blandit, dignissim tincidunt arcu bibendum.",
-      imageSrc: "/src/assets/posts/El-cuidado-de-la-piel-en-verano.jpg",
-      buttonText: "Leer más",
-      buttonLink: "/",
-    },
-  ],
-};
 
 const services = [
   {
@@ -70,11 +47,11 @@ const services = [
 ];
 ---
 
-<BaseLayout>
+<BaseLayout pageTitle={pageTitle}>
   <Hero
     imageSrc="../../../src/assets/salud-mujer/HeroSaludMujer.jpg"
     showMedicalSearch={true}
   />
-  <ServiceMenu services={services} cols='3' />
-  <PostsResume postsResumeData={postsResumeData} />
+  <ServiceMenu services={services} cols="3" />
+  <CarouselPosts slides={posts} slidesPerView="2" title="Publicaciones" />
 </BaseLayout>

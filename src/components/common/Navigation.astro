@@ -16,15 +16,16 @@ const submenuItems = [
 
   <!-- Menú Servicios con Submenú -->
   <div class="menu-item">
-    <a href="#">Servicios</a>
+    <a href="#">Servicios Salud</a>
     <div class="submenu text-black">
       {submenuItems.map((item) => <a href={item.link}>{item.name}</a>)}
     </div>
   </div>
 
-  <a href="/garantias-incluidas">Garantías incluidas</a>
-  <a href="/blog">Artículos</a>
+  <a href="/cuadro-medico">Cuadro médico</a>
   <a href="/plan-de-vida-saludable">Plan de vida saludable</a>
+  <a href="/blog">Artículos</a>
+  <a href="/garantias-incluidas">Garantías incluidas</a>
   <a href="/otros-servicios">Otros servicios</a>
   <a class="orange" href="/area-privada/mis-datos">Área privada</a>
 </div>
@@ -52,7 +53,7 @@ const submenuItems = [
     font-weight: 400;
     text-transform: uppercase;
     color: black;
-    padding:0px .5rem
+    padding: 0px 0.5rem;
   }
 
   .nav-links a:hover,

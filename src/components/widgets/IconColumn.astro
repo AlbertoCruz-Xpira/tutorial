@@ -1,11 +1,12 @@
 ---
+import HtmlBlock from "../simple/HtmlBlock.astro";
 const { imageSrc, title, text } = Astro.props;
 ---
 
 <div class="grid justify-items-center text-center">
   <img src={imageSrc} />
   <h4 class="pt-4 pb-1">{title}</h4>
-  <p>{text}</p>
+  <HtmlBlock html={text}/>
 </div>
 
 <style>

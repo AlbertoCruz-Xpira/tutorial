@@ -90,10 +90,26 @@ p.bold {
 }
 
 /* service detail */
+.service-detail ul li::marker {
+  color: #ffb03b;
+}
+
+.service-detail p,
+.service-detail li,
+.service-detail span {
+  color: #a2a2a2;
+  font-weight: 400;
+}
+
+.service-detail p.color-turquoise,
+.service-detail li.color-turquoise,
+.service-detail span.color-turquoise {
+    color: var(--color-turquoise-500);
+}
+
 .service-page h2,
 .service-detail h2 {
   color: var(--color-turquoise-500);
-  margin-bottom: 20px;
 }
 
 .service-page .icon-line h2 {
@@ -115,6 +131,7 @@ p.bold {
 
 .service-detail h4 {
   color: var(--color-turquoise-500);
+  font-weight: initial;
 }
 
 .service-page p,
@@ -140,3 +157,13 @@ p.bold {
   padding-bottom: 5px;
   font-weight: 300;
 }
+
+.service-detail.pink h2,
+.service-detail.pink h3,
+.service-detail.pink h4 {
+  color: #e4919e;
+}
+
+.service-detail.pink .icon-row {
+    border-color: #e4919e;
+  }

@@ -2,6 +2,7 @@
 import BaseLayout from "../../../layouts/BaseLayout.astro";
 import HeroSmall from "/src/components/HeroSmall.astro";
 import TitleIconRow from "/src/components/widgets/IconRow.astro";
+import ImageRow from "../../../components/widgets/ImageRow.astro";
 
 const content = [
   {
@@ -13,6 +14,38 @@ const content = [
     component: "TitleIconRow",
     imageSrc: "/src/assets/salud-mujer/obstetricia/icon-caracteristicas.png",
     title: "Características",
+  },
+  {
+    component: "TitleIconRow",
+    imageSrc: "/src/assets/salud-mujer/obstetricia/icon-pruebas.png",
+    title: "Pruebas que se realizan:",
+  },
+  {
+    imageSrc:
+      "/src/assets/salud-mujer/obstetricia/valoracion-ginecologia-3.png",
+    description_1: `<ul>
+            <li>
+              <span
+                ><strong>Ecografía de viabilidad:</strong> Nos permite observar la
+                localización, tamaño y frecuencia cardiaca del embrión. Se realiza
+                entre la semana 6 y 9 de embarazo.</span
+              >
+            </li>
+            <li>
+              <span
+                ><strong>Cribaje de primer trimestre:</strong> Descarta alteraciones
+                de los cromosomas, como por ejemplo el Síndrome de Down. Consta de
+                una analítica de sangre (semana 8-10) y una ecografía detallada (semana
+                11-13)</span
+              >
+            </li>
+            <li>
+              <span
+                ><strong>Ecografía semana 20-22:</strong> Durante la misma se observa
+                la morfología del feto.</span
+              >
+            </li>
+          </ul>`,
   },
 ];
 ---
@@ -27,76 +60,85 @@ const content = [
   <div
     class="items-center max-w-5xl px-10 sm:px-10 md:px-10 lg:mx-auto pt-10 pb-5 service-detail"
   >
-    <TitleIconRow imageSrc={content[1].imageSrc} title={content[1].title} />
+    <!-- Caracteristicas -->
+    <section>
+      <TitleIconRow imageSrc={content[1].imageSrc} title={content[1].title} />
+      <div class="grid grid-col-1 gap-5">
+        <div class="flex gap-10">
+          <div>
+            <img
+              class="min-w-25"
+              src="/src/assets/salud-mujer/obstetricia/caracteristica1-obstetricia.png"
+            />
+          </div>
+          <div>
+            <h3>Embarazo y Parto normal:</h3>
+            <p>
+              Asistencia y control de la gestación para lograr un desarrollo y
+              bienestar materno fetal. Un adecuado control garantiza la
+              tranquilidad y que el embarazo evolucione de forma satisfactoria.
+            </p>
+            <p>
+              <strong>Control del embarazo.</strong> Diagnóstico del bienestar fetal,
+              diagnóstico de la madurez fetal y coordinación del manejo de enfermedades
+              maternas que complican o se complican con la gestación. Detección y
+              diagnóstico prenatal de malformaciones congénitas y enfermedades hereditarias.
+              Diagnosticar o descartar alteraciones morfológicas fetales. Control
+              del crecimiento fetal y anejos fetales.
+            </p>
+          </div>
+        </div>
 
-    <div>
-      <div>
-        <img
-          src="/src/assets/salud-mujer/obstetricia/caracteristica1-obstetricia.png"
-        />
+        <div class="flex gap-10">
+          <div>
+            <img
+              class="min-w-25"
+              src="/src/assets/salud-mujer/obstetricia/caracteristica2-obstetricia.png"
+            />
+          </div>
+          <div>
+            <h3>Alto Riesgo Obstétrico:</h3>
+            <p>
+              Realizamos valoraciones clínico-integrales para detectar los
+              riesgos o posibles riesgos en el proceso de gestación,
+              garantizando el seguimiento estrecho y necesario para garantizar
+              el bienestar del bebe y la madre.
+            </p>
+          </div>
+        </div>
+
+        <div class="flex gap-10">
+          <div>
+            <img
+              class="min-w-25"
+              src="/src/assets/salud-mujer/obstetricia/caracteristica3-obstetricia.png"
+            />
+          </div>
+          <div>
+            <h3>Diagnóstico Prenatal:</h3>
+            <p>
+              La unidad se encarga de llevar un exhaustivo control para realizar
+              diagnostico prenatal de enfermedades cromosómicas, alteraciones
+              morfológicas fetales y enfermedades hereditarias.
+            </p>
+          </div>
+        </div>
       </div>
-      <div>
-        <h3>Embarazo y Parto normal:</h3>
-        <p>
-          Asistencia y control de la gestación para lograr un desarrollo y
-          bienestar materno fetal. Un adecuado control garantiza la tranquilidad
-          y que el embarazo evolucione de forma satisfactoria.
-        </p>
-        <p>
-          <strong>Control del embarazo.</strong> Diagnóstico del bienestar fetal,
-          diagnóstico de la madurez fetal y coordinación del manejo de enfermedades
-          maternas que complican o se complican con la gestación. Detección y diagnóstico
-          prenatal de malformaciones congénitas y enfermedades hereditarias. Diagnosticar
-          o descartar alteraciones morfológicas fetales. Control del crecimiento
-          fetal y anejos fetales.
-        </p>
-      </div>
-    </div>
-    <div>
-      <div>
-        <img
-          src="/src/assets/salud-mujer/obstetricia/caracteristica2-obstetricia.png"
-        />
-      </div>
-      <div>
-        <h3>Alto Riesgo Obstétrico:</h3>
-        <p>
-          Realizamos valoraciones clínico-integrales para detectar los riesgos o
-          posibles riesgos en el proceso de gestación, garantizando el
-          seguimiento estrecho y necesario para garantizar el bienestar del bebe
-          y la madre.
-        </p>
-      </div>
-    </div>
-    <div>
-      <div>
-        <img
-          src="/src/assets/salud-mujer/obstetricia/caracteristica3-obstetricia.png"
-        />
-      </div>
-      <div>
-        <h3>Diagnóstico Prenatal:</h3>
-        <p>
-          La unidad se encarga de llevar un exhaustivo control para realizar
-          diagnostico prenatal de enfermedades cromosómicas, alteraciones
-          morfológicas fetales y enfermedades hereditarias.
-        </p>
-      </div>
-    </div>
-    <div>
-      <div>
-        <img src="/src/assets/salud-mujer/obstetricia/icon-pruebas.png" /><h2>
-          Pruebas que se realizan:
-        </h2>
-      </div>
-      <div>
+    </section>
+
+    <!-- Pruebas que se realizan -->
+    <section>
+      <TitleIconRow imageSrc={content[2].imageSrc} title={content[2].title} />
+
+      <!-- Imagen 1 -->
+      <section class="grid grid-col-1 md:grid-cols-2 gap-5">
         <div>
           <img
             src="/src/assets/salud-mujer/obstetricia/valoracion-ginecologia-3.png"
           />
         </div>
         <div>
-          <ul>
+          <ul class="plan-vida-p">
             <li>
               <span
                 ><strong>Ecografía de viabilidad:</strong> Nos permite observar la
@@ -120,6 +162,10 @@ const content = [
             </li>
           </ul>
         </div>
+      </section>
+
+      <!-- Imagen 2 -->
+      <section class="grid grid-col-1 md:grid-cols-2 gap-5">
         <div>
           <h3>También existen otras pruebas específicas como:</h3>
           <ul>
@@ -138,15 +184,15 @@ const content = [
         <div>
           <img src="/src/assets/salud-mujer/obstetricia/img-obstetricia.png" />
         </div>
-      </div>
-    </div>
+      </section>
+    </section>
+
     <div>
-      <div>
-        <img src="/src/assets/salud-mujer/obstetricia/icon-screening.png" /><h2>
-          Screening combinado de primer trimestre (triple screening)
-        </h2>
+      <div class="flex gap-5">
+        <img src="/src/assets/salud-mujer/obstetricia/icon-screening.png" />
+        <h2>Screening combinado de primer trimestre (triple screening)</h2>
       </div>
-      <div>
+      <section>
         <p>
           Se recomienda la utilización conjunta de: Pruebas bioquímicas (PAPP-A,
           BHCG libre), Ecográfica TN (Translucencia nucal) y Edad materna, como
@@ -162,8 +208,9 @@ const content = [
           o de un embarazo de alto riesgo obstétrico. El especialista en ginecología
           planificará cuantas ecografías son necesarias realizar.
         </p>
-      </div>
-      <div>
+      </section>
+
+      <div class="grid grid-col-1 md:grid-cols-4 gap-5">
         <div>
           <img src="/src/assets/salud-mujer/obstetricia/ecografia1.png" />
           <p>
@@ -194,41 +241,45 @@ const content = [
           </p>
         </div>
       </div>
-      <div>
+
+      <section>
         <div>
           <h3>También disponemos de las Eco 3D y 4D</h3>
         </div>
-      </div>
-      <div>
-        <div>
-          <img src="/src/assets/salud-mujer/obstetricia/img-obstetricia2.png" />
+
+        <div class="grid grid-col-1 md:grid-cols-2 gap-5">
+          <div>
+            <img
+              src="/src/assets/salud-mujer/obstetricia/img-obstetricia2.png"
+            />
+          </div>
+          <div>
+            <h4>Ecografía 3D:</h4>
+            <p>
+              Es una ecografía en la que se ven imágenes fijas en 3 dimensiones
+              a partir de la ecografía en dos dimensiones que se realiza
+              habitualmente.
+            </p><br />
+            <h4>Ecografía 4D:</h4>
+            <p>
+              Es una técnica no invasiva y sin riesgo para el bebé ni para la
+              mujer embarazada. Se muestran movimiento y en tiempo real
+              permitiendo ver las imágenes que se van captando y que revelan
+              detalles del feto.
+            </p><br />
+            <p>
+              <strong>Semanas 16-20:</strong> Podrás ver a tu bebé de cuerpo entero
+              y emocionarte al ver sus primeros gestos.<br />
+              <strong>Semana 20-26:</strong> El pequeño ya está más formado. Podrás
+              emocionarte viendo en detalle cómo es su carita, manos y, quién sabe,
+              igual alguna de sus primeras patadas.<br />
+              <strong>Semana 27-30:</strong> Podrás ver y disfrutar de tu bebé, viendo
+              sus gestos, bostezos, sonrisas o incluso ver cómo se coge las manitas
+              o se chupa el dedo.
+            </p>
+          </div>
         </div>
-        <div>
-          <h4>Ecografía 3D:</h4>
-          <p>
-            Es una ecografía en la que se ven imágenes fijas en 3 dimensiones a
-            partir de la ecografía en dos dimensiones que se realiza
-            habitualmente.
-          </p><br />
-          <h4>Ecografía 4D:</h4>
-          <p>
-            Es una técnica no invasiva y sin riesgo para el bebé ni para la
-            mujer embarazada. Se muestran movimiento y en tiempo real
-            permitiendo ver las imágenes que se van captando y que revelan
-            detalles del feto.
-          </p><br />
-          <p>
-            <strong>Semanas 16-20:</strong> Podrás ver a tu bebé de cuerpo entero
-            y emocionarte al ver sus primeros gestos.<br />
-            <strong>Semana 20-26:</strong> El pequeño ya está más formado. Podrás
-            emocionarte viendo en detalle cómo es su carita, manos y, quién sabe,
-            igual alguna de sus primeras patadas.<br />
-            <strong>Semana 27-30:</strong> Podrás ver y disfrutar de tu bebé, viendo
-            sus gestos, bostezos, sonrisas o incluso ver cómo se coge las manitas
-            o se chupa el dedo.
-          </p>
-        </div>
-      </div>
+      </section>
     </div>
   </div>
 </BaseLayout>

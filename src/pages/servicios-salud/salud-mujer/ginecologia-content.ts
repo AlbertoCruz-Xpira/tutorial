@@ -8,21 +8,11 @@ export const content: BaseContent[] = [
     imageDesc: "",
     description_1: `
       <ul>
-        <li>
-          <span>Prevención de enfermedades.</span>
-        </li>
-        <li>
-          <span>Detectar riesgo de problemas médicos futuros.</span>
-        </li>
-        <li>
-          <span>Orientar sobre estilos y calidad de vida.</span>
-        </li>
-        <li>
-          <span>Revisión y recomendación de las vacunas correspondientes.</span>
-        </li>
-        <li>
-          <span>Seguimiento y control por un médico de forma directa.</span>
-        </li>
+        <li><span>Prevención de enfermedades.</span></li>
+        <li><span>Detectar riesgo de problemas médicos futuros.</span></li>
+        <li><span>Orientar sobre estilos y calidad de vida.</span></li>
+        <li><span>Revisión y recomendación de las vacunas correspondientes.</span></li>
+        <li><span>Seguimiento y control por un médico de forma directa.</span></li>
       </ul>
     `,
     orientation: 0,

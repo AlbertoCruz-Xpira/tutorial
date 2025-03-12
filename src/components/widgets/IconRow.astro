@@ -1,8 +1,22 @@
 ---
-const { imageSrc, title } = Astro.props;
+import HtmlBlock from "../simple/HtmlBlock.astro";
+
+const { imageSrc, title, orientation, description_1 } = Astro.props;
+const mode = orientation;
+
+// mode = 1: Modo cuadro blanco
 ---
 
-<div class="inline-flex items-center justify-content-center pb-10">
-  <img src={imageSrc} />
-  <h2 class="ml-5 title color-turquoise">{title}</h2>
-</div>
+{
+  mode === 1 ? (
+    <div class="icon-row bg-white flex items-center gap-5 p-5 border-l-8 border-l-[#009494]">
+      <img src={imageSrc} />
+      <HtmlBlock html={description_1} />
+    </div>
+  ) : (
+    <div class="icon-row inline-flex items-center justify-content-center pb-10">
+      <img src={imageSrc} />
+      <h2 class="ml-5 title color-turquoise">{title}</h2>
+    </div>
+  )
+}
