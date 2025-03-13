@@ -9,7 +9,7 @@ import CarouselPromotions from "../components/CarouselPromotions.astro";
 import CarouselPosts from "../components/CarouselPosts.astro";
 
 const bannerData = {
-  imageSrc: "/src/assets/chica-con-movil.jpg",
+  imageSrc: "/chica-con-movil.jpg",
   title: "Accede a tu área asegurado",
   subtitle: "Realiza consultas y gestiona tus citas en el área asegurado.",
   buttonText: "Acceder",
@@ -18,21 +18,21 @@ const bannerData = {
 
 const slides = [
   {
-    imageSrc: "/src/assets/fisioterapia.jpg",
+    imageSrc: "/fisioterapia.jpg",
     title: "Conoce nuestros servicios",
     content: "Servicios avanzados de Fisioterapia.",
     buttonText: "Más información",
     buttonLink: "/descubrir",
   },
   {
-    imageSrc: "/src/assets/oftalmología.jpg",
+    imageSrc: "/oftalmología.jpg",
     title: "Conéctate con expertos",
     content: "Accede a una comunidad de profesionales dispuestos a ayudarte.",
     buttonText: "Conectar ahora",
     buttonLink: "/conectar",
   },
   {
-    imageSrc: "/src/assets/gimnasio.jpg",
+    imageSrc: "/gimnasio.jpg",
     title: "Tu éxito empieza aquí",
     content: "Aprende, crece y alcanza tus metas con nosotros.",
     buttonText: "Empezar",
@@ -41,7 +41,7 @@ const slides = [
 ];
 
 const bannerOcasoData = {
-  imageSrc: "/src/assets/ocaso.webp",
+  imageSrc: "/ocaso.webp",
   heading:
     "Legálitas Salud es un servicio para los asegurados de OCASO SEGUROS",
   heading2: "¿Aún no eres Asegurado?",
@@ -50,7 +50,7 @@ const bannerOcasoData = {
 };
 
 const infoBannerData = {
-  imageSrc: "/src/assets/familia.jpg",
+  imageSrc: "/familia.jpg",
   title: "Protejemos tu salud, cuidamos de ti",
   content:
     "En Legalitas, entendemos que tu bienestar y el de tu familia es lo más importante. Por eso, te ofrecemos un servicio de salud integral diseñado para brindarte apoyo médico y legal en los momentos en que más lo necesitas.",
@@ -73,7 +73,7 @@ import posts from "../data/posts";
 ---
 
 <BaseLayout>
-  <Hero imageSrc="src/assets/HeroSection.jpg" showMedicalSearch={true} />
+  <Hero imageSrc="/HeroSection.jpg" showMedicalSearch={true} />
   <Banner bannerData={bannerData} />
   <Carousel slides={slides} slidesPerView="1" />
   <BannerOcaso bannerOcasoData={bannerOcasoData} />

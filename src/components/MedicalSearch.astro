@@ -1,6 +1,7 @@
 ---
 import SearchIcon from "../icons/SearchIcon.astro";
 import FilterIcon from "../icons/FilterIcon.astro";
+import SimpleButton from "./buttons/SimpleButton.astro";
 
 const mockup = `{
     "name": "Orthopedic Medicine and Rehabilitation Center",
@@ -106,14 +107,14 @@ mx-auto"
           x-show="showFilters"
           class="absolute top-full mt-2 w-full max-w-lg bg-white shadow-lg rounded-lg p-4 z-1000"
         >
-          <div class="grid grid-cols-1 gap-5">
+          <div class="grid grid-cols-1 gap-1">
             <p class="text-lg font-semibold text-gray-900">
               Introduce aquí los datos para una nueva búsqueda (Ciudad, C.P.,
               dirección...)
             </p>
 
-            <section class="grid grid-cols-2 gap-5">
-              <label class="block text-gray-700">
+            <div class="grid grid-cols-2 gap-5">
+              <label class="block text-gray-700 grid grid-col-1">
                 <span>Distancia:</span>
                 <select
                   id="range"
@@ -129,17 +130,18 @@ mx-auto"
                 </select>
               </label>
 
-              <label class="block text-gray-700">
+              <label class="block text-gray-700 grid grid-col-1">
                 <span>Ubicación:</span>
                 <input
                   type="text"
                   class="mt-1 p-2 border border-gray-300 rounded-md"
+                  style="min-height: 44px"
                   placeholder="Introduce una ciudad"
                 />
               </label>
-            </section>
+            </div>
 
-            <section class="grid grid-cols-2 gap-5">
+            <div class="grid grid-cols-1 gap-5">
               <div class="mt-2 space-y-2 gap-5">
                 <label class="block text-gray-700">
                   <span>Especialidad:</span>
@@ -227,23 +229,25 @@ mx-auto"
                   </select>
                 </label>
               </div>
-              <div>
-                <label for="Name">Nombre del médico:</label>
-                <input
-                  id="name"
-                  name="Name"
-                  pattern="[A-Za-zàáâäãåèéêëìíîïòóôöõøùúûüÿýñçčšžÀÁÂÄÃÅÈÉÊËÌÍÎÏÒÓÔÖÕØÙÚÛÜŸÝÑßÇŒÆČŠŽ∂ð ,.'-]+"
-                  type="text"
-                  value=""
-                />
-              </div>
-            </section>
+            </div>
 
-            <button
-              class="w-full bg-blue-600 hover:bg-blue-700 text-white py-2 rounded-md"
-            >
-              Aplicar filtros
-            </button>
+            <div class="grid grid-cols-1 gap-5">
+              <label for="Name" class="block text-gray-700"
+                >Nombre del médico:</label
+              >
+              <input
+                id="name"
+                name="Name"
+                pattern="[A-Za-zàáâäãåèéêëìíîïòóôöõøùúûüÿýñçčšžÀÁÂÄÃÅÈÉÊËÌÍÎÏÒÓÔÖÕØÙÚÛÜŸÝÑßÇŒÆČŠŽ∂ð ,.'-]+"
+                type="text"
+                value=""
+                class="mt-1 p-2 border border-gray-300 rounded-md"
+              />
+            </div>
+
+            <div class="flex justify-center mt-2">
+              <SimpleButton buttonText="Aplicar filtros" />
+            </div>
           </div>
         </div>
         <!-- /Filtros desplegables -->

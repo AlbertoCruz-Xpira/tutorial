@@ -2,9 +2,9 @@ import { BaseContent } from "/src/interface/BaseContent";
 
 export const content: BaseContent[] = [
   {
-    icon: "/src/assets/podologia/podologia-icon1.png",
+    icon: "/podologia/podologia-icon1.png",
     title: "Quiropodia",
-    imageSrc: "/src/assets/podologia/podologia1.png",
+    imageSrc: "/podologia/podologia1.png",
     imageDesc: "",
     description_1: `<p>
               Prevenir, diagnosticar y tratar cualquier problema relacionado con
@@ -17,9 +17,9 @@ export const content: BaseContent[] = [
     description_2: "",
   },
   {
-    icon: "/src/assets/podologia/podologia-icon2.png",
+    icon: "/podologia/podologia-icon2.png",
     title: "Hiperqueratosis",
-    imageSrc: "/src/assets/podologia/podologia2.png",
+    imageSrc: "/podologia/podologia2.png",
     imageDesc: "",
     description_1: `<p>
               Es la presión o roce mantenido intermitente produciendo un
@@ -45,7 +45,7 @@ export const content: BaseContent[] = [
   {
     icon: "",
     title: "",
-    imageSrc: "/src/assets/podologia/podologia3.png",
+    imageSrc: "/podologia/podologia3.png",
     imageDesc: "",
     description_1: `
           <h3>Prevención pie diabético</h3>
@@ -61,7 +61,7 @@ export const content: BaseContent[] = [
   {
     icon: "",
     title: "",
-    imageSrc: "/src/assets/podologia/podologia4.png",
+    imageSrc: "/podologia/podologia4.png",
     imageDesc: "",
     description_1: `<h3>Problemas de uñas</h3>
                 <p>El tratamiento de la quiropodia se basa en el corte y fresado de las uñas. En el caso que el podólogo considere recomendará también el uso de medicamentos para tratar la posible infección. A su vez, en caso de sospecha de posible infección por hongos, el podólogo obtendrá una muestra de la uña para realizar un cultivo de la uña y poder aislar el microorganismo que esté causando el problema infeccioso y tratarlo correctamente.</p>`,
@@ -69,9 +69,9 @@ export const content: BaseContent[] = [
     description_2: "",
   },
   {
-    icon: "/src/assets/podologia/podologia-icon3.png",
+    icon: "/podologia/podologia-icon3.png",
     title: "Cirugías",
-    imageSrc: "/src/assets/podologia/podologia5.png",
+    imageSrc: "/podologia/podologia5.png",
     imageDesc: "",
     description_1: `<p>Existen algunos problemas de los pies que se pueden resolver de manera definitiva mediante cirugía.</p>
                 <h3 class="margintop15">Prevención pie diabético</h3>
@@ -80,9 +80,9 @@ export const content: BaseContent[] = [
     description_2: "",
   },
   {
-    icon: "/src/assets/podologia/podologia-icon5.png",
+    icon: "/podologia/podologia-icon5.png",
     title: "Podología deportiva",
-    imageSrc: "/src/assets/podologia/podologia6.png",
+    imageSrc: "/podologia/podologia6.png",
     imageDesc: "",
     description_1: `<h3>Juanetes</h3>
       <p>
@@ -103,27 +103,27 @@ export const content: BaseContent[] = [
     description_2: "",
   },
   {
-    icon: "/src/assets/podologia/podologia-icon4.png",
+    icon: "/podologia/podologia-icon4.png",
     title: "Curación de heridas",
-    imageSrc: "/src/assets/podologia/podologia7.png",
+    imageSrc: "/podologia/podologia7.png",
     imageDesc: "",
     description_1: `<p>Se aplican los protocolos de tratamiento con los que se logran reducir el porcentaje de aparición de complicaciones en los pies y piernas. La mala circulación venosa en las piernas es, a menudo, la causa de distintos problemas en los miembros inferiores tales como piernas hinchadas o doloridas, varices e incluso úlceras.</p>`,
     orientation: 0,
     description_2: "",
   },
   {
-    icon: "/src/assets/podologia/podologia-icon5.png",
+    icon: "/podologia/podologia-icon5.png",
     title: "Podología deportiva",
-    imageSrc: "/src/assets/podologia/podologia8.png",
+    imageSrc: "/podologia/podologia8.png",
     imageDesc: "",
     description_1: `<p>El tratamiento conjunto y coordinado de nuestros podólogos y fisioterapeutas es esencial para la correcta resolución de la lesión deportiva. El conjunto de análisis biomecánico de la marcha y gesto deportivo en coordinación con la valoración y diagnóstico fisioterapéutico nos llevará a la pauta del plan de tratamiento y de recuperación y readaptación a la práctica deportiva del paciente que tenga una lesión. A su vez, una vez resuelta o en el caso de no tener lesión, el tratamiento irá enfocado a la prevención de esta haciendo un estudio y viendo de manera precoz cuales pueden ser los factores de riesgo para desarrollar una lesión.</p>`,
     orientation: 0,
     description_2: "",
   },
   {
-    icon: "/src/assets/podologia/podologia-icon6.png",
+    icon: "/podologia/podologia-icon6.png",
     title: "Podología personas mayores",
-    imageSrc: "/src/assets/podologia/podologia9.png",
+    imageSrc: "/podologia/podologia9.png",
     imageDesc: "",
     description_1: `<p>
             A lo largo de nuestras vidas, nuestros pies son los encargados de

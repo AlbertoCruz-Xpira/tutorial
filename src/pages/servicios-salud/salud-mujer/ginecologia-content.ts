@@ -2,9 +2,9 @@ import { BaseContent } from "/src/interface/BaseContent";
 
 export const content: BaseContent[] = [
   {
-    icon: "/src/assets/salud-mujer/ginecologia/icon-proposito-ginecologia.png",
+    icon: "/salud-mujer/ginecologia/icon-proposito-ginecologia.png",
     title: "El propósito de estas visitas",
-    imageSrc: "/src/assets/salud-mujer/ginecologia/proposito-ginecologia.png",
+    imageSrc: "/salud-mujer/ginecologia/proposito-ginecologia.png",
     imageDesc: "",
     description_1: `
       <ul>
@@ -19,9 +19,9 @@ export const content: BaseContent[] = [
     description_2: "",
   },
   {
-    icon: "/src/assets/salud-mujer/ginecologia/icon-evaluacion-ginecologia.png",
+    icon: "/salud-mujer/ginecologia/icon-evaluacion-ginecologia.png",
     title: "Evaluación ginecológica anual",
-    imageSrc: "/src/assets/salud-mujer/ginecologia/evaluacion-ginecologia.png",
+    imageSrc: "/salud-mujer/ginecologia/evaluacion-ginecologia.png",
     imageDesc: "",
     description_1: `
       <ul>
@@ -43,9 +43,9 @@ export const content: BaseContent[] = [
     description_2: "",
   },
   {
-    icon: "/src/assets/salud-mujer/ginecologia/icon-prevencion-ginecologia.png",
+    icon: "/salud-mujer/ginecologia/icon-prevencion-ginecologia.png",
     title: "Valoración y prevención",
-    imageSrc: "/src/assets/salud-mujer/ginecologia/valoracion-ginecologia.png",
+    imageSrc: "/salud-mujer/ginecologia/valoracion-ginecologia.png",
     imageDesc: `<p>
         Nota: Si padece cardiopatía, problemas renales o algunas otras
         afecciones, es posible que necesite un control más estricto.
@@ -112,7 +112,7 @@ export const content: BaseContent[] = [
     icon: "",
     title: "",
     imageSrc:
-      "/src/assets/salud-mujer/ginecologia/valoracion-ginecologia-2.png",
+      "/salud-mujer/ginecologia/valoracion-ginecologia-2.png",
     imageDesc: "",
     description_1: `
       <h3>Vacunas</h3>
@@ -138,7 +138,7 @@ export const content: BaseContent[] = [
     icon: "",
     title: "",
     imageSrc:
-      "/src/assets/salud-mujer/ginecologia/valoracion-ginecologia-3.png",
+      "/salud-mujer/ginecologia/valoracion-ginecologia-3.png",
     imageDesc: "",
     description_1: `
       <h3>Examen pélvico y citología vaginal</h3>
@@ -158,7 +158,7 @@ export const content: BaseContent[] = [
     icon: "",
     title: "",
     imageSrc:
-      "/src/assets/salud-mujer/ginecologia/valoracion-ginecologia-4.png",
+      "/salud-mujer/ginecologia/valoracion-ginecologia-4.png",
     imageDesc: "",
     description_1: `
       <h3>Ecografía Mamaria</h3>
@@ -195,7 +195,7 @@ export const content: BaseContent[] = [
     icon: "",
     title: "",
     imageSrc:
-      "/src/assets/salud-mujer/ginecologia/valoracion-ginecologia-5.png",
+      "/salud-mujer/ginecologia/valoracion-ginecologia-5.png",
     imageDesc: "",
     description_1: `
       <h3>Ecografía ginecológica</h3>
@@ -260,7 +260,7 @@ export const content: BaseContent[] = [
     icon: "",
     title: "",
     imageSrc:
-      "/src/assets/salud-mujer/ginecologia/valoracion-ginecologia-6.png",
+      "/salud-mujer/ginecologia/valoracion-ginecologia-6.png",
     imageDesc: "",
     description_1: `
       <h3>Examen para cáncer de colon </h3>

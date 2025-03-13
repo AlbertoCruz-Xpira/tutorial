@@ -19,32 +19,32 @@ export const content = [
       [
         {
           component: "IconRow",
-          imageSrc: "/src/assets/genetica/genetica-icon1.png",
+          imageSrc: "/genetica/genetica-icon1.png",
           title: "Nutrición Personalizada",
         },
       ],
       [
         {
           component: "IconColumn",
-          imageSrc: "/src/assets/genetica/genetica-img-icon1.png",
+          imageSrc: "/genetica/genetica-img-icon1.png",
           title: "Intolerancias Alimentarias",
           text: "El test de intolerancia alimentaria A200 evalúa la respuesta del sistema inmune frente a más de 200 alimentos habituales en la dieta mediterránea.",
         },
         {
           component: "IconColumn",
-          imageSrc: "/src/assets/genetica/genetica-img-icon2.png",
+          imageSrc: "/genetica/genetica-img-icon2.png",
           title: "Nutrigenética",
           text: "Personas que deseen adaptar su dieta en función a su genética y conocer sus necesidades nutricionales específicas de manera personalizada.",
         },
         {
           component: "IconColumn",
-          imageSrc: "/src/assets/genetica/genetica-img-icon3.png",
+          imageSrc: "/genetica/genetica-img-icon3.png",
           title: "MigraTest",
           text: "Indicada en el caso de personas que padezcan migrañas y quieran saber si el origen está relacionado con un déficit de la actividad de la enzima DAO.",
         },
         {
           component: "IconColumn",
-          imageSrc: "/src/assets/genetica/genetica-img-icon4.png",
+          imageSrc: "/genetica/genetica-img-icon4.png",
           title: "Cuidado intestinal",
           text: "Lactosa Test consiste en un estudio genético de intolerancia a la lactosa, a través de una muestra de raspado bucal.",
         },
@@ -56,26 +56,26 @@ export const content = [
       [
         {
           component: "IconRow",
-          imageSrc: "/src/assets/genetica/genetica-icon2.png",
+          imageSrc: "/genetica/genetica-icon2.png",
           title: "Cardio",
         },
       ],
       [
         {
           component: "IconColumn",
-          imageSrc: "/src/assets/genetica/genetica-img-icon5.png",
+          imageSrc: "/genetica/genetica-img-icon5.png",
           title: "CardioScore",
           text: "Se basa en una extracción de sangre que permitirá una evaluación clínico-genética del riesgo cardiovascular real.",
         },
         {
           component: "IconColumn",
-          imageSrc: "/src/assets/genetica/genetica-img-icon6.png",
+          imageSrc: "/genetica/genetica-img-icon6.png",
           title: "Omega 3",
           text: "Indicador para la prevención de enfermedades cardiovasculares y cerebrovasculares.",
         },
         {
           component: "IconColumn",
-          imageSrc: "/src/assets/genetica/genetica-img-icon7.png",
+          imageSrc: "/genetica/genetica-img-icon7.png",
           title: "Perfil Cardiovascular",
           text: "Permite obtener información sobre los niveles de colesterol (HDL y LDL), triglicéridos, homocisteína, proteína C reactiva, índice aterogénico, lipoproteína (a) y hemoglobina glicosilada.",
         },
@@ -87,14 +87,14 @@ export const content = [
       [
         {
           component: "IconRow",
-          imageSrc: "/src/assets/genetica/genetica-icon3.png",
+          imageSrc: "/genetica/genetica-icon3.png",
           title: "Edad y Salud",
         },
       ],
       [
         {
           component: "ImageRow",
-          imageSrc: "/src/assets/genetica/genetica1.png",
+          imageSrc: "/genetica/genetica1.png",
           html: `
           <h3>Longitud Telomérica</h3>
           <p>

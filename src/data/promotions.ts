@@ -3,7 +3,7 @@ import type { Promotion } from "../interface/Promotion"
 const promotions: Promotion[] = [
     {
         heading: "Presbicia",
-        imageSrc: "/src/assets/promociones/Presbicia.jpg",
+        imageSrc: "/promociones/Presbicia.jpg",
         buttonText: "Más información",
         buttonLink: "/promociones/presbicia",
         price: 95,
@@ -11,7 +11,7 @@ const promotions: Promotion[] = [
     },
     {
         heading: "Cataratas",
-        imageSrc: "/src/assets/promociones/Cataratas.jpg",
+        imageSrc: "/promociones/Cataratas.jpg",
         buttonText: "Más información",
         buttonLink: "/promociones/cataratas",
         price: 95,
@@ -19,7 +19,7 @@ const promotions: Promotion[] = [
     },
     {
         heading: "Retina",
-        imageSrc: "/src/assets/promociones/Retina.jpg",
+        imageSrc: "/promociones/Retina.jpg",
         buttonText: "Más información",
         buttonLink: "/promociones/retina",
         price: 95,

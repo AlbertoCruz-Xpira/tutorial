@@ -2,7 +2,7 @@ import type { BaseContent } from "../../../interface/BaseContent";
 
 export const content: BaseContent[] = [
   {
-    icon: "/src/assets/salud-mujer/onco-gine/icon-oncogine1.png",
+    icon: "/salud-mujer/onco-gine/icon-oncogine1.png",
     title: "Nuestras recomendaciones preventivas para ti",
     imageSrc: "",
     imageDesc: "",
@@ -13,7 +13,7 @@ export const content: BaseContent[] = [
   {
     icon: "",
     title: "",
-    imageSrc: "/src/assets/salud-mujer/onco-gine/img-oncogine1.png",
+    imageSrc: "/salud-mujer/onco-gine/img-oncogine1.png",
     imageDesc: "",
     description_1: `<ul class="plan-vida-p">
                     <li><span><strong>Exploración Ginecológica:</strong> Se buscarán signos y síntomas en genitales externos y tacto vaginal, permitiendo la valoración de útero y ovarios.</span></li>
@@ -38,7 +38,7 @@ export const content: BaseContent[] = [
         </p>`,
   },
   {
-    icon: "/src/assets/salud-mujer/onco-gine/icon-oncogine2.png",
+    icon: "/salud-mujer/onco-gine/icon-oncogine2.png",
     title: "Valoración en equipo multidisciplinar:",
     imageSrc: "",
     imageDesc: "",
@@ -49,7 +49,7 @@ export const content: BaseContent[] = [
   {
     icon: "",
     title: "",
-    imageSrc: "/src/assets/salud-mujer/onco-gine/img-oncogine2.png",
+    imageSrc: "/salud-mujer/onco-gine/img-oncogine2.png",
     imageDesc: "",
     description_1: `<p>Realiza un tratamiento integral del cáncer en la mujer, desde su diagnóstico hasta su curación, lo que implica la puesta en marcha de un programa de detección precoz (chequeos), tratamiento de la enfermedad primaria y recidivante.</p><br>
 <p>Los tipos de tumores que se tratan son: tumores de mama, ovario, trompas de Falopio, cuello uterino, endometrio, miometrio, vulva, vagina, y peritoneo.</p>`,
@@ -57,7 +57,7 @@ export const content: BaseContent[] = [
     description_2: "",
   },
   {
-    icon: "/src/assets/salud-mujer/onco-gine/icon-oncogine3.png",
+    icon: "/salud-mujer/onco-gine/icon-oncogine3.png",
     title: "Tratamiento",
     imageSrc: "",
     imageDesc: "",
@@ -68,7 +68,7 @@ export const content: BaseContent[] = [
   {
     icon: "",
     title: "",
-    imageSrc: "/src/assets/salud-mujer/onco-gine/img-oncogine3.png",
+    imageSrc: "/salud-mujer/onco-gine/img-oncogine3.png",
     imageDesc: "",
     description_1: `<ul class="plan-vida-p">
                     <li><span>Cirugía radical del cáncer ginecológico.</span></li>
@@ -82,7 +82,7 @@ export const content: BaseContent[] = [
     description_2: "",
   },
   {
-    icon: "/src/assets/salud-mujer/onco-gine/icon-oncogine4.png",
+    icon: "/salud-mujer/onco-gine/icon-oncogine4.png",
     title: "Otros",
     imageSrc: "",
     imageDesc: "",
@@ -93,7 +93,7 @@ export const content: BaseContent[] = [
   {
     icon: "",
     title: "",
-    imageSrc: "/src/assets/salud-mujer/onco-gine/img-oncogine4.png",
+    imageSrc: "/salud-mujer/onco-gine/img-oncogine4.png",
     imageDesc: "",
     description_1: `<h3>Cáncer de piel:</h3>
                 <p>Cualquier persona que pasa tiempo bajo el sol puede padecer cáncer de piel. Las personas de piel blanca, especialmente las que tienen el cabello rubio o que son pelirrojas, tienen una mayor probabilidad de padecer este cáncer que las personas de piel más oscura. Las personas que hayan tenido un familiar cercano con melanoma y aquellas que han tenido quemaduras solares graves durante la niñez tienen una mayor probabilidad de padecer cáncer de piel.</p>`,
@@ -116,7 +116,7 @@ export const content: BaseContent[] = [
   {
     icon: "",
     title: "Examen de la piel:",
-    imageSrc: "/src/assets/salud-mujer/onco-gine/img-oncogine5.png",
+    imageSrc: "/salud-mujer/onco-gine/img-oncogine5.png",
     imageDesc: "",
     description_1: `<p class="p-eco p-pink">
                     <span>Examen de la piel:</span><br>
@@ -126,9 +126,9 @@ export const content: BaseContent[] = [
     description_2: "",
   },
   {
-    icon: "/src/assets/salud-mujer/onco-gine/img-oncogine6.png",
+    icon: "/salud-mujer/onco-gine/img-oncogine6.png",
     title: "Biopsia de piel",
-    imageSrc: "/src/assets/salud-mujer/onco-gine/img-oncogine6.png",
+    imageSrc: "/salud-mujer/onco-gine/img-oncogine6.png",
     imageDesc: "",
     description_1: `<p class="p-eco p-pink">
                     <span>Biopsia de piel: </span><br>
@@ -141,7 +141,7 @@ export const content: BaseContent[] = [
   {
     icon: "",
     title: "",
-    imageSrc: "/src/assets/salud-mujer/onco-gine/img-oncogine2.png",
+    imageSrc: "/salud-mujer/onco-gine/img-oncogine2.png",
     imageDesc: "",
     description_1: `<h3>Cáncer de Pulmón</h3>
                 <p>Al menos 8 de cada 10 pacientes diagnosticados, se deben al hábito de fumar. Sin embargo, las personas que no fuman pueden también pueden padecerlo.</p>
@@ -153,7 +153,7 @@ export const content: BaseContent[] = [
   {
     icon: "",
     title: "",
-    imageSrc: "/src/assets/salud-mujer/onco-gine/img-oncogine7.png",
+    imageSrc: "/salud-mujer/onco-gine/img-oncogine7.png",
     imageDesc: "",
     description_1: `<div class="col-md-6">
                 <h3>Cáncer de Colon:</h3>
@@ -176,7 +176,7 @@ export const content: BaseContent[] = [
     description_2: "",
   },
   {
-    icon: "/src/assets/salud-mujer/onco-gine/icon-oncogine4.png",
+    icon: "/salud-mujer/onco-gine/icon-oncogine4.png",
     title: "Pruebas diagnósticas",
     imageSrc: "",
     imageDesc: "",
@@ -187,7 +187,7 @@ export const content: BaseContent[] = [
   {
     icon: "",
     title: "",
-    imageSrc: "/src/assets/salud-mujer/onco-gine/img-oncogine8.png",
+    imageSrc: "/salud-mujer/onco-gine/img-oncogine8.png",
     imageDesc: "",
     description_1: `<p>
                     Se han reseñado más de 50 síndromes hereditarios de cáncer. La mayoría de ellos son causados por mutaciones altamente penetrantes que se heredan en forma dominante. La lista a continuación incluye algunos de los síndromes hereditarios de cáncer más comunes para los que se dispone de pruebas genéticas; incluye también el gen o genes mutados en cada síndrome, así como los tipos de cáncer asociados con más frecuencia con estos síndromes.

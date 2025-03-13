@@ -2,9 +2,9 @@ import { BaseContent } from "/src/interface/BaseContent";
 
 export const content: BaseContent[] = [
   {
-    icon: "/src/assets/oftalmologia/oftalmologia-icon1.png",
+    icon: "/oftalmologia/oftalmologia-icon1.png",
     title: "Unidad de Oftalmología",
-    imageSrc: "/src/assets/oftalmologia/oftalmologia1.png",
+    imageSrc: "/oftalmologia/oftalmologia1.png",
     imageDesc: "",
     description_1: `
         <h3>Cirugía refractiva</h3>
@@ -17,7 +17,7 @@ export const content: BaseContent[] = [
   {
     icon: "",
     title: "",
-    imageSrc: "/src/assets/oftalmologia/oftalmologia2.png",
+    imageSrc: "/oftalmologia/oftalmologia2.png",
     imageDesc: "",
     description_1: `
         <h3>Presbicia o vista cansada</h3>
@@ -31,7 +31,7 @@ export const content: BaseContent[] = [
   {
     icon: "",
     title: "",
-    imageSrc: "/src/assets/oftalmologia/oftalmologia3.png",
+    imageSrc: "/oftalmologia/oftalmologia3.png",
     imageDesc: "",
     description_1: `
         <h3>Cataratas</h3>
@@ -45,7 +45,7 @@ export const content: BaseContent[] = [
   {
     icon: "",
     title: "",
-    imageSrc: "/src/assets/oftalmologia/oftalmologia4.png",
+    imageSrc: "/oftalmologia/oftalmologia4.png",
     imageDesc: "",
     description_1: `
         <h3>Retina</h3>
@@ -55,9 +55,9 @@ export const content: BaseContent[] = [
     description_2: "",
   },
   {
-    icon: "/src/assets/oftalmologia/oftalmologia-icon2.png",
+    icon: "/oftalmologia/oftalmologia-icon2.png",
     title: "Enfermedades de los ojos",
-    imageSrc: "/src/assets/oftalmologia/oftalmologia5.png",
+    imageSrc: "/oftalmologia/oftalmologia5.png",
     imageDesc: "",
     description_1: `
         <div class="col-md-12">
@@ -73,7 +73,7 @@ export const content: BaseContent[] = [
   {
     icon: "",
     title: "",
-    imageSrc: "/src/assets/oftalmologia/oftalmologia6.png",
+    imageSrc: "/oftalmologia/oftalmologia6.png",
     imageDesc: "",
     description_1: `
                         <h3>Estrabismo</h3>
@@ -88,7 +88,7 @@ export const content: BaseContent[] = [
   {
     icon: "",
     title: "",
-    imageSrc: "/src/assets/oftalmologia/oftalmologia7.png",
+    imageSrc: "/oftalmologia/oftalmologia7.png",
     imageDesc: "",
     description_1: `   <h3>Alteraciones neuroftalmológicas</h3>
                 <p>Los casos son tratados conjuntamente por un neurólogo y un oftalmólogo para ofrecer un enfoque y una solución multidisciplinar.</p><br>

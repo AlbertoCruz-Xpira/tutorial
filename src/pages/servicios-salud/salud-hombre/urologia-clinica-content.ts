@@ -4,7 +4,7 @@ export const content: BaseContent[] = [
   {
     icon: "",
     title: "",
-    imageSrc: "/src/assets/salud-hombre/urologia-clinica/urologia1.png",
+    imageSrc: "/salud-hombre/urologia-clinica/urologia1.png",
     imageDesc: "",
     description_1: `
       <h3>Infecciones Urogenitales:</h3>
@@ -52,7 +52,7 @@ export const content: BaseContent[] = [
   {
     icon: "",
     title: "",
-    imageSrc: "/src/assets/salud-hombre/urologia-clinica/urologia2.png",
+    imageSrc: "/salud-hombre/urologia-clinica/urologia2.png",
     imageDesc: "",
     description_1: `
         <p>
@@ -96,7 +96,7 @@ export const content: BaseContent[] = [
   {
     icon: "",
     title: "",
-    imageSrc: "/src/assets/salud-hombre/urologia-clinica/urologia3.png",
+    imageSrc: "/salud-hombre/urologia-clinica/urologia3.png",
     imageDesc: "",
     description_1: `
         <p>
@@ -147,7 +147,7 @@ export const content: BaseContent[] = [
   {
     icon: "",
     title: "",
-    imageSrc: "/src/assets/salud-hombre/urologia-clinica/urologia4.png",
+    imageSrc: "/salud-hombre/urologia-clinica/urologia4.png",
     imageDesc: "",
     description_1: `
         <p>
@@ -176,7 +176,7 @@ export const content: BaseContent[] = [
   {
     icon: "",
     title: "",
-    imageSrc: "/src/assets/salud-hombre/urologia-clinica/urologia5.png",
+    imageSrc: "/salud-hombre/urologia-clinica/urologia5.png",
     imageDesc: "",
     description_1: `
         <h3>La litiasis de vías Urinarias:</h3>

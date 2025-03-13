@@ -2,7 +2,7 @@ import type { BaseContent } from "../../../interface/BaseContent";
 
 export const content: BaseContent[] = [
   {
-    icon: "/src/assets/salud-mujer/reproduccion-asistida/icon-reproduccion.png",
+    icon: "/salud-mujer/reproduccion-asistida/icon-reproduccion.png",
     title: "Inseminación Artificial (IA)",
     imageSrc: "",
     imageDesc: "",
@@ -14,7 +14,7 @@ export const content: BaseContent[] = [
     icon: "",
     title: "",
     imageSrc:
-      "/src/assets/salud-mujer/reproduccion-asistida/reproduccion-1.png",
+      "/salud-mujer/reproduccion-asistida/reproduccion-1.png",
     imageDesc: "",
     description_1: `<ul>
             <li>
@@ -46,7 +46,7 @@ export const content: BaseContent[] = [
     icon: "",
     title: "",
     imageSrc:
-      "/src/assets/salud-mujer/reproduccion-asistida/reproduccion-2.png",
+      "/salud-mujer/reproduccion-asistida/reproduccion-2.png",
     imageDesc: "",
     description_1: `<h4>¿Qué es la Inseminación Artificial?</h4>
           <p>
@@ -68,14 +68,14 @@ export const content: BaseContent[] = [
     icon: "",
     title: "",
     imageSrc:
-      "/src/assets/salud-mujer/reproduccion-asistida/reproduccion-3.png",
+      "/salud-mujer/reproduccion-asistida/reproduccion-3.png",
     imageDesc: "",
     description_1: ``,
     orientation: 0,
     description_2: "Procedimiento",
   },
   {
-    icon: "/src/assets/salud-mujer/reproduccion-asistida/icon-fecundacion.png",
+    icon: "/salud-mujer/reproduccion-asistida/icon-fecundacion.png",
     title: "Inseminación Artificial (IA)",
     imageSrc: "",
     imageDesc: "",
@@ -87,7 +87,7 @@ export const content: BaseContent[] = [
     icon: "",
     title: "",
     imageSrc:
-      "/src/assets/salud-mujer/reproduccion-asistida/reproduccion-4.png",
+      "/salud-mujer/reproduccion-asistida/reproduccion-4.png",
     imageDesc: "",
     description_1: `
     <h4>¿Qué es la Fecundación In Vitro?</h4>
@@ -102,7 +102,7 @@ export const content: BaseContent[] = [
     icon: "",
     title: "",
     imageSrc:
-      "/src/assets/salud-mujer/reproduccion-asistida/reproduccion-5.png",
+      "/salud-mujer/reproduccion-asistida/reproduccion-5.png",
     imageDesc: "",
     description_1: ``,
     orientation: 0,
@@ -112,7 +112,7 @@ export const content: BaseContent[] = [
     icon: "",
     title: "",
     imageSrc:
-      "/src/assets/salud-mujer/reproduccion-asistida/reproduccion-6.png",
+      "/salud-mujer/reproduccion-asistida/reproduccion-6.png",
     imageDesc: "",
     description_1: `<h4>¿Qué es la Ovodonación?</h4>
                 <p>
@@ -149,7 +149,7 @@ export const content: BaseContent[] = [
     icon: "",
     title: "",
     imageSrc:
-      "/src/assets/salud-mujer/reproduccion-asistida/reproduccion-7.png",
+      "/salud-mujer/reproduccion-asistida/reproduccion-7.png",
     imageDesc: "",
     description_1: `<h4 class="pb-2">Edad: 18 a 35 años</h4>
                 <p>
@@ -166,7 +166,7 @@ export const content: BaseContent[] = [
     icon: "",
     title: "",
     imageSrc:
-      "/src/assets/salud-mujer/reproduccion-asistida/reproduccion-8.png",
+      "/salud-mujer/reproduccion-asistida/reproduccion-8.png",
     imageDesc: "",
     description_1: ``,
     orientation: 2,

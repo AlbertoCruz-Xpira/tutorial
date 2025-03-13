@@ -4,7 +4,7 @@ export const content: BaseContent[] = [
   {
     icon: "",
     title: "",
-    imageSrc: "/src/assets/salud-hombre/uro-oncologia/urooncologia1.png",
+    imageSrc: "/salud-hombre/uro-oncologia/urooncologia1.png",
     imageDesc: "",
     description_1: `
       <h3>Cáncer de próstata:</h3>
@@ -25,7 +25,7 @@ export const content: BaseContent[] = [
    {
     icon: "",
     title: "",
-    imageSrc: "/src/assets/salud-hombre/uro-oncologia/urooncologia2.png",
+    imageSrc: "/salud-hombre/uro-oncologia/urooncologia2.png",
     imageDesc: "",
     description_1: `
         <h3>Cáncer de vejiga:</h3>
@@ -45,7 +45,7 @@ export const content: BaseContent[] = [
    {
     icon: "",
     title: "",
-    imageSrc: "/src/assets/salud-hombre/uro-oncologia/urooncologia3.png",
+    imageSrc: "/salud-hombre/uro-oncologia/urooncologia3.png",
     imageDesc: "",
     description_1: `
         <h3>Cáncer de riñón:</h3>
@@ -62,7 +62,7 @@ export const content: BaseContent[] = [
    {
     icon: "",
     title: "",
-    imageSrc: "/src/assets/salud-hombre/uro-oncologia/urooncologia4.png",
+    imageSrc: "/salud-hombre/uro-oncologia/urooncologia4.png",
     imageDesc: "",
     description_1: `
         <h3>Cáncer Testicular:</h3>

@@ -8,7 +8,7 @@ const posts:Post[] = [
         tag: "edad",
         description:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec molestie turpis id odio blandit, dignissim tincidunt arcu bibendum.",
-        imageSrc: "/src/assets/posts/De-que-se-ocupa-un-oftalmologo.jpg",
+        imageSrc: "/posts/De-que-se-ocupa-un-oftalmologo.jpg",
         buttonText: "Leer más",
         buttonLink: "/posts/La-vida-y-la-edad",
     },
@@ -19,7 +19,7 @@ const posts:Post[] = [
         tag: "piel",
         description:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec molestie turpis id odio blandit, dignissim tincidunt arcu bibendum.",
-        imageSrc: "/src/assets/posts/El-cuidado-de-la-piel-en-verano.jpg",
+        imageSrc: "/posts/El-cuidado-de-la-piel-en-verano.jpg",
         buttonText: "Leer más",
         buttonLink: "/posts/El-cuidado-de-la-piel-en-verano",
     },
@@ -30,7 +30,7 @@ const posts:Post[] = [
         tag: "edad",
         description:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec molestie turpis id odio blandit, dignissim tincidunt arcu bibendum.",
-        imageSrc: "/src/assets/posts/De-que-se-ocupa-un-oftalmologo.jpg",
+        imageSrc: "/posts/De-que-se-ocupa-un-oftalmologo.jpg",
         buttonText: "Leer más",
         buttonLink: "/posts/Publicacion-3",
     },
@@ -41,7 +41,7 @@ const posts:Post[] = [
         tag: "piel",
         description:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec molestie turpis id odio blandit, dignissim tincidunt arcu bibendum.",
-        imageSrc: "/src/assets/posts/El-cuidado-de-la-piel-en-verano.jpg",
+        imageSrc: "/posts/El-cuidado-de-la-piel-en-verano.jpg",
         buttonText: "Leer más",
         buttonLink: "/posts/Publicacion-4",
     },

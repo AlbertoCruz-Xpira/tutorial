@@ -2,9 +2,9 @@ import { BaseContent } from "/src/interface/BaseContent";
 
 export const content: BaseContent[] = [
   {
-    icon: "/src/assets/plan-de-vida-saludable/icon-mesa.png",
+    icon: "/plan-de-vida-saludable/icon-mesa.png",
     title: "Ponga la mesa",
-    imageSrc: "/src/assets/plan-de-vida-saludable/menu-para-bajar-de-peso-3-1.png",
+    imageSrc: "/plan-de-vida-saludable/menu-para-bajar-de-peso-3-1.png",
     imageDesc: "",  
     description_1: `
         <h3 class="plan-vida-h3"> Haga que la variedad juegue a su favor </h3>
@@ -20,7 +20,7 @@ export const content: BaseContent[] = [
   {
     icon: "",
     title: "",
-    imageSrc: "/src/assets/plan-de-vida-saludable/limite.png",
+    imageSrc: "/plan-de-vida-saludable/limite.png",
     imageDesc: "",  
     description_1: `
         <h3 class="plan-vida-h3"> Ponga límite a los alimentos no saludables </h3>
@@ -37,7 +37,7 @@ export const content: BaseContent[] = [
   {
     icon: "",
     title: "",
-    imageSrc: "/src/assets/plan-de-vida-saludable/verduras.png",
+    imageSrc: "/plan-de-vida-saludable/verduras.png",
     imageDesc: "",  
     description_1: `
         <h3 class="plan-vida-h3">  </h3>
@@ -57,7 +57,7 @@ export const content: BaseContent[] = [
   {
     icon: "",
     title: "",
-    imageSrc: "/src/assets/plan-de-vida-saludable/glucosa.png",
+    imageSrc: "/plan-de-vida-saludable/glucosa.png",
     imageDesc: "",  
     description_1: `
         <h3 class="plan-vida-h3"> Colabore para tener el nivel de glucosa dentro de los límites normales </h3>

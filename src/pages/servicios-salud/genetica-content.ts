@@ -2,7 +2,7 @@ import { BaseContent } from "/src/interface/BaseContent";
 
 export const content: BaseContent[] = [
   {
-    icon: "/src/assets/genetica/genetica-icon1.png",
+    icon: "/genetica/genetica-icon1.png",
     title: "Nutrición Personalizada",
     imageSrc: "",
     imageDesc: "",
@@ -13,7 +13,7 @@ export const content: BaseContent[] = [
   {
     icon: "",
     title: "Intolerancias Alimentarias",
-    imageSrc: "/src/assets/genetica/genetica-img-icon1.png",
+    imageSrc: "/genetica/genetica-img-icon1.png",
     imageDesc: "",
     description_1: `<p class="p-eco">
                     El test de intolerancia alimentaria A200 evalúa la respuesta del sistema inmune frente a más de 200 alimentos habituales en la dieta mediterránea.
@@ -24,7 +24,7 @@ export const content: BaseContent[] = [
   {
     icon: "",
     title: "Nutrigenética",
-    imageSrc: "/src/assets/genetica/genetica-img-icon2.png",
+    imageSrc: "/genetica/genetica-img-icon2.png",
     imageDesc: "",
     description_1: `<p class="p-eco">
                     Personas que deseen adaptar su dieta en función a su genética y conocer sus necesidades nutricionales específicas de manera personalizada.
@@ -35,7 +35,7 @@ export const content: BaseContent[] = [
   {
     icon: "",
     title: "MigraTest",
-    imageSrc: "/src/assets/genetica/genetica-img-icon3.png",
+    imageSrc: "/genetica/genetica-img-icon3.png",
     imageDesc: "",
     description_1: `<p class="p-eco">
                     Indicada en el caso de personas que padezcan migrañas y quieran saber si el origen está relacionado con un déficit de la actividad de la enzima DAO.
@@ -46,7 +46,7 @@ export const content: BaseContent[] = [
   {
     icon: "",
     title: "Cuidado intestinal",
-    imageSrc: "/src/assets/genetica/genetica-img-icon4.png",
+    imageSrc: "/genetica/genetica-img-icon4.png",
     imageDesc: "",
     description_1: `<p class="p-eco">
                     Lactosa Test consiste en un estudio genético de intolerancia a la lactosa, a través de una muestra de raspado bucal.
@@ -55,7 +55,7 @@ export const content: BaseContent[] = [
     description_2: "",
   },
   {
-    icon: "/src/assets/genetica/genetica-icon2.png",
+    icon: "/genetica/genetica-icon2.png",
     title: "Cardio",
     imageSrc: "",
     imageDesc: "",
@@ -66,7 +66,7 @@ export const content: BaseContent[] = [
   {
     icon: "",
     title: "CardioScore",
-    imageSrc: "/src/assets/genetica/genetica-img-icon5.png",
+    imageSrc: "/genetica/genetica-img-icon5.png",
     imageDesc: "",
     description_1: `<p class="p-eco">
                     Se basa en una extracción de sangre que permitirá una evaluación clínico-genética del riesgo cardiovascular real.
@@ -77,7 +77,7 @@ export const content: BaseContent[] = [
   {
     icon: "",
     title: "Omega-3",
-    imageSrc: "/src/assets/genetica/genetica-img-icon6.png",
+    imageSrc: "/genetica/genetica-img-icon6.png",
     imageDesc: "",
     description_1: `<p class="p-eco">
                     Indicador para la prevención de enfermedades cardiovasculares y cerebrovasculares.
@@ -88,7 +88,7 @@ export const content: BaseContent[] = [
   {
     icon: "",
     title: "Perfil Cardiovascular",
-    imageSrc: "/src/assets/genetica/genetica-img-icon7.png",
+    imageSrc: "/genetica/genetica-img-icon7.png",
     imageDesc: "",
     description_1: `<p class="p-eco">
                     Permite obtener información sobre los niveles de colesterol (HDL y LDL), triglicéridos, homocisteína, proteína C reactiva, índice aterogénico, lipoproteína (a) y hemoglobina glicosilada.
@@ -97,7 +97,7 @@ export const content: BaseContent[] = [
     description_2: "",
   },
   {
-    icon: "/src/assets/genetica/genetica-icon3.png",
+    icon: "/genetica/genetica-icon3.png",
     title: "Edad y Salud",
     imageSrc: "",
     imageDesc: "",
@@ -108,7 +108,7 @@ export const content: BaseContent[] = [
   {
     icon: "",
     title: "",
-    imageSrc: "/src/assets/genetica/genetica1.png",
+    imageSrc: "/genetica/genetica1.png",
     imageDesc: "",
     description_1: `    <h3>Longitud Telomérica</h3>
     <p>Te permitirá conocer la edad biológica de tu organismo frente a tu edad cronológica. Si la prueba resulta
@@ -125,7 +125,7 @@ export const content: BaseContent[] = [
     description_2: "",
   },
   {
-    icon: "/src/assets/genetica/genetica-icon4.png",
+    icon: "/genetica/genetica-icon4.png",
     title: "Bienestar – Prevención",
     imageSrc: "",
     imageDesc: "",
@@ -136,7 +136,7 @@ export const content: BaseContent[] = [
   {
     icon: "",
     title: "Prevención Check",
-    imageSrc: "/src/assets/genetica/genetica-img-icon8.png",
+    imageSrc: "/genetica/genetica-img-icon8.png",
     imageDesc: "",
     description_1: `<p class="p-eco">
                     Personas que deseen mantener y mejorar su estado de salud actual, previniendo, en la medida de lo posible, las enfermedades crónicas frecuentes de la edad adulta.
@@ -147,7 +147,7 @@ export const content: BaseContent[] = [
   {
     icon: "",
     title: "Chequeo Completo por sexo",
-    imageSrc: "/src/assets/genetica/genetica-img-icon9.png",
+    imageSrc: "/genetica/genetica-img-icon9.png",
     imageDesc: "",
     description_1: `<p class="p-eco">
                     La detección de posibles alteraciones bioquímicas relacionadas con determinadas patologías, a través de una muestra de sangre y de orina. El chequeo incluye un hemograma completo y parámetros bioquímicos claves para la realización de una revisión general.
@@ -156,7 +156,7 @@ export const content: BaseContent[] = [
     description_2: "",
   },
   {
-    icon: "/src/assets/genetica/genetica-icon5.png",
+    icon: "/genetica/genetica-icon5.png",
     title: "Rendimiento Deportivo",
     imageSrc: "",
     imageDesc: "",
@@ -167,7 +167,7 @@ export const content: BaseContent[] = [
   {
     icon: "",
     title: "Chequeo deportivo avanzado",
-    imageSrc: "/src/assets/genetica/genetica-img-icon10.png",
+    imageSrc: "/genetica/genetica-img-icon10.png",
     imageDesc: "",
     description_1: `<p class="p-eco">
                     Evalúa diferentes parámetros analíticos claves para un correcto estado de salud y un óptimo rendimiento deportivo, permitiéndote conocer cuáles son susceptibles de mejora.
@@ -178,7 +178,7 @@ export const content: BaseContent[] = [
   {
     icon: "",
     title: "Test Lesiones",
-    imageSrc: "/src/assets/genetica/genetica-img-icon11.png",
+    imageSrc: "/genetica/genetica-img-icon11.png",
     imageDesc: "",
     description_1: `<p class="p-eco">
                     Información acerca de la susceptibilidad a sufrir lesiones durante el entrenamiento, así como la respuesta en función del tipo de ejercicio de forma individualizada.
@@ -187,7 +187,7 @@ export const content: BaseContent[] = [
     description_2: "",
   },
   {
-    icon: "/src/assets/genetica/genetica-icon6.png",
+    icon: "/genetica/genetica-icon6.png",
     title: "Prevención de Cáncer",
     imageSrc: "",
     imageDesc: "",
@@ -198,7 +198,7 @@ export const content: BaseContent[] = [
   {
     icon: "",
     title: "",
-    imageSrc: "/src/assets/genetica/genetica2.png",
+    imageSrc: "/genetica/genetica2.png",
     imageDesc: "",
     description_1: `<h3>Tipología de Test en Oncología:</h3>
                 <p>
@@ -223,7 +223,7 @@ export const content: BaseContent[] = [
     description_2: "",
   },
   {
-    icon: "/src/assets/genetica/genetica-icon7.png",
+    icon: "/genetica/genetica-icon7.png",
     title: "Futuros padres",
     imageSrc: "",
     imageDesc: "",
@@ -234,7 +234,7 @@ export const content: BaseContent[] = [
   {
     icon: "",
     title: "",
-    imageSrc: "/src/assets/genetica/genetica3.png",
+    imageSrc: "/genetica/genetica3.png",
     imageDesc: "",
     description_1: `<h3>Test Prenatal</h3>
                 <p>
@@ -252,7 +252,7 @@ export const content: BaseContent[] = [
   {
     icon: "",
     title: "",
-    imageSrc: "/src/assets/genetica/genetica4.png",
+    imageSrc: "/genetica/genetica4.png",
     imageDesc: "",
     description_1: `<h3>Test Genético</h3>
                 <p>
@@ -263,7 +263,7 @@ export const content: BaseContent[] = [
     description_2: "",
   },
   {
-    icon: "/src/assets/genetica/genetica-icon8.png",
+    icon: "/genetica/genetica-icon8.png",
     title: "Otros",
     imageSrc: "",
     imageDesc: "",
@@ -274,7 +274,7 @@ export const content: BaseContent[] = [
   {
     icon: "",
     title: "Farmacogenética",
-    imageSrc: "/src/assets/genetica/genetica-img-icon12.png",
+    imageSrc: "/genetica/genetica-img-icon12.png",
     imageDesc: "",
     description_1: `<p class="p-eco">
                     El test de intolerancia alimentaria A200 evalúa la respuesta del sistema inmune frente a más de 200 alimentos habituales en la dieta mediterránea.
@@ -285,7 +285,7 @@ export const content: BaseContent[] = [
   {
     icon: "",
     title: "Glaucoma PEX test",
-    imageSrc: "/src/assets/genetica/genetica-img-icon13.png",
+    imageSrc: "/genetica/genetica-img-icon13.png",
     imageDesc: "",
     description_1: `<p class="p-eco">
                     Análisis de toxicidad de los fármacos de uso habitual para determinar la elección más adecuada.
@@ -296,7 +296,7 @@ export const content: BaseContent[] = [
   {
     icon: "",
     title: "Macula Test",
-    imageSrc: "/src/assets/genetica/genetica-img-icon14.png",
+    imageSrc: "/genetica/genetica-img-icon14.png",
     imageDesc: "",
     description_1: `<p class="p-eco">
                     Riesgo genético de padecer degeneración macular asociada a la edad.
@@ -307,7 +307,7 @@ export const content: BaseContent[] = [
   {
     icon: "",
     title: "Metales en el Organismo",
-    imageSrc: "/src/assets/genetica/genetica-img-icon15.png",
+    imageSrc: "/genetica/genetica-img-icon15.png",
     imageDesc: "",
     description_1: `<p class="p-eco">
                     Análisis en cabello de la presencia de metales para evaluar una posible toxicidad en tu dieta o en tu entorno.
@@ -321,7 +321,7 @@ export const content: BaseContent[] = [
   {
     icon: "",
     title: "Huella Genética",
-    imageSrc: "/src/assets/genetica/genetica-img-icon16.png",
+    imageSrc: "/genetica/genetica-img-icon16.png",
     imageDesc: "",
     description_1: `<p class="p-eco">
                     Conserva tu DNI genético para el futuro.
@@ -332,7 +332,7 @@ export const content: BaseContent[] = [
   {
     icon: "",
     title: "Test de Paternidad",
-    imageSrc: "/src/assets/genetica/genetica-img-icon17.png",
+    imageSrc: "/genetica/genetica-img-icon17.png",
     imageDesc: "",
     description_1: `<p class="p-eco">
                     Prueba de ADN para determinar la paternidad biológica.
@@ -343,7 +343,7 @@ export const content: BaseContent[] = [
   {
     icon: "",
     title: "Test Linfocitario",
-    imageSrc: "/src/assets/genetica/genetica-img-icon7.png",
+    imageSrc: "/genetica/genetica-img-icon7.png",
     imageDesc: "",
     description_1: `<p class="p-eco">
                     Evaluación del sistema inmunitario.

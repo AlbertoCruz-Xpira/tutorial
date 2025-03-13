@@ -29,7 +29,7 @@ export const content: BaseContent[] = [
    {
     icon: "",
     title: "",
-    imageSrc: "/src/assets/salud-hombre/disfuncion-erectil/disfuncion1.png",
+    imageSrc: "/salud-hombre/disfuncion-erectil/disfuncion1.png",
     imageDesc: "",
     description_1: `
         <h3>
@@ -107,7 +107,7 @@ export const content: BaseContent[] = [
    {
     icon: "",
     title: "",
-    imageSrc: "/src/assets/salud-hombre/disfuncion-erectil/disfuncion2.png",
+    imageSrc: "/salud-hombre/disfuncion-erectil/disfuncion2.png",
     imageDesc: "",
     description_1: `
         <h3>Causas psicológicas de la disfunción eréctil:</h3>
@@ -140,7 +140,7 @@ export const content: BaseContent[] = [
    {
     icon: "",
     title: "",
-    imageSrc: "/src/assets/salud-hombre/disfuncion-erectil/disfuncion3.png",
+    imageSrc: "/salud-hombre/disfuncion-erectil/disfuncion3.png",
     imageDesc: "",
     description_1: `
         <h3>Factores de riesgo pueden contribuir a la disfunción eréctil:</h3>
@@ -199,7 +199,7 @@ export const content: BaseContent[] = [
   {
     icon: "",
     title: "Consejos para una vida sexual satisfactoria:",
-    imageSrc: "/src/assets/salud-hombre/disfuncion-erectil/disfuncion3.png",
+    imageSrc: "/salud-hombre/disfuncion-erectil/disfuncion3.png",
     imageDesc: "",
     description_1: "",
     orientation: 0,
@@ -208,7 +208,7 @@ export const content: BaseContent[] = [
   {
     icon: "",
     title: "Hacer ejercicio físico:",
-    imageSrc: "/src/assets/salud-hombre/disfuncion-erectil/consejodisfuncion1.png",
+    imageSrc: "/salud-hombre/disfuncion-erectil/consejodisfuncion1.png",
     imageDesc: "",
     description_1: `<p>
           Produce una mejoría emocional y, este estado de bienestar y
@@ -221,7 +221,7 @@ export const content: BaseContent[] = [
   {
     icon: "",
     title: "Abandonar el tabaco:",
-    imageSrc: "/src/assets/salud-hombre/disfuncion-erectil/consejodisfuncion2.png",
+    imageSrc: "/salud-hombre/disfuncion-erectil/consejodisfuncion2.png",
     imageDesc: "",
     description_1: `<p>
           Afecta los flujos sanguíneos del pene, adelantando el envejecimiento
@@ -233,7 +233,7 @@ export const content: BaseContent[] = [
   {
     icon: "",
     title: "Dieta equilibrada:",
-    imageSrc: "/src/assets/salud-hombre/disfuncion-erectil/consejodisfuncion3.png",
+    imageSrc: "/salud-hombre/disfuncion-erectil/consejodisfuncion3.png",
     imageDesc: "",
     description_1: `<p>
           Nos ayuda a mantener la salud física y el aspecto físico, algunos
@@ -245,7 +245,7 @@ export const content: BaseContent[] = [
   {
     icon: "",
     title: "Evitar prácticas sexuales de riesgo:",
-    imageSrc: "/src/assets/salud-hombre/disfuncion-erectil/consejodisfuncion4.png",
+    imageSrc: "/salud-hombre/disfuncion-erectil/consejodisfuncion4.png",
     imageDesc: "",
     description_1: `<p>
           Nos evitara más de un disgusto tanto por la ITS como por embarazos no
@@ -265,7 +265,7 @@ export const content: BaseContent[] = [
   {
     icon: "",
     title: "Practicar técnicas de autocontrol emocional:",
-    imageSrc: "/src/assets/salud-hombre/disfuncion-erectil/consejodisfuncion5.png",
+    imageSrc: "/salud-hombre/disfuncion-erectil/consejodisfuncion5.png",
     imageDesc: "",
     description_1: `<p>
           Se recomienda la relajación para evitar cargas estresantes, que
@@ -277,7 +277,7 @@ export const content: BaseContent[] = [
   {
     icon: "",
     title: "Evitar relaciones tóxicas:",
-    imageSrc: "/src/assets/salud-hombre/disfuncion-erectil/consejodisfuncion6.png",
+    imageSrc: "/salud-hombre/disfuncion-erectil/consejodisfuncion6.png",
     imageDesc: "",
     description_1: `<p>
           También en el plano emocional, debemos mantener una relación libre de
@@ -290,7 +290,7 @@ export const content: BaseContent[] = [
   {
     icon: "",
     title: "Mejorar la información sexual:",
-    imageSrc: "/src/assets/salud-hombre/disfuncion-erectil/consejodisfuncion7.png",
+    imageSrc: "/salud-hombre/disfuncion-erectil/consejodisfuncion7.png",
     imageDesc: "",
     description_1: `<p>
           Se debe invertir recursos para mejorar la orientación tanto de
@@ -303,7 +303,7 @@ export const content: BaseContent[] = [
   {
     icon: "",
     title: "Comunicación:",
-    imageSrc: "/src/assets/salud-hombre/disfuncion-erectil/consejodisfuncion8.png",
+    imageSrc: "/salud-hombre/disfuncion-erectil/consejodisfuncion8.png",
     imageDesc: "",
     description_1: `<p>
           Conocerse y conocer a tu pareja te ayuda a llevar unas relaciones

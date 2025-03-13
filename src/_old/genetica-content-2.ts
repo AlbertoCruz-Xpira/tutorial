@@ -1,70 +1,70 @@
 export const content = [
   {
     pageTitle: "Genética",
-    imageSrc: "/src/assets/genetica/banner-genetica1.jpg",
+    imageSrc: "/genetica/banner-genetica1.jpg",
   },
   {
     
-    imageSrc: "/src/assets/genetica/genetica-icon1.png",
+    imageSrc: "/genetica/genetica-icon1.png",
     title: "Nutrición Personalizada",
     icon: "",
     text: "",
   },
   {
     
-    imageSrc: "/src/assets/genetica/genetica-img-icon1.png",
+    imageSrc: "/genetica/genetica-img-icon1.png",
     title: "Intolerancias Alimentarias",
     text: "El test de intolerancia alimentaria A200 evalúa la respuesta del sistema inmune frente a más de 200 alimentos habituales en la dieta mediterránea.",
   },
   {
    
-    imageSrc: "/src/assets/genetica/genetica-img-icon2.png",
+    imageSrc: "/genetica/genetica-img-icon2.png",
     title: "Nutrigenética",
     text: "Personas que deseen adaptar su dieta en función a su genética y conocer sus necesidades nutricionales específicas de manera personalizada.",
   },
   {
     
-    imageSrc: "/src/assets/genetica/genetica-img-icon3.png",
+    imageSrc: "/genetica/genetica-img-icon3.png",
     title: "MigraTest",
     text: "Indicada en el caso de personas que padezcan migrañas y quieran saber si el origen está relacionado con un déficit de la actividad de la enzima DAO.",
   },
   {
    
-    imageSrc: "/src/assets/genetica/genetica-img-icon4.png",
+    imageSrc: "/genetica/genetica-img-icon4.png",
     title: "Cuidado intestinal",
     text: "Lactosa Test consiste en un estudio genético de intolerancia a la lactosa, a través de una muestra de raspado bucal.",
   },
   {
    
-    imageSrc: "/src/assets/genetica/genetica-icon2.png",
+    imageSrc: "/genetica/genetica-icon2.png",
     title: "Cardio",
   },
   {
     component: "IconColumn",
-    imageSrc: "/src/assets/genetica/genetica-img-icon5.png",
+    imageSrc: "/genetica/genetica-img-icon5.png",
     title: "CardioScore",
     text: "Se basa en una extracción de sangre que permitirá una evaluación clínico-genética del riesgo cardiovascular real.",
   },
   {
     component: "IconColumn",
-    imageSrc: "/src/assets/genetica/genetica-img-icon6.png",
+    imageSrc: "/genetica/genetica-img-icon6.png",
     title: "Omega 3",
     text: "Indicador para la prevención de enfermedades cardiovasculares y cerebrovasculares.",
   },
   {
     component: "IconColumn",
-    imageSrc: "/src/assets/genetica/genetica-img-icon7.png",
+    imageSrc: "/genetica/genetica-img-icon7.png",
     title: "Perfil Cardiovascular",
     text: "Permite obtener información sobre los niveles de colesterol (HDL y LDL), triglicéridos, homocisteína, proteína C reactiva, índice aterogénico, lipoproteína (a) y hemoglobina glicosilada..",
   },
   {
     component: "IconRow",
-    imageSrc: "/src/assets/genetica/genetica-icon3.png",
+    imageSrc: "/genetica/genetica-icon3.png",
     title: "Edad y Salud",
   },
   {
     component: "ImageRow",
-    imageSrc: "/src/assets/genetica/genetica1.png",
+    imageSrc: "/genetica/genetica1.png",
     html: `
     <h3>Longitud Telomérica</h3>
     <p>
@@ -90,46 +90,46 @@ export const content = [
   },
   {
     component: "IconRow",
-    imageSrc: "/src/assets/genetica/genetica-icon4.png",
+    imageSrc: "/genetica/genetica-icon4.png",
     title: "Bienestar – Prevención",
   },
   {
     component: "IconColumn",
-    imageSrc: "/src/assets/genetica/genetica-img-icon8.png",
+    imageSrc: "/genetica/genetica-img-icon8.png",
     title: "Prevención Check",
     text: "Personas que deseen mantener y mejorar su estado de salud actual, previniendo, en la medida de lo posible, las enfermedades crónicas frecuentes de la edad adulta.",
   },
   {
     component: "IconColumn",
-    imageSrc: "/src/assets/genetica/genetica-img-icon9.png",
+    imageSrc: "/genetica/genetica-img-icon9.png",
     title: "Perfil Cardiovascular",
     text: "La detección de posibles alteraciones bioquímicas relacionadas con determinadas patologías, a través de una muestra de sangre y de orina. El chequeo incluye un hemograma completo y parámetros bioquímicos claves para la realización de una revisión general.",
   },
   {
     component: "IconRow",
-    imageSrc: "/src/assets/genetica/genetica-icon5.png",
+    imageSrc: "/genetica/genetica-icon5.png",
     title: "Rendimiento Deportivo",
   },
   {
     component: "IconColumn",
-    imageSrc: "/src/assets/genetica/genetica-img-icon10.png",
+    imageSrc: "/genetica/genetica-img-icon10.png",
     title: "Chequeo deportivo avanzado",
     text: "Evalúa diferentes parámetros analíticos claves para un correcto estado de salud y un óptimo rendimiento deportivo, permitiéndote conocer cuáles son susceptibles de mejora.",
   },
   {
     component: "IconColumn",
-    imageSrc: "/src/assets/genetica/genetica-img-icon11.png",
+    imageSrc: "/genetica/genetica-img-icon11.png",
     title: "Test Lesiones",
     text: "Información acerca de la susceptibilidad a sufrir lesiones durante el entrenamiento, así como la respuesta en función del tipo de ejercicio de forma individualizada.",
   },
   {
     component: "IconRow",
-    imageSrc: "/src/assets/genetica/genetica-icon6.png",
+    imageSrc: "/genetica/genetica-icon6.png",
     title: "Prevención de Cancer",
   },
   {
     component: "ImageRow",
-    imageSrc: "/src/assets/genetica/genetica2.png",
+    imageSrc: "/genetica/genetica2.png",
     html: `
     <h3>Tipología de Test en Oncología:</h3>
     <p>
@@ -178,12 +178,12 @@ export const content = [
   },
   {
     component: "IconRow",
-    imageSrc: "/src/assets/genetica/genetica-icon7.png",
+    imageSrc: "/genetica/genetica-icon7.png",
     title: "Futuros Padres",
   },
   {
     component: "ImageRow",
-    imageSrc: "/src/assets/genetica/genetica3.png",
+    imageSrc: "/genetica/genetica3.png",
     html: `
     <h3>Test Prenatal</h3>
     <p>
@@ -203,7 +203,7 @@ export const content = [
   },
   {
     component: "ImageRow",
-    imageSrc: "/src/assets/genetica/genetica4.png",
+    imageSrc: "/genetica/genetica4.png",
     html: `
     <h3>Test Prenatal</h3>
     <h3>Test Genético</h3>
@@ -218,48 +218,48 @@ export const content = [
   },
   {
     component: "IconRow",
-    imageSrc: "/src/assets/genetica/genetica-icon8.png",
+    imageSrc: "/genetica/genetica-icon8.png",
     title: "Otros",
   },
   {
     component: "IconColumn",
-    imageSrc: "/src/assets/genetica/genetica-img-icon12.png",
+    imageSrc: "/genetica/genetica-img-icon12.png",
     title: "Farmacogenética",
     text: "Análisis de toxicidad de los fármacos de uso habitual para determinar la elección más adecuada.",
   },
   {
     component: "IconColumn",
-    imageSrc: "/src/assets/genetica/genetica-img-icon13.png",
+    imageSrc: "/genetica/genetica-img-icon13.png",
     title: "Glaucoma PEX test",
     text: "Riesgo genético de padecer glaucoma pseudoexfoliativo.",
   },
   {
     component: "IconColumn",
-    imageSrc: "/src/assets/genetica/genetica-img-icon14.png",
+    imageSrc: "/genetica/genetica-img-icon14.png",
     title: "Macula Test",
     text: "Riesgo genético de padecer degeneración macular asociada a la edad.",
   },
   {
     component: "IconColumn",
-    imageSrc: "/src/assets/genetica/genetica-img-icon15.png",
+    imageSrc: "/genetica/genetica-img-icon15.png",
     title: "Metales en el Organismo",
     text: "Análisis en cabello de la presencia de metales para evaluar una posible toxicidad en tu dieta o en tu entorno.",
   },
   {
     component: "IconColumn",
-    imageSrc: "/src/assets/genetica/genetica-img-icon16.png",
+    imageSrc: "/genetica/genetica-img-icon16.png",
     title: "Huella Genética",
     text: "Conserva tu DNI genético para el futuro.",
   },
   {
     component: "IconColumn",
-    imageSrc: "/src/assets/genetica/genetica-img-icon17.png",
+    imageSrc: "/genetica/genetica-img-icon17.png",
     title: "Test de Paternidad",
     text: "Prueba de ADN para determinar la paternidad biológica.",
   },
   {
     component: "IconColumn",
-    imageSrc: "/src/assets/genetica/genetica-img-icon7.png",
+    imageSrc: "/genetica/genetica-img-icon7.png",
     title: "Test Linfocitario",
     text: "Evaluación del sistema inmunitario.",
   },

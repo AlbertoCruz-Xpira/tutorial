@@ -4,7 +4,7 @@ export const content: BaseContent[] = [
   {
     icon: "",
     title: "",
-    imageSrc: "/src/assets/salud-hombre/fertilidad-masculina/fertilidad1.png",
+    imageSrc: "/salud-hombre/fertilidad-masculina/fertilidad1.png",
     imageDesc: "",
     description_1: `
         <h3>Poca calidad del semen: </h3>
@@ -32,7 +32,7 @@ export const content: BaseContent[] = [
    {
     icon: "",
     title: "",
-    imageSrc: "/src/assets/salud-hombre/fertilidad-masculina/fertilidad2.png",
+    imageSrc: "/salud-hombre/fertilidad-masculina/fertilidad2.png",
     imageDesc: "",
     description_1: `
         <h3>Obstrucciones: </h3>
@@ -46,7 +46,7 @@ export const content: BaseContent[] = [
    {
     icon: "",
     title: "",
-    imageSrc: "/src/assets/salud-hombre/fertilidad-masculina/fertilidad3.png",
+    imageSrc: "/salud-hombre/fertilidad-masculina/fertilidad3.png",
     imageDesc: "",
     description_1: `
         <h3>Factores hereditarios: </h3>
@@ -60,7 +60,7 @@ export const content: BaseContent[] = [
    {
     icon: "",
     title: "",
-    imageSrc: "/src/assets/salud-hombre/fertilidad-masculina/fertilidad4.png",
+    imageSrc: "/salud-hombre/fertilidad-masculina/fertilidad4.png",
     imageDesc: "",
     description_1: `
         <h3>Eyaculación retrógrada: </h3>
@@ -74,7 +74,7 @@ export const content: BaseContent[] = [
   {
     icon: "",
     title: "",
-    imageSrc: "/src/assets/salud-hombre/fertilidad-masculina/fertilidad5.png",
+    imageSrc: "/salud-hombre/fertilidad-masculina/fertilidad5.png",
     imageDesc: "",
     description_1: `<h3>Testículos no descendidos (criptorquidia):</h3>
             <p>
@@ -90,7 +90,7 @@ export const content: BaseContent[] = [
   {
     icon: "",
     title: "",
-    imageSrc: "/src/assets/salud-hombre/fertilidad-masculina/fertilidad6.png",
+    imageSrc: "/salud-hombre/fertilidad-masculina/fertilidad6.png",
     imageDesc: "",
     description_1: `<h3>Vasectomía (esterilización):</h3>
             <p>
@@ -106,7 +106,7 @@ export const content: BaseContent[] = [
   {
     icon: "",
     title: "",
-    imageSrc: "/src/assets/salud-hombre/fertilidad-masculina/fertilidad7.png",
+    imageSrc: "/salud-hombre/fertilidad-masculina/fertilidad7.png",
     imageDesc: "",
     description_1: `<h3>Edad:</h3>
             <p>
@@ -125,7 +125,7 @@ export const content: BaseContent[] = [
   {
     icon: "",
     title: "",
-    imageSrc: "/src/assets/salud-hombre/fertilidad-masculina/fertilidad8.png",
+    imageSrc: "/salud-hombre/fertilidad-masculina/fertilidad8.png",
     imageDesc: "",
     description_1: `
         <h3>Peso:</h3>
@@ -138,7 +138,7 @@ export const content: BaseContent[] = [
   {
     icon: "",
     title: "",
-    imageSrc: "/src/assets/salud-hombre/fertilidad-masculina/fertilidad9.png",
+    imageSrc: "/salud-hombre/fertilidad-masculina/fertilidad9.png",
     imageDesc: "",
     description_1: `<h3>Tratamiento</h3>
             <p>A menudo no se puede identificar la causa exacta de la infertilidad. Aún si no está clara la causa exacta se puede indicar algún tratamiento:</p>
@@ -156,7 +156,7 @@ export const content: BaseContent[] = [
   {
     icon: "",
     title: "Evitar prácticas sexuales de riesgo:",
-    imageSrc: "/src/assets/salud-hombre/disfuncion-erectil/consejodisfuncion4.png",
+    imageSrc: "/salud-hombre/disfuncion-erectil/consejodisfuncion4.png",
     imageDesc: "",
     description_1: `<p>
           Nos evitara más de un disgusto tanto por la ITS como por embarazos no
