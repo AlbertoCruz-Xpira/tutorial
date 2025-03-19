@@ -216,7 +216,7 @@ export const content: BaseContent[] = [
         </li>
       </ul>
     `,
-    orientation: 1,
+    orientation: 0,
     description_2: "",
   },
   {

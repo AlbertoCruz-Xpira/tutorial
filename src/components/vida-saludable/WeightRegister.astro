@@ -1,0 +1,153 @@
+---
+import Table from "../simple/Table.astro";
+
+const data = [
+  { 'Fecha': '04-02-2025', 'Peso (kg)': 70 },
+  { 'Fecha': '10-03-2025', 'Peso (kg)': 75 },
+  { 'Fecha': '17-02-2025', 'Peso (kg)': 74 }
+];
+const rowsPerPage = 2;
+---
+
+<div class="items-center max-w-5xl px-10 sm:px-10 md:px-10 lg:mx-auto pt-10 pb-5 habitos-page">
+    <div class="p-15" id="registroPeso">
+      <div class="contentRegistroPeso">
+        <div class="row margintop35">
+          <div class="flex gap-2 items-center">
+            <img src="/plan-de-vida-saludable/plan-de-habitos-saludables/icon-registropeso.png" class="bell-icon">
+            <h3>Peso:</h3>
+          </div>
+        </div>
+
+        <div class="row margintop35 container-registro-peso mt-3">
+          <div class="grid grid-col-1 gap-3">
+            <h4 class="marginbottom20">Registra tu peso para tener un seguimiento actualizado</h4>
+            <form action="/plan-de-vida-saludable/plan-de-habitos-de-vida-saludable" enctype="multipart/form-data" method="post" class="flex items-center gap-2">
+              <h5 class="h5peso">Peso:</h5>
+              <input type="text" name="registroPeso" placeholder="Kg" pattern="^(([1-9])|([1-9][0-9]{1,1})|([1][0]{2}))$" required="" class="border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-1 focus:ring-grey-400 focus:border-grey-400">
+              <button class="btn badge-info btn-registropeso button-orange">Guardar</button>
+              <input name="ufprt" type="hidden" value="51FC38083DE215C6F2D719A6463EC0B0CC33139828F3805F8A1B70E3C414FB25EB3C7B3B18AA820FEC96F39D1E9358430B040097AD7B42E941D2DF5DB0A2BAD0F3221F3105CD1224F380115317012B539D0A5EF3BF7B4CF043DDCBA1241B68AA3E38E1EC8C9FCC71513B83442DFDA8E19F7BD91E366AA445E7C643C74D144F3C1F833877369B1E8053CC17336F2E1B4E1934462380C15873A41DB87D66A1CC1203A08B90E4220F49B805E002135D90BD">
+            </form>
+          </div>
+        </div>
+        <div class="row containergrafica">
+          <div class="col-md-12">
+            <h4 class="marginbottom20">Peso (Kg)</h4>
+            <div id="graficaRegistroPesos" data-highcharts-chart="0" style="overflow: hidden;">
+              <div id="highcharts-hruix7w-0" dir="ltr" style="position: relative; overflow: hidden; width: 793px; height: 400px; text-align: left; line-height: normal; z-index: 0; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); user-select: none; touch-action: manipulation; outline: none; padding: 0px;" class="highcharts-container ">
+                <svg version="1.1" class="highcharts-root" style="font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Helvetica, Arial, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;, sans-serif; font-size: 1rem;" xmlns="http://www.w3.org/2000/svg" width="793" height="400" viewBox="0 0 793 400" role="img" aria-label="">
+                  <desc>Created with Highcharts 12.1.2</desc>
+                  <defs>
+                    <filter id="highcharts-drop-shadow-0">
+                      <feDropShadow dx="1" dy="1" flood-color="#000000" flood-opacity="0.75" stdDeviation="2.5"></feDropShadow>
+                    </filter>
+                    <clipPath id="highcharts-hruix7w-7-">
+                      <rect x="0" y="0" width="703" height="343" fill="none"></rect>
+                    </clipPath>
+                  </defs>
+                  <rect fill="#ffffff" class="highcharts-background" filter="none" x="0" y="0" width="793" height="400" rx="0" ry="0"></rect>
+                  <rect fill="none" class="highcharts-plot-background" x="80" y="10" width="703" height="343" filter="none"></rect>
+                  <g class="highcharts-pane-group" data-z-index="0"></g>
+                  <g class="highcharts-grid highcharts-xaxis-grid" data-z-index="1">
+                    <path fill="none" stroke="#e6e6e6" stroke-width="0" stroke-dasharray="none" data-z-index="1" class="highcharts-grid-line" d="M 314.5 10 L 314.5 353" opacity="1"></path>
+                    <path fill="none" stroke="#e6e6e6" stroke-width="0" stroke-dasharray="none" data-z-index="1" class="highcharts-grid-line" d="M 548.5 10 L 548.5 353" opacity="1"></path>
+                    <path fill="none" stroke="#e6e6e6" stroke-width="0" stroke-dasharray="none" data-z-index="1" class="highcharts-grid-line" d="M 783.5 10 L 783.5 353" opacity="1"></path>
+                    <path fill="none" stroke="#e6e6e6" stroke-width="0" stroke-dasharray="none" data-z-index="1" class="highcharts-grid-line" d="M 80.5 10 L 80.5 353" opacity="1"></path>
+                  </g>
+                  <g class="highcharts-grid highcharts-yaxis-grid" data-z-index="1">
+                    <path fill="none" stroke="#e6e6e6" stroke-width="1" stroke-dasharray="none" data-z-index="1" class="highcharts-grid-line" d="M 80 353.5 L 783 353.5" opacity="1"></path>
+                    <path fill="none" stroke="#e6e6e6" stroke-width="1" stroke-dasharray="none" data-z-index="1" class="highcharts-grid-line" d="M 80 304.5 L 783 304.5" opacity="1"></path>
+                    <path fill="none" stroke="#e6e6e6" stroke-width="1" stroke-dasharray="none" data-z-index="1" class="highcharts-grid-line" d="M 80 255.5 L 783 255.5" opacity="1"></path>
+                    <path fill="none" stroke="#e6e6e6" stroke-width="1" stroke-dasharray="none" data-z-index="1" class="highcharts-grid-line" d="M 80 206.5 L 783 206.5" opacity="1"></path>
+                    <path fill="none" stroke="#e6e6e6" stroke-width="1" stroke-dasharray="none" data-z-index="1" class="highcharts-grid-line" d="M 80 157.5 L 783 157.5" opacity="1"></path>
+                    <path fill="none" stroke="#e6e6e6" stroke-width="1" stroke-dasharray="none" data-z-index="1" class="highcharts-grid-line" d="M 80 108.5 L 783 108.5" opacity="1"></path>
+                    <path fill="none" stroke="#e6e6e6" stroke-width="1" stroke-dasharray="none" data-z-index="1" class="highcharts-grid-line" d="M 80 59.5 L 783 59.5" opacity="1"></path>
+                    <path fill="none" stroke="#e6e6e6" stroke-width="1" stroke-dasharray="none" data-z-index="1" class="highcharts-grid-line" d="M 80 10.5 L 783 10.5" opacity="1"></path>
+                  </g>
+                  <rect fill="none" class="highcharts-plot-border" data-z-index="1" stroke="#cccccc" stroke-width="0" x="80" y="10" width="703" height="343"></rect>
+                  <g class="highcharts-axis highcharts-xaxis" data-z-index="2">
+                    <path fill="none" class="highcharts-axis-line" stroke="#333333" stroke-width="1" data-z-index="7" d="M 80 353.5 L 783 353.5"></path>
+                  </g>
+                  <g class="highcharts-axis highcharts-yaxis" data-z-index="2">
+                    <text x="25.516803741455078" data-z-index="7" text-anchor="middle" transform="translate(0,0) rotate(270 25.516803741455078 181.5)" class="highcharts-axis-title" style="color: rgb(102, 102, 102); font-size: 0.8em; fill: rgb(102, 102, 102);" y="181.5">Peso (Kg)</text>
+                    <path fill="none" class="highcharts-axis-line" stroke="#333333" stroke-width="0" data-z-index="7" d="M 80 10 L 80 353"></path>
+                  </g>
+                  <g class="highcharts-series-group" data-z-index="3" filter="none">
+                    <g class="highcharts-series highcharts-series-0 highcharts-spline-series highcharts-color-0" data-z-index="0.1" opacity="1" transform="translate(80,10) scale(1 1)" clip-path="url(#highcharts-hruix7w-7-)">
+                      <path fill="none" d="M 117.16666666667 294 C 117.16666666667 294 257.766666666668 147 351.5 98 C 445.2333333333319 49.000000000000014 585.83333333333 49 585.83333333333 49" class="highcharts-graph" data-z-index="1" stroke="#2caffe" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" filter="none"></path>
+                      <path fill="none" d="M 117.16666666667 294 C 117.16666666667 294 257.766666666668 147 351.5 98 C 445.2333333333319 49.000000000000014 585.83333333333 49 585.83333333333 49" data-z-index="2" class="highcharts-tracker-line" stroke-linecap="round" stroke-linejoin="round" stroke="rgba(192,192,192,0.0001)" stroke-width="22"></path>
+                    </g>
+                    <g class="highcharts-markers highcharts-series-0 highcharts-spline-series highcharts-color-0 highcharts-tracker" data-z-index="0.1" opacity="1" transform="translate(80,10) scale(1 1)" clip-path="none">
+                      <path fill="#2caffe" d="M 585.5 49 A 0 0 0 1 1 585.5 49 Z" class="highcharts-halo highcharts-color-0" data-z-index="-1" fill-opacity="0.25" visibility="hidden"></path>
+                      <path fill="#2caffe" d="M 117.5 298 A 4 4 0 1 1 117.50019999999992 297.999999995 Z" stroke="#ffffff" stroke-width="0" opacity="1" class="highcharts-point highcharts-color-0"></path>
+                      <path fill="#2caffe" d="M 351.5 102 A 4 4 0 1 1 351.5001999999999 101.999999995 Z" stroke="#ffffff" stroke-width="0" opacity="1" class="highcharts-point highcharts-color-0"></path>
+                      <path fill="#2caffe" d="M 585.5 53 A 4 4 0 1 1 585.5002 52.999999995 Z" stroke="#ffffff" stroke-width="0" opacity="1" class="highcharts-point highcharts-color-0"></path>
+                    </g>
+                  </g>
+                  <text x="397" class="highcharts-title" data-z-index="4" text-align="center" y="25" text-anchor="middle" transform-origin="10 22" transform="translate(0,0) scale(1 1)" style="font-size: 1.2em; color: rgb(51, 51, 51); font-weight: bold; fill: rgb(51, 51, 51);"></text>
+                  <text x="397" class="highcharts-subtitle" data-z-index="4" text-align="center" y="24" text-anchor="middle" transform-origin="10 15" transform="translate(0,0) scale(1 1)" style="color: rgb(102, 102, 102); font-size: 0.8em; fill: rgb(102, 102, 102);"></text>
+                  <text x="10" text-anchor="start" class="highcharts-caption" data-z-index="4" style="color: rgb(102, 102, 102); font-size: 0.8em; fill: rgb(102, 102, 102);" text-align="left" y="397" transform-origin="10 15" transform="translate(0,0) scale(1 1)"></text>
+                  <g class="highcharts-axis-labels highcharts-xaxis-labels" data-z-index="7">
+                    <text x="197.16666666666333" text-anchor="middle" transform="translate(0,0)" style="color: rgb(51, 51, 51); cursor: default; font-size: 0.8em; fill: rgb(51, 51, 51);" y="380" opacity="1">04/02/2025</text>
+                    <text x="431.50000000000335" text-anchor="middle" transform="translate(0,0)" style="color: rgb(51, 51, 51); cursor: default; font-size: 0.8em; fill: rgb(51, 51, 51);" y="380" opacity="1">17/02/2025</text>
+                    <text x="665.8333333333334" text-anchor="middle" transform="translate(0,0)" style="color: rgb(51, 51, 51); cursor: default; font-size: 0.8em; fill: rgb(51, 51, 51);" y="380" opacity="1">10/03/2025</text>
+                  </g>
+                  <g class="highcharts-axis-labels highcharts-yaxis-labels" data-z-index="7">
+                    <text x="65" text-anchor="end" transform="translate(0,0)" style="color: rgb(51, 51, 51); cursor: default; font-size: 0.8em; fill: rgb(51, 51, 51);" y="357" opacity="1">69Kg</text>
+                    <text x="65" text-anchor="end" transform="translate(0,0)" style="color: rgb(51, 51, 51); cursor: default; font-size: 0.8em; fill: rgb(51, 51, 51);" y="308" opacity="1">70Kg</text>
+                    <text x="65" text-anchor="end" transform="translate(0,0)" style="color: rgb(51, 51, 51); cursor: default; font-size: 0.8em; fill: rgb(51, 51, 51);" y="259" opacity="1">71Kg</text>
+                    <text x="65" text-anchor="end" transform="translate(0,0)" style="color: rgb(51, 51, 51); cursor: default; font-size: 0.8em; fill: rgb(51, 51, 51);" y="210" opacity="1">72Kg</text>
+                    <text x="65" text-anchor="end" transform="translate(0,0)" style="color: rgb(51, 51, 51); cursor: default; font-size: 0.8em; fill: rgb(51, 51, 51);" y="161" opacity="1">73Kg</text>
+                    <text x="65" text-anchor="end" transform="translate(0,0)" style="color: rgb(51, 51, 51); cursor: default; font-size: 0.8em; fill: rgb(51, 51, 51);" y="112" opacity="1">74Kg</text>
+                    <text x="65" text-anchor="end" transform="translate(0,0)" style="color: rgb(51, 51, 51); cursor: default; font-size: 0.8em; fill: rgb(51, 51, 51);" y="63" opacity="1">75Kg</text>
+                    <text x="65" text-anchor="end" transform="translate(0,0)" style="color: rgb(51, 51, 51); cursor: default; font-size: 0.8em; fill: rgb(51, 51, 51);" y="14" opacity="1">76Kg</text>
+                  </g>
+                  <text x="783" class="highcharts-credits" text-anchor="end" data-z-index="8" text-align="right" y="395" style="cursor: pointer; color: rgb(153, 153, 153); font-size: 0.6em; fill: rgb(153, 153, 153);">Highcharts.com</text>
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- <Table data={data} rowsPerPage={rowsPerPage} /> -->
+
+      </div>
+    </div>
+  </div>
+
+<style>
+    .container-registro-peso {
+        background: #ffffff;
+        padding: 25px;
+        margin-bottom: 20px;
+        border: 1px solid #ececec;
+    }
+    #tablaRegistroPesos th, #tablaMensajes th {
+        text-align: center;
+        background-color: #ffb03b;
+        color: #ffffff;
+    }
+    .containergrafica {
+        background: #ffffff;
+        border: 1px solid #e6eaeb;
+        padding: 40px;
+    }
+    strong {
+        font-weight: bold;
+    }
+
+    h3,h4,h5,label {
+        color: var(--color-turquoise-500);
+    }
+
+    p {
+        margin-bottom: 0px;
+        color: #a2a2a2;
+    }
+    p.small {
+        font-size: 0.7rem;
+    }
+    h3 {font-size: 20px;}
+    h4 {font-size: 16px;}
+    h5 {font-size: 14px;}
+</style>

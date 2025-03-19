@@ -1,0 +1,136 @@
+---
+export interface Props {
+  data: Array<{ [key: string]: string | number }>;
+  rowsPerPage?: number;
+}
+
+const { data, rowsPerPage = 3 } = Astro.props;
+---
+
+<script>
+    function tableComponent({ data, rowsPerPage }: { data: Array<{ [key: string]: string | number }>, rowsPerPage: number }) {
+      return {
+        data, 
+        rowsPerPage,
+        currentPage: 1,
+        sortColumn: "",
+        sortAsc: true,
+    
+        get headers() {
+          return this.data.length > 0 ? Object.keys(this.data[0]) : [];
+        },
+    
+        get sortedData() {
+          if (!this.sortColumn) return this.data;
+          return [...this.data].sort((a, b) =>
+            this.sortAsc
+              ? (a[this.sortColumn] > b[this.sortColumn] ? 1 : -1)
+              : (a[this.sortColumn] < b[this.sortColumn] ? 1 : -1)
+          );
+        },
+    
+        get paginatedData() {
+          let start = (this.currentPage - 1) * this.rowsPerPage;
+          console.log(this.paginatedData);
+          return this.sortedData.slice(start, start + this.rowsPerPage);
+        },
+    
+        get totalPages() {
+          return Math.ceil(this.data.length / this.rowsPerPage);
+        },
+    
+        changePage(delta: number) {
+          this.currentPage = Math.max(1, Math.min(this.currentPage + delta, this.totalPages));
+        },
+    
+        sortBy(column: string) {
+          if (this.sortColumn === column) {
+            this.sortAsc = !this.sortAsc;
+          } else {
+            this.sortColumn = column;
+            this.sortAsc = true;
+          }
+        },
+      };
+    }
+    </script>
+
+<table
+  x-data="tableComponent({ data: data, rowsPerPage: rowsPerPage })"
+  class="table-auto border-collapse border border-gray-300 w-full"
+>
+  <thead>
+    <tr>
+      <template x-for="(header, index) in headers">
+        <th
+          x-text="header"
+          @click="sortBy(header)"
+          class="cursor-pointer border border-gray-300 px-4 py-2 bg-gray-200"
+        ></th>
+      </template>
+    </tr>
+  </thead>
+  <tbody>
+    <template x-for="row in paginatedData">
+      <tr>
+        <template x-for="header in headers">
+          <td x-text="row[header]" class="border border-gray-300 px-4 py-2"></td>
+        </template>
+      </tr>
+    </template>
+  </tbody>
+</table>
+
+<div class="flex justify-between mt-2">
+  <button @click="changePage(-1)" :disabled="currentPage === 1" class="px-3 py-1 bg-blue-500 text-white rounded">◀ Anterior</button>
+  <span>Página <span x-text="currentPage"></span> de <span x-text="totalPages"></span></span>
+  <button @click="changePage(1)" :disabled="currentPage === totalPages" class="px-3 py-1 bg-blue-500 text-white rounded">Siguiente ▶</button>
+</div>
+
+<script>
+function tableComponent({ data, rowsPerPage }: { data: Array<{ [key: string]: string | number }>, rowsPerPage: number }) {
+  return {
+    data, 
+    rowsPerPage,
+    currentPage: 1,
+    sortColumn: "",
+    sortAsc: true,
+
+    get headers() {
+      return this.data.length > 0 ? Object.keys(this.data[0]) : [];
+    },
+
+    get sortedData() {
+      if (!this.sortColumn) return this.data;
+      return [...this.data].sort((a, b) =>
+        this.sortAsc
+          ? (a[this.sortColumn] > b[this.sortColumn] ? 1 : -1)
+          : (a[this.sortColumn] < b[this.sortColumn] ? 1 : -1)
+      );
+    },
+
+    get paginatedData() {
+      let start = (this.currentPage - 1) * this.rowsPerPage;
+      console.log(this.paginatedData);
+      return this.sortedData.slice(start, start + this.rowsPerPage);
+    },
+
+    get totalPages() {
+      return Math.ceil(this.data.length / this.rowsPerPage);
+    },
+
+    changePage(delta: number) {
+      this.currentPage = Math.max(1, Math.min(this.currentPage + delta, this.totalPages));
+    },
+
+    sortBy(column: string) {
+      if (this.sortColumn === column) {
+        this.sortAsc = !this.sortAsc;
+      } else {
+        this.sortColumn = column;
+        this.sortAsc = true;
+      }
+    },
+  };
+}
+</script>

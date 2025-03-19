@@ -1,18 +1,33 @@
 ---
 import BaseLayout from "../../../layouts/BaseLayout.astro";
 import HeroSmall from "/src/components/HeroSmall.astro";
+import IndexAccordion from "../../../components/grid/IndexAccordion.astro";
+
 const pageTitle = "Genética";
 const url = "/salud-mujer/genetica/banner-genetica.png";
+
+const sections = [
+  {
+    id: "section_1",
+    title: "Cordón umbilical",
+  },
+  {
+    id: "section_2",
+    title: "Genética",
+  }
+];
 ---
 
 <BaseLayout>
 
   <HeroSmall name={pageTitle} url={url} alternativeText={pageTitle}/>
 
+  <IndexAccordion sections={sections} />
+
   <div
     class="items-center max-w-5xl px-10 sm:px-10 md:px-10 lg:mx-auto pt-10 pb-5 service-detail"
   >
-    <div>
+    <section id="section_1">
       <div>
         <div class="inline-flex items-center justify-content-center pb-10">
           <img class="py-5" src="/icon/icon-genetica1.png" />
@@ -196,9 +211,7 @@ const url = "/salud-mujer/genetica/banner-genetica.png";
           </h3>
         </div>
       </section>
-      <section
-        class="grid grid-col-1 lg:grid-cols-2 items-center justify-items-center"
-      >
+      <section class="grid grid-col-1 lg:grid-cols-2 items-center justify-items-center">
         <div>
           <img
             class="py-5"
@@ -225,8 +238,9 @@ const url = "/salud-mujer/genetica/banner-genetica.png";
           </p>
         </div>
       </section>
-    </div>
-    <div>
+    </section>
+
+    <section id="section_2">
       <div>
         <div class="inline-flex items-center justify-content-center pb-10">
           <img
@@ -441,6 +455,6 @@ const url = "/salud-mujer/genetica/banner-genetica.png";
           </div>
         </div>
       </div>
-    </div>
+    </section>
   </div>
 </BaseLayout>

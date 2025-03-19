@@ -1,17 +1,40 @@
 ---
-const { sections } = Astro.props;
+export interface Section {
+    id: string,
+    title: string
+}
+
+const { sections, style } = Astro.props;
 ---
 
-<nav class="sticky top-0 bg-white shadow-md p-4">
-  <div class="grid grid-col-1 gap-5">
+<nav class=`index-accordion sticky top-0 bg-white p-5 ${style}`>
+  <ul class="flex flex-col md:flex-row md:justify-evenly items-center sm:gap-1">
     {
-      sections.map((section: any) => (
-        <div class="gap-5">
-          <a href={`#${section.id}`} class="text-blue-500 hover:underline">
+      sections.map((section: Section) => (
+        <li>
+          <a href={`#${section.id}`} class="color-turquoise text-[0.9rem] hover:underline">
             {section.title}
           </a>
-        </div>
+        </li>
       ))
     }
   </ul>
 </nav>
+
+<style>
+  @media screen and (min-width:768px) {
+    .index-accordion li {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-grow: 1;
+    }
+    .index-accordion li:not(:last-child) {
+      border-right: 1px solid rgb(178, 179, 181);
+    }
+  }
+
+  .pink a {
+    color: #e4919e;
+  }
+</style>

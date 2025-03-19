@@ -4,20 +4,39 @@ import HeroSmall from "/src/components/HeroSmall.astro";
 import IconRow from "/src/components/widgets/IconRow.astro";
 import ImageRow from "/src/components/widgets/ImageRow.astro";
 import HtmlBlock from "/src/components/simple/HtmlBlock.astro";
+import IndexAccordion from "../../../components/grid/IndexAccordion.astro";
 
 const pageTitle = "Ginecología";
 const url = "/salud-mujer/ginecologia/banner-ginecologia.jpg";
 import { content } from "./ginecologia-content.ts";
+
+const sections = [
+  {
+    id: "section_1",
+    title: "El propósito",
+  },
+  {
+    id: "section_2",
+    title: "Evaluación ginecológica",
+  },
+  {
+    id: "section_3",
+    title: "Valoración y prevención",
+  },
+];
 ---
 
 <BaseLayout>
   <HeroSmall name={pageTitle} url={url} alternativeText={pageTitle} />
 
+  <IndexAccordion sections={sections} />
+
   <div
     class="items-center max-w-5xl px-10 sm:px-10 md:px-10 lg:mx-auto pt-10 pb-5 service-detail"
   >
+    
     <!-- SECTION 1 -->
-    <section>
+    <section id="section_1">
       <IconRow imageSrc={content[0].icon} title={content[0].title} />
       <ImageRow
         imageSrc={content[0].imageSrc}
@@ -27,7 +46,7 @@ import { content } from "./ginecologia-content.ts";
     </section>
 
     <!-- SECTION 2 -->
-    <section>
+    <section id="section_2">
       <IconRow imageSrc={content[1].icon} title={content[1].title} />
       <ImageRow
         imageSrc={content[1].imageSrc}
@@ -37,7 +56,7 @@ import { content } from "./ginecologia-content.ts";
     </section>
 
     <!-- SECTION 3 -->
-    <section>
+    <section id="section_3">
       <IconRow imageSrc={content[2].icon} title={content[2].title} />
       <HtmlBlock html={content[2].description_2} />
       <ImageRow

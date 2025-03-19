@@ -6,20 +6,59 @@ import IconRow from "/src/components/widgets/IconRow.astro";
 import IconColumn from "/src/components/widgets/IconColumn.astro";
 import ImageRow from "/src/components/widgets/ImageRow.astro";
 import Column from "/src/components/widgets/Column.astro";
-import { content } from "./genetica-content";
+import IndexAccordion from "../../components/grid/IndexAccordion.astro";
 
 const pageTitle = "Genética";
 const imageSrc = "/genetica/banner-genetica1.jpg";
+
+import { content } from "./genetica-content";
+
+const sections = [
+  {
+    id: "section_1",
+    title: "Nutrición personalizada",
+  },
+  {
+    id: "section_2",
+    title: "Cardio",
+  },
+  {
+    id: "section_3",
+    title: "Edad y salud",
+  },
+  {
+    id: "section_4",
+    title: "Bienestar - Prevención",
+  },
+  {
+    id: "section_5",
+    title: "Rendimiento deportivo",
+  },
+  {
+    id: "section_6",
+    title: "Prevención de cáncer",
+  },
+  {
+    id: "section_7",
+    title: "Futuros padres",
+  },
+  {
+    id: "section_8",
+    title: "Otros",
+  },
+];
 ---
 
 <BaseLayout pageTitle={pageTitle}>
   <HeroSmall name={pageTitle} url={imageSrc} alternativeText={pageTitle} />
 
+  <IndexAccordion sections={sections} />
+
   <div
     class="items-center max-w-5xl px-10 sm:px-10 md:px-10 lg:mx-auto pt-10 pb-5 service-detail"
   >
     <!-- Nutrición Personalizada -->
-    <section>
+    <section id="section_1">
       <IconRow imageSrc={content[0].icon} title={content[0].title} />
 
       <Column number="4">
@@ -50,7 +89,7 @@ const imageSrc = "/genetica/banner-genetica1.jpg";
     </section>
 
     <!-- Cardio -->
-    <section>
+    <section id="section_2">
       <IconRow imageSrc={content[5].icon} title={content[5].title} />
 
       <Column number="3">
@@ -75,7 +114,7 @@ const imageSrc = "/genetica/banner-genetica1.jpg";
     </section>
 
     <!-- Edad y salud -->
-    <section id="edadsalud">
+    <section id="section_3">
       <IconRow imageSrc={content[9].icon} title={content[9].title} />
 
       <ImageRow
@@ -85,7 +124,7 @@ const imageSrc = "/genetica/banner-genetica1.jpg";
     </section>
 
     <!-- Bienestar -->
-    <section id="bienestar">
+    <section id="section_4">
       <IconRow imageSrc={content[11].icon} title={content[11].title} />
 
       <section class="grid grid-col-1 lg:grid-cols-2 gap-10 text-[0.7rem]">
@@ -104,7 +143,7 @@ const imageSrc = "/genetica/banner-genetica1.jpg";
     </section>
 
     <!-- Rendimiento -->
-    <section id="rendimiento">
+    <section id="section_5">
       <IconRow imageSrc={content[14].icon} title={content[14].title} />
 
       <Column number="2">
@@ -123,7 +162,7 @@ const imageSrc = "/genetica/banner-genetica1.jpg";
     </section>
 
     <!-- Prevención -->
-    <section id="prevencioncancer">
+    <section id="section_6">
       <IconRow imageSrc={content[17].icon} title={content[17].title} />
 
       <ImageRow
@@ -133,7 +172,7 @@ const imageSrc = "/genetica/banner-genetica1.jpg";
     </section>
 
     <!-- FUTUROS PADRES -->
-    <section id="futurospadres">
+    <section id="section_7">
       <IconRow imageSrc={content[19].icon} title={content[19].title} />
 
       <ImageRow
@@ -149,7 +188,7 @@ const imageSrc = "/genetica/banner-genetica1.jpg";
     </section>
 
     <!-- OTROS -->
-    <section id="otros">
+    <section id="section_8">
       <IconRow imageSrc={content[22].icon} title={content[22].title} />
 
       <Column number="4">

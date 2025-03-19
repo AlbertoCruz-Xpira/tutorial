@@ -3,25 +3,49 @@ import BaseLayout from "../../../layouts/BaseLayout.astro";
 import HeroSmall from "../../../components/HeroSmall.astro";
 import IconRow from "../../../components/widgets/IconRow.astro";
 import ImageRow from "../../../components/widgets/ImageRow.astro";
-const pageTitle = "Onco-gine";
-const url = "/salud-mujer/onco-gine/banner-oncogine.png";
-
+import IndexAccordion from "../../../components/grid/IndexAccordion.astro";
 import type { BaseContent } from "../../../interface/BaseContent";
 import HtmlBlock from "../../../components/simple/HtmlBlock.astro";
 import Column from "../../../components/widgets/Column.astro";
 import IconColumn from "../../../components/widgets/IconColumn.astro";
 
+const pageTitle = "Onco-gine";
+const url = "/salud-mujer/onco-gine/banner-oncogine.png";
 import { content } from "./onco-gine-content";
+
+const sections = [
+  {
+    id: "section_1",
+    title: "Recomendaciones",
+  },
+  {
+    id: "section_2",
+    title: "Valoración",
+  },
+  {
+    id: "section_3",
+    title: "Tratamientos",
+  },
+  {
+    id: "section_4",
+    title: "Otros",
+  },
+  {
+    id: "section_5",
+    title: "Pruebas diagnósticas",
+  },
+];
 ---
 
 <BaseLayout>
   <HeroSmall name={pageTitle} url={url} alternativeText={pageTitle} />
+  <IndexAccordion sections={sections} style="pink"/>
 
   <div
     class="items-center max-w-5xl px-10 sm:px-10 md:px-10 lg:mx-auto pt-10 pb-5 service-detail pink"
   >
     <!-- Nuestra recomendaciones -->
-    <section>
+    <section id="section_1">
       <IconRow imageSrc={content[0].icon} title={content[0].title} />
       <HtmlBlock html={content[1].description_2} />
       <ImageRow
@@ -32,7 +56,7 @@ import { content } from "./onco-gine-content";
     </section>
 
     <!-- Valoración en equipo -->
-    <section>
+    <section id="section_2">
       <IconRow imageSrc={content[2].icon} title={content[2].title} />
       <ImageRow
         imageSrc={content[3].imageSrc}
@@ -42,7 +66,7 @@ import { content } from "./onco-gine-content";
     </section>
 
     <!-- Tratamiento -->
-    <section>
+    <section id="section_3">
       <IconRow imageSrc={content[4].icon} title={content[4].title} />
       <ImageRow
         imageSrc={content[5].imageSrc}
@@ -52,7 +76,7 @@ import { content } from "./onco-gine-content";
     </section>
 
     <!-- Otros -->
-    <section>
+    <section id="section_4">
       <IconRow imageSrc={content[6].icon} title={content[6].title} />
       <ImageRow
         imageSrc={content[7].imageSrc}
@@ -99,7 +123,7 @@ import { content } from "./onco-gine-content";
     </section>
 
     <!-- Pruebas diagnósticas -->
-    <section>
+    <section id="section_5">
       <IconRow imageSrc={content[13].icon} title={content[13].title} />
       <ImageRow
         imageSrc={content[14].imageSrc}

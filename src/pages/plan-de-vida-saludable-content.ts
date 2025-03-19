@@ -7,7 +7,7 @@ export const content: BaseContent[] = [
     imageSrc: "/plan-de-vida-saludable/menu-para-bajar-de-peso-3-1.png",
     imageDesc: "",  
     description_1: `
-        <h3 class="plan-vida-h3"> Haga que la variedad juegue a su favor </h3>
+        <h3 class="plan-vida-h3"><strong>Haga que la variedad juegue a su favor</strong></h3>
         <ul class="plan-vida-p">
             <li><span>Ingiera distintas piezas de frutas y verduras de colores vistosos.</span></li>
             <li><span>Elija pequeñas cantidades de cereales, alubias y verduras con almidón saludables.</span></li>
@@ -23,7 +23,7 @@ export const content: BaseContent[] = [
     imageSrc: "/plan-de-vida-saludable/limite.png",
     imageDesc: "",  
     description_1: `
-        <h3 class="plan-vida-h3"> Ponga límite a los alimentos no saludables </h3>
+        <h3 class="plan-vida-h3"><strong>Ponga límite a los alimentos no saludables</strong></h3>
         <p class="plan-vida-p"></p><ul class="plan-vida-p">
         <li><span>Utilice solo pequeñas cantidades de grasas saludables (insaturadas), como aceite de oliva, girasol o maíz ,para preparar sus comidas.</span></li>
         <li><span>Consuma pequeñas cantidades de aguacates, nueces y pipas de calabaza como parte de su dieta diaria.</span></li>
@@ -52,7 +52,7 @@ export const content: BaseContent[] = [
         <p class="font-size-14">Tome de 6 a 11 raciones cada día. Los panes integrales, los cereales y la pasta son mejores que los elaborados con harina blanca procesada. Los alimentos más sanos incluyen en su lista de ingredientes el trigo u otros cereales integrales como uno de los principales componentes. Sorprenda a sus papilas gustativas con diferentes cereales integralse, como el arroz integral, la avena y el maíz.</p><p></p>
     `,
     orientation: 1,
-    description_2: `<p class="p-comidas-ligeras">Las comidas ligeras y atractivas pueden ayudarle a controlar su diabetes</p>`,
+    description_2: `<p class="orange-higlighted">Las comidas ligeras y atractivas pueden ayudarle a controlar su diabetes</p>`,
   },
   {
     icon: "",

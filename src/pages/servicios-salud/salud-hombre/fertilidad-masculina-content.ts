@@ -1,4 +1,4 @@
-import { BaseContent } from "/src/interface/BaseContent";
+import type { BaseContent } from "../../../interface/BaseContent";
 
 export const content: BaseContent[] = [
   {
@@ -100,7 +100,7 @@ export const content: BaseContent[] = [
             <p>
                 También pueden afectar a la fertilidad, Asimismo, la obligación de tener relaciones sexuales "por necesidad" para tener un niño puede crear tensión en la pareja.
             </p>`,
-    orientation: 0,
+    orientation: 1,
     description_2: "",
   },
   {
@@ -132,7 +132,7 @@ export const content: BaseContent[] = [
         <p>
             Los extremos sobrepeso o delgadez excesiva, puede disminuir la fertilidad en los varones y las mujeres. Sin embargo, el factor ponderal influye algo más en la fertilidad femenina que en la masculina. En último término, el posible efecto del peso en la fertilidad del varón depende de la calidad inicial de su semen. Se recomienda una vida sana y equilibrada en todos los casos.
         </p>`,
-    orientation: 0,
+    orientation: 1,
     description_2: "",
   },
   {

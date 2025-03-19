@@ -3,6 +3,8 @@ import BaseLayout from "../../../layouts/BaseLayout.astro";
 import HeroSmall from "../../../components/HeroSmall.astro";
 import ImageRow from "../../../components/widgets/ImageRow.astro";
 import IconRow from "../../../components/widgets/IconRow.astro";
+import IndexAccordion from "../../../components/grid/IndexAccordion.astro";
+
 
 const pageTitle = "Reproducción asistida";
 const url =
@@ -12,16 +14,33 @@ import type { BaseContent } from "../../../interface/BaseContent";
 import HtmlBlock from "../../../components/simple/HtmlBlock.astro";
 
 import { content } from "./reproduccion-asistida-content";
+
+const sections = [
+  {
+    id: "section_1",
+    title: "Inseminación Artificial (IA)",
+  },
+  {
+    id: "section_2",
+    title: "Fecundación in Vitro FIV",
+  },
+  {
+    id: "section_3",
+    title: "Ovodonación",
+  },
+];
 ---
 
 <BaseLayout>
   <HeroSmall name={pageTitle} url={url} alternativeText={pageTitle} />
 
+  <IndexAccordion sections={sections} />
+
   <div
     class="items-center max-w-5xl px-10 sm:px-10 md:px-10 lg:mx-auto pt-10 pb-5 service-detail"
   >
     <!-- INSEMINACIÓN ARTIFICIAL -->
-    <section>
+    <section id="section_1">
       <IconRow imageSrc={content[0].icon} title={content[0].title} />
       <ImageRow
         imageSrc={content[1].imageSrc}
@@ -47,7 +66,9 @@ import { content } from "./reproduccion-asistida-content";
       </div>
     </div>
 
-    <section>
+
+    <!-- FECUNDACIÓN IN VITRO -->
+    <section id="section_2">
       <IconRow imageSrc={content[4].icon} title={content[4].title} />
       <HtmlBlock text={content[5].description_2} />
       <ImageRow
@@ -66,8 +87,9 @@ import { content } from "./reproduccion-asistida-content";
       </div>
     </div>
 
-    <section>
-      <IconRow imageSrc={content[6].icon} title={content[4].title} />
+    <!-- OVODONACIÓN -->
+    <section id="section_3">
+      <IconRow imageSrc={content[6].icon} title={content[6].title} />
       <ImageRow
         imageSrc={content[7].imageSrc}
         orientation={content[7].orientation}

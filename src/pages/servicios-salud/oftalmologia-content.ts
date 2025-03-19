@@ -39,7 +39,7 @@ export const content: BaseContent[] = [
             Son una opacidad total o parcial del cristalino del ojo. Se producen cuando el cristalino, la lente natural del ojo que tiene capacidad refractiva y permite enfocar los objetos y el paso de la luz, va perdiendo transparencia progresivamente.
             <br>La aparición de las cataratas visuales forma parte del proceso natural de envejecimiento del ser humano, cuando también pueden aparecer otras patologías oculares, como el glaucoma o los problemas de retina. También existen otros factores que las propician, como la diabetes, las infecciones o traumatismos oculares y la herencia genética.
         </p>`,
-    orientation: 0,
+    orientation: 1,
     description_2: "",
   },
   {
@@ -61,7 +61,7 @@ export const content: BaseContent[] = [
     imageDesc: "",
     description_1: `
         <div class="col-md-12">
-                <h2>Tratamientos oftalmológicos</h2>
+                <h3>Tratamientos oftalmológicos</h3>
             </div>
              <h3>Oftalmología pediátrica</h3>
                 <p>Se ocupa de la detección, tratamiento y seguimiento de los problemas visuales infantiles especialmente del ojo vago y del estrabismo infantil.</p><br>
@@ -94,7 +94,7 @@ export const content: BaseContent[] = [
                 <p>Los casos son tratados conjuntamente por un neurólogo y un oftalmólogo para ofrecer un enfoque y una solución multidisciplinar.</p><br>
                 <h3>Vias lagrimales</h3>
                 <p>El lagrimeo constante puede llegar a interferir en la calidad de vida del paciente. La obstrucción de la vía lagrimal tiene una solución quirúrgica.</p>`,
-    orientation: 0,
+    orientation: 1,
     description_2: "",
   }
 ];

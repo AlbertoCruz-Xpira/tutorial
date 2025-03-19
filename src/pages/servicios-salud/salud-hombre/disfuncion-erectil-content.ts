@@ -101,7 +101,7 @@ export const content: BaseContent[] = [
             </li>
           </ul>
     `,
-    orientation: 1,
+    orientation: 0,
     description_2: "",
   },
    {
@@ -134,7 +134,7 @@ export const content: BaseContent[] = [
             </li>
           </ul>
     `,
-    orientation: 0,
+    orientation: 1,
     description_2: "",
   },
    {
@@ -193,7 +193,7 @@ export const content: BaseContent[] = [
           </li>
         </ul>
     `,
-    orientation: 1,
+    orientation: 0,
     description_2: "",
   },
   {

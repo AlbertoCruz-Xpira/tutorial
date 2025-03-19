@@ -4,85 +4,122 @@ import HeroSmall from "/src/components/HeroSmall.astro";
 import IconRow from "/src/components/widgets/IconRow.astro";
 import ImageRow from "/src/components/widgets/ImageRow.astro";
 import MoreInformacionForm from "../../components/MoreInformacionForm.astro";
+import IndexAccordion from "../../components/grid/IndexAccordion.astro";
+
 
 const pageTitle = "Podología";
 const url = "/podologia/banner-podologia.jpg";
 
 import { content } from "./podologia-content.ts";
+
+const sections = [
+  {
+    id: "section_1",
+    title: "Quiropodia",
+  },
+  {
+    id: "section_2",
+    title: "Hiperqueratosis",
+  },
+  {
+    id: "section_3",
+    title: "Cirugías",
+  },
+  {
+    id: "section_4",
+    title: "Curación de heridas",
+  },
+  {
+    id: "section_5",
+    title: "Podología deportiva",
+  },
+  {
+    id: "section_6",
+    title: "Podología personas mayores",
+  },
+  
+];
 ---
 
 <BaseLayout>
   <HeroSmall name={pageTitle} url={url} alternativeText={pageTitle} />
 
+  <IndexAccordion sections={sections} />
+
   <div
     class="items-center max-w-5xl px-10 sm:px-10 md:px-10 lg:mx-auto pt-10 pb-5 service-detail"
   >
     <!-- SECTION 1 -->
-    <section>
+    <section id="section_1">
       <IconRow imageSrc={content[0].icon} title={content[0].title} />
       <ImageRow
         imageSrc={content[0].imageSrc}
-        orientation="1"
+        orientation={content[0].orientation}
         html={content[0].description_1}
       />
     </section>
 
     <!-- SECTION 2 -->
-    <section>
+    <section id="section_2">
       <IconRow imageSrc={content[1].icon} title={content[1].title} />
       <ImageRow
         imageSrc={content[1].imageSrc}
+        orientation={content[1].orientation}
         html={content[1].description_1}
       />
       <ImageRow
         imageSrc={content[2].imageSrc}
-        orientation="1"
+        orientation={content[2].orientation}
         html={content[2].description_1}
       />
       <ImageRow
         imageSrc={content[3].imageSrc}
+        orientation={content[3].orientation}
         html={content[3].description_1}
       />
     </section>
 
     <!-- SECTION 3 -->
-    <section>
+    <section id="section_3">
       <IconRow imageSrc={content[4].icon} title={content[4].title} />
       <ImageRow
         imageSrc={content[4].imageSrc}
+        orientation={content[4].orientation}
         html={content[4].description_1}
       />
       <ImageRow
         imageSrc={content[5].imageSrc}
-        orientation="1"
+        orientation={content[5].orientation}
         html={content[5].description_1}
       />
     </section>
 
     <!-- SECTION 4 -->
-    <section>
+    <section id="section_4">
       <IconRow imageSrc={content[6].icon} title={content[6].title} />
       <ImageRow
         imageSrc={content[6].imageSrc}
+        orientation={content[6].orientation}
         html={content[6].description_1}
       />
     </section>
 
     <!-- SECTION 5 -->
-    <section>
+    <section id="section_5">
       <IconRow imageSrc={content[7].icon} title={content[7].title} />
       <ImageRow
         imageSrc={content[7].imageSrc}
-        orientation="1"
+        orientation={content[7].orientation}
         html={content[7].description_1}
       />
     </section>
 
     <!-- SECTION 6 -->
-    <section>
+    <section id="section_6">
       <IconRow imageSrc={content[8].icon} title={content[8].title} />
       <ImageRow
         imageSrc={content[8].imageSrc}
+        orientation={content[8].orientation}
         html={content[8].description_1}
       />
     </section>

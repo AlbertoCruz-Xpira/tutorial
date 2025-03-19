@@ -13,7 +13,7 @@ export const content: BaseContent[] = [
               derivar en una lesión en el pie que nos limita nuestra calidad de
               vida.
             </p>`,
-    orientation: 0,
+    orientation: 1,
     description_2: "",
   },
   {
@@ -55,7 +55,7 @@ export const content: BaseContent[] = [
             laterales produce que se clave la uña en la piel de los bordes del
             dedo.
           </p>`,
-    orientation: 0,
+    orientation: 1,
     description_2: "",
   },
   {
@@ -99,7 +99,7 @@ export const content: BaseContent[] = [
         Es el dolor, hinchazón deformidad, cojera, alteraciones de la piel como
         hiperqueratosis o helomas y dificultad para ponerse zapatos.
       </p>`,
-    orientation: 0,
+    orientation: 1,
     description_2: "",
   },
   {
@@ -117,7 +117,7 @@ export const content: BaseContent[] = [
     imageSrc: "/podologia/podologia8.png",
     imageDesc: "",
     description_1: `<p>El tratamiento conjunto y coordinado de nuestros podólogos y fisioterapeutas es esencial para la correcta resolución de la lesión deportiva. El conjunto de análisis biomecánico de la marcha y gesto deportivo en coordinación con la valoración y diagnóstico fisioterapéutico nos llevará a la pauta del plan de tratamiento y de recuperación y readaptación a la práctica deportiva del paciente que tenga una lesión. A su vez, una vez resuelta o en el caso de no tener lesión, el tratamiento irá enfocado a la prevención de esta haciendo un estudio y viendo de manera precoz cuales pueden ser los factores de riesgo para desarrollar una lesión.</p>`,
-    orientation: 0,
+    orientation: 1,
     description_2: "",
   },
   {

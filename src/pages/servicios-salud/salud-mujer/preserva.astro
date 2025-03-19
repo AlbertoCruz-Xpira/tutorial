@@ -2,13 +2,13 @@
 import BaseLayout from "../../../layouts/BaseLayout.astro";
 import HeroSmall from "../../../components/HeroSmall.astro";
 import MoreInformacionForm from "../../../components/MoreInformacionForm.astro";
-const pageTitle = "Preserva";
-const url = "/salud-mujer/preserva/banner-preserva.png";
-
+import IndexAccordion from "../../../components/grid/IndexAccordion.astro";
 import type { BaseContent } from "../../../interface/BaseContent";
 import IconRow from "../../../components/widgets/IconRow.astro";
 import ImageRow from "../../../components/widgets/ImageRow.astro";
-import Column from "../../../components/widgets/Column.astro";
+
+const pageTitle = "Preserva";
+const url = "/salud-mujer/preserva/banner-preserva.png";
 
 export const content: BaseContent[] = [
   {
@@ -45,17 +45,30 @@ export const content: BaseContent[] = [
     description_2: "",
   },
 ];
+
+const sections = [
+  {
+    id: "section_1",
+    title: "Preserva",
+  },
+  {
+    id: "section_2",
+    title: "Donación de óvulos",
+  },
+];
 ---
 
 <BaseLayout>
   <HeroSmall name={pageTitle} url={url} alternativeText={pageTitle} />
+
+  <IndexAccordion sections={sections} />
 
   <div
     class="items-center max-w-5xl px-10 sm:px-10 md:px-10 lg:mx-auto pt-10 pb-5 service-detail"
   >
     <div>
       <!-- Preserva -->
-      <section>
+      <section id="section_1">
         <IconRow imageSrc={content[0].icon} title={content[0].title} />
         <ImageRow
           imageSrc={content[1].imageSrc}
@@ -348,7 +361,7 @@ export const content: BaseContent[] = [
       </div>
     </div>
 
-    <div>
+    <section id="section_2">
       <div>
         <div>
           <IconRow

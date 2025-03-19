@@ -1,0 +1,126 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import Resume from "../../components/vida-saludable/Resume.astro";
+import WeightRegister from "../../components/vida-saludable/WeightRegister.astro";
+import Messages from "../../components/vida-saludable/Messages.astro";
+import MedicalFollowUp from "../../components/vida-saludable/MedicalFollowUp.astro";
+import UserDown from "../../components/vida-saludable/UserDown.astro";
+
+import { content } from "../plan-de-vida-saludable-content.ts";
+
+const pageTitle = "Plan de vida saludable";
+const url = "/plan-de-vida-saludable/banner-plan.png";
+---
+
+<BaseLayout>
+  <!-- HERO VIDA SALUDABLE -->
+  <div class="relative">
+    <img class="w-full" src={url} alt={pageTitle} />
+
+    <!-- Contenedor del texto centrado encima de la imagen -->
+    <div
+      class="absolute inset-0 flex items-center justify-center text-white text-center p-4"
+    >
+      <div class="grid grid-col-1 py-5">
+        <h2 class="font-bold">Plan de hábitos de vida saludable</h2>
+      </div>
+    </div>
+  </div>
+  
+  <div x-data="{ activeSection: 'dashboard' }">
+    <div class="w-full">
+      <div name="menuLateral" id="menuUsuario" class="menu-planvidasaludable">
+          <nav class="nav nav-pills flex flex-col md:flex-row md:justify-evenly">
+              <a 
+                id="menuBtnDashB" class="md:flex-grow text-center nav-link active-plan"
+                :class="{ 'active-plan': activeSection === 'dashboard' }"
+                href="#" @click="activeSection = 'dashboard'">
+                <h5>Resumen del Plan</h5>
+              </a>
+              <a 
+                id="menuBtnRegistroPeso" class="md:flex-grow text-center nav-link"
+                :class="{ 'active-plan': activeSection === 'registroPeso' }"
+                href="#" @click="activeSection = 'registroPeso'">
+                <h5>Registro de peso</h5>
+              </a>
+              <a 
+                id="menuBtnMensajes" class="md:flex-grow text-center nav-link"
+                :class="{ 'active-plan': activeSection === 'mensajes' }"
+                href="#" @click="activeSection = 'mensajes'">
+                <h5>Mensajes</h5></a>
+              <a 
+                id="menuBtnSegMed" class="md:flex-grow text-center nav-link"
+                :class="{ 'active-plan': activeSection === 'seguimientoMedico' }"
+                href="#" @click="activeSection = 'seguimientoMedico'">
+                <h5>Seguimiento médico</h5></a>
+              <a 
+                id="menuBtnBajaUser" class="md:flex-grow text-center nav-link"
+                :class="{ 'active-plan': activeSection === 'bajaUsuario' }"
+                href="#" @click="activeSection = 'bajaUsuario'">
+                <h5>Baja de usuario</h5>
+              </a>
+          </nav>
+      </div>
+    </div>
+
+    <section x-show="activeSection === 'dashboard'" x-cloak x-transition>
+      <Resume />
+    </section>
+    <section x-show="activeSection === 'registroPeso'" x-cloak x-transition>
+      <WeightRegister />
+    </section>
+    <section x-show="activeSection === 'mensajes'" x-cloak x-transition>
+      <Messages />
+    </section>
+    <section x-show="activeSection === 'seguimientoMedico'" x-cloak x-transition>
+      <MedicalFollowUp />
+    </section>
+    <section x-show="activeSection === 'bajaUsuario'" x-cloak x-transition>
+      <UserDown />
+    </section>
+  </div>
+
+<style>
+.menu-planvidasaludable {
+    background-color: #ffffff !important;
+}
+.nav {
+    flex-wrap: wrap;
+    padding-left: 0;
+    margin-bottom: 0;
+    list-style: none;
+}
+.menu-planvidasaludable nav {
+    border-top: none !important;
+    border-left: none !important;
+}
+#menuUsuario .nav-pills .nav-link {
+    border-radius: 0%;
+}
+/* @media (max-width: 992px) {
+    #menuUsuario nav a {
+        background-position-x: 20px;
+    }
+}
+@media (max-width: 1072px) {
+    #menuUsuario nav a {
+        background-position: 10px 15px;
+    }
+} */
+#menuUsuario h5 {
+  font-size: 15px;
+}
+
+#menuUsuario nav a {
+    border-right: 1px solid #ececec;
+    padding: 20px;
+    background-position: 15px 15px;
+}
+#menuUsuario nav a {
+    color: #009494;
+}
+#menuUsuario nav a.active-plan {
+    color: white;
+    background-color: #095fac;
+}
+</style>

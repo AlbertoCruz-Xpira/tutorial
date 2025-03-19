@@ -1,0 +1,91 @@
+---
+import Table from "../simple/Table.astro";
+
+const registers = [ 
+  { 'Fecha': '04-02-2025', 'Mensaje': "Tienes una notificación." },
+  { 'Fecha': '10-03-2025', 'Mensaje': "Recuerda revisar tu correo." },
+  { 'Fecha': '17-02-2025', 'Mensaje': "No olvides tu cita." }
+];
+const rowsPerPage = 2;
+---
+<div class="items-center max-w-5xl px-10 sm:px-10 md:px-10 lg:mx-auto pt-10 pb-5 habitos-page" id="mensajes">
+    <div class="row margintop35">
+      <div class="col-md-12">
+        <div class="contentMensajes">
+            <div class="flex items-center gap-2 pb-3">
+                <img src="/plan-de-vida-saludable/plan-de-habitos-saludables/icon-mensajes.png" class="bell-icon">
+                <h3>Mensajes:</h3>
+            </div>
+
+            <!-- PRUEBA -->
+            <div x-data="{ registers: $el.dataset.registers }" x-init="console.log(registers)">
+                <table class="table-auto border-collapse border border-gray-300 w-full">
+                  <thead>
+                    <tr>
+                      <th class="cursor-pointer border border-gray-300 px-4 py-2 bg-gray-200">Fecha</th>
+                      <th class="cursor-pointer border border-gray-300 px-4 py-2 bg-gray-200">Mensaje</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <template x-for="(item, index) in registers" :key="index">
+                      <tr>
+                        <td x-text="item.Fecha" class="border border-gray-300 px-4 py-2"></td>
+                        <td x-text="item.Mensaje" class="border border-gray-300 px-4 py-2"></td>
+                      </tr>
+                    </template>
+                  </tbody>
+                </table>
+              </div>
+              
+              <!-- Pasar los datos del frontmatter como atributo data-registers -->
+              <div data-registers={JSON.stringify(registers)}></div>
+              
+              <script>
+                document.addEventListener('alpine:init', () => {
+                  console.log('Alpine.js está funcionando con los datos!');
+                });
+              </script>
+            <!--/ PRUEBA -->
+
+            <!-- <Table data={data} rowsPerPage={rowsPerPage} /> -->
+
+
+          <!-- <div>
+            <div id="tablaMensajes_wrapper" class="dataTables_wrapper no-footer">
+              <div class="dataTables_length" id="tablaMensajes_length">
+                <label>Mostrar <select name="tablaMensajes_length" aria-controls="tablaMensajes" class="">
+                    <option value="10">10</option>
+                    <option value="25">25</option>
+                    <option value="50">50</option>
+                    <option value="100">100</option>
+                  </select> registros </label>
+              </div>
+              <div id="tablaMensajes_filter" class="dataTables_filter">
+                <label>Buscar : <input type="search" class="" placeholder="" aria-controls="tablaMensajes">
+                </label>
+              </div>
+              <table id="tablaMensajes" class="display dataTable no-footer" role="grid" aria-describedby="tablaMensajes_info" style="width: 0px;">
+                <thead>
+                  <tr role="row">
+                    <th id="fecha_tablamensajes" class="sorting_asc" tabindex="0" aria-controls="tablaMensajes" rowspan="1" colspan="1" aria-label="Fecha: activate to sort column descending" aria-sort="ascending" style="width: 0px;">Fecha</th>
+                    <th id="mensaje_tablamensajes" class="sorting" tabindex="0" aria-controls="tablaMensajes" rowspan="1" colspan="1" aria-label="Mensaje: activate to sort column ascending" style="width: 0px;">Mensaje</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr class="odd">
+                    <td valign="top" colspan="2" class="dataTables_empty">No hay mensajes disponibles</td>
+                  </tr>
+                </tbody>
+              </table>
+              <div class="dataTables_info" id="tablaMensajes_info" role="status" aria-live="polite">Mostrando registros del 0 al 0 de un total de 0 registros</div>
+              <div class="dataTables_paginate paging_simple_numbers" id="tablaMensajes_paginate">
+                <a class="paginate_button previous disabled" aria-controls="tablaMensajes" data-dt-idx="0" tabindex="0" id="tablaMensajes_previous">Anterior</a>
+                <span></span>
+                <a class="paginate_button next disabled" aria-controls="tablaMensajes" data-dt-idx="1" tabindex="0" id="tablaMensajes_next">Siguiente</a>
+              </div>
+            </div>
+          </div> -->
+        </div>
+      </div>
+    </div>
+  </div>

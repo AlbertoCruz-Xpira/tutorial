@@ -76,7 +76,7 @@ export const content: BaseContent[] = [
   },
   {
     icon: "/salud-mujer/reproduccion-asistida/icon-fecundacion.png",
-    title: "Inseminación Artificial (IA)",
+    title: "Fecundación in Vitro (FIV)",
     imageSrc: "",
     imageDesc: "",
     description_1: ``,
@@ -99,14 +99,14 @@ export const content: BaseContent[] = [
     description_2: `<p>La Fecundación In Vitro (FIV) es la unión del óvulo con el espermatozoide en el laboratorio-in vitro-, con el fin de obtener embriones ya fecundados para transferir al útero materno y que evolucionen hasta conseguir un embarazo.</p>`,
   },
   {
-    icon: "",
-    title: "",
+    icon: "/salud-mujer/reproduccion-asistida/icon-ovodonacion.png",
+    title: "Ovodonación",
     imageSrc:
-      "/salud-mujer/reproduccion-asistida/reproduccion-5.png",
+      "",
     imageDesc: "",
     description_1: ``,
     orientation: 0,
-    description_2: "Procedimiento",
+    description_2: "",
   },
   {
     icon: "",
@@ -121,7 +121,7 @@ export const content: BaseContent[] = [
                 <p>
                     Así, la donación de óvulos hace posible el milagro de la vida en mujeres que de otra manera no podrían tener hijos.
                 </p>`,
-    orientation: 0,
+    orientation: 1,
     description_2: `<p>
             La ovodonación permite dar la oportunidad a mujeres que no pueden
             tener hijos de gestar un embrión por sí mismas, fruto de los óvulos

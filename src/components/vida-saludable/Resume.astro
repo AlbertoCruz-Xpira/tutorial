@@ -1,0 +1,130 @@
+---
+import CalculatorResult from "./CalculatorResult.astro";
+---
+
+<div class="items-center max-w-5xl px-10 sm:px-10 md:px-10 lg:mx-auto pt-10 pb-5 habitos-page">
+
+    <div class="grid grid-col-1 gap-3">
+
+    
+      <!-- BLOCK AVANCE -->
+      <div class="flex margintop35">
+        <div class="col-md-12">
+          <div class="container-dashboard-trimestres">
+            <div class="flex gap-3">
+              <img src="/plan-de-vida-saludable/plan-de-habitos-saludables/icon-dashboard.png" class="icon-dashboard">
+              <h3>Avance en el Plan de Hábitos de Vida Saludable</h3>
+            </div>
+            <div class="trimestres flex justify-around mt-12">
+              <div class="trimestreinicio">
+                <h5>Inicio</h5>
+              </div>
+              <div class="trimestreuno">
+                <h5>1º Trimestre</h5>
+              </div>
+              <div class="trimestredos">
+                <h5>2º Trimestre</h5>
+              </div>
+              <div class="trimestretres">
+                <h5>3º Trimestre</h5>
+              </div>
+              <div class="trimestrefin">
+                <h5>Fin</h5>
+              </div>
+            </div>
+            <div class="wrapper-dashboard">
+              <div class="container-background-dashboard">
+                <img src="/plan-de-vida-saludable/plan-de-habitos-saludables/bg-dashboard.png" class="img-dashboard">
+              </div>
+              <div class="container-degradado-dashboard" style="width: 16.6667%;">
+                <img src="/plan-de-vida-saludable/plan-de-habitos-saludables/bg-degradado.png" class="img-degradado hidden">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="flex">
+          <div class="col-md-12">
+            <div id="mesesPlanActivo"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- REGISTRO Y SEGUIMIENTO -->
+      <div class="sm:grid sm:grid-col-1 md:flex gap-3">
+        <div class="col-md-4">
+          <div class="container-dashboard grid grid-col-1 gap-1">
+            <!-- ICON ROW -->
+            <div class="flex gap-3 items-center">
+              <img src="/plan-de-vida-saludable/plan-de-habitos-saludables/icon-peso.png" class="img-peso">
+              <h3>Registro de peso</h3>
+            </div>
+
+            <div class="grid grid-col-1">
+              <p>Registra tu peso para tener un seguimiento actualizado</p>
+              <form action="//plan-de-vida-saludable/plan-de-habitos-saludables/plan-de-habitos-de-vida-saludable" enctype="multipart/form-data" method="post">
+                <div class="form-group form-registrar-peso mb-3">
+                  <label class="label-peso">Peso:</label>
+                  <input type="text" name="registroPeso" placeholder=" Kg"
+                    class="border border-gray-300 rounded-md px-3 py-2 mt-1 focus:outline-none focus:ring-1 focus:ring-grey-400 focus:border-grey-400" 
+                    pattern="^(([1-9])|([1-9][0-9]{1,1})|([1][0]{2}))$" required="">
+                </div>
+                <button class="btn badge-info btn-peso button-orange margin50auto w-full">Guardar edición</button>
+                <input name="ufprt" type="hidden" value="CE4124A1F6765DCF1E64F9C809B512BB1EFA8548AB333DD6CA874C1AA957B5A95ABBEE4D66628F66DF5B85FF15CB130464E53D87017CA1F905174CD19E3FEA949F22D365BC24D3300598B0630C1BEBE779F3D0DE7E533BA3A34331D6F70A52A75A23AD102A3DADD96EEFD7570638666F748324DE62706E8214D7020D0FB54A3E035630D177267042C1A2F3B6BB6E516A85A82DC904BF1EA8EA4D0B056B7345BB028814EA32057FE9F0CB79AF61956C50">
+              </form>
+              <div>
+                <button class="btn btn-peso margin20auto button-orange w-full" onclick="mostrarRegistroPeso()">Ver histórico</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-8">
+          <div class="container-dashboard grid grid-col-1 gap-2">
+              <div>
+                <div id="menuBtnSegMed" class="flex items-center gap-2 nav-link a-seguimientomedico">
+                  <img src="/plan-de-vida-saludable/plan-de-habitos-saludables/icon-seguimiento.png" class="center-seguimiento" style="max-width: 65px;">
+                  <h3>Seguimiento médico</h3>
+                </div>
+                <a id="menuBtnSegMed" class="button-orange nav-link a-seguimientomedico" href="#" onclick="mostrarSeguimientoMedico()">
+                  Abrir
+                </a>
+              </div>
+
+              <div class="flex items-center gap-2">
+                <img src="/plan-de-vida-saludable/plan-de-habitos-saludables/icon-bell.png" class="bell-icon">
+                <h4 class="marginbottom20">Últimos mensajes:</h4>
+              </div>
+
+              <p>No hay mensajes disponibles</p>
+
+              <div class="flex margin-consulta">
+                <div class="col-md-12">
+                  <p class="small">Si tienes alguna consulta ponte en contacto con nuestro Equipo Médico al <strong>91 703 90 24</strong>. Horario de llamadas <strong>L-V de 8.00 a 21.00h.</strong> </p>
+                </div>
+              </div>
+          </div>
+        </div>
+      </div>
+      <CalculatorResult/>
+    </div>
+
+  </div>
+
+  <style>
+    .container-dashboard-trimestres {
+      padding: 20px;
+      background: #ffffff;
+      border: 1px solid #ececec;
+      min-height: 235px;
+      position: relative;
+    }
+    .container-dashboard {
+        padding: 20px;
+        background: #ffffff;
+        border: 1px solid #ececec;
+        min-height: 391px;
+        position: relative;
+    }
+    .label-peso {
+        font-weight: bold;
+    }
+  </style>

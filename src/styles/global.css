@@ -167,3 +167,63 @@ p.bold {
 .service-detail.pink .icon-row {
     border-color: #e4919e;
   }
+  
+.service-detail .index-accordion ul {
+  list-style: none;
+}
+
+.service-detail .index-accordion li {
+  padding-bottom: 0px;
+}
+
+.service-detail .orange-higlighted {
+  text-align: center;
+  font-size: 32px;
+  color: #feb44c;
+}
+
+.button-orange {
+  color: #ffb03b;
+  background: #fff;
+  border: 1px solid #ffb03b;
+  padding: 10px 10px;
+  border-radius: 0px;
+  cursor: pointer;
+  text-align: center;
+  border-radius: 25px;
+}
+
+.button-orange:hover {
+  color: #fff;
+  background: #ffb03b;
+}
+
+
+.habitos-page strong {
+    font-weight: bold;
+}
+
+.habitos-page h3,
+.habitos-page h4,
+.habitos-page h5,
+.habitos-page label {
+    color: var(--color-turquoise-500);
+}
+
+.habitos-page p {
+    margin-bottom: 0px;
+    color: #a2a2a2;
+}
+.habitos-page p.small {
+    font-size: 0.7rem;
+}
+
+.habitos-page h3 {font-size: 20px;}
+.habitos-page h4 {font-size: 16px;}
+.habitos-page h5 {font-size: 14px;}
+
+.habitos-page .white-block {
+    background: #ffffff;
+    padding: 20px;
+    border: 1px solid #e6eaeb;
+}

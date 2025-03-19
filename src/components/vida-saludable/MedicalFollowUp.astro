@@ -1,0 +1,47 @@
+<div class="items-center max-w-5xl px-10 sm:px-10 md:px-10 lg:mx-auto pt-10 pb-5 habitos-page" id="seguimientoMedico">
+    <div class="contentSeguimientoMedico">
+      <div class="flex items-center gap-2 margintop35">
+        <div class="flex items-center gap-2">
+          <img src="/plan-de-vida-saludable/plan-de-habitos-saludables/icon-seguimiento-medico.png" class="bell-icon">
+          <h3>Seguimiento médico</h3>
+        </div>
+      </div>
+      <div class="container-seguimiento white-block p-5 mt-3">
+        <div class="grid grid-col-1 gap-3">
+          <div class="flex items-center gap-2">
+            <div class="col-md-12">
+              <p>Escribe aquí tu consulta. El departamento médico te contestará en la dirección de correo indicada</p>
+            </div>
+          </div>
+          <form action="/plan-de-vida-saludable/plan-de-habitos-de-vida-saludable" enctype="multipart/form-data" method="post">
+            <div class="flex items-center gap-2 consulta-seguimiento w-full">
+              <div class="col-md-2">
+                <label>Mi correo:</label>
+              </div>
+              <div class="col-md-10 flex-1">
+                <input type="email" name="email" required="" class="flex-1 w-full border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-1 focus:ring-grey-400 focus:border-grey-400">
+              </div>
+            </div>
+            <div class="flex items-center gap-2 mt-5">
+              <div class="col-md-2">
+                <label>Mi consulta:</label>
+              </div>
+              <div class="col-md-10 flex-1">
+                <textarea name="consulta" required="" class="w-full border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-1 focus:ring-grey-400 focus:border-grey-400"></textarea>
+              </div>
+            </div>
+            <div class="flex items-right justify-end gap-2 mt-3">
+              <button class="enviardoctor button-orange">ENVIAR AL DOCTOR</button>
+            </div>
+            <input name="ufprt" type="hidden" value="FFDD3795BED386ACC5CE145DB29E465633ECB029596947863DB4088399C9952538E5B639116189B50A57AD506BBDF482C0F8138FA64F3868F160E4CF4D05548D7461497D83CA01F1C9B6D9BE873951045383BBFB504DA0373D73E99DE377D5B78F078ED21F72EBF758CCEFF9250405746549178767036CE1251C69C1F74C7F15B9067054DB179DBE1D866C9ABA07B6F8DE3E459854A8F676A7E8462C0592D18AEB9E3F1100344071F8FA6989C2CBC42FAF2DEA9F63BA7F9A3EFC22E14A4937EC">
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <style>
+    .container-seguimiento textarea {
+    height: 200px;
+}
+  </style>

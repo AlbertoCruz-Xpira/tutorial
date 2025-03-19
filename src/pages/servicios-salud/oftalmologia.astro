@@ -3,58 +3,75 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
 import HeroSmall from "/src/components/HeroSmall.astro";
 import IconRow from "/src/components/widgets/IconRow.astro";
 import ImageRow from "/src/components/widgets/ImageRow.astro";
+import IndexAccordion from "../../components/grid/IndexAccordion.astro";
 import MoreInformacionForm from "../../components/MoreInformacionForm.astro";
 
 const pageTitle = "Oftalmología";
 const url = "/oftalmologia/banner-oftalmologia.jpg";
 
 import { content } from "./oftalmologia-content.ts";
+
+const sections = [
+  {
+    id: "section_1",
+    title: "Unidad de Oftalmología",
+  },
+  {
+    id: "section_2",
+    title: "Enfermedad de los ojos",
+  }
+];
 ---
 
 <BaseLayout>
   <HeroSmall name={pageTitle} url={url} alternativeText={pageTitle} />
 
+  <IndexAccordion sections={sections} />
+
   <div
     class="items-center max-w-5xl px-10 sm:px-10 md:px-10 lg:mx-auto pt-10 pb-5 service-detail"
   >
     <!-- SECTION 1 -->
-    <section>
+    <section id="section_1">
       <IconRow imageSrc={content[0].icon} title={content[0].title} />
       <ImageRow
         imageSrc={content[0].imageSrc}
-        orientation="1"
+        orientation={content[0].orientation}
         html={content[0].description_1}
       />
       <ImageRow
         imageSrc={content[1].imageSrc}
+        orientation={content[1].orientation}
         html={content[1].description_1}
       />
       <ImageRow
         imageSrc={content[2].imageSrc}
-        orientation="1"
+        orientation={content[2].orientation}
         html={content[2].description_1}
       />
       <ImageRow
         imageSrc={content[3].imageSrc}
+        orientation={content[3].orientation}
         html={content[3].description_1}
       />
     </section>
 
     <!-- SECTION 1 -->
-    <section>
+    <section id="section_2">
       <IconRow imageSrc={content[4].icon} title={content[4].title} />
       <ImageRow
         imageSrc={content[4].imageSrc}
-        orientation="1"
+        orientation={content[4].orientation}
         html={content[4].description_1}
       />
       <ImageRow
         imageSrc={content[5].imageSrc}
+        orientation={content[5].orientation}
         html={content[5].description_1}
       />
       <ImageRow
         imageSrc={content[6].imageSrc}
-        orientation="1"
+        orientation={content[6].orientation}
         html={content[6].description_1}
       />
     </section>

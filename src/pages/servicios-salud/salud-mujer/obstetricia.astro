@@ -2,6 +2,7 @@
 import BaseLayout from "../../../layouts/BaseLayout.astro";
 import HeroSmall from "/src/components/HeroSmall.astro";
 import TitleIconRow from "/src/components/widgets/IconRow.astro";
+import IndexAccordion from "../../../components/grid/IndexAccordion.astro";
 import ImageRow from "../../../components/widgets/ImageRow.astro";
 
 const content = [
@@ -48,6 +49,21 @@ const content = [
           </ul>`,
   },
 ];
+
+const sections = [
+  {
+    id: "section_1",
+    title: "Características",
+  },
+  {
+    id: "section_2",
+    title: "Pruebas",
+  },
+  {
+    id: "section_3",
+    title: "Triple Screening",
+  },
+];
 ---
 
 <BaseLayout>
@@ -57,11 +73,13 @@ const content = [
     alternativeText={content[0].pageTitle}
   />
 
+  <IndexAccordion sections={sections} />
+
   <div
     class="items-center max-w-5xl px-10 sm:px-10 md:px-10 lg:mx-auto pt-10 pb-5 service-detail"
   >
     <!-- Caracteristicas -->
-    <section>
+    <section id="section_1">
       <TitleIconRow imageSrc={content[1].imageSrc} title={content[1].title} />
       <div class="grid grid-col-1 gap-5">
         <div class="flex gap-10">
@@ -127,7 +145,7 @@ const content = [
     </section>
 
     <!-- Pruebas que se realizan -->
-    <section>
+    <section id="section_2">
       <TitleIconRow imageSrc={content[2].imageSrc} title={content[2].title} />
 
       <!-- Imagen 1 -->
@@ -187,7 +205,7 @@ const content = [
       </section>
     </section>
 
-    <div>
+    <section id="section_3">
       <div class="flex gap-5">
         <img src="/salud-mujer/obstetricia/icon-screening.png" />
         <h2>Screening combinado de primer trimestre (triple screening)</h2>
