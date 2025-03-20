@@ -8,16 +8,16 @@ const pageTitle = "Gestionar mis datos";
         <div class="grid grid-cols-1 gap-4">
             <!-- Primera columna -->
             <div>
-            <label for="desde" class="block text-sm font-medium text-gray-700 mt-4">Desde</label>
+            <label for="desde" class="block text-sm font-medium text-gray-700 mt-2">Desde</label>
             <input type="date" id="desde" name="desde" class="mt-1 p-2 w-full border rounded-md" />
 
-            <label for="hasta" class="block text-sm font-medium text-gray-700 mt-4">Hasta</label>
+            <label for="hasta" class="block text-sm font-medium text-gray-700 mt-2">Hasta</label>
             <input type="date" id="hasta" name="hasta" class="mt-1 p-2 w-full border rounded-md" />
 
-            <label for="nombre" class="block text-sm font-medium text-gray-700 mt-4">Nombre del Médico/Centro</label>
+            <label for="nombre" class="block text-sm font-medium text-gray-700 mt-2">Nombre del Médico/Centro</label>
             <input type="text" id="nombre" name="nombre" class="mt-1 p-2 w-full border rounded-md" />
 
-            <label for="estado" class="block text-sm font-medium text-gray-700 mt-4">Estado</label>
+            <label for="estado" class="block text-sm font-medium text-gray-700 mt-2">Estado</label>
             <select id="estado" name="estado" class="mt-1 p-2 w-full border rounded-md">
                 <option value="masculino">Todos</option>
                 <option value="femenino">Primero</option>
@@ -45,6 +45,7 @@ const pageTitle = "Gestionar mis datos";
     form select {
         border-color: #dfdfdf;
         font-size: 0.8rem;
+        min-height: 40px;
     }
     form label {
         color: var(--color-turquoise-500);

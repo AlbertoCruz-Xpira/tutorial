@@ -5,28 +5,28 @@ const pageTitle = "Área privada";
 ---
 <PrivateAreaLayout pageTitle={pageTitle}>
     <form class="max-w-4xl mx-auto p-6 bg-white shadow-md rounded-lg">
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-4">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-3">
             <!-- Primera columna -->
             <div>
             <label for="id" class="block text-sm font-medium text-gray-700">ID</label>
             <input type="text" id="id" name="id" class="mt-1 p-2 w-full border rounded-md" />
 
-            <label for="email" class="block text-sm font-medium text-gray-700 mt-4">Email</label>
+            <label for="email" class="block text-sm font-medium text-gray-700 mt-2">Email</label>
             <input type="email" id="email" name="email" class="mt-1 p-2 w-full border rounded-md" />
 
-            <label for="nombre" class="block text-sm font-medium text-gray-700 mt-4">Nombre</label>
+            <label for="nombre" class="block text-sm font-medium text-gray-700 mt-2">Nombre</label>
             <input type="text" id="nombre" name="nombre" class="mt-1 p-2 w-full border rounded-md" />
 
-            <label for="primer-apellido" class="block text-sm font-medium text-gray-700 mt-4">Primer Apellido</label>
+            <label for="primer-apellido" class="block text-sm font-medium text-gray-700 mt-2">Primer Apellido</label>
             <input type="text" id="primer-apellido" name="primer-apellido" class="mt-1 p-2 w-full border rounded-md" />
 
-            <label for="segundo-apellido" class="block text-sm font-medium text-gray-700 mt-4">Segundo Apellido</label>
+            <label for="segundo-apellido" class="block text-sm font-medium text-gray-700 mt-2">Segundo Apellido</label>
             <input type="text" id="segundo-apellido" name="segundo-apellido" class="mt-1 p-2 w-full border rounded-md" />
 
-            <label for="fecha-nacimiento" class="block text-sm font-medium text-gray-700 mt-4">Fecha de Nacimiento</label>
+            <label for="fecha-nacimiento" class="block text-sm font-medium text-gray-700 mt-2">Fecha de Nacimiento</label>
             <input type="date" id="fecha-nacimiento" name="fecha-nacimiento" class="mt-1 p-2 w-full border rounded-md" />
 
-            <label for="sexo" class="block text-sm font-medium text-gray-700 mt-4">Sexo</label>
+            <label for="sexo" class="block text-sm font-medium text-gray-700 mt-2">Sexo</label>
             <select id="sexo" name="sexo" class="mt-1 p-2 w-full border rounded-md">
                 <option value="masculino">Masculino</option>
                 <option value="femenino">Femenino</option>
@@ -39,22 +39,22 @@ const pageTitle = "Área privada";
             <label for="telefono" class="block text-sm font-medium text-gray-700">Teléfono</label>
             <input type="tel" id="telefono" name="telefono" class="mt-1 p-2 w-full border rounded-md" />
 
-            <label for="tipo-via" class="block text-sm font-medium text-gray-700 mt-4">Tipo de Vía</label>
+            <label for="tipo-via" class="block text-sm font-medium text-gray-700 mt-2">Tipo de Vía</label>
             <input type="text" id="tipo-via" name="tipo-via" class="mt-1 p-2 w-full border rounded-md" />
 
-            <label for="nombre-via" class="block text-sm font-medium text-gray-700 mt-4">Nombre de Vía</label>
+            <label for="nombre-via" class="block text-sm font-medium text-gray-700 mt-2">Nombre de Vía</label>
             <input type="text" id="nombre-via" name="nombre-via" class="mt-1 p-2 w-full border rounded-md" />
 
-            <label for="codigo-postal" class="block text-sm font-medium text-gray-700 mt-4">Código Postal</label>
+            <label for="codigo-postal" class="block text-sm font-medium text-gray-700 mt-2">Código Postal</label>
             <input type="text" id="codigo-postal" name="codigo-postal" class="mt-1 p-2 w-full border rounded-md" />
 
-            <label for="poblacion" class="block text-sm font-medium text-gray-700 mt-4">Población</label>
+            <label for="poblacion" class="block text-sm font-medium text-gray-700 mt-2">Población</label>
             <input type="text" id="poblacion" name="poblacion" class="mt-1 p-2 w-full border rounded-md" />
 
-            <label for="provincia" class="block text-sm font-medium text-gray-700 mt-4">Provincia</label>
+            <label for="provincia" class="block text-sm font-medium text-gray-700 mt-2">Provincia</label>
             <input type="text" id="provincia" name="provincia" class="mt-1 p-2 w-full border rounded-md" />
 
-            <label for="pais" class="block text-sm font-medium text-gray-700 mt-4">País</label>
+            <label for="pais" class="block text-sm font-medium text-gray-700 mt-2">País</label>
             <input type="text" id="pais" name="pais" class="mt-1 p-2 w-full border rounded-md" />
             </div>
         </div>
@@ -78,6 +78,7 @@ const pageTitle = "Área privada";
     form select {
         border-color: #dfdfdf;
         font-size: 0.8rem;
+        min-height: 40px;
     }
     form label {
         color: var(--color-turquoise-500);
