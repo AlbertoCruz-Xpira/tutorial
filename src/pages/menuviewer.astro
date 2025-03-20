@@ -1,0 +1,56 @@
+---
+import FlipBook from "../components/FlipBook"
+
+const pages = [
+  { content: '/plan-de-vida-saludable/menus/menu_1/page0001.png' },
+  { content: '/plan-de-vida-saludable/menus/menu_1/page0002.png' },
+  { content: '/plan-de-vida-saludable/menus/menu_1/page0003.png' },
+  { content: '/plan-de-vida-saludable/menus/menu_1/page0004.png' },
+];
+---
+
+<div class="flipbook-wrapper">
+    <FlipBook pages={pages} client:load />
+</div>
+
+<style>
+    .flipbook-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #d43e3e;
+}
+
+.flipbook-container {
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: white;
+  border: 1px solid #ddd;
+  padding: 20px;
+}
+
+.page h2 {
+  margin-bottom: 10px;
+}
+
+.page ul {
+  list-style: none;
+  padding: 0;
+}
+
+.page li {
+  padding: 5px 0;
+  font-size: 18px;
+}
+.stf__item {
+  top: 0 !important;
+}
+
+  </style>

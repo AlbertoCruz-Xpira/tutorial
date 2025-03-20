@@ -1,0 +1,35 @@
+---
+import { useEffect } from 'astro/client';
+---
+<html>
+  <head>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.6/css/jquery.dataTables.min.css">
+    <script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
+  </head>
+  <body>
+    <table id="example" class="display" style="width:100%">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Nombre</th>
+          <th>Edad</th>
+          <th>Ciudad</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>1</td><td>Juan Pérez</td><td>28</td><td>Madrid</td></tr>
+        <tr><td>2</td><td>María López</td><td>34</td><td>Barcelona</td></tr>
+        <tr><td>3</td><td>Carlos Sánchez</td><td>25</td><td>Sevilla</td></tr>
+        <tr><td>4</td><td>Laura Gómez</td><td>31</td><td>Valencia</td></tr>
+      </tbody>
+    </table>
+    
+    <script>
+        declare var $: any;
+        $(document).ready(function() {
+            $('#example').DataTable();
+        });
+    </script>
+  </body>
+</html>

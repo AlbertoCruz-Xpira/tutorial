@@ -1,0 +1,167 @@
+---
+// Este es un componente en Astro para el Flipbook.
+const pages = [
+  { content: '/plan-de-vida-saludable/menus/menu_1/page0001.png' },
+  { content: '/plan-de-vida-saludable/menus/menu_1/page0002.png' },
+  { content: '/plan-de-vida-saludable/menus/menu_1/page0003.png' },
+  { content: '/plan-de-vida-saludable/menus/menu_1/page0004.png' },
+];
+---
+
+<nav class="bg-blue text-white flex items-center justify-around">
+    <button class="control prev" id="prevBtn">←</button>
+    <button class="control next" id="nextBtn">→</button>
+    <button class="control expand" id="expandBtn">🔍 Ampliar</button>
+    <button class="control reduce" id="reduceBtn">↩ Reducir</button>
+</nav>
+
+<div class="flipbook-container">
+    <div class="flipbook-page-wrapper"></div>
+        <div id="flipbook" class="flipbook">
+            {pages.map((page, index) => (
+            <div class="flipbook-page" id={`page-${index}`}>
+                <img src={page.content}/>
+            </div>
+            ))}
+        </div>
+    </div>
+</div>
+
+
+
+<script>
+    import "../scripts/flipbook.js";
+  </script>
+
+<style>
+    .flipbook-container {
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #f4f4f4;
+    }
+
+    .flipbook {
+        display: flex;
+        width: 100%;
+        height: 100%;
+        position: relative;
+        perspective: 1000px;
+    }
+
+    .flipbook.single-page {
+        width: 300px;
+    }
+
+    .flipbook-page-wrapper {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        transform-origin: left center;
+        transition: transform 1s ease-in-out;
+    }
+
+    .flipbook-page {
+        background-color: white;
+        border: 1px solid #ccc;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        transform-style: preserve-3d;
+        backface-visibility: hidden;
+        transition: transform 0.6s ease;
+    }
+
+    
+
+    .flipbook-page p {
+        font-size: 24px;
+        text-align: center;
+        margin: 0;
+    }
+
+    .flipbook-page:nth-child(even) {
+        background-color: #f9f9f9;
+    }
+
+    .flipbook-page.active {
+        transform: rotateY(180deg);
+    }
+    .control {
+        background-color: rgba(0, 0, 0, 0.5);
+        color: #fff;
+        font-size: 2rem;
+        padding: 10px;
+        border: none;
+        cursor: pointer;
+        border-radius: 50%;
+        z-index: 10;
+    }
+
+    .control.prev {
+    }
+
+    .control.next {
+    }
+
+    .control.expand {
+    }
+
+    .control.reduce {
+        display: none; /* Inicialmente oculto */
+    }
+
+    .control:hover {
+        background-color: rgba(0, 0, 0, 0.8);
+    }
+    .flipbook {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 600px; /* Ajuste para mostrar dos páginas */
+  height: 400px;
+  perspective: 1200px;
+}
+
+.flipbook.single-page {
+  width: 300px; /* Solo se muestra una página */
+}
+
+.flipbook-page-wrapper {
+  width: 50%;
+  height: 100%;
+  position: absolute;
+  transform-origin: left center;
+  transition: transform 1s ease-in-out;
+}
+
+.flipbook-page {
+  width: 100%;
+  height: 100%;
+  background: white;
+  border: 1px solid #ccc;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  backface-visibility: hidden;
+  transform-origin: left center;
+  transition: transform 1s ease-in-out;
+}
+
+.flipbook-page.flipped {
+  transform: rotateY(-180deg);
+}
+
+.flipbook-page-wrapper.flipped {
+  transform: translateX(100%) rotateY(-180deg);
+}
+
+</style>

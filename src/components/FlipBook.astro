@@ -1,0 +1,89 @@
+---
+
+export interface Menu {
+    day: string,
+    meals: Array<string>
+}
+
+const week: Menu[] = 
+    [
+        { day: 'Lunes', meals: ['Desayuno', 'Almuerzo', 'Merienda', 'Cena'] },
+        { day: 'Martes', meals: ['Desayuno', 'Almuerzo', 'Merienda', 'Cena'] },
+        { day: 'Miércoles', meals: ['Desayuno', 'Almuerzo', 'Merienda', 'Cena'] },
+        { day: 'Jueves', meals: ['Desayuno', 'Almuerzo', 'Merienda', 'Cena'] },
+        { day: 'Viernes', meals: ['Desayuno', 'Almuerzo', 'Merienda', 'Cena'] },
+        { day: 'Sábado', meals: ['Desayuno', 'Almuerzo', 'Merienda', 'Cena'] },
+        { day: 'Domingo', meals: ['Desayuno', 'Almuerzo', 'Merienda', 'Cena'] }
+    ];
+---
+
+<div id="book">
+	<div class="cover">
+        <h1>The Bible</h1>
+    </div>
+</div>
+
+<div id="controls">
+	<label for="page-number">Page:</label> <input type="text" size="3" id="page-number"> of <span id="number-pages"></span>
+</div>
+
+<script>
+    import "../scripts/jquery-1.7.1.min.js";
+    import "../scripts/turn.min.js";
+</script>
+
+<script>
+
+var numberOfPages = 1000; 
+
+
+    // Adds the pages that the book will need
+    function addPage(page: number, book: any) {
+        // 	First check if the page is already in the book
+        if (!book.turn('hasPage', page)) {
+            // Create an element for this page
+            var element = $('<div />', {'class': 'page '+((page%2==0) ? 'odd' : 'even'), 'id': 'page-'+page}).html('<i class="loader"></i>');
+            // If not then add the page
+            book.turn('addPage', element, page);
+            // Let's assum that the data is comming from the server and the request takes 1s.
+            setTimeout(function(){
+                    element.html('<div class="data">Data for page '+page+'</div>');
+            }, 1000);
+        }
+    }
+    
+    declare var $: any;
+    $(window).ready(function(){
+        $('#book').turn({
+            acceleration: true,
+            pages: numberOfPages,
+            elevation: 50,
+            gradients: !$.isTouch,
+            when: {
+                turning: function(e: Event, page: number, view: string) {
+
+                    // Gets the range of pages that the book needs right now
+                    var range = $(this).turn('range', page);
+
+                    // Check if each page is within the book
+                    for (page = range[0]; page<=range[1]; page++) 
+                        addPage(page, $(this));
+                },
+                turned: function(e: Event, page: number) {
+                    $('#page-number').val(page);
+                }
+            }
+        })
+    });
+
+    $(window).bind('keydown', function(e: any) {
+
+        if (e.target && e.target.tagName.toLowerCase()!='input')
+            if (e.keyCode==37)
+                $('#book').turn('previous');
+            else if (e.keyCode==39)
+                $('#book').turn('next');
+
+        }
+    );
+</script>
