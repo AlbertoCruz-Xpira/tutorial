@@ -1,0 +1,18 @@
+---
+const { centers } = Astro.props;
+const API_KEY = "TU_API_KEY";
+---
+<!-- <img src="./gmap.jpg" alt="gmap" /> -->
+
+<!-- Contenedor del mapa -->
+<div id="map" style="width: 100%; height: 500px;"></div>
+
+<!-- Cargar Google Maps API -->
+<script
+  src={`https://maps.googleapis.com/maps/api/js?key=${API_KEY}&callback=initMap&libraries=maps,marker`}
+  async
+  defer
+></script>
+
+<!-- Importar el script del mapa -->
+<!-- <script src="/src/map.js"></script> -->

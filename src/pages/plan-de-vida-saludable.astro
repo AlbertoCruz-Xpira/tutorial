@@ -2,7 +2,7 @@
 import BaseLayout from "../layouts/BaseLayout.astro";
 import IconRow from "../components/widgets/IconRow.astro";
 import ImageRow from "../components/widgets/ImageRow.astro";
-import Calculator from "../components/Calculator.astro";
+import Calculator from "../components/vida-saludable/Calculator.astro";
 
 const pageTitle = "Plan de vida saludable";
 const url = "/plan-de-vida-saludable/banner.png";
@@ -14,20 +14,11 @@ import HtmlBlock from "../components/simple/HtmlBlock.astro";
 
 <BaseLayout>
   <!-- HERO VIDA SALUDABLE -->
-  <div class="relative">
-    <img class="w-full" src={url} alt={pageTitle} />
-
-    <!-- Contenedor del texto centrado encima de la imagen -->
-    <div
-      class="absolute inset-0 flex items-center justify-center text-white text-center p-4"
-    >
-      <div class="grid grid-col-1 gap-2">
-        <h2 class="font-bold color-turquoise">Haz tu vida más saludable</h2>
-        <div class="text-[1.2rem] text-[#3e3f40]">
-          Utiliza la calculadora, sigue los menús recomendados y disfruta tus
-          platos saludables.
-        </div>
-      </div>
+  <div class="relative w-full min-h-35 md:min-h-75 bg-contain bg-cover bg-center content-center grid grid-col-1 justify-center items-center text-white text-center p-4 gap-2" style={`background-image: url(${url});`}>
+    <h2 class="font-bold color-turquoise">Haz tu vida más saludable</h2>
+    <div class="text-[1rem] md:text-[1.2rem] text-[#3e3f40]">
+      Utiliza la calculadora, sigue los menús recomendados y disfruta tus
+      platos saludables.
     </div>
   </div>
 
@@ -37,8 +28,7 @@ import HtmlBlock from "../components/simple/HtmlBlock.astro";
     <!-- Sección de Consejos Prácticos -->
     <div class="container" x-data="{ showCalculator: false }">
       <form>
-        <input />
-        <div class="grid grid-cols-2 gap-5">
+        <div class="grid grid-col-1 md:grid-cols-2 gap-5">
           <!-- Plan de Vida Saludable -->
           <div class="grid grid-col-1 items-center justify-content-center">
             <IconRow
@@ -48,19 +38,23 @@ import HtmlBlock from "../components/simple/HtmlBlock.astro";
 
             <div
               style="background-image:url(/plan-de-vida-saludable/bg-planhabitos.jpg);"
-              class="h-full bg-cover bg-no-repeat grid items-center justify-center p-5 left-box"
+              class="h-full bg-cover bg-no-repeat grid items-end justify-center p-5 left-box"
             >
-              <h3>Accede a tu plan personalizado para clientes de Ocaso</h3>
-              <p>
-                Controla tu peso, recibe consejos para mejorar tus hábitos,
-                entra a tu plan de vida saludable.
-              </p>
-              <SimpleButton buttonText="Plan de Hábitos de Vida Saludable" buttonLink="/plan-de-vida-saludable/plan-de-habitos-de-vida-saludable" />
+              <div class="grid grid-col-1 gap-2">
+                <h2 class="white">Accede a tu plan personalizado para clientes de Ocaso</h2>
+                <p class="white">
+                  Controla tu peso, recibe consejos para mejorar tus hábitos,
+                  entra a tu plan de vida saludable.
+                </p>
+                <div class="flex justify-center">
+                  <SimpleButton buttonText="Plan de Hábitos de Vida Saludable" buttonLink="/plan-de-vida-saludable/plan-de-habitos-de-vida-saludable" />
+                </div> 
+              </div>
             </div>
           </div>
 
           <!-- Calculadora -->
-          <div class="grid grid-col-1 items-center justify-content-center">
+          <div class="grid grid-col-1 items-center justify-content-center pt-5 md:pt-0" >
             <IconRow
               imageSrc="/plan-de-vida-saludable/icon-calculadora.png"
               title="Calculadora"
@@ -68,43 +62,43 @@ import HtmlBlock from "../components/simple/HtmlBlock.astro";
 
             <div id="quote-calculadora-right" class="p-5 bg-white">
               <div class="text_calculadora">
-                <h5 class="color-turquoise pb-5">
+                <p class="color-turquoise pb-5">
                   Introduce tus datos y obtendrás unas pautas útiles para llevar
                   una dieta equilibrada y saludable:
-                </h5>
+                </p>
               </div>
+
               <div class="form-group sexoCheck grid grid-col-1 gap-2">
                 <!--<h5>Datos</h5><br />-->
                 <div class="label_sexo hidden">
                   <label for="Sexo">Sexo:</label>
                 </div>
                 <div class="checkbox-inline sexo flex gap-3">
-                  <div class="hombre">
-                    <div class="box-label flex items-center gap-2">
-                      Hombre <input
+                  <div class="hombre flex items-center gap-1">
+                    <input
                         id="Sexo"
                         name="Sexo"
                         required="required"
                         type="radio"
                         value="Hombre"
                       />
-                    </div>
+                    <label class="box-label">Hombre</label>
                   </div>
-                  <div class="mujer">
-                    <div class="box-label flex items-center gap-2">
-                      Mujer <input
+                  <div class="mujer flex items-center gap-1">
+                    <input
                         id="Sexo"
                         name="Sexo"
                         required="required"
                         type="radio"
                         value="Mujer"
                       />
-                    </div>
+                    <label class="box-label">Mujer</label>
                   </div>
                 </div>
               </div>
               <div class="clear"></div>
 
+              <!-- ALTURA PESO EDAD -->
               <div class="form-group calc grid grid-col-1 gap-2">
                 <div class="flex gap-3 items-center">
                   <div class="min-w-10 box-label"><label for="Altura">Altura:</label></div>
@@ -153,15 +147,16 @@ import HtmlBlock from "../components/simple/HtmlBlock.astro";
                 </div>
               </div>
               <div class="clear"></div>
+
+              <!-- EJERCICIO -->
               <div class="form-group calcActividad grid grid-col-1 gap-3">
                 <label for="FactActivi" class="hidden">Factor Actividad:</label>
                 <div class="textEjercicio">
                   <p>Ejercicio:</p>
                 </div>
-                <div class="px-5 pb-2 grid grid-col-1 gap-2">
-                  <div class="form-inline flex row checkEjercicio gap-1">
-                    <div class="calcEjercicio flex items-center gap-2">
-                      <div class="box-label flex items-center gap-2">En cama o mínima</div>
+                <div class="px-5 pb-2 grid grid-col-1">
+                  <div class="form-inline flex row checkEjercicio gap-3">
+                    <div class="calcEjercicio flex items-center gap-1">
                       <input
                         id="FactActivi"
                         name="FactActivi"
@@ -169,9 +164,9 @@ import HtmlBlock from "../components/simple/HtmlBlock.astro";
                         type="radio"
                         value="1"
                       />
+                      <label class="box-label">En cama o mínima</label>
                     </div>
-                    <div class="calcEjercicio flex items-center gap-2">
-                      <div class="box-label flex items-center gap-2">Ligero</div>
+                    <div class="calcEjercicio flex items-center gap-1">
                       <input
                         id="FactActivi"
                         name="FactActivi"
@@ -179,9 +174,9 @@ import HtmlBlock from "../components/simple/HtmlBlock.astro";
                         type="radio"
                         value="2"
                       />
+                      <label class="box-label">Ligero</label>
                     </div>
-                    <div class="calcEjercicio flex items-center gap-2">
-                      <div class="box-label flex items-center gap-2">Medio</div>
+                    <div class="calcEjercicio flex items-center gap-1">
                       <input
                         id="FactActivi"
                         name="FactActivi"
@@ -189,11 +184,11 @@ import HtmlBlock from "../components/simple/HtmlBlock.astro";
                         type="radio"
                         value="3"
                       />
+                      <label class="box-label">Medio</label>
                     </div>
                   </div>
-                  <div class="form-inline flex row checkEjercicio gap-1">
-                    <div class="calcEjercicio flex items-center gap-2">
-                      <div class="box-label flex items-center gap-2">Intenso:</div>
+                  <div class="form-inline flex row checkEjercicio gap-3">
+                    <div class="calcEjercicio flex items-center gap-1">
                       <input
                         id="FactActivi"
                         name="FactActivi"
@@ -201,9 +196,9 @@ import HtmlBlock from "../components/simple/HtmlBlock.astro";
                         type="radio"
                         value="4"
                       />
+                      <label class="box-label">Intenso</label>
                     </div>
-                    <div class="calcEjercicio flex items-center gap-2">
-                      <div class="box-label flex items-center gap-2">Muy intenso</div>
+                    <div class="calcEjercicio flex items-center gap-1">
                       <input
                         id="FactActivi"
                         name="FactActivi"
@@ -211,6 +206,7 @@ import HtmlBlock from "../components/simple/HtmlBlock.astro";
                         type="radio"
                         value="5"
                       />
+                      <label class="box-label">Muy intenso</label>
                     </div>
                   </div>
                 </div>
@@ -275,6 +271,12 @@ import HtmlBlock from "../components/simple/HtmlBlock.astro";
     color: #545454;
   }
 
+  @media screen and (max-width:768px) {
+    .box-label {
+    font-size: .8em;
+  }
+}
+
   .calcActividad {
     border: 1px solid #ececec;
     margin: 15px 0px;
@@ -297,9 +299,13 @@ import HtmlBlock from "../components/simple/HtmlBlock.astro";
     cursor: pointer;
     text-align: center;
     border-radius:25px;
-}
-.button-orange:hover {
-  color: #fff;
+  }
+  .button-orange:hover {
+    color: #fff;
     background: #ffb03b;
-}
+  }
+  input  {
+    min-height: 40px;
+  }
+
 </style>

@@ -3,8 +3,7 @@ import MedicalSearch from "/src/components/MedicalSearch.astro";
 const { url, alternativeText, name, showMedicalSearch } = Astro.props;
 ---
 
-<div class="relative">
-  <img class="w-full" src={url} alt={alternativeText} />
+<div class="relative w-full min-h-35 md:min-h-75 bg-contain bg-cover bg-center" style={`background-image: url(${url});`}>
   <div class="absolute inset-0 flex items-center justify-left bg-black/10">
     <h3 class="color-turquoise pl-20">{name}</h3>
     {showMedicalSearch && <MedicalSearch />}

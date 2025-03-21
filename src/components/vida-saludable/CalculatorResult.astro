@@ -1,3 +1,7 @@
+---
+export let get = Astro.props;
+---
+
 <!-- DIETAS -->
 
 <div class="service-detail">
@@ -9,8 +13,8 @@
         <div class="text-resultados grid grid-col-1 gap-2">
           <h2 class="orange">¡Adelante!</h2>
           <p>
-            Tu dieta recomendada es de <span class="resultados_calorias">
-              2377.18</span
+            Tu dieta recomendada es de 
+            <span class="resultados_calorias">{get}</span
             > Kcal. Descubre los menús que puedes seguir para estar más sano. <br
             />
             <span class="bold">Ocaso cuida de ti.</span>

@@ -1,5 +1,29 @@
 ---
-import CalculatorResult from "../components/vida-saludable/CalculatorResult.astro";
+import CalculatorResult from "../../components/vida-saludable/CalculatorResult.astro";
+
+let getResult = 0;
+
+const calcularGET = () => {
+  const sexo = document.querySelector('input[name="Sexo"]:checked').value;
+  const altura = parseFloat(document.getElementById("Altura").value);
+  const peso = parseFloat(document.getElementById("Peso").value);
+  const edad = parseInt(document.getElementById("Edad").value);
+  const factorActividad = parseFloat(
+    document.querySelector('input[name="FactActivi"]:checked').value
+  );
+
+  let tmb = 0;
+  if (sexo === "Hombre") {
+    tmb = 88.36 + 13.4 * peso + 4.8 * altura - 5.7 * edad;
+  } else {
+    tmb = 447.6 + 9.2 * peso + 3.1 * altura - 4.3 * edad;
+  }
+
+  getResult = tmb * factorActividad;
+
+  // Renderizar de nuevo CalculatorResult con el nuevo GET
+  document.getElementById("result-component").setAttribute("get", getResult);
+};
 
 ---
 
@@ -12,7 +36,7 @@ import CalculatorResult from "../components/vida-saludable/CalculatorResult.astr
       <!--<img class="img-fluid" src="~/images/icon/down_arrow.png" alt="calculadora"/>-->
     </div>
   </div>
-  <form
+  <form onsubmit="event.preventDefault(); calcularGET();"
     action="/plan-de-vida-saludable/"
     enctype="multipart/form-data"
     method="post"
@@ -206,7 +230,7 @@ import CalculatorResult from "../components/vida-saludable/CalculatorResult.astr
     />
   </form>
 
-  <CalculatorResult/>
+  <CalculatorResult get={getResult = 0}/>
   
 </div>
 

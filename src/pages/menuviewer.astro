@@ -1,5 +1,6 @@
 ---
 import FlipBook from "../components/FlipBook"
+import FlipBookSimple from "../components/FlipBookSimple.astro";
 
 const pages = [
   { content: '/plan-de-vida-saludable/menus/menu_1/page0001.png' },
@@ -9,9 +10,11 @@ const pages = [
 ];
 ---
 
-<div class="flipbook-wrapper">
+<!-- <div class="flipbook-wrapper">
     <FlipBook pages={pages} client:load />
-</div>
+</div> -->
+
+<FlipBookSimple pages={pages}/>
 
 <style>
     .flipbook-wrapper {
@@ -19,7 +22,7 @@ const pages = [
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background-color: #d43e3e;
+  background-color: #fff;
 }
 
 .flipbook-container {
