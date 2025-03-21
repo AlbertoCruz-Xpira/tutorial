@@ -14,11 +14,11 @@ const url = "/pediatria/bg-dosis.png";
     class="items-center max-w-5xl px-10 sm:px-10 md:px-10 lg:mx-auto pt-10 pb-5"
   >
     <div class="bg-white">
-      <div class="container">
+      <div class="px-10 py-5">
         <div class="py-4 border-b border-gray-300 color-turquoise">
           <h4>Calculadora de dosis</h4>
         </div>
-        <form class="box py-5 px-10" id="quote-modal-dosis">
+        <form class="box p-5" id="quote-modal-dosis">
           <div id="quote-modal-dosis" class="">
             <div
               id="modal-dialog-content-dosis"
@@ -26,8 +26,10 @@ const url = "/pediatria/bg-dosis.png";
             >
               <div class="col-md-6 col-xs-12 quote-dosis-left">
                 <div class="form-group grid gap-2">
-                  <div class="dosis-peso flex gap-5 items-center">
-                    <img src="/pediatria/ico-dosis-peso.png" />
+                  <div class="dosis-peso flex gap-3 items-center">
+                    <div class="img-wrapper">
+                      <img src="/pediatria/ico-dosis-peso.png" />
+                    </div>
                     <input
                       id="PesoCalcDosis"
                       class="border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-1 focus:ring-grey-400 focus:border-grey-400"
@@ -40,8 +42,11 @@ const url = "/pediatria/bg-dosis.png";
                     />
                     <p>kg</p>
                   </div>
-                  <div class="dosis-edad flex gap-5 items-center">
-                    <img src="/pediatria/ico-dosis-calendar.png" />
+
+                  <div class="dosis-edad flex gap-3 items-center">
+                    <div class="img-wrapper">
+                      <img src="/pediatria/ico-dosis-calendar.png" /> 
+                    </div>
                     <input
                       id="EdadCalcDosis"
                       class="border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-1 focus:ring-grey-400 focus:border-grey-400"
@@ -55,8 +60,10 @@ const url = "/pediatria/bg-dosis.png";
                     <p>años</p>
                   </div>
 
-                  <div class="dosis-pactivo flex gap-5 items-center">
-                    <img src="/pediatria/ico-dosis-pactivo.png" />
+                  <div class="dosis-pactivo flex gap-3 items-center">
+                    <div class="img-wrapper">
+                      <img src="/pediatria/ico-dosis-pactivo.png" />
+                    </div>
                     <label for="ListadoPrinActivo" class="hidden">ListadoPrinActivo</label>
 
                     <select
@@ -92,12 +99,12 @@ const url = "/pediatria/bg-dosis.png";
                     </select>
                   </div>
 
-                  <div class="botonDosis pt-2">
+                  <div class="botonDosis pt-10">
                     <Button buttonLink="#" buttonText="Calcular Dosis" />
                   </div>
                 </div>
               </div>
-              <div class="quote-dosis-right flex items-center justify-center">
+              <div class="quote-dosis-right flex items-center justify-center p-10 border-gray-300 w-full">
                 <p>Seleccionar Calcular Dosis para ver resultado</p>
               </div>
             </div>
@@ -108,23 +115,21 @@ const url = "/pediatria/bg-dosis.png";
 
     <!--Bloque buscador farmacias-->
     <section>
-      <Column number="2">
+      <div class="grid grid-col-1 items-center md:grid-cols-2 gap-5">
         <div class="bg-white">
           <a
             href="https://www.mscbs.gob.es/profesionales/saludPublica/prevPromocion/vacunaciones/home.htm"
             target="_blank"
           >
-            <Column number="2">
-              <div>
-                <img src="/pediatria/busca-farma-peq.jpg" />
-              </div>
-              <div class="grid grid-col-1 items-center p-3">
+            <div class="flex">
+              <img src="/pediatria/busca-farma-peq.jpg" />
+              <div class="grid grid-col-1 items-center p-5">
                 <h5 class="color-turquoise">
                   Accede aquí para consultar sobre vacunas y programas de
                   vacunación
                 </h5>
               </div>
-            </Column>
+            </div>
           </a>
         </div>
         <div class="bg-white">
@@ -132,19 +137,17 @@ const url = "/pediatria/bg-dosis.png";
             href="https://www.cofm.es/es/farmacias/buscador-de-farmacias/"
             target="_blank"
           >
-            <Column number="2">
-              <div>
-                <img src="/pediatria/vademecum-peq.jpg" />
-              </div>
-              <div class="grid grid-col-1 items-center p-3">
+            <div class="flex">
+              <img src="/pediatria/vademecum-peq.jpg" />
+              <div class="grid grid-col-1 items-center p-5">
                 <h5 class="color-turquoise">
                   Encuentra tu farmacia más cercana 24h
                 </h5>
               </div>
-            </Column>
+            </div>
           </a>
         </div>
-      </Column>
+      </div>
     </section>
   </div>
   <!--fin Bloque buscador farmacias-->
@@ -156,6 +159,13 @@ const url = "/pediatria/bg-dosis.png";
     }
     h5 {
       font-size: 1rem;
+    }
+    input, select {
+      min-height: 40px;
+      min-width:250px;
+    }
+    .img-wrapper {
+      min-width: 35px;
     }
   </style>
 </BaseLayout>
