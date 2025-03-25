@@ -1,20 +1,21 @@
 ---
 import SimpleButton from "./buttons/SimpleButton.astro";
+import type { Post } from "../interface/Post";
 
-const { postsResumeData } = Astro.props;
-const { title, posts } = postsResumeData;
+const { postsData, pageTitle } = Astro.props;
+const posts = postsData;
 ---
 
 <section class="bg-[#FFF] p-10" data-component="PostsResume">
   <div class="items-center max-w-5xl mx-auto mb-10">
-    <h3 class="text-[1.2rem] font-bold pt-1">{title}</h3>
+    <h3 class="text-[1.2rem] font-bold pt-1">{pageTitle}</h3>
   </div>
 
   <!-- fila -->
   <div class="max-w-5xl mx-auto items-center">
     <div class="grid lg:grid-cols-2 grid-cols-1 gap-10 items-center">
       {
-        posts.map((post: any) => (
+        posts.map((post: Post) => (
           <div class="grid grid-col-1 gap-3">
             <div
               class="min-h-[20rem] flex justify-end items-end bg-cover bg-center relative p-2"

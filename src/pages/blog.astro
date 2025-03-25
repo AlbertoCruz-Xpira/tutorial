@@ -1,35 +1,14 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import PostsResume from "../components/PostsResume.astro";
-const pageTitle = "Blog";
 
-const postsResumeData = {
-  title: "Publicaciones",
-  posts: [
-    {
-      heading: "La vida y la edad",
-      category: "Salud",
-      description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec molestie turpis id odio blandit, dignissim tincidunt arcu bibendum.",
-      imageSrc: "/posts/De-que-se-ocupa-un-oftalmologo.jpg",
-      buttonText: "Leer más",
-      buttonLink: "/",
-    },
-    {
-      heading: "El cuidado de la piel en verano",
-      category: "Salud",
-      description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec molestie turpis id odio blandit, dignissim tincidunt arcu bibendum.",
-      imageSrc: "/posts/El-cuidado-de-la-piel-en-verano.jpg",
-      buttonText: "Leer más",
-      buttonLink: "/",
-    },
-  ],
-};
+import posts from "../data/posts";
+
+const pageTitle = "Blog";
 ---
 
-<BaseLayout>
+<BaseLayout pageTitle={pageTitle}>
   <div class="items-center max-w-5xl px-10 sm:px-10 md:px-10 lg:mx-auto pt-10 pb-5 service-page">
-    <PostsResume postsResumeData={postsResumeData} />
+    <PostsResume postsData={posts} pageTitle={pageTitle} />
   </div>
 </BaseLayout>
